@@ -158,9 +158,8 @@ if ($query->num_rows > 0) {
     <meta name="theme-color" content="">
     <link rel="canonical" href="https://toytime-theme.myshopify.com/pages/faq">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="icon" type="image/png" href="//toytime-theme.myshopify.com/cdn/shop/files/Favicon.svg?crop=center&height=32&v=1707973018&width=32"><link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin><title>
-      faq
- &ndash; ToyTime-theme</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="icon" type="image/png" href="//toytime-theme.myshopify.com/cdn/shop/files/Favicon.svg?crop=center&height=32&v=1707973018&width=32"><link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <title>Omacha Shop | FAQ</title>
 
  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
  href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
