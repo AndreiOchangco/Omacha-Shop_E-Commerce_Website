@@ -1,4 +1,4 @@
-# Omacha Shop - E-commerce Toy Store
+# Omacha Shop | E-Commerce Website
 
 <p align="center">
   <img src="screenshot/logo.png" alt="Omacha Shop Logo" height="50px"/> <!-- Đảm bảo đường dẫn logo chính xác -->
