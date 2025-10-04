@@ -42,6 +42,8 @@ body1{
 .container #flip:checked ~ .cover{
   transform: rotateY(-180deg);
 }
+
+
  .container .cover .front,
  .container .cover .back{
   position: absolute;
@@ -49,6 +51,9 @@ body1{
   left: 0;
   height: 100%;
   width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }
 .cover .back{
   transform: rotateY(180deg);
@@ -130,7 +135,7 @@ body1{
   bottom: 0;
   height: 3px;
   width: 25px;
-  background: #ffb44a;
+  background: #19f574;
 }
 .forms .signup-form  .title:before{
   width: 20px;
@@ -159,11 +164,11 @@ body1{
 }
 .form-content .input-box input:focus,
 .form-content .input-box input:valid{
-  border-color: #ffb44a;
+  border-color: #19f574;
 }
 .form-content .input-box i{
   position: absolute;
-  color: #ffb44a;
+  color: #19f574;
   font-size: 17px;
 }
 .forms .form-content .text{
@@ -182,7 +187,7 @@ body1{
   margin-top: 40px;
 }
 .forms .form-content .button input {
-  background: #ffb44a;
+  background: #19f574;
   color: #fff;
   border: none;
   padding: 12px 20px;
@@ -192,7 +197,7 @@ body1{
   transition: all 0.4s ease;
 }
 .forms .form-content .button input:hover {
-  background: linear-gradient(135deg, #ffb44a, #ffb44a, #dcc724, #5dffc6, #4866ff, #ba4bff, #ff6262);
+  background: linear-gradient(135deg, #19f574, #19f574, #19f574, #d3ffe4, #d3ffe4, #19f574, #19f574);
   background-size: 300% 300%;
   color: #ffffff;
   animation: gradientShift 4.6s;
