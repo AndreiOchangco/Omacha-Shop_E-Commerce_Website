@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
 <html lang="en" dir="ltr">
-
 <head>
     <title>Omacha Shop | Register</title>
     <meta charset="UTF-8">
     <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
     <link rel="stylesheet" href="style.css">
     <!-- link icon -->
-    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="icon" type="image/png" href="images/omachalogo.jpg" />
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body1>
+<body>
     <div class="container">
         <form action="signup.php" method="post" autocomplete="off" class="sign-in-form">
             <input type="checkbox" id="flip">
             <div class="cover">
                 <div class="front">
-                    <img src="images/icon.png" alt="">
+                    <img src="images/omachalogo.jpg" alt="" class="logo">
                 </div>
                 <div class="back">
-                    <img class="backImg" src="images/backImg.jpg" alt="">
+                    <img class="backImg" src="images/background-image.png" alt="">
                     <div class="text">
                         <span class="text-1">Complete miles of journey <br> with one step</span>
                         <span class="text-2">Let's get started</span>
@@ -58,7 +57,5 @@
             </div>
         </form>
     </div>
-</body1>
-
-
+</body>
 </html>
