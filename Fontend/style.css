@@ -204,6 +204,15 @@ height: auto;
   font-weight: bold;
   transition: all 0.4s ease;
 }
+
+.input-box i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #19f574;       
+}
+
 .forms .form-content .button input:hover {
   background: linear-gradient(135deg, #19f574, #19f574, #19f574, #d3ffe4, #d3ffe4, #19f574, #19f574);
   background-size: 300% 300%;
@@ -249,6 +258,10 @@ height: auto;
   }
   .container #flip:checked ~ .forms .login-form{
     display: none;
+  }
+  .fa-user {
+    margin-left: 10px;
+    padding-left:  10px ;
   }
 }
 
