@@ -376,7 +376,7 @@ if ($query->num_rows > 0) {
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
 						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="images/Omacha-Shop_4000x2000/OmachaShop-Logo2.png">Omacha Shop</h1>
+									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
@@ -385,7 +385,7 @@ if ($query->num_rows > 0) {
 							<li class="active-menu">
 								<a href="index.php">Home</a>
 								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1</a></li>
+									<li><a href="home-01.html">Homepage 1</a></li>
 									<li><a href="home-02.html">Homepage 2</a></li>
 									<li><a href="home-03.html">Homepage 3</a></li>
 								</ul>
@@ -445,7 +445,7 @@ if ($query->num_rows > 0) {
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="index.html" class="navbar-brand">
+				<a href="index.php" class="navbar-brand">
 							
 					<img class="Imagealignment"src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" alt="IMG-LOGO">
 					
@@ -512,7 +512,7 @@ if ($query->num_rows > 0) {
 				<li>
 					<a href="index.php">Home</a>
 					<ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
+						<li><a href="home-01.html">Homepage 1</a></li>
 						<li><a href="home-02.html">Homepage 2</a></li>
 						<li><a href="home-03.html">Homepage 3</a></li>
 					</ul>
