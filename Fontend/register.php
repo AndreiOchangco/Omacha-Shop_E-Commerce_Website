@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
 <html lang="en" dir="ltr">
 <head>
-    <title>Omacha Shop | Register</title>
+    <title>Omacha Shop | Sign Up</title>
     <meta charset="UTF-8">
-    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
     <link rel="stylesheet" href="style.css">
     <!-- link icon -->
     <link rel="icon" type="image/png" href="images/omachalogo.jpg" />

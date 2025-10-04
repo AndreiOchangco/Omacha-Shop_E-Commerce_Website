@@ -6,6 +6,7 @@
 
 Welcome to Omacha Shop, a dynamic and inclusive e-commerce platform tailored to meet the needs of individuals across all age groups. This project exemplifies a full-stack web application developed using PHP and designed to run seamlessly with XAMPP. Omacha Shop offers a rich array of features, including intuitive product browsing, secure checkout processes, and user-friendly account management for customers. For administrators, the platform provides robust tools for managing products, orders, users, and content, ensuring efficient and effective business operations. Whether you're a casual shopper or a business owner, Omacha Shop is built to deliver a comprehensive and engaging online shopping experience.
 </br>
+</br>
 This README is available in English and Tagalog. Please expand the section for your preferred language.
 
 

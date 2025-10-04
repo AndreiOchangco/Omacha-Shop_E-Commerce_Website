@@ -14,7 +14,7 @@ $conn = new mysqli('localhost', 'root', '', 'toy-shop'); //servername, username,
 if ($conn->connect_error) {
     die("Connection Failed : " . $conn->connect_error);
 } else {
-    if (isset($_POST['user']) && isset($_POST['pass'])) { // kiem tra xem bien co ton tai hay hong
+    if (isset($_POST['user']) && isset($_POST['pass'])) { // Check if the variable exists or not
         $user = $_POST['user'];
         $pass = $_POST['pass'];
 
@@ -22,14 +22,14 @@ if ($conn->connect_error) {
             $_SESSION['user'] = 'admin.com';
             header('Location: ../Admin/public/index.php');
         } else {
-            $stmt = $conn->prepare("SELECT * FROM login WHERE userName = ? AND loginpassword = ?"); // so sanh bien nhap vao voi database
+            $stmt = $conn->prepare("SELECT * FROM login WHERE userName = ? AND loginpassword = ?"); // Compare input variables with database
             $stmt->bind_param("ss", $user, $pass);
             $stmt->execute();
             $result = $stmt->get_result();
 
             if ($result->num_rows <= 0) {
                 $error = 'Invalid username or password';
-                header('Location: login.html'); // Chuyển hướng đến trang login.html nếu đăng nhập thất bại
+                header('Location: login.html'); // Redirect to login.html page if login fails
             } else if ($result->num_rows > 0) {
                 $_SESSION['user'] = $user;
                 // print_r($_SESSION['user']);
