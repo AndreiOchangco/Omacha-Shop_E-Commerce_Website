@@ -176,7 +176,7 @@ if ($query->num_rows > 0) {
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="images/icon.png" />
+	<link rel="icon" type="image/png" href="images/omachalogo.jpg" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -327,12 +327,12 @@ if ($query->num_rows > 0) {
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
-							<p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
+							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
 									href="mailto:omachacontact@gmail.com"
 									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
-							<p style="color: #F4538A"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #000; text-decoration: none;">+1922 4800</a></p>
+							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
@@ -340,15 +340,15 @@ if ($query->num_rows > 0) {
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
 								target="_blank" title="Visit the Reis Adventures fanpage.">
-								<i style="color: #49243E;" class="fab fa-facebook-f"></i>
+								<i style="color: #0066cdff;" class="fab fa-facebook-f"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
 								title="Visit the Reis Adventures Twitter.">
-								<i style="color: #49243E;" class="fab fa-twitter"></i>
+								<i style="color: #00aaffff;" class="fab fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
 								target="_blank" title="Visit the Reis Adventures Linkedin.">
-								<i style="color: #49243E;" class="fab fa-linkedin-in"></i>
+								<i style="color: #000000ff;" class="fab fa-linkedin-in"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
@@ -370,13 +370,13 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #FFEFEF;">
-				<nav class="limiter-menu-desktop container" style="background-color: #FFEFEF;">
+			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
 						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="images/icon.png">Omacha</h1>
+									src="images/omachalogo.jpg">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
