@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <title>Omacha - Playful World</title>
+    <title>Omacha Shop | Register</title>
     <meta charset="UTF-8">
     <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
     <link rel="stylesheet" href="style.css">
