@@ -1,7 +1,7 @@
 # Omacha Shop | E-Commerce Website
 
 <p align="center">
-    <img src="./Fontend/images/omachalogo.jpg" alt="Omacha Shop Logo" height="50px"/> <!-- Siguraduhing tama ang landas ng logo -->
+    <img src="./Fontend/images/omachalogo.jpg" alt="Omacha Shop Logo" height="100px"/>
 </p>
 
 <p align="justify">Welcome to Omacha Shop, a dynamic and inclusive e-commerce platform tailored to meet the needs of individuals across all age groups. This project exemplifies a full-stack web application developed using PHP and designed to run seamlessly with XAMPP. Omacha Shop offers a rich array of features, including intuitive product browsing, secure checkout processes, and user-friendly account management for customers. For administrators, the platform provides robust tools for managing products, orders, users, and content, ensuring efficient and effective business operations. Whether you're a casual shopper or a business owner, Omacha Shop is built to deliver a comprehensive and engaging online shopping experience.</p>
@@ -20,11 +20,11 @@ This README is available in English and Tagalog. Please expand the section for y
 
 ## 🌟 Project Overview
 
-Omacha Shop is designed to provide a seamless and enjoyable online shopping experience for individuals of all ages. Whether you're searching for toys, gifts, or collectibles, the platform offers a diverse and carefully curated collection to meet your needs. With features like intuitive browsing, detailed product descriptions, and secure (simulated) payment options, Omacha ensures a user-friendly experience for everyone. Additionally, the platform includes tools for order tracking and customer engagement, making it a trusted destination for families, hobbyists, and collectors. For businesses, the robust administration system streamlines operations, enabling efficient management of products, orders, and customer interactions.
+<p align="justify">Omacha Shop is designed to provide a seamless and enjoyable online shopping experience for individuals of all ages. Whether you're searching for toys, gifts, or collectibles, the platform offers a diverse and carefully curated collection to meet your needs. With features like intuitive browsing, detailed product descriptions, and secure (simulated) payment options, Omacha ensures a user-friendly experience for everyone. Additionally, the platform includes tools for order tracking and customer engagement, making it a trusted destination for families, hobbyists, and collectors. For businesses, the robust administration system streamlines operations, enabling efficient management of products, orders, and customer interactions.</p>
 
 **Live Demo (GitHub Pages - Frontend UI Only):**
 *   Customer View: [https://tranhuudat2004.github.io/Omacha-Shop-Demo/](https://tranhuudat2004.github.io/Omacha-Shop-Demo/)
-*   Admin View (UI Only): [https://tranhuudat2004.github.io/Omacha-Shop-Demo/Admin/public/index.html](https://tranhuudat2004.github.io/Omacha-Shop-Demo/Admin/public/index.html)
+*   Admin View (UI Only): [https://tranhuudat2004.github.io/Omacha-Shop-Demo/Admin/public/index.html](https://tranhuudat2004.github.io/Omacha-Shop-Demo/Admin/public/index.html)</br>
 *(Note: The live demos are frontend-only and do not include backend functionality like database interactions, user authentication, or order processing. For full functionality, please set up the project locally as described below.)*
 
 ## ✨ Key Features
