@@ -1,0 +1,7 @@
+.symbol-btn-back-to-top {
+  background: red;           /* button color */
+  padding: 12px 14px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: #fff;
+}

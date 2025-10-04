@@ -124,7 +124,10 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 .slick-slide {outline: none !important;}
 
 
-
+body{
+    margin: 0;                 /* removes default browser margin */
+  padding: 0;                /* removes default browser padding */
+}
 
 
 /*//////////////////////////////////////////////////////////////////
