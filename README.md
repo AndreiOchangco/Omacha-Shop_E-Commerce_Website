@@ -23,8 +23,8 @@
 <p align="justify">Omacha Shop is designed to provide a seamless and enjoyable online shopping experience for individuals of all ages. Whether you're searching for toys, gifts, or collectibles, the platform offers a diverse and carefully curated collection to meet your needs. With features like intuitive browsing, detailed product descriptions, and secure (simulated) payment options, Omacha ensures a user-friendly experience for everyone. Additionally, the platform includes tools for order tracking and customer engagement, making it a trusted destination for families, hobbyists, and collectors. For businesses, the robust administration system streamlines operations, enabling efficient management of products, orders, and customer interactions.</p>
 
 **Live Demo (GitHub Pages - Frontend UI Only):**
-*   Customer View: [https://andreiochangco.github.io/Omacha-Shop_E-Commerce_Website/Fontend/index.php](https://andreiochangco.github.io/Omacha-Shop_E-Commerce_Website/Fontend/index.php)
-*   Admin View (UI Only): [https://andreiochangco.github.io/Omacha-Shop_E-Commerce_Website/Admin/public/index.php](https://andreiochangco.github.io/Omacha-Shop_E-Commerce_Website/Admin/public/index.php)</br>
+*   Customer View: [https://andreiochangco.github.io/Omacha-Shop_E-Commerce_Website/Fontend/](https://andreiochangco.github.io/Omacha-Shop_E-Commerce_Website/Fontend/)
+*   Admin View (UI Only): [https://andreiochangco.github.io/Omacha-Shop_E-Commerce_Website/Admin/public/](https://andreiochangco.github.io/Omacha-Shop_E-Commerce_Website/Admin/public/)</br>
 *(Note: The live demos are frontend-only and do not include backend functionality like database interactions, user authentication, or order processing. For full functionality, please set up the project locally as described below.)*
 
 ## ✨ Key Features
