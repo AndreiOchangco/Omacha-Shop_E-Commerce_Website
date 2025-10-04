@@ -384,15 +384,21 @@ if ($query->num_rows > 0) {
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.php">Home</a>
+								<ul class="sub-menu">
+									<li><a href="index.html">Homepage 1</a></li>
+									<li><a href="home-02.html">Homepage 2</a></li>
+									<li><a href="home-03.html">Homepage 3</a></li>
+								</ul>
 
 							</li>
 
 							<li class="label1" data-label1="hot">
 							<a href="product.html">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1</a></li>
-									<li><a href="home-02.html">Homepage 2</a></li>
-									<li><a href="home-03.html">Homepage 3</a></li>
+								<ul class="sub-menu-m">
+									<li><a href="0_12months.php">0-12 Months</a></li>
+									<li><a href="1_2years.php">1-2 Years</a></li>
+									<li><a href="3+years.php">3+ Years</a></li>
+									<li><a href="5+years.php">5+ Years</a></li>
 								</ul>
 							</li>
 
@@ -516,7 +522,7 @@ if ($query->num_rows > 0) {
 				<li>
 					<a href="product2.php">Shop</a>
 					<ul class="sub-menu-m">
-					<li><a href="0_12months.php">0-12 Months</a></li>
+						<li><a href="0_12months.php">0-12 Months</a></li>
 						<li><a href="1_2years.php">1-2 Years</a></li>
 						<li><a href="3+years.php">3+ Years</a></li>
 						<li><a href="5+years.php">5+ Years</a></li>
