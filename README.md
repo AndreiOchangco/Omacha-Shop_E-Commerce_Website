@@ -1,7 +1,7 @@
 # Omacha Shop | E-Commerce Website
 
 <p align="center">
-    <img src="./Fontend/images/Omacha-Shop_4000x2000/OmachaShop-Logo1.png" alt="Omacha Shop Logo" height="100px"/>
+    <img src="./Fontend/images/Omacha-Shop_4000x2000/OmachaShop-Logo2.png" alt="Omacha Shop Logo" height="100px"/>
 </p>
 
 <p align="justify">Welcome to Omacha Shop, a dynamic and inclusive e-commerce platform tailored to meet the needs of individuals across all age groups. This project exemplifies a full-stack web application developed using PHP and designed to run seamlessly with XAMPP. Omacha Shop offers a rich array of features, including intuitive product browsing, secure checkout processes, and user-friendly account management for customers. For administrators, the platform provides robust tools for managing products, orders, users, and content, ensuring efficient and effective business operations. Whether you're a casual shopper or a business owner, Omacha Shop is built to deliver a comprehensive and engaging online shopping experience.</p>
