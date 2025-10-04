@@ -394,7 +394,7 @@ if ($query->num_rows > 0) {
 
 							<li class="label1" data-label1="hot">
 							<a href="product.html">Shop</a>
-								<ul class="sub-menu-m">
+								<ul class="sub-menu">
 									<li><a href="0_12months.php">0-12 Months</a></li>
 									<li><a href="1_2years.php">1-2 Years</a></li>
 									<li><a href="3+years.php">3+ Years</a></li>
