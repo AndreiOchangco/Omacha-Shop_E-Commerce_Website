@@ -7,7 +7,7 @@
 <p align="justify">Welcome to Omacha Shop, a dynamic and inclusive e-commerce platform tailored to meet the needs of individuals across all age groups. This project exemplifies a full-stack web application developed using PHP and designed to run seamlessly with XAMPP. Omacha Shop offers a rich array of features, including intuitive product browsing, secure checkout processes, and user-friendly account management for customers. For administrators, the platform provides robust tools for managing products, orders, users, and content, ensuring efficient and effective business operations. Whether you're a casual shopper or a business owner, Omacha Shop is built to deliver a comprehensive and engaging online shopping experience.</p>
 </br>
 </br>
-This README is available in English and Tagalog. Please expand the section for your preferred language.
+<p align="justify">This README is available in English and Tagalog. Please expand the section for your preferred language.</p>
 
 
 
@@ -134,11 +134,11 @@ You are free to Share and Adapt the material, under the terms of Attribution and
 
 ## 🌟 Project Overview
 
-Ang Omacha Shop ay idinisenyo upang magbigay ng tuluy-tuloy at kasiya-siyang karanasan sa online shopping para sa mga indibidwal sa lahat ng edad. Naghahanap ka man ng mga laruan, regalo, o collectible, nag-aalok ang platform ng magkakaibang at maingat na na-curate na koleksyon para matugunan ang iyong mga pangangailangan. Sa mga feature tulad ng intuitive na pagba-browse, detalyadong paglalarawan ng produkto, at secure (simulate) na mga opsyon sa pagbabayad, tinitiyak ng Omacha ang isang user-friendly na karanasan para sa lahat. Bukod pa rito, ang platform ay may kasamang mga tool para sa pagsubaybay sa order at pakikipag-ugnayan sa customer, na ginagawa itong isang pinagkakatiwalaang destinasyon para sa mga pamilya, hobbyist, at collectors. Para sa mga negosyo, ang matatag na sistema ng administrasyon ay nag-streamline ng mga operasyon, na nagbibigay-daan sa mahusay na pamamahala ng mga produkto, mga order, at mga pakikipag-ugnayan ng customer.
+<p align="justify">Ang Omacha Shop ay idinisenyo upang magbigay ng tuluy-tuloy at kasiya-siyang karanasan sa online shopping para sa mga indibidwal sa lahat ng edad. Naghahanap ka man ng mga laruan, regalo, o collectible, nag-aalok ang platform ng magkakaibang at maingat na na-curate na koleksyon para matugunan ang iyong mga pangangailangan. Sa mga feature tulad ng intuitive na pagba-browse, detalyadong paglalarawan ng produkto, at secure (simulate) na mga opsyon sa pagbabayad, tinitiyak ng Omacha ang isang user-friendly na karanasan para sa lahat. Bukod pa rito, ang platform ay may kasamang mga tool para sa pagsubaybay sa order at pakikipag-ugnayan sa customer, na ginagawa itong isang pinagkakatiwalaang destinasyon para sa mga pamilya, hobbyist, at collectors. Para sa mga negosyo, ang matatag na sistema ng administrasyon ay nag-streamline ng mga operasyon, na nagbibigay-daan sa mahusay na pamamahala ng mga produkto, mga order, at mga pakikipag-ugnayan ng customer.</p>
 
 **Live Demo (GitHub Pages - Frontend UI Only):**
 *   Customer View: [https://tranhuudat2004.github.io/Omacha-Shop-Demo/](https://tranhuudat2004.github.io/Omacha-Shop-Demo/)
-*   Admin View (UI Only): [https://tranhuudat2004.github.io/Omacha-Shop-Demo/Admin/public/index.html](https://tranhuudat2004.github.io/Omacha-Shop-Demo/Admin/public/index.html)
+*   Admin View (UI Only): [https://tranhuudat2004.github.io/Omacha-Shop-Demo/Admin/public/index.html](https://tranhuudat2004.github.io/Omacha-Shop-Demo/Admin/public/index.html)</br>
 *(Note: Ang mga live na demo ay frontend-only at hindi kasama ang backend functionality tulad ng mga pakikipag-ugnayan sa database, pagpapatotoo ng user, o pagpoproseso ng order. Para sa buong functionality, mangyaring i-set up ang proyekto nang lokal gaya ng inilarawan sa ibaba.)*
 
 ## ✨ Key Features
