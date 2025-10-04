@@ -176,7 +176,7 @@ if ($query->num_rows > 0) {
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="images/omachalogo.jpg" />
+	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -376,7 +376,7 @@ if ($query->num_rows > 0) {
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
 						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="images/omachalogo.jpg">Omacha Shop</h1>
+									src="images/Omacha-Shop_4000x2000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
@@ -388,12 +388,11 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li class="label1" data-label1="hot">
-							<a href="product2.php">Shop</a>
+							<a href="product.html">Shop</a>
 								<ul class="sub-menu">
-									<li><a href="0_12months.php">0-12 Months</a></li>
-									<li><a href="1_2years.php">1-2 Years</a></li>
-									<li><a href="3+years.php">3+ Years</a></li>
-									<li><a href="5+years.php">5+ Years</a></li>
+									<li><a href="index.html">Homepage 1</a></li>
+									<li><a href="home-02.html">Homepage 2</a></li>
+									<li><a href="home-03.html">Homepage 3</a></li>
 								</ul>
 							</li>
 
@@ -442,7 +441,7 @@ if ($query->num_rows > 0) {
 			<div class="logo-mobile">
 				<a href="index.html" class="navbar-brand">
 							
-					<img class="Imagealignment"src="images/icon.png">
+					<img class="Imagealignment"src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" alt="IMG-LOGO">
 					
 				</a>
 			</div>
@@ -506,6 +505,11 @@ if ($query->num_rows > 0) {
 			<ul class="main-menu-m">
 				<li>
 					<a href="index.php">Home</a>
+					<ul class="sub-menu-m">
+						<li><a href="index.html">Homepage 1</a></li>
+						<li><a href="home-02.html">Homepage 2</a></li>
+						<li><a href="home-03.html">Homepage 3</a></li>
+					</ul>
 					
 				</li>
 
