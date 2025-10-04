@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: toy-shop
 Target Host: localhost
 Target Database: toy-shop
-Date: 10/4/2025 12:01:37 PM
+Date: 10/4/2025 12:06:50 PM
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -59,7 +59,7 @@ CREATE TABLE `login` (
   `email` varchar(100) NOT NULL,
   `loginpassword` varchar(255) NOT NULL,
   PRIMARY KEY (`userID`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- ----------------------------
 -- Table structure for order
@@ -156,6 +156,7 @@ INSERT INTO `login` VALUES ('21', 'DaoMinhPhuc', 'DaoMinhPhuc@gmail.com', '1234'
 INSERT INTO `login` VALUES ('23', 'huudat', 'huudat', 'huudat');
 INSERT INTO `login` VALUES ('24', 'mini', 'mini', 'mini');
 INSERT INTO `login` VALUES ('25', 'TranHuuDat', 'TranHuuDat@gmail.com', '123456');
+INSERT INTO `login` VALUES ('26', 'Andrei Luise E. Ochangco', 'Andrei Luise E. Ochangco', 'O9Btwentie6@ALE0#');
 INSERT INTO `order` VALUES ('70', '21', '3', '11', '5', '1');
 INSERT INTO `order` VALUES ('79', '14', '6', '13', '5', '1');
 INSERT INTO `order` VALUES ('84', '14', '4', '11', '1', '1');
