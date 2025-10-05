@@ -202,6 +202,9 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<!--===============================================================================================-->
+
+	<!-- CSS FILES-->
+
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 
@@ -956,7 +959,7 @@ if ($query->num_rows > 0) {
 						while ($discount = mysqli_fetch_assoc($query)) {
 					?>
 						<div class="block1 wrap-pic-w">
-							<img class="retangle" src="images/rectangle1.jpg" alt="IMG-BANNER">
+							<img class="clothes" src="images/Homepage-images/clothes_img.png" alt="IMG-BANNER">
 							<div class="block1-content">
 								<div class="block2-txt-child1 flex-col-l">
 									<span class="block1-name stext-122 trans-04 p-b-8">
@@ -980,7 +983,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w">
-						<img class="retangle" src="images/rectangle2.jpg" alt="IMG-BANNER">
+						<img class="clothes" src="images/Homepage-images/digital_accessories.png" alt="IMG-BANNER">
 						<div class="block1-content">
 							<div class="block2-txt-child1 flex-col-l">
 								<span class="block1-name stext-122  trans-04 p-b-8">
@@ -1002,7 +1005,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w">
-						<img class="retangle" src="images/rectangle3.jpg" alt="IMG-BANNER">
+						<img class="clothes" src="images/Homepage-images/shoes_img.png" alt="IMG-BANNER">
 						<div class="block1-content">
 							<div class="block2-txt-child1 flex-col-l">
 								<span class="block1-name stext-122  trans-04 p-b-8">
@@ -1634,7 +1637,7 @@ if ($query->num_rows > 0) {
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
-			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #e83b6f; --fa-secondary-color: #e83b6f;"></i>
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #19f574;"></i>
 		</span>
 	</div>
 
