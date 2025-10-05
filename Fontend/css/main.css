@@ -4159,8 +4159,8 @@ img.Imagealignment{
 
 .logo-slider .item1 img{
   width: 100%;
-  height: 90px; /* Đảm bảo tỷ lệ khung hình không bị méo */
-  max-height: 100px;
+  height: 100px; 
+  max-height: 150px;
 }
 
 .container2{
@@ -4181,7 +4181,7 @@ img.Imagealignment{
   height: 4px;
   background-color: #BFD8AF;
   bottom: -20px;
-  top: 50px;
+  top: 100px;
   left: 0;
   right: 0;
   margin: 0 auto;

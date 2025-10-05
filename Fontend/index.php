@@ -398,10 +398,11 @@ if ($query->num_rows > 0) {
 							<li class="label1" data-label1="hot">
 							<a href="product.html">Shop</a>
 								<ul class="sub-menu">
-									<li><a href="0_12months.php">0-12 Months</a></li>
-									<li><a href="1_2years.php">1-2 Years</a></li>
-									<li><a href="3+years.php">3+ Years</a></li>
-									<li><a href="5+years.php">5+ Years</a></li>
+									<li><a href="./Products/convenience-products.php">Convenience</a></li>
+									<li><a href="./Products/shopping-products.php">Shopping</a></li>
+									<li><a href="3+years.php">Specialty</a></li>
+									<li><a href="5+years.php">Unsought</a></li>
+									<li><a href=""></a>Digital</li>
 								</ul>
 							</li>
 
@@ -920,7 +921,7 @@ if ($query->num_rows > 0) {
 					<!-- Block3 -->
 					<div class="block1 wrap-pic-w">
 						<img class="category" src="images/Homepage-images/speciality_icon.png" alt="category-img">
-						<h5 class="stext-121">Speciality Products</h5>
+						<h5 class="stext-121">Specialty Products</h5>
 					</div>
 				</div>
 
