@@ -903,40 +903,40 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/category1.jpg" alt="category-img">
-						<h5 class="stext-121">Squeaky Toys</h5>
+						<img class="category" src="images/Homepage-images/convenience_icon.png" alt="category-img">
+						<h5 class="stext-121">Convenience Products</h5>
 					</div>
 				</div>
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block2 -->
 					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/category2.jpg" alt="category-img">
-						<h5 class="stext-121">Melody Mates</h5>
+						<img class="category" src="images/Homepage-images/shopping_icon.png" alt="category-img">
+						<h5 class="stext-121">Shopping Products</h5>
 					</div>
 				</div>
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block3 -->
 					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/category3.jpg" alt="category-img">
-						<h5 class="stext-121">Travel Treasures</h5>
+						<img class="category" src="images/Homepage-images/speciality_icon.png" alt="category-img">
+						<h5 class="stext-121">Speciality Products</h5>
 					</div>
 				</div>
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block4 -->
 					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/category4.jpg" alt="category-img">
-						<h5 class="stext-121">Wooden Wonder</h5>
+						<img class="category" src="images/Homepage-images/unsought_icon.png" alt="category-img">
+						<h5 class="stext-121">Unsought Products</h5>
 					</div>
-				</div>
+				</div>	
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block5 -->
 					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/category5.jpg" alt="category-img">
-						<h5 class="stext-121">Pull Toys</h5>
+						<img class="category" src="images/Homepage-images/digital_icon.png" alt="category-img">
+						<h5 class="stext-121">Digital Products</h5>
 					</div>
 				</div>
 			</div>
@@ -962,7 +962,7 @@ if ($query->num_rows > 0) {
 							<img class="clothes" src="images/Homepage-images/clothes_img.png" alt="IMG-BANNER">
 							<div class="block1-content">
 								<div class="block2-txt-child1 flex-col-l">
-									<span class="block1-name stext-122 trans-04 p-b-8">
+									<span class="block1-name stext-122 trans-04 p-b-8" >
 										<?php echo $discount['d_name'];?>
 									</span>
 									<span class="block1-info stext-102 trans-04">

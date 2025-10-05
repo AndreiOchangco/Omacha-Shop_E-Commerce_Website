@@ -3379,38 +3379,61 @@ img.Imagealignment{
 }
 
 
-.category {
-  margin: 10px 0;
-  height: 100%;
-  width: 100%;
-  background: #fff; 
-  padding: 9px;
-  border-radius: 50%;
-  position: relative;
-  border: 0.5px dashed #7E6363;
-  border-spacing: 100px 0px;
-  
-  /* box-shadow: 0 0 0 0.2rem rgba(219, 56, 140, 0.25); */
-
+/* Category Section Styling */
+.sec-banner {
+  background-color: #fff;
+  padding-top: 80px;
+  padding-bottom: 50px;
 }
 
-.category:hover {
-  margin: 10px 0;
-  height: 100%;
-  width: 100%;
-  background: #fff; 
+.sec-banner h1 {
+  color: #007bff; /* adjust as needed */
+  margin-bottom: 50px;
+}
+
+/* Each category box */
+.block1 {
+  background: #ffffff;
   padding: 5px;
-  border-radius: 50%;
+  border-radius: 12px;
+  transition: all 0.3s ease;
   position: relative;
-  border: 0.5px dashed #7E6363;
-  transition: 0.3s;
-  
-  /* box-shadow: 0 0 0 0.2rem rgba(219, 56, 140, 0.25); */
-
+  overflow: hidden;
 }
+
+/* Center and resize image */
+.category {
+  width: 100px; /* increase or decrease size */
+  height: 100px; 
+  margin: 20px auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect to enlarge image */
+.block1:hover .category {
+  transform: scale(1.2);
+}
+
+/* Text below image */
+.stext-121 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+/* Spacing between categories */
+.col-md-2,
+.col-sm-4 {
+  margin: 20px 20px;
+}
+
+
+
 
 .wrap-pic-w:hover .stext-121 {
-  color: #D5B4B4;
+  color: #19f574;
 }
 
 /* rectangle */
@@ -3448,6 +3471,19 @@ img.Imagealignment{
 
 .block1 .clothes{
   border-radius: 12px;
+}
+
+/* 🔍 Hover zoom effect */
+.block1:hover img.clothes {
+  transform: scale(1.1);
+}
+
+
+
+.block1 img.clothes {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
 }
 
 /* Style the button */
