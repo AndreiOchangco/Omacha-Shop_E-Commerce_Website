@@ -1,6 +1,6 @@
 # Omacha Shop | E-Commerce Website
 
-<p align="center" onclick="none">
+<p align="center">
     <img src="./Fontend/images/Omacha-Shop_4000x2000/OmachaShop-Logo2.png" alt="Omacha Shop Logo" height="150px"/>
 </p>
 
