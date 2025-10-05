@@ -152,7 +152,7 @@ if ($query->num_rows > 0) {
 <html lang="en">
 
 <head>
-	<title>Shopping Cart</title>
+	<title>Omacha Shop | Shopping Cart</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="search.css">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">

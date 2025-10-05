@@ -331,8 +331,8 @@ if ($query->num_rows > 0) {
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
 							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
-									href="mailto:omachacontact@gmail.com"
-									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
+									href="mailto:omachashopofficial@gmail.com"
+									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
 							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
 									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
@@ -343,11 +343,11 @@ if ($query->num_rows > 0) {
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
 								target="_blank" title="Visit the Reis Adventures fanpage.">
-								<i style="color: #0066cdff;" class="fab fa-facebook-f"></i>
+								<i style="color: #000000ff;" class="fab fa-facebook-f"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
 								title="Visit the Reis Adventures Twitter.">
-								<i style="color: #00aaffff;" class="fab fa-twitter"></i>
+								<i style="color: #000000ff;" class="fab fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
 								target="_blank" title="Visit the Reis Adventures Linkedin.">
@@ -356,7 +356,7 @@ if ($query->num_rows > 0) {
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
 								target="_blank" title="Visit the Reis Adventures Instagram.">
-								<i style="color: #49243E;" class="fab fa-instagram"></i>
+								<i style="color: #000000ff;" class="fab fa-instagram"></i>
 							</a>
 							<div class="data1">
 								<i style="color: #49243E;" class=""></i>
@@ -395,15 +395,19 @@ if ($query->num_rows > 0) {
 
 							</li>
 
-							<li class="label1" data-label1="hot">
+							<li class="label1" data-label1="new">
 							<a href="product.html">Shop</a>
 								<ul class="sub-menu">
 									<li><a href="./Products/convenience-products.php">Convenience</a></li>
 									<li><a href="./Products/shopping-products.php">Shopping</a></li>
-									<li><a href="3+years.php">Specialty</a></li>
-									<li><a href="5+years.php">Unsought</a></li>
-									<li><a href=""></a>Digital</li>
+									<li><a href="./Products/specialty-products.php">Specialty</a></li>
+									<li><a href="./Products/unsought-products.php">Unsought</a></li>
+									<li><a href="./Products/digital-products.php">Digital</a></li>
 								</ul>
+							</li>
+
+							<li class="label1" data-label1="hot">
+								<a href="shopping-cart.php">Cart</a>
 							</li>
 
 							<li>
@@ -411,15 +415,11 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li>
-								<a href="contact.php">Contact</a>
+								<a href="about.php">About</a>
 							</li>
 
 							<li>
-								<a href="about.php">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="about.php">About</a></li>
-									<li><a href="FAQ.php">Faq</a></li>
-								</ul>
+								<a href="contact.php">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -526,10 +526,11 @@ if ($query->num_rows > 0) {
 				<li>
 					<a href="product2.php">Shop</a>
 					<ul class="sub-menu-m">
-						<li><a href="0_12months.php">0-12 Months</a></li>
-						<li><a href="1_2years.php">1-2 Years</a></li>
-						<li><a href="3+years.php">3+ Years</a></li>
-						<li><a href="5+years.php">5+ Years</a></li>
+						<li><a href="./Products/convenience-products.php">Convenience</a></li>
+						<li><a href="./Products/shopping-products.php">Shopping</a></li>
+						<li><a href="./Products/specialty-products.php">Specialty</a></li>
+						<li><a href="./Products/unsought-products.php">Unsought</a></li>
+						<li><a href="./Products/digital-products.php"></a>Digital</li>
 					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>

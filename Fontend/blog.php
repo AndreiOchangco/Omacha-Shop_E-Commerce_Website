@@ -130,7 +130,7 @@ if ($result->num_rows > 0) {
 <html lang="en">
 
 <head>
-	<title>Blog</title>
+	<title>Omacha Shop | Blog</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">

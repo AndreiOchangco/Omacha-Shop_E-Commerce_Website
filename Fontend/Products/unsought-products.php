@@ -1,17 +1,17 @@
 <?php
-require_once '../../Admin/connection/connectData.php';
-    $sqlYear = "SELECT * FROM product where p_age = '0-12 months'";
+require_once '../Admin/connection/connectData.php';
+    $sqlYear = "SELECT * FROM product where p_age = '5+ years'";
     $queryYear = mysqli_query($conn, $sqlYear);
 
-	include '../login.php';
+	include 'login.php';
 
-include('../../Admin/connection/connectionpro.php');
-require_once '../../Admin/connection/connectData.php';
+include('../Admin/connection/connectionpro.php');
+require_once '../Admin/connection/connectData.php';
 
 
 if (!isset($_SESSION["user"])) {
 	// Redirect user to the login page if not logged in
-	header("Location: ../login.html");
+	header("Location: login.html");
 	exit(); // Stop further execution of the script
 }
 
@@ -156,18 +156,18 @@ if ($query->num_rows > 0) {
 <html lang="en">
 
 <head>
-	<title>Omacha Shop | Convenience Products</title>
+	<title>Product</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<link rel="stylesheet" href="../css/cart.css">
+	<link rel="stylesheet" href="cart.css">
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
+	<link rel="icon" type="image/png" href="images/icon.png" />
 	<!-- link icon -->
-	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="./css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
+	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
 
@@ -179,35 +179,35 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<link rel="icon" type="image/png" href="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
+	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../fonts/linearicons-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/MagnificPopup/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../css/util.css">
-	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" href="../disproduct.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="disproduct.css">
 	<!--===============================================================================================-->
 </head>
 
@@ -229,7 +229,7 @@ if ($query->num_rows > 0) {
 	}
 
 	.btn-delete:hover {
-		color: #F4538A;
+		color:#F4538A;
 	}
 </style>
 
@@ -245,8 +245,8 @@ if ($query->num_rows > 0) {
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
 							<p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
-									href="mailto:omachashopofficial@gmail.com"
-									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
+									href="mailto:omachacontact@gmail.com"
+									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
 							<p style="color: #F4538A"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
 									style="color: #000; text-decoration: none;">+1922 4800</a></p>
@@ -292,7 +292,7 @@ if ($query->num_rows > 0) {
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
 						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha</h1>
+									src="images/icon.png">Omacha</h1>
 					</a>
 
 					<!-- Menu desktop -->
@@ -300,6 +300,7 @@ if ($query->num_rows > 0) {
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.php">Home</a>
+
 							</li>
 
 							<li class="label1" data-label1="hot">
@@ -465,7 +466,7 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</header>
-	<!-- Cart -->
+<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>
 
@@ -552,7 +553,7 @@ if ($query->num_rows > 0) {
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center">
-			0-12 Months
+			5+ Years
 		</h2>
 	</section>
 
@@ -759,7 +760,7 @@ if ($query->num_rows > 0) {
 									<button type="submit" value="street">Streetstyle </button>
 								</a>
 
-
+								
 							</div>
 						</div>
 
@@ -797,9 +798,9 @@ if ($query->num_rows > 0) {
                                     <span class="stext-105 cl3 price">$<?php echo $product['p_price']; ?></span>
                                 </div>
                                 <div class="block2-txt-child2 flex-r p-t-3">
-                                    <a href="../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                        <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" href="../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>">
-                                        <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" href="../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>">
+                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                        <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+                                        <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
                                     </a>
                                 </div>
                             </div>
