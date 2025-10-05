@@ -2,20 +2,21 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+The following versions of Omacha Shop are currently supported with security updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 1.0.x   | ✅ Supported       |
+| < 1.0   | ❌ Not Supported   |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability, please report it by emailing **omachashopofficial@gmail.com**.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- We aim to respond to all reports within **72 hours**.
+- Please provide as much detail as possible, including steps to reproduce the issue.
+- Once your report is received, we will investigate and keep you updated on the status.
+- If the vulnerability is confirmed, we will work to release a fix as soon as possible and credit you if desired.
+- If the vulnerability is declined, we will provide a clear explanation.
+
+Thank you for helping keep Omacha Shop secure!
