@@ -172,10 +172,11 @@ body{
   position: fixed;
   width: 70px;
   height: 70px;
-  bottom: 10px;
-  right: 40px;
+  bottom: 20px;
+  right: 20px;
   border-radius: 50%;
   background-color: #F8E8EE;
+  opacity: 80%;
   justify-content: center;
   align-items: center;
   z-index: 1000;

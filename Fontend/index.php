@@ -207,7 +207,8 @@ if ($query->num_rows > 0) {
 
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-
+	<link rel="stylesheet" type="text/css" href="css/universal.css">
+	
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
     <!-- link icon -->
     <link
@@ -1592,7 +1593,7 @@ if ($query->num_rows > 0) {
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
-			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #19f574;"></i>
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>
 	</div>
 
