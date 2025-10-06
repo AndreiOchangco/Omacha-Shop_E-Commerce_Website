@@ -978,7 +978,7 @@ if ($query->num_rows > 0) {
 	<!-- retangle end -->
 
 	<!-- Category Start -->
-	<div class="sec-banner bg0 p-t-80 p-b-50">
+	<div class="sec-banner bg0 p-t-50 p-b-80">
 		<div class="container text-center">
 			<h1 class="text-primary1 " style="padding-bottom: 50px;">Shop by Category</h1>
 			<div class="row">
