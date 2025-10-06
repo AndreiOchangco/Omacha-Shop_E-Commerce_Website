@@ -18,3 +18,12 @@
 .z-index-100 {
     z-index: 100 !important;
 }
+
+.unsought-legend-color {
+    --bg-opacity: 1;
+    background-color: #18df64ff !important;
+}
+.digital-legend-color {
+    --bg-opacity: 1;
+    background-color: #5b25a1ff !important;
+}
