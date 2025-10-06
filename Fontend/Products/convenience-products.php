@@ -167,7 +167,7 @@ if ($query->num_rows > 0) {
 	<!-- link icon -->
 	<link rel="icon" type="image/png" href="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!-- link icon -->
-	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="./css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
+	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
 

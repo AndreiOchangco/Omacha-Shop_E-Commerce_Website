@@ -1,17 +1,17 @@
 <?php
-require_once '../Admin/connection/connectData.php';
+require_once '../../Admin/connection/connectData.php';
     $sqlYear = "SELECT * FROM product where p_age = '1-2 years'";
     $queryYear = mysqli_query($conn, $sqlYear);
 
-	include 'login.php';
+	include '../login.php';
 
-include('../Admin/connection/connectionpro.php');
-require_once '../Admin/connection/connectData.php';
+include('../../Admin/connection/connectionpro.php');
+require_once '../../Admin/connection/connectData.php';
 
 
 if (!isset($_SESSION["user"])) {
 	// Redirect user to the login page if not logged in
-	header("Location: login.html");
+	header("Location: ../login.html");
 	exit(); // Stop further execution of the script
 }
 
@@ -163,7 +163,7 @@ if ($query->num_rows > 0) {
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<link rel="stylesheet" href="cart.css">
+	<link rel="stylesheet" href="../css/cart.css">
 	<!-- link icon -->
 	<link rel="icon" type="image/png" href="images/icon.png" />
 	<!-- link icon -->
