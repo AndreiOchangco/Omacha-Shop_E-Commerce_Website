@@ -2022,8 +2022,12 @@ input.num-product::-webkit-inner-spin-button {
   background-color: #858585;
 }
 
-.blocky:hover .blocky-name, .blocky-info, .blocky-link{
+.blocky:hover .blocky-name{
   color:  #efefef;
+}
+
+.blocky:hover .blocky-info{
+  color: white;
 }
 /* Hover effect to enlarge image */
 .blocky:hover .category {
