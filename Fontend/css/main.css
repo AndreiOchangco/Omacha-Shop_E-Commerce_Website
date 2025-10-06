@@ -241,7 +241,7 @@ body{
 .top-bar {
   height: 45px;
   background-color: #F9F5F6;
-  z-index: 1000;
+  z-index: 0;
 }
 
 /*---------------------------------------------*/
@@ -250,6 +250,7 @@ body{
   font-size: 13px;
   line-height: 1.8;
   color: #b2b2b2;
+  z-index: 1000;
 }
 
 
@@ -262,10 +263,12 @@ body{
   height: 100%;
   color: #b2b2b2;
   border-right: 1px solid rgba(255,255,255,0.3);
+  z-index: 1000;
 }
 
 .right-top-bar a:first-child {
   border-left: 1px solid rgba(255,255,255,0.3);
+  z-index: 1000;
 }
 
 .right-top-bar a:hover {
@@ -278,6 +281,7 @@ body{
   padding: 8px 20px;
   border-top: 1px solid rgba(255,255,255,0.05);
   background-color: #222;
+  z-index: 1000;
 }
 
 
