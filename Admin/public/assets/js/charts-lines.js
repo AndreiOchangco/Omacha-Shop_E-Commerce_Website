@@ -4,7 +4,7 @@
 const lineConfig = {
   type: 'line',
   data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     datasets: [
       {
         label: '<$10000',
@@ -14,7 +14,7 @@ const lineConfig = {
          */
         backgroundColor: '#FF76CE',
         borderColor: '#FF76CE',
-        data: [43, 48, 40, 54, 67, 73, 70],
+        data: [43, 48, 40, 54, 67, 73, 70, 62, 84, 89, 35, 73, 31],
         fill: false,
       },
       {
@@ -26,7 +26,7 @@ const lineConfig = {
          */
         backgroundColor: '#40A2D8',
         borderColor: '#40A2D8',
-        data: [24, 50, 64, 74, 52, 51, 65],
+        data: [24, 50, 64, 74, 52, 51, 65, 10, 45, 89, 25, 64, 77],
       },
     ],
   },
