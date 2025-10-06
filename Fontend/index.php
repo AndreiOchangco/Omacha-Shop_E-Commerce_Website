@@ -343,20 +343,24 @@ if ($query->num_rows > 0) {
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
 								target="_blank" title="Visit the Reis Adventures fanpage.">
-								<i style="color: #000000ff;" class="fa-brands fa-square-facebook"></i>
+								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
 								title="Visit the Reis Adventures Twitter.">
-								<i style="color: #000000ff;" class="fa-brands fa-twitter"></i>
+								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
 								target="_blank" title="Visit the Reis Adventures Linkedin.">
-								<i style="color: #000000ff;" class="fa-brands fa-linkedin"></i>
+								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
 								target="_blank" title="Visit the Reis Adventures Instagram.">
-								<i style="color: #000000ff;" class="fa-brands fa-square-instagram"></i>
+								<i style="
+        background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+" class="fa-brands fa-square-instagram"></i>
 							</a>
 							<div class="data1">
 								<i style="color: #49243E;" class=""></i>
