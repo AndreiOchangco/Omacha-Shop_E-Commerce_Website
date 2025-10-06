@@ -1,4 +1,3 @@
-<!-- Trang này dùng để điền form -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
 
+
 	<!-- link icon -->
 	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
 		href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
+
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
 
@@ -69,6 +70,29 @@
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
 </head>
+
+<style>
+	/* Định dạng nút check out và view cart */
+	#btn-cart {
+		background-color: #F4538A;
+		color: #FFEFEF;
+	}
+
+	#btn-cart:hover {
+		background-color: black;
+		color: #FFEFEF;
+	}
+
+	/* Định dạng nút delete */
+	.btn-delete {
+		color: black;
+	}
+
+	.btn-delete:hover {
+		color:#F4538A;
+	}
+</style>
+
 <body class="animsition">
 	
 	<!-- Header -->
@@ -110,13 +134,12 @@
 							</a>
 							<div class="data1">
 								<i style="color: #49243E;" class=""></i>
-								<a href="register.html" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b>Login
+								<a href="register.php" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b><?php echo $userLogin["userID"]; ?>
 										/</b></a>
 							</div>
 							<div class="data2">
 								<i style="color: #49243E;" class=""></i>
-								<a href="register.html" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b>Register</b></a>
+								<a href="register.php" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b><?php echo $userLogin["userName"]; ?></b></a>
 							</div>
 						</div>
 					</div>
@@ -141,7 +164,7 @@
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="product.html">Shop</a>
+								<a href="product2.php">Shop</a>
 								<ul class="sub-menu">
 									<li><a href="index.html">Homepage 1</a></li>
 									<li><a href="home-02.html">Homepage 2</a></li>
@@ -150,7 +173,7 @@
 							</li>
 
 							<li>
-								<a href="blog.html">Blog</a>
+								<a href="blog.php">Blog</a>
 							</li>
 
 							<li>
@@ -158,7 +181,7 @@
 							</li>
 
 							<li>
-								<a href="about.html">Pages</a>
+								<a href="about.php">Pages</a>
 								<ul class="sub-menu">
 									<li><a href="index.html">About</a></li>
 									<li><a href="home-02.html">Faq</a></li>
@@ -174,13 +197,13 @@
 						</div>
 
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-							data-notify="2">
+							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
-						<a href="#"
+						<a href="wishlist.php"
 							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-							data-notify="0">
+							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
 					</div>
@@ -221,7 +244,7 @@
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-				<!-- <ul class="topbar-mobile">
+			<!-- <ul class="topbar-mobile">
 					<li>
 						<div class="left-top-bar">
 							Free shipping for standard order over $100
@@ -251,11 +274,17 @@
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.html">Home</a>
+					<a href="index.php">Home</a>
+					
+				</li>
+
+				<li>
+					<a href="product2.php">Shop</a>
 					<ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
-						<li><a href="home-02.html">Homepage 2</a></li>
-						<li><a href="home-03.html">Homepage 3</a></li>
+					<li><a href="0_12months.php">0-12 Months</a></li>
+						<li><a href="1_2years.php">1-2 Years</a></li>
+						<li><a href="3+years.php">3+ Years</a></li>
+						<li><a href="5+years.php">5+ Years</a></li>
 					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -263,23 +292,19 @@
 				</li>
 
 				<li>
-					<a href="product.html">Shop</a>
+					<a href="shoping-cart.php" class="label1 rs1" data-label1="hot">Cart</a>
 				</li>
 
 				<li>
-					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+					<a href="blog.php">Blog</a>
 				</li>
 
 				<li>
-					<a href="blog.html">Blog</a>
+					<a href="about.php">About</a>
 				</li>
 
 				<li>
-					<a href="about.html">About</a>
-				</li>
-
-				<li>
-					<a href="contact.html">Contact</a>
+					<a href="contact.php">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -315,70 +340,68 @@
 					<i class="zmdi zmdi-close"></i>
 				</div>
 			</div>
-			
+
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-01.jpg" alt="IMG">
-						</div>
+					<span>Congratulations! You&#39;ve got <strong>Free Shipping!</strong></span>
+					<div class="progress1"></div>
+					<br>
+					<?php
+					// Duyệt qua mỗi sản phẩm trong giỏ hàng và hiển thị thông tin
+					foreach ($order_array as $item) {
+						// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
+						$product_images = array_map('trim', explode(',', $item["p_image"]));
+						
+						// mới có u_id $userLogin["userID"], 555
+						if ($item["u_id"] == $userLogin["userID"] && $item["o_quantity"] > 0 && $item["o_status"] == 0) {
+					?>
+							<li class="header-cart-item m-b-20">
+								<div class="row">
+									<div class="col-md-3">
+										<div class="header-cart-item-img">
+											<!-- Hiện hình trong giỏ hàng -->
+											<img src="images/<?php echo $product_images[0]; ?>" alt="IMG">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div >
+											<!-- Hiện tên sản phẩm trong giỏ hàng -->
+											<a href="#" class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
+										</div>
+										<!-- Hiện số lượng sản phẩm và giá tiền -->
+										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x $<?php echo $item["p_price"]; ?></span>
+									</div>
+									<div class="col-md-3">
+										<form action="delete-cart2.php" method="post">											
+											<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
 
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								White Shirt Pleat
-							</a>
-
-							<span class="header-cart-item-info">
-								1 x $19.00
-							</span>
-						</div>
-					</li>
-
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-02.jpg" alt="IMG">
-						</div>
-
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								Converse All Star
-							</a>
-
-							<span class="header-cart-item-info">
-								1 x $39.00
-							</span>
-						</div>
-					</li>
-
-					<li class="header-cart-item flex-w flex-t m-b-12">
-						<div class="header-cart-item-img">
-							<img src="images/item-cart-03.jpg" alt="IMG">
-						</div>
-
-						<div class="header-cart-item-txt p-t-8">
-							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-								Nixon Porter Leather
-							</a>
-
-							<span class="header-cart-item-info">
-								1 x $17.00
-							</span>
-						</div>
-					</li>
+											<!-- Nút xóa tại đây -->
+											<input type="submit" value="X" name="delete-cart" class="btn-delete">
+											<!-- <//?php print_r($item['p_id']); ?> -->
+										</form>
+									</div>
+								</div>
+							</li>
+					<?php
+						}
+					}
+					?>
 				</ul>
-				
+
+
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
-						Total: $75.00
+						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
+						<p>Total: $<?php echo $totalPrice; ?></p>
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						<a href="shopping-cart.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 							View Cart
 						</a>
 
-						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-							Check Out
+						<a href="your-order.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+							Your Order
 						</a>
 					</div>
 				</div>
@@ -401,7 +424,7 @@
 		<h1 class="stext-121 heading">Get In Touch</h1>
 		<p class="para">this is description</p>
 		<div class="contactForm">
-			<form action="contact.php" method="post">
+			<form action="thank-you.php" method="post">
 				<h1 class=" stext-121 sub-heading">Let's talk</h1>
 				<p class="para para2">
 					Contact us for a quote, help to join the them.
@@ -416,7 +439,7 @@
 			<div class="map-container">
 				<div class="mapBg"></div>
 				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6664.797587636566!2d120.31906337019782!3d16.616150818369103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sph!4v1759145518403!5m2!1sen!2sph" width="650" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.786852619814!2d120.31229760000001!3d16.6374632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33918d5e2a81bcfb%3A0xd9ee01c3a2281d87!2sOmacha%20Shop%20%7C%20E-commerce%20Website!5e0!3m2!1sen!2sph!4v1759728220314!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 				
 			</div>
@@ -436,7 +459,7 @@
 					<article class="text">
 						<h1 class="stext-121 sub-heading">Email</h1>
 						<p class="para">
-							<a href="mailto:omachacontact@gmail.com">omachacontact@gmail.com</a>
+							<a href="mailto:omachacontact@gmail.com">omachashopofficial@gmail.com</a>
 						</p>
 						
 					</article>
