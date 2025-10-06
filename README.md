@@ -44,7 +44,7 @@
 |             **Shopping Cart**             |                  **Checkout Process**                  |                    **Thank You Page**                     |
 |    ![Omacha Cart](screenshot/cart.jpg)    |      ![Omacha Checkout](screenshot/checkout.jpg)       |       ![Omacha Thank You](screenshot/thankyou.jpg)        |
 |              **Login Page**               |                 **Registration Page**                  |                     **Wishlist Page**                     |
-|   ![Omacha Login](screenshot/login.jpg)   |      ![Omacha Register](screenshot/signup.jpg)       |        ![Omacha Wishlist](screenshot/wishlist.jpg)        |
+|   ![Omacha Login](screenshot/login.png)   |      ![Omacha Register](screenshot/signup.png)       |        ![Omacha Wishlist](screenshot/wishlist.jpg)        |
 |               **Blog Page**               |                   **About Us Page**                    |                     **Contact Page**                      |
 |    ![Omacha Blog](screenshot/blog.jpg)    |       ![Omacha About Us](screenshot/about5.jpg)        |         ![Omacha Contact](screenshot/contact.jpg)         |
 |        **Order Detail**         |                   **Search Results**                   |          **Comment Section** (e.g., on Product)           |
