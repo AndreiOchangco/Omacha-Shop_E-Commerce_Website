@@ -1,6 +1,6 @@
 <?php
 require_once '../../Admin/connection/connectData.php';
-    $sqlYear = "SELECT * FROM product where p_age = '1-2 years'";
+    $sqlYear = "SELECT * FROM product where p_age = '0-12 months'";
     $queryYear = mysqli_query($conn, $sqlYear);
 
 	include '../login.php';
@@ -156,7 +156,7 @@ if ($query->num_rows > 0) {
 <html lang="en">
 
 <head>
-	<title>Product</title>
+	<title>Omacha Shop | Shopping Products</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -165,7 +165,7 @@ if ($query->num_rows > 0) {
 
 	<link rel="stylesheet" href="../css/cart.css">
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="images/icon.png" />
+	<link rel="icon" type="image/png" href="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!-- link icon -->
 	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
 
@@ -181,33 +181,33 @@ if ($query->num_rows > 0) {
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/linearicons-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/slick/slick.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/MagnificPopup/magnific-popup.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="disproduct.css">
+	<link rel="stylesheet" type="text/css" href="../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../disproduct.css">
 	<!--===============================================================================================-->
 </head>
 
@@ -229,7 +229,7 @@ if ($query->num_rows > 0) {
 	}
 
 	.btn-delete:hover {
-		color:#F4538A;
+		color: #F4538A;
 	}
 </style>
 
@@ -244,12 +244,12 @@ if ($query->num_rows > 0) {
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
-							<p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
-									href="mailto:omachacontact@gmail.com"
-									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
+							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
+									href="mailto:omachashopofficial@gmail.com"
+									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
-							<p style="color: #F4538A"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #000; text-decoration: none;">+1922 4800</a></p>
+							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
@@ -257,20 +257,24 @@ if ($query->num_rows > 0) {
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
 								target="_blank" title="Visit the Reis Adventures fanpage.">
-								<i style="color: #49243E;" class="fab fa-facebook-f"></i>
+								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
 								title="Visit the Reis Adventures Twitter.">
-								<i style="color: #49243E;" class="fab fa-twitter"></i>
+								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
 								target="_blank" title="Visit the Reis Adventures Linkedin.">
-								<i style="color: #49243E;" class="fab fa-linkedin-in"></i>
+								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
 								target="_blank" title="Visit the Reis Adventures Instagram.">
-								<i style="color: #49243E;" class="fab fa-instagram"></i>
+								<i style="
+										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+								" class="fa-brands fa-square-instagram"></i>
 							</a>
 							<div class="data1">
 								<i style="color: #49243E;" class=""></i>
@@ -279,54 +283,61 @@ if ($query->num_rows > 0) {
 							</div>
 							<div class="data2">
 								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b><?php echo $userLogin["userName"];?></b></a>
+								<a href="register.php" class="btn2 btn-primary2 mt-1"
+									style="color: #49243E;"><b><?php echo $userLogin["userName"];?></b></a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #FFEFEF;">
-				<nav class="limiter-menu-desktop container" style="background-color: #FFEFEF;">
+			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
 						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="images/icon.png">Omacha</h1>
+									src="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="index.php">Home</a>
+								<a href="../index.php">Home</a>
+								<ul class="sub-menu">
+									<li><a href="../home-01.html">Homepage 1</a></li>
+									<li><a href="../home-02.html">Homepage 2</a></li>
+									<li><a href="../home-03.html">Homepage 3</a></li>
+								</ul>
 
+							</li>
+
+							<li class="label1" data-label1="new">
+							<a href="../product.html">Shop</a>
+								<ul class="sub-menu">
+									<li><a href="../Products/convenience-products.php">Convenience</a></li>
+									<li><a href="../Products/shopping-products.php">Shopping</a></li>
+									<li><a href="../Products/specialty-products.php">Specialty</a></li>
+									<li><a href="../Products/unsought-products.php">Unsought</a></li>
+									<li><a href="../Products/digital-products.php">Digital</a></li>
+								</ul>
 							</li>
 
 							<li class="label1" data-label1="hot">
-							<a href="product2.php">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="0_12months.php">0-12 Months</a></li>
-									<li><a href="1_2years.php">1-2 Years</a></li>
-									<li><a href="3+years.php">3+ Years</a></li>
-									<li><a href="5+years.php">5+ Years</a></li>
-								</ul>
+								<a href="../shopping-cart.php">Cart</a>
 							</li>
 
 							<li>
-								<a href="blog.php">Blog</a>
+								<a href="../blog.php">Blog</a>
 							</li>
 
 							<li>
-								<a href="contact.php">Contact</a>
+								<a href="../about.php">About</a>
 							</li>
 
 							<li>
-								<a href="about.php">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="about.php">About</a></li>
-									<li><a href="FAQ.php">Faq</a></li>
-								</ul>
+								<a href="../contact.php">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -356,7 +367,7 @@ if ($query->num_rows > 0) {
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="../index.html"><img src="../images/icons/logo-01.png" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -385,7 +396,7 @@ if ($query->num_rows > 0) {
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<!-- <ul class="topbar-mobile">
+			<ul class="topbar-mobile">
 					<li>
 						<div class="left-top-bar">
 							Free shipping for standard order over $100
@@ -411,16 +422,16 @@ if ($query->num_rows > 0) {
 							</a>
 						</div>
 					</li>
-				</ul> -->
+				</ul>
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.php">Home</a>
+					<a href="../index.php">Home</a>
 					
 				</li>
 
 				<li>
-					<a href="product2.php">Shop</a>
+					<a href="../product2.php">Shop</a>
 					<ul class="sub-menu-m">
 					<li><a href="0_12months.php">0-12 Months</a></li>
 						<li><a href="1_2years.php">1-2 Years</a></li>
@@ -433,19 +444,19 @@ if ($query->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="shoping-cart.php" class="label1 rs1" data-label1="hot">Cart</a>
+					<a href="../shopping-cart.php" class="label1 rs1" data-label1="hot">Cart</a>
 				</li>
 
 				<li>
-					<a href="blog.php">Blog</a>
+					<a href="../blog.php">Blog</a>
 				</li>
 
 				<li>
-					<a href="about.php">About</a>
+					<a href="../about.php">About</a>
 				</li>
 
 				<li>
-					<a href="contact.php">Contact</a>
+					<a href="../contact.php">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -454,7 +465,7 @@ if ($query->num_rows > 0) {
 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
 				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-					<img src="images/icons/icon-close2.png" alt="CLOSE">
+					<img src="../images/icons/icon-close2.png" alt="CLOSE">
 				</button>
 
 				<form class="wrap-search-header flex-w p-l-15">
@@ -466,7 +477,7 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</header>
-<!-- Cart -->
+	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>
 
@@ -551,9 +562,9 @@ if ($query->num_rows > 0) {
 
 	<!-- home intro -->
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center">
-			1-2 Years
+			Shopping Products
 		</h2>
 	</section>
 
@@ -760,7 +771,7 @@ if ($query->num_rows > 0) {
 									<button type="submit" value="street">Streetstyle </button>
 								</a>
 
-								
+
 							</div>
 						</div>
 
@@ -789,18 +800,18 @@ if ($query->num_rows > 0) {
                         <!-- Block2 -->
                         <div class="block2">
                             <div id="<?php echo $product['p_id']; ?>" class="block2-pic hov-img0" style="border: 0.1px dashed #000; border-radius: 50px;">
-                                <img src="images/<?php echo $product['p_image']; ?>" alt="IMG-PRODUCT">
+                                <img src="../images/<?php echo $product['p_image']; ?>" alt="IMG-PRODUCT">
                             </div>
                             <div class="block2-txt flex-w flex-t p-t-14">
                                 <div class="block2-txt-child1 flex-col-l">
-                                    <a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"><?php echo $product['p_name']; ?></a>
+                                    <a href="../product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"><?php echo $product['p_name']; ?></a>
                                     <p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1"><?php echo $product['p_type']; ?></p>
                                     <span class="stext-105 cl3 price">$<?php echo $product['p_price']; ?></span>
                                 </div>
                                 <div class="block2-txt-child2 flex-r p-t-3">
-                                    <a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                        <img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-                                        <img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+                                    <a href="../../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+                                        <img class="icon-heart1 dis-block trans-04" src="../images/icons/icon-heart-01.png" alt="ICON" href="../../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>">
+                                        <img class="icon-heart2 dis-block trans-04 ab-t-l" src="../images/icons/icon-heart-02.png" alt="ICON" href="../../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>">
                                     </a>
                                 </div>
                             </div>
@@ -923,7 +934,7 @@ if ($query->num_rows > 0) {
 						<form>
 							<div class="wrap-input1 w-full p-b-4">
 								<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
-									placeholder="email@example.com">
+									placeholder="omachashopofficial@gmail.com">
 								<div class="focus-input1 trans-04"></div>
 							</div>
 
@@ -939,23 +950,23 @@ if ($query->num_rows > 0) {
 				<div class="p-t-40">
 					<div class="flex-c-m flex-w p-b-18">
 						<a href="#" class="m-all-1">
-							<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+							<img src="../images/icons/icon-pay-01.png" alt="ICON-PAY">
 						</a>
 
 						<a href="#" class="m-all-1">
-							<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+							<img src="../images/icons/icon-pay-02.png" alt="ICON-PAY">
 						</a>
 
 						<a href="#" class="m-all-1">
-							<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+							<img src="../images/icons/icon-pay-03.png" alt="ICON-PAY">
 						</a>
 
 						<a href="#" class="m-all-1">
-							<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+							<img src="../images/icons/icon-pay-04.png" alt="ICON-PAY">
 						</a>
 
 						<a href="#" class="m-all-1">
-							<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+							<img src="../images/icons/icon-pay-05.png" alt="ICON-PAY">
 						</a>
 					</div>
 
@@ -988,7 +999,7 @@ if ($query->num_rows > 0) {
 		<div class="container">
 			<div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
 				<button class="how-pos3 hov3 trans-04 js-hide-modal1">
-					<img src="images/icons/icon-close.png" alt="CLOSE">
+					<img src="../images/icons/icon-close.png" alt="CLOSE">
 				</button>
 
 				<div class="row">
@@ -999,31 +1010,31 @@ if ($query->num_rows > 0) {
 								<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
 								<div class="slick3 gallery-lb">
-									<div class="item-slick3" data-thumb="images/product-detail-01.jpg">
+									<div class="item-slick3" data-thumb="../images/product-detail-01.jpg">
 										<div class="wrap-pic-w pos-relative">
-											<img src="images/product-detail-01.jpg" alt="IMG-PRODUCT">
+											<img src="../images/product-detail-01.jpg" alt="IMG-PRODUCT">
 
-											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-01.jpg">
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="../images/product-detail-01.jpg">
 												<i class="fa fa-expand"></i>
 											</a>
 										</div>
 									</div>
 
-									<div class="item-slick3" data-thumb="images/product-detail-02.jpg">
+									<div class="item-slick3" data-thumb="../images/product-detail-02.jpg">
 										<div class="wrap-pic-w pos-relative">
-											<img src="images/product-detail-02.jpg" alt="IMG-PRODUCT">
+											<img src="../images/product-detail-02.jpg" alt="IMG-PRODUCT">
 
-											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-02.jpg">
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="../images/product-detail-02.jpg">
 												<i class="fa fa-expand"></i>
 											</a>
 										</div>
 									</div>
 
-									<div class="item-slick3" data-thumb="images/product-detail-03.jpg">
+									<div class="item-slick3" data-thumb="../images/product-detail-03.jpg">
 										<div class="wrap-pic-w pos-relative">
-											<img src="images/product-detail-03.jpg" alt="IMG-PRODUCT">
+											<img src="../images/product-detail-03.jpg" alt="IMG-PRODUCT">
 
-											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-03.jpg">
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="../images/product-detail-03.jpg">
 												<i class="fa fa-expand"></i>
 											</a>
 										</div>
@@ -1137,14 +1148,14 @@ if ($query->num_rows > 0) {
 	</div>
 
 	<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="../vendor/animsition/js/animsition.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../vendor/bootstrap/js/popper.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+	<script src="../vendor/select2/select2.min.js"></script>
 	<script>
 		$(".js-select2").each(function() {
 			$(this).select2({
@@ -1154,18 +1165,18 @@ if ($query->num_rows > 0) {
 		})
 	</script>
 	<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<script src="../vendor/daterangepicker/moment.min.js"></script>
+	<script src="../vendor/daterangepicker/daterangepicker.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/slick/slick.min.js"></script>
-	<script src="js/slick-custom.js"></script>
+	<script src="../vendor/slick/slick.min.js"></script>
+	<script src="../js/slick-custom.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/parallax100/parallax100.js"></script>
+	<script src="../vendor/parallax100/parallax100.js"></script>
 	<script>
 		$('.parallax100').parallax100();
 	</script>
 	<!--===============================================================================================-->
-	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script src="../vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 	<script>
 		$('.gallery-lb').each(function() { // the containers for all your galleries
 			$(this).magnificPopup({
@@ -1179,9 +1190,9 @@ if ($query->num_rows > 0) {
 		});
 	</script>
 	<!--===============================================================================================-->
-	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
+	<script src="../vendor/isotope/isotope.pkgd.min.js"></script>
 	<!--===============================================================================================-->
-	<script src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script src="../vendor/sweetalert/sweetalert.min.js"></script>
 	<script>
 		$('.js-addwish-b2, .js-addwish-detail').on('click', function(e) {
 			e.preventDefault();
@@ -1218,7 +1229,7 @@ if ($query->num_rows > 0) {
 		});
 	</script>
 	<!--===============================================================================================-->
-	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
 		$('.js-pscroll').each(function() {
 			$(this).css('position', 'relative');
@@ -1235,7 +1246,7 @@ if ($query->num_rows > 0) {
 		});
 	</script>
 	<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="../js/main.js"></script>
 
 </body>
 
