@@ -2009,6 +2009,95 @@ input.num-product::-webkit-inner-spin-button {
 /*//////////////////////////////////////////////////////////////////
 [ Block1 ]*/
 
+.blocky {
+  padding: auto;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+}
+.blocky:hover{
+
+  background-color: #858585;
+}
+
+.blocky:hover .blocky-name, .blocky-info, .blocky-link{
+  color:  #efefef;
+}
+/* Hover effect to enlarge image */
+.blocky:hover .category {
+  transform: scale(1.2);
+}
+
+.blocky-content {
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+  padding: 20px; 
+  box-sizing: border-box; 
+}
+
+.blocky-name,
+.blocky-info,
+.blocky-link {
+  color: #2c1e1e; 
+  
+}
+
+.blocky-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.blocky-info,
+.blocky-link {
+  font-size: 18px;
+  margin-top: -10px;
+}
+
+
+
+
+.blocky .clothes{
+  border-radius: 12px;
+  
+  
+}
+
+/* 🔍 Hover zoom effect */
+.blocky:hover img.clothes {
+  transform: scale(1.1);
+}
+
+
+
+.blocky img.clothes {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+  opacity: 0.7 ;
+  display: block;
+}
+
+/* Style the button */
+.blocky-btn {
+  display: inline-block;
+  padding: 10px 20px; 
+  background-color: #867070; 
+  color: #000; 
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.3s; 
+}
+
+.blocky-btn:hover {
+  background-color: #3E3232; 
+  color: #fff;
+}
+
+
 
 /*//////////////////////////////////////////////////////////////////
 [ Block2 ]*/
@@ -3472,6 +3561,8 @@ img.Imagealignment{
 
 .block1 .clothes{
   border-radius: 12px;
+  
+  
 }
 
 /* 🔍 Hover zoom effect */
@@ -3485,6 +3576,8 @@ img.Imagealignment{
   width: 100%;
   height: auto;
   transition: transform 0.4s ease;
+  opacity: 0.7 ;
+  display: block;
 }
 
 /* Style the button */

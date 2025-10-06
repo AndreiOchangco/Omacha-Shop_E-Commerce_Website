@@ -906,19 +906,19 @@ if ($query->num_rows > 0) {
 						$query = mysqli_query($conn, $sqlDiscount);
 						while ($discount = mysqli_fetch_assoc($query)) {
 					?>
-						<div class="block1 wrap-pic-w">
+						<div class="blocky wrap-pic-w">
 							<img class="clothes" src="images/Homepage-images/clothes_img.png" alt="IMG-BANNER">
-							<div class="block1-content">
+							<div class="blocky-content">
 								<div class="block2-txt-child1 flex-col-l">
-									<span class="block1-name stext-122 trans-04 p-b-8" >
+									<span class="blocky-name stext-122 trans-04 p-b-8" >
 										<?php echo $discount['d_name'];?>
 									</span>
-									<span class="block1-info stext-102 trans-04">
+									<span class="blocky-info stext-102 trans-04">
 										Get <?php echo $discount['d_amount'];?>% off your first purchase
 									</span>
 								</div>
-								<div class="block1-txt-child2 p-b-4 trans-05">
-									<a href="product2.php" class="block1-btn stext-101 cl0 trans-09">
+								<div class="blocky-txt-child2 p-b-4 trans-05">
+									<a href="product2.php" class="blocky-btn stext-101 cl0 trans-09">
 										Shop Now
 									</a>
 								</div>
