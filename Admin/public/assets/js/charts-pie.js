@@ -19,7 +19,7 @@ const pieConfig = {
   },
   options: {
     responsive: true,
-    cutoutPercentage: 80,
+    cutoutPercentage: 50,
     /**
      * Default legends are ugly and impossible to style.
      * See examples in charts.html to add your own legends
