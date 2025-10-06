@@ -484,7 +484,7 @@ if ($query->num_rows > 0) {
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<!-- <ul class="topbar-mobile">
+			<ul class="topbar-mobile">
 					<li>
 						<div class="left-top-bar">
 							Free shipping for standard order over $100
@@ -510,7 +510,7 @@ if ($query->num_rows > 0) {
 							</a>
 						</div>
 					</li>
-				</ul> -->
+				</ul>
 
 			<ul class="main-menu-m">
 				<li>
@@ -896,60 +896,6 @@ if ($query->num_rows > 0) {
 	</section>
 
 
-
-	<!-- Category Start -->
-	<div class="sec-banner bg0 p-t-80 p-b-50">
-		<div class="container text-center">
-			<h1 class="text-primary1 " style="padding-bottom: 50px;">Shop by Category</h1>
-			<div class="row">
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
-					<!-- Block1 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/convenience_icon.png" alt="category-img">
-						<h5 class="stext-121">Convenience Products</h5>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
-					<!-- Block2 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/shopping_icon.png" alt="category-img">
-						<h5 class="stext-121">Shopping Products</h5>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
-					<!-- Block3 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/speciality_icon.png" alt="category-img">
-						<h5 class="stext-121">Specialty Products</h5>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
-					<!-- Block4 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/unsought_icon.png" alt="category-img">
-						<h5 class="stext-121">Unsought Products</h5>
-					</div>
-				</div>	
-
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
-					<!-- Block5 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/digital_icon.png" alt="category-img">
-						<h5 class="stext-121">Digital Products</h5>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-	<!-- Category End -->
-
-
 	<!-- retangle start -->
 	<div class="sec-banner bg0 p-t-80 p-b-50">
 		<div class="container">
@@ -1031,56 +977,54 @@ if ($query->num_rows > 0) {
 
 	<!-- retangle end -->
 
-	<!-- age start -->
-	<div class="sec-banner bg0 p-t-20 p-b-50">
+	<!-- Category Start -->
+	<div class="sec-banner bg0 p-t-80 p-b-50">
 		<div class="container text-center">
-			<h1 class="text-primary1" style="padding-bottom: 50px;">Shop By Age</h1>
+			<h1 class="text-primary1 " style="padding-bottom: 50px;">Shop by Category</h1>
 			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-12 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
-					<div class="ageimg">
-						<a href="0_12months.php">
-							<img src="images/age1.jpg" alt="category-img" data-hover="images/age1.jpg">
-						</a>
-						<h5 class="stext-123">0 - 12 months</h5>
+					<div class="block1 wrap-pic-w">
+						<img class="category" src="images/Homepage-images/convenience_icon.png" alt="category-img">
+						<h5 class="stext-121">Convenience Products</h5>
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-12 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block2 -->
-					<div class="ageimg1">
-						<a href="1_2years.php">
-							<img src="images/age1.jpg" alt="category-img" data-hover="images/age1.jpg">
-						</a>
-						<h5 class="stext-123">1 - 2 Years</h5>
+					<div class="block1 wrap-pic-w">
+						<img class="category" src="images/Homepage-images/shopping_icon.png" alt="category-img">
+						<h5 class="stext-121">Shopping Products</h5>
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-12 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block3 -->
-					<div class="ageimg2">
-						<a href="3+years.php">
-							<img src="images/age1.jpg" alt="category-img" data-hover="images/age1.jpg">
-						</a>
-						<h5 class="stext-123">3+ Years</h5>
+					<div class="block1 wrap-pic-w">
+						<img class="category" src="images/Homepage-images/speciality_icon.png" alt="category-img">
+						<h5 class="stext-121">Specialty Products</h5>
 					</div>
 				</div>
 
-				<div class="col-lg-3 col-md-6 col-sm-12 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block4 -->
-					<div class="ageimg3">
-						<a href="5+years.php">
-							<img src="images/age1.jpg" alt="category-img" data-hover="images/age1.jpg">
-						</a>
-						<h5 class="stext-123">5+ Years</h5>
+					<div class="block1 wrap-pic-w">
+						<img class="category" src="images/Homepage-images/unsought_icon.png" alt="category-img">
+						<h5 class="stext-121">Unsought Products</h5>
+					</div>
+				</div>	
+
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
+					<!-- Block5 -->
+					<div class="block1 wrap-pic-w">
+						<img class="category" src="images/Homepage-images/digital_icon.png" alt="category-img">
+						<h5 class="stext-121">Digital Products</h5>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-	<!-- age end -->
+	<!-- Category End -->
 
 	<!-- hospot start -->
 	<section>
