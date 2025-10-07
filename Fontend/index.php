@@ -453,10 +453,18 @@ if ($query->num_rows > 0) {
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
 								<ul class="profile-sub-menu">
 									<li><a href="home-01.php">Profile</a></li>
+<<<<<<< HEAD
 									
 									<li><a id="darkModeToggle">Toggle Dark Mode</a></li>
+=======
+										<!-- Your toggle button -->
+										<button id="darkModeToggle">
+										<span class="darkbtn">☀️</span>
+										</button>
+										
+>>>>>>> 9c1eb0150aadbda7a7288cde9f9a0d70ee392895
 
-									<li><a href="home-03.php">Logout</a></li>
+									<li><a href="register.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -1927,24 +1935,32 @@ if ($query->num_rows > 0) {
 		});
 
 
-		//darkmode
-const toggle = document.getElementById('darkModeToggle');
-const darkCss = document.getElementById('dark-mode-css');
+  // Get elements
+  const toggle = document.getElementById('darkModeToggle');
+  const darkCss = document.getElementById('dark-mode-css');
+  const knob = toggle.querySelector('.darkbtn');
 
-// Check localStorage for mode preference
-if (localStorage.getItem('darkMode') === 'enabled') {
+  // On page load, check saved preference
+  if (localStorage.getItem('darkMode') === 'enabled') {
     darkCss.removeAttribute('disabled');
-}
+    knob.textContent = '🌙';
+  } else {
+    darkCss.setAttribute('disabled', '');
+    knob.textContent = '☀️';
+  }
 
-toggle.addEventListener('click', () => {
+  // Toggle dark mode on click
+  toggle.addEventListener('click', () => {
     if (darkCss.hasAttribute('disabled')) {
-        darkCss.removeAttribute('disabled');
-        localStorage.setItem('darkMode', 'enabled');
+      darkCss.removeAttribute('disabled');
+      localStorage.setItem('darkMode', 'enabled');
+      knob.textContent = '🌙';
     } else {
-        darkCss.setAttribute('disabled', '');
-        localStorage.setItem('darkMode', 'disabled');
+      darkCss.setAttribute('disabled', '');
+      localStorage.setItem('darkMode', 'disabled');
+      knob.textContent = '☀️';
     }
-});
+  });
 
 
 
