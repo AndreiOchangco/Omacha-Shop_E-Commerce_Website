@@ -343,20 +343,20 @@ if ($query->num_rows > 0) {
 					<div class="col-lg-6 text-center text-lg-right">
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-								target="_blank" title="Visit the Reis Adventures fanpage.">
+								target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
 								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-								title="Visit the Reis Adventures Twitter.">
+								title="Visit the Reis Omacha Shop Philippines Twitter.">
 								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-								target="_blank" title="Visit the Reis Adventures Linkedin.">
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
 								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-								target="_blank" title="Visit the Reis Adventures Instagram.">
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
 								<i style="
 										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
 										-webkit-background-clip: text;

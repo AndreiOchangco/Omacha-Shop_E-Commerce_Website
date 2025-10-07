@@ -123,10 +123,20 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 [ Slick2 ]*/
 .slick-slide {outline: none !important;}
 
-
-body{
-    margin: 0;                 /* removes default browser margin */
+html, body {
+  height: 100%;
+  margin: 0;                 /* removes default browser margin */
   padding: 0;                /* removes default browser padding */
+  overscroll-behavior: none;
+}
+
+* {
+  overscroll-behavior: contain;
+}
+
+.scroll-container {
+  overflow: auto;
+  overscroll-behavior: contain; /* stops parent scroll chaining */
 }
 
 
