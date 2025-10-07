@@ -363,16 +363,9 @@ if ($query->num_rows > 0) {
 										-webkit-text-fill-color: transparent;
 								" class="fa-brands fa-square-instagram"></i>
 							</a>
-							<div class="data1">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b><?php echo $userLogin["userID"];?>
-										/</b></a>
-							</div>
-							<div class="data2">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b><?php echo $userLogin["userName"];?></b></a>
-							</div>
+							
+							
+							
 						</div>
 					</div>
 				</div>
@@ -445,6 +438,10 @@ if ($query->num_rows > 0) {
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart">
+								<a href="register.php" class="btn2 btn-primary2 mt-1 "
+									style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
+							</div>
 					</div>
 				</nav>
 			</div>
