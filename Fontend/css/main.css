@@ -549,6 +549,30 @@ html, body {
 }
 
 /*---------------------------------------------*/
+.main-menu > li:hover > a {
+  text-decoration: none;
+  color: #481E14;
+}
+
+.main-menu > li:hover > .sub-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sub-menu li:hover > .sub-menu {
+  visibility: visible;
+  opacity: 1;
+} 
+
+.sub-menu li:hover {
+  background-color: transparent;
+}
+
+.sub-menu > li:hover > a {
+  color: #6c7ae0;
+  text-decoration: none;
+}
+
 .profile-menu > li:hover > a {
   text-decoration: none;
   color: #481E14;

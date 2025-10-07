@@ -438,7 +438,7 @@ if ($query->num_rows > 0) {
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
-						<div class="profile-menu icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11">
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
 							<li class="active-menu">
 								<a href="register.php" class="btn2 btn-primary2 mt-1 "
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
