@@ -2145,13 +2145,7 @@ input.num-product::-webkit-inner-spin-button {
   background-color: #858585;
 }
 
-.blocky:hover .blocky-name{
-  color:  #efefef;
-}
 
-.blocky:hover .blocky-info{
-  color: white;
-}
 /* Hover effect to enlarge image */
 .blocky:hover .category {
   transform: scale(1.2);
@@ -2169,7 +2163,8 @@ input.num-product::-webkit-inner-spin-button {
 .blocky-name,
 .blocky-info,
 .blocky-link {
-  color: #2c1e1e; 
+  color: #ffffff; 
+  text-shadow: 0 0 5px #898989, 0 0 10px #ffffff;
   
 }
 
@@ -2863,7 +2858,7 @@ input.num-product::-webkit-inner-spin-button {
 ==================================================================*/
 .bg-none {background-color: transparent;}
 .bg0 {background-color: #fff;}
-.bg1 {background-color: #F4538A;}
+.bg1 {background-color: #19f574;}
 .bg2 {background-color: #e6e6e6;}
 .bg3 {background-color: #F9F5F6;}
 .bg5 {background-color: rgba(0,0,0,0.5);}
@@ -3577,7 +3572,13 @@ img.Imagealignment{
 
 
 .navbar-brand{
-  padding-bottom: 15px;
+      display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
 }
 
 /* gategory */

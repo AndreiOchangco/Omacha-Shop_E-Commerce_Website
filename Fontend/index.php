@@ -156,6 +156,15 @@ if ($query->num_rows > 0) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="../../dark.css">
+<?php
+// PHP code block ends here
+?>
+<!-- filepath: Fontend/index.php -->
+<!-- ...existing code... -->
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/dark.css" disabled>
+<!-- ...existing code... -->
 
 
 	<!-- link icon -->
@@ -444,7 +453,9 @@ if ($query->num_rows > 0) {
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
 								<ul class="profile-sub-menu">
 									<li><a href="home-01.php">Profile</a></li>
-									<li><a href="home-02.php">Change Theme</a></li>
+									
+									    <button id="darkModeToggle">Toggle Dark Mode</button>
+
 									<li><a href="home-03.php">Logout</a></li>
 								</ul>
 							</li>
@@ -1916,9 +1927,30 @@ if ($query->num_rows > 0) {
 		});
 
 
+		//darkmode
+const toggle = document.getElementById('darkModeToggle');
+const darkCss = document.getElementById('dark-mode-css');
+
+// Check localStorage for mode preference
+if (localStorage.getItem('darkMode') === 'enabled') {
+    darkCss.removeAttribute('disabled');
+}
+
+toggle.addEventListener('click', () => {
+    if (darkCss.hasAttribute('disabled')) {
+        darkCss.removeAttribute('disabled');
+        localStorage.setItem('darkMode', 'enabled');
+    } else {
+        darkCss.setAttribute('disabled', '');
+        localStorage.setItem('darkMode', 'disabled');
+    }
+});
+
 
 
 	</script>
+
+	
 </body>
 
 </html>

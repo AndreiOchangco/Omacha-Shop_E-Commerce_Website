@@ -1,0 +1,9 @@
+body {
+    background-color: #181818;
+    color: #f1f1f1;
+}
+a, .navbar, .card, .footer, .limiter-menu-desktop, .wrap-menu-desktop, .top-bar{
+    background-color: #232323 !important;
+    color: #f1f1f1 !important;
+}
+/* Add more dark mode styles as needed */
