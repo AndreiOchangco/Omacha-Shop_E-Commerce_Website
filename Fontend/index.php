@@ -453,16 +453,14 @@ if ($query->num_rows > 0) {
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
 								<ul class="profile-sub-menu">
 									<li><a href="home-01.php">Profile</a></li>
-<<<<<<< HEAD
 									
-									<li><a id="darkModeToggle">Toggle Dark Mode</a></li>
-=======
+									<li>
 										<!-- Your toggle button -->
-										<button id="darkModeToggle">
-										<span class="darkbtn">☀️</span>
-										</button>
+										<a id="darkModeToggle">
+											<span class="darkbtn">☀️</span>
+										</a>
+									</li>
 										
->>>>>>> 9c1eb0150aadbda7a7288cde9f9a0d70ee392895
 
 									<li><a href="register.php">Logout</a></li>
 								</ul>
