@@ -453,10 +453,10 @@ if ($query->num_rows > 0) {
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
 								<ul class="profile-sub-menu">
 									<li><a href="home-01.php">Profile</a></li>
-										<div class="darkbtn">
-
-											<button id="darkModeToggle">🌙</button>
-										</div>
+										<!-- Your toggle button -->
+										<button id="darkModeToggle">
+										<span class="darkbtn">☀️</span>
+										</button>
 										
 
 									<li><a href="register.php">Logout</a></li>
@@ -1930,25 +1930,32 @@ if ($query->num_rows > 0) {
 		});
 
 
-		//darkmode
-const toggle = document.getElementById('darkModeToggle');
-const darkCss = document.getElementById('dark-mode-css');
+  // Get elements
+  const toggle = document.getElementById('darkModeToggle');
+  const darkCss = document.getElementById('dark-mode-css');
+  const knob = toggle.querySelector('.darkbtn');
 
-// Check localStorage for mode preference
-if (localStorage.getItem('darkMode') === 'enabled') {
+  // On page load, check saved preference
+  if (localStorage.getItem('darkMode') === 'enabled') {
     darkCss.removeAttribute('disabled');
-}
+    knob.textContent = '🌙';
+  } else {
+    darkCss.setAttribute('disabled', '');
+    knob.textContent = '☀️';
+  }
 
-toggle.addEventListener('click', () => {
+  // Toggle dark mode on click
+  toggle.addEventListener('click', () => {
     if (darkCss.hasAttribute('disabled')) {
-        darkCss.removeAttribute('disabled');
-        localStorage.setItem('darkMode', 'enabled');
+      darkCss.removeAttribute('disabled');
+      localStorage.setItem('darkMode', 'enabled');
+      knob.textContent = '🌙';
     } else {
-        darkCss.setAttribute('disabled', '');
-        localStorage.setItem('darkMode', 'disabled');
+      darkCss.setAttribute('disabled', '');
+      localStorage.setItem('darkMode', 'disabled');
+      knob.textContent = '☀️';
     }
-
-});
+  });
 
 
 
