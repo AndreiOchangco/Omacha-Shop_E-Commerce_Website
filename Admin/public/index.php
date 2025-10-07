@@ -152,7 +152,7 @@
                   d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
                 </path>
               </svg>
-              <span class="ml-4">Buttons</span>
+              <span class="ml-4">Manage Buttons</span>
             </a>
           </li>
           <li class="relative px-6 py-3">
@@ -164,7 +164,7 @@
                   d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
                 </path>
               </svg>
-              <span class="ml-4">Modals</span>
+              <span class="ml-4"> Manage Modals</span>
             </a>
           </li>
           <li class="relative px-6 py-3">
