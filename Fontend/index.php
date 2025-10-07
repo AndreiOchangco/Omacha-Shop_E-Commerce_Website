@@ -454,7 +454,7 @@ if ($query->num_rows > 0) {
 								<ul class="profile-sub-menu">
 									<li><a href="home-01.php">Profile</a></li>
 									
-									    <button id="darkModeToggle">Toggle Dark Mode</button>
+									<li><a id="darkModeToggle">Toggle Dark Mode</a></li>
 
 									<li><a href="home-03.php">Logout</a></li>
 								</ul>
