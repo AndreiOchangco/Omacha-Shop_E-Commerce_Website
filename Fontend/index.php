@@ -453,10 +453,13 @@ if ($query->num_rows > 0) {
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
 								<ul class="profile-sub-menu">
 									<li><a href="home-01.php">Profile</a></li>
-									
-									    <button id="darkModeToggle">Toggle Dark Mode</button>
+										<div class="darkbtn">
 
-									<li><a href="home-03.php">Logout</a></li>
+											<button id="darkModeToggle">🌙</button>
+										</div>
+										
+
+									<li><a href="register.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -1944,6 +1947,7 @@ toggle.addEventListener('click', () => {
         darkCss.setAttribute('disabled', '');
         localStorage.setItem('darkMode', 'disabled');
     }
+
 });
 
 
