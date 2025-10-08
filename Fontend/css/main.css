@@ -3385,7 +3385,7 @@ input.num-product::-webkit-inner-spin-button {
 /*//////////////////////////////////////////////////////////////////
 [ XL ]*/
 @media (max-width: 1199px) {
-  .m-0-xl {margin: 0;}
+  .m-0-xl {margin: 5;}
   .m-lr-0-xl {margin-left: 0; margin-right: 0;}
   .m-lr-15-xl {margin-left: 15px; margin-right: 15px;}
   .m-l-0-xl {margin-left: 0;}
@@ -4990,4 +4990,3 @@ form{
 #button-cart:hover {
   background-color: #F4538A;
 }
-

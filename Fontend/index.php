@@ -385,7 +385,7 @@ if ($query->num_rows > 0) {
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
-						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
+						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
 									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
