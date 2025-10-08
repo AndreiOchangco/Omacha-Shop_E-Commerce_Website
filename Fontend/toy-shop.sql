@@ -61,6 +61,12 @@ CREATE TABLE `login` (
   PRIMARY KEY (`userID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+ALTER TABLE `order`
+ADD CONSTRAINT `fk_order_user`
+FOREIGN KEY (`u_id`) REFERENCES `login`(`userID`)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
 -- ----------------------------
 -- Table structure for order
 -- ----------------------------
@@ -90,6 +96,12 @@ CREATE TABLE `order_detail` (
   KEY `fk_order_id` (`o_id`),
   CONSTRAINT `fk_order_id` FOREIGN KEY (`o_id`) REFERENCES `order` (`o_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+ALTER TABLE `order`
+ADD CONSTRAINT `fk_order_product`
+FOREIGN KEY (`p_id`) REFERENCES `product`(`p_id`)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 -- ----------------------------
 -- Table structure for product
