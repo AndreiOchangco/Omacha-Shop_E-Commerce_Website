@@ -1887,6 +1887,7 @@ if ($query->num_rows > 0) {
 	<script src="js/tooltip.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="js/dark-mode.js"></script>
 	<script src="js/scroll.js"></script>
 
 
@@ -1928,34 +1929,6 @@ if ($query->num_rows > 0) {
 					}
 				],
 			});
-		});
-
-
-		// Get elements
-		const toggle = document.getElementById('darkModeToggle');
-		const darkCss = document.getElementById('dark-mode-css');
-		const knob = toggle.querySelector('.darkbtn');
-
-		// On page load, check saved preference
-		if (localStorage.getItem('darkMode') === 'enabled') {
-			darkCss.removeAttribute('disabled');
-			knob.textContent = '🌙';
-		} else {
-			darkCss.setAttribute('disabled', '');
-			knob.textContent = '☀️';
-		}
-
-		// Toggle dark mode on click
-		toggle.addEventListener('click', () => {
-			if (darkCss.hasAttribute('disabled')) {
-			darkCss.removeAttribute('disabled');
-			localStorage.setItem('darkMode', 'enabled');
-			knob.textContent = '🌙';
-			} else {
-			darkCss.setAttribute('disabled', '');
-			localStorage.setItem('darkMode', 'disabled');
-			knob.textContent = '☀️';
-			}
 		});
 
 	</script>

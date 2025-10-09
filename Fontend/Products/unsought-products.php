@@ -208,6 +208,8 @@ if ($query->num_rows > 0) {
 	<link rel="stylesheet" type="text/css" href="../css/util.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../disproduct.css">
+	<link rel="stylesheet" href="../css/universal.css">
+	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="../css/darkcsspart2.css" disabled>
 	<!--===============================================================================================-->
 </head>
 
@@ -358,6 +360,25 @@ if ($query->num_rows > 0) {
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
+							<li class="active-menu">
+								<a href="../register.php" class="btn2 btn-primary2 mt-1 "
+								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
+								<ul class="profile-sub-menu">
+									<li><a href="../user-profile.php">Profile</a></li>
+									
+									<li>
+										<!-- Your toggle button -->
+										<a id="darkModeToggle">
+											<span class="darkbtn">☀️</span>
+										</a>
+									</li>
+										
+
+									<li><a href="../register.php">Logout</a></li>
+								</ul>
+							</li>
+						</div>
 					</div>
 				</nav>
 			</div>
@@ -1247,6 +1268,7 @@ if ($query->num_rows > 0) {
 	</script>
 	<!--===============================================================================================-->
 	<script src="../js/main.js"></script>
+	<script src="js/dark-mode.js"></script>
 	<script src="js/scroll.js"></script>
 
 </body>
