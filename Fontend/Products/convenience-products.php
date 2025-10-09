@@ -306,9 +306,9 @@ if ($query->num_rows > 0) {
 							<li class="active-menu">
 								<a href="../index.php">Home</a>
 								<ul class="sub-menu">
-									<li><a href="../home-01.html">Homepage 1</a></li>
-									<li><a href="../home-02.html">Homepage 2</a></li>
-									<li><a href="../home-03.html">Homepage 3</a></li>
+									<li><a href="../index.php#shop-by-category">Categories</a></li>
+									<li><a href="../index.php#new-arrivals">Arrivals</a></li>
+									<li><a href="../index.php#blog">Blog</a></li>
 								</ul>
 
 							</li>
@@ -316,11 +316,11 @@ if ($query->num_rows > 0) {
 							<li class="label1" data-label1="new">
 							<a href="../product.html">Shop</a>
 								<ul class="sub-menu">
-									<li><a href="../Products/convenience-products.php">Convenience</a></li>
-									<li><a href="../Products/shopping-products.php">Shopping</a></li>
-									<li><a href="../Products/specialty-products.php">Specialty</a></li>
-									<li><a href="../Products/unsought-products.php">Unsought</a></li>
-									<li><a href="../Products/digital-products.php">Digital</a></li>
+									<li><a href="convenience-products.php">Convenience</a></li>
+									<li><a href="shopping-products.php">Shopping</a></li>
+									<li><a href="specialty-products.php">Specialty</a></li>
+									<li><a href="unsought-products.php">Unsought</a></li>
+									<li><a href="digital-products.php">Digital</a></li>
 								</ul>
 							</li>
 
@@ -1247,6 +1247,7 @@ if ($query->num_rows > 0) {
 	</script>
 	<!--===============================================================================================-->
 	<script src="../js/main.js"></script>
+	<script src="js/scroll.js"></script>
 
 </body>
 
