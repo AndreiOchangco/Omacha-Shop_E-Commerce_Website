@@ -11,7 +11,7 @@ section, footer, .icon-header, .profile-sub-menu, i.zmdi, .c17{
     color: #f1f1f1 !important;
 }
 
-footer h4 {
+footer h4, footer p{
     background-color: #232323 !important;
     color: #f1f1f1 !important;
 }

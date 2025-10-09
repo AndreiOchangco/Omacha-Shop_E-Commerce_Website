@@ -395,9 +395,9 @@ if ($query->num_rows > 0) {
 							<li class="active-menu">
 								<a href="index.php">Home</a>
 								<ul class="sub-menu">
-									<li><a href="home-01.php">Homepage 1</a></li>
-									<li><a href="home-02.php">Homepage 2</a></li>
-									<li><a href="home-03.php">Homepage 3</a></li>
+									<li><a href="#shop-by-category">Categories</a></li>
+									<li><a href="#new-arrivals">Arrivals</a></li>
+									<li><a href="home-03.php">Blog</a></li>
 								</ul>
 
 							</li>
@@ -452,7 +452,7 @@ if ($query->num_rows > 0) {
 								<a href="register.php" class="btn2 btn-primary2 mt-1 "
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
 								<ul class="profile-sub-menu">
-									<li><a href="home-01.php">Profile</a></li>
+									<li><a href="user-profile.php">Profile</a></li>
 									
 									<li>
 										<!-- Your toggle button -->
@@ -1009,7 +1009,7 @@ if ($query->num_rows > 0) {
 	<!-- retangle end -->
 
 	<!-- Category Start -->
-	<div class="sec-banner bg0 p-t-80 p-b-50">
+	<div class="sec-banner bg0 p-t-80 p-b-50" id="shop-by-category">
 		<div class="container text-center">
 			<h1 class="text-primary1 " style="padding-bottom: 50px;">Shop by Category</h1>
 			<div class="row">
@@ -1197,7 +1197,7 @@ if ($query->num_rows > 0) {
 		</div>
 	</div>
 
-	<section class="bg0 p-t-62 p-b-60">
+	<section class="bg0 p-t-100 p-b-60" id="new-arrivals">
 		<div class="content">
 			<div class="container">
 				<div class="row justify-content-center mb-4">
@@ -1534,7 +1534,7 @@ if ($query->num_rows > 0) {
 						GET IN TOUCH
 					</h4>
 
-					<p class="stext-107 cl7 size-201">
+					<p class="stext-107 size-201">
 						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
 						on (+1) 96 716 6879
 					</p>
