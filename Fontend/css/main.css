@@ -132,6 +132,7 @@ html, body {
 
 * {
   overscroll-behavior: contain;
+  scroll-behavior: smooth;
 }
 
 .scroll-container {

@@ -156,15 +156,12 @@ if ($query->num_rows > 0) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
-	<link rel="stylesheet" href="../../dark.css">
 <?php
 // PHP code block ends here
 ?>
-<!-- filepath: Fontend/index.php -->
-<!-- ...existing code... -->
+<!-- Major CSS -->
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/dark.css" disabled>
-<!-- ...existing code... -->
 
 
 	<!-- link icon -->
@@ -397,7 +394,7 @@ if ($query->num_rows > 0) {
 								<ul class="sub-menu">
 									<li><a href="#shop-by-category">Categories</a></li>
 									<li><a href="#new-arrivals">Arrivals</a></li>
-									<li><a href="home-03.php">Blog</a></li>
+									<li><a href="#blog">Blog</a></li>
 								</ul>
 
 							</li>
@@ -1057,7 +1054,7 @@ if ($query->num_rows > 0) {
 	</div>
 	<!-- Category End -->
 
-	<!-- hospot start -->
+	<!-- hostpot start -->
 	<section>
 		<div class="container1">
 			<img src="images/hostspot.jpg" alt="img">
@@ -1889,6 +1886,7 @@ if ($query->num_rows > 0) {
 	<script src="js/tooltip.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script src="js/scroll.js"></script>
 
 
 	<script>
@@ -1928,43 +1926,39 @@ if ($query->num_rows > 0) {
 						}
 					}
 				],
-
 			});
 		});
 
 
-  // Get elements
-  const toggle = document.getElementById('darkModeToggle');
-  const darkCss = document.getElementById('dark-mode-css');
-  const knob = toggle.querySelector('.darkbtn');
+		// Get elements
+		const toggle = document.getElementById('darkModeToggle');
+		const darkCss = document.getElementById('dark-mode-css');
+		const knob = toggle.querySelector('.darkbtn');
 
-  // On page load, check saved preference
-  if (localStorage.getItem('darkMode') === 'enabled') {
-    darkCss.removeAttribute('disabled');
-    knob.textContent = '🌙';
-  } else {
-    darkCss.setAttribute('disabled', '');
-    knob.textContent = '☀️';
-  }
+		// On page load, check saved preference
+		if (localStorage.getItem('darkMode') === 'enabled') {
+			darkCss.removeAttribute('disabled');
+			knob.textContent = '🌙';
+		} else {
+			darkCss.setAttribute('disabled', '');
+			knob.textContent = '☀️';
+		}
 
-  // Toggle dark mode on click
-  toggle.addEventListener('click', () => {
-    if (darkCss.hasAttribute('disabled')) {
-      darkCss.removeAttribute('disabled');
-      localStorage.setItem('darkMode', 'enabled');
-      knob.textContent = '🌙';
-    } else {
-      darkCss.setAttribute('disabled', '');
-      localStorage.setItem('darkMode', 'disabled');
-      knob.textContent = '☀️';
-    }
-  });
-
-
+		// Toggle dark mode on click
+		toggle.addEventListener('click', () => {
+			if (darkCss.hasAttribute('disabled')) {
+			darkCss.removeAttribute('disabled');
+			localStorage.setItem('darkMode', 'enabled');
+			knob.textContent = '🌙';
+			} else {
+			darkCss.setAttribute('disabled', '');
+			localStorage.setItem('darkMode', 'disabled');
+			knob.textContent = '☀️';
+			}
+		});
 
 	</script>
 
-	
-</body>
+	</body>
 
 </html>
