@@ -163,7 +163,7 @@ if ($query->num_rows > 0) {
 <!-- filepath: Fontend/index.php -->
 <!-- ...existing code... -->
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/dark.css" disabled>
+<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 <!-- ...existing code... -->
 
 
