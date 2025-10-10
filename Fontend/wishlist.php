@@ -879,6 +879,9 @@ if ($resultOrder->num_rows > 0) {
 								</form>
 							</div>
 						</div>
+						<!-- <?php
+					 }
+					?> -->
 				</section>
 
 
