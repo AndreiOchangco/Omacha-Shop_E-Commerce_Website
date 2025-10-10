@@ -394,6 +394,7 @@ if ($query->num_rows > 0) {
 									<li><a href="#shop-by-category">Categories</a></li>
 									<li><a href="#new-arrivals">Arrivals</a></li>
 									<li><a href="#blog">Blog</a></li>
+									<li><a href="#top-brands">Top Brands</a></li>
 								</ul>
 
 							</li>
@@ -1429,36 +1430,36 @@ if ($query->num_rows > 0) {
 
 
 	<!-- brand start -->
-	<div class="containcarousel">
-  <h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
+	<div class="containcarousel p-t-80 p-b-35" id="top-brands">
+  	<h1 class="text-primary1" style="text-align: center;">Top Brands</h1>
 
-  <div class="carousel">
-    <div class="group">
-      <div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
-      <div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
-      <div class="card1"><img src="images/Homepage-images/nike-logo.png" alt="Nike logo"></div>
-      <div class="card1"><img src="images/Homepage-images/uniqlo2-logo.png" alt="Uniqlo logo"></div>
-      <div class="card1"><img src="images/Homepage-images/pg-logo.png" alt="P&G logo"></div>
-      <div class="card1"><img src="images/Homepage-images/unilever-logo.png" alt="Unilever logo"></div>
-    </div>
+		<div class="carousel">
+			<div class="group">
+			<div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
+			<div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
+			<div class="card1"><img src="images/Homepage-images/nike-logo.png" alt="Nike logo"></div>
+			<div class="card1"><img src="images/Homepage-images/uniqlo2-logo.png" alt="Uniqlo logo"></div>
+			<div class="card1"><img src="images/Homepage-images/pg-logo.png" alt="P&G logo"></div>
+			<div class="card1"><img src="images/Homepage-images/unilever-logo.png" alt="Unilever logo"></div>
+			</div>
 
-    <div aria-hidden class="group">
-      <div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
-      <div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
-      <div class="card1"><img src="images/Homepage-images/nike-logo.png" alt="Nike logo"></div>
-      <div class="card1"><img src="images/Homepage-images/uniqlo2-logo.png" alt="Uniqlo logo"></div>
-      <div class="card1"><img src="images/Homepage-images/pg-logo.png" alt="P&G logo"></div>
-      <div class="card1"><img src="images/Homepage-images/unilever-logo.png" alt="Unilever logo"></div>
-    </div>
-  </div>
-</div>
+			<div aria-hidden class="group">
+			<div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
+			<div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
+			<div class="card1"><img src="images/Homepage-images/nike-logo.png" alt="Nike logo"></div>
+			<div class="card1"><img src="images/Homepage-images/uniqlo2-logo.png" alt="Uniqlo logo"></div>
+			<div class="card1"><img src="images/Homepage-images/pg-logo.png" alt="P&G logo"></div>
+			<div class="card1"><img src="images/Homepage-images/unilever-logo.png" alt="Unilever logo"></div>
+			</div>
+		</div>
+	</div>
 
 	<!-- brand end -->
 
 
 	
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32">
+	<footer class="bg3 p-t-75 p-b-35">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">

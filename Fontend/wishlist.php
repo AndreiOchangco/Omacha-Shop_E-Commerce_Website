@@ -123,7 +123,7 @@ if ($resultOrder->num_rows > 0) {
 <html lang="en">
 
 <head>
-	<title>Product</title>
+	<title>Omacha Shop | Wishlist</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -132,7 +132,7 @@ if ($resultOrder->num_rows > 0) {
 
 	<link rel="stylesheet" href="cart.css">
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="images/icon.png" />
+	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!-- link icon -->
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
 	<!-- link icon -->
@@ -188,6 +188,8 @@ if ($resultOrder->num_rows > 0) {
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="disproduct.css">
+	<link rel="stylesheet" type="text/css" href="css/universal.css">
+	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 	<!--===============================================================================================-->
 </head>
 
@@ -216,123 +218,145 @@ if ($resultOrder->num_rows > 0) {
 <body class="animsition">
 
 	<!-- Header -->
-	<header class="header-v4">
+	<header id="go-up">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
-			<!-- Topbar -->
-			<div class="top-bar">
-				<div class="content-topbar flex-sb-m h-full container">
-					<div class="left-top-bar">
-						<div class="d-inline-flex align-items-center">
-							<p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
-									href="mailto:omachacontact@gmail.com"
-									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
-							<p class="text-body px-3">|</p>
-							<p style="color: #F4538A"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #000; text-decoration: none;">+1922 4800</a></p>
-						</div>
-					</div>
+                <!-- Topbar -->
+                <div class="top-bar">
+                    <div class="content-topbar flex-sb-m h-full container">
+                        <div class="left-top-bar">
+                            <div class="d-inline-flex align-items-center">
+                                <p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
+                                        href="mailto:omachashopofficial@gmail.com"
+                                        style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
+                                <p class="text-body px-3">|</p>
+                                <p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+                                        style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
+                            </div>
+                        </div>
 
-					<div class="col-lg-6 text-center text-lg-right">
-						<div class="d-inline-flex align-items-center">
-							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-								target="_blank" title="Visit the Reis Adventures fanpage.">
-								<i style="color: #49243E;" class="fab fa-facebook-f"></i>
-							</a>
-							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-								title="Visit the Reis Adventures Twitter.">
-								<i style="color: #49243E;" class="fab fa-twitter"></i>
-							</a>
-							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-								target="_blank" title="Visit the Reis Adventures Linkedin.">
-								<i style="color: #49243E;" class="fab fa-linkedin-in"></i>
-							</a>
-							<a class="text-primary px-3"
-								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-								target="_blank" title="Visit the Reis Adventures Instagram.">
-								<i style="color: #49243E;" class="fab fa-instagram"></i>
-							</a>
-							<div class="data1">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b><?php echo $userLogin["userID"]; ?>
-										/</b></a>
-							</div>
-							<div class="data2">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b><?php echo $userLogin["userName"]; ?></b></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+                        <div class="col-lg-6 text-center text-lg-right">
+                            <div class="d-inline-flex align-items-center">
+                                <a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
+                                    target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
+                                    <i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
+                                </a>
+                                <a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
+                                    title="Visit the Reis Omacha Shop Philippines Twitter.">
+                                    <i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
+                                </a>
+                                <a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
+                                    target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
+                                    <i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a class="text-primary px-3"
+                                    href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
+                                    target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
+                                    <i style="
+                                            background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
+                                            -webkit-background-clip: text;
+                                            -webkit-text-fill-color: transparent;
+                                    " class="fa-brands fa-square-instagram"></i>
+                                </a>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-			<div class="wrap-menu-desktop" style="background-color: #FFEFEF;">
-				<nav class="limiter-menu-desktop container" style="background-color: #FFEFEF;">
+                <div class="wrap-menu-desktop" style="background-color: #ffffffff;">
+                    <nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
-					<!-- Logo desktop -->
-					<a href="index.html" class="navbar-brand">
-						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="images/icon.png">Omacha</h1>
-					</a>
+                        <!-- Logo desktop -->
+                        <a href="index.php" class="navbar-brand">
+                            <h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
+                                        src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
+                        </a>
 
-					<!-- Menu desktop -->
-					<div class="menu-desktop">
-						<ul class="main-menu">
-							<li class="active-menu">
-								<a href="index.php">Home</a>
+                        <!-- Menu desktop -->
+                        <div class="menu-desktop">
+                            <ul class="main-menu">
+                                <li class="active-menu">
+                                    <a href="index.php">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.php#shop-by-category">Categories</a></li>
+                                        <li><a href="index.php#new-arrivals">Arrivals</a></li>
+                                        <li><a href="index.php#blog">Blog</a></li>
+                                        <li><a href="index.php#top-brands">Top Brands</a></li>
+                                    </ul>
 
-							</li>
+                                </li>
 
-							<li class="label1" data-label1="hot">
-								<a href="product2.php">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="0_12months.php">0-12 Months</a></li>
-									<li><a href="1_2years.php">1-2 Years</a></li>
-									<li><a href="3+years.php">3+ Years</a></li>
-									<li><a href="5+years.php">5+ Years</a></li>
-								</ul>
-							</li>
+                                <li class="label1" data-label1="new">
+                                <a href="product.html">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="./Products/convenience-products.php">Convenience</a></li>
+                                        <li><a href="./Products/shopping-products.php">Shopping</a></li>
+                                        <li><a href="./Products/specialty-products.php">Specialty</a></li>
+                                        <li><a href="./Products/unsought-products.php">Unsought</a></li>
+                                        <li><a href="./Products/digital-products.php">Digital</a></li>
+                                    </ul>
+                                </li>
 
-							<li>
-								<a href="blog.php">Blog</a>
-							</li>
+                                <li class="label1" data-label1="hot">
+                                    <a href="shopping-cart.php">Cart</a>
+                                </li>
 
-							<li>
-								<a href="contact.php">Contact</a>
-							</li>
+                                <li>
+                                    <a href="blog.php">Blog</a>
+                                </li>
 
-							<li>
-								<a href="about.php">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="about.php">About</a></li>
-									<li><a href="FAQ.php">Faq</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
+                                <li>
+                                    <a href="about.php">About</a>
+                                </li>
 
-					<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m">
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-							<i class="zmdi zmdi-search"></i>
-						</div>
+                                <li>
+                                    <a href="contact.php">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
 
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-							data-notify="<?php echo $order_count ?>">
-							<i class="zmdi zmdi-shopping-cart"></i>
-						</div>
+                        <!-- Icon header -->
+                        <div class="wrap-icon-header flex-w flex-r-m">
+                            <div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+                                <i class="zmdi zmdi-search"></i>
+                            </div>
 
-						<a href="wishlist.php"
-							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-							data-notify="<?php echo $wishlist_count ?>">
-							<i class="zmdi zmdi-favorite-outline"></i>
-						</a>
-					</div>
-				</nav>
-			</div>
-		</div>
+                            <div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+                                data-notify="<?php echo $order_count?>">
+                                <i class="zmdi zmdi-shopping-cart"></i>
+                            </div>
+
+                            <a href="#go-up"
+                                class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
+                                data-notify="<?php echo $wishlist_count?>">
+                                <i class="zmdi zmdi-favorite-outline"></i>
+                            </a>
+                            <div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
+                                <li class="active-menu">
+                                    <a href="register.php" class="btn2 btn-primary2 mt-1 "
+                                    style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
+                                    <ul class="profile-sub-menu">
+                                        <li><a href="user-profile.php">Profile</a></li>
+                                        
+                                        <li>
+                                            <!-- Your toggle button -->
+                                            <a id="darkModeToggle">
+                                                <span class="darkbtn">☀️</span>
+                                            </a>
+                                        </li>
+                                            
+
+                                        <li><a href="register.php">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
 
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">

@@ -311,6 +311,7 @@ if ($query->num_rows > 0) {
 									<li><a href="../index.php#shop-by-category">Categories</a></li>
 									<li><a href="../index.php#new-arrivals">Arrivals</a></li>
 									<li><a href="../index.php#blog">Blog</a></li>
+									<li><a href="../index.php#top-brands">Top Brands</a></li>
 								</ul>
 
 							</li>

@@ -60,7 +60,6 @@ $wishlist_count = 0;
 
 <!-- Major CSS -->
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 <!-- ...existing code... -->
 
 
@@ -293,6 +292,7 @@ $wishlist_count = 0;
                                         <li><a href="index.php#shop-by-category">Categories</a></li>
                                         <li><a href="index.php#new-arrivals">Arrivals</a></li>
                                         <li><a href="index.php#blog">Blog</a></li>
+                                        <li><a href="index.php#top-brands">Top Brands</a></li>
                                     </ul>
 
                                 </li>
