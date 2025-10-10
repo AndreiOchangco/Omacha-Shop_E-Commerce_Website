@@ -37,11 +37,6 @@
 
 
 
-/* ─────────────────────────────── */
-/* 🌿 UNIVERSAL GREEN SCROLLBAR   */
-/* Works on Chrome, Edge, Safari, Firefox */
-/* ─────────────────────────────── */
-
 /* Default scrollbar style (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 10px;
@@ -56,7 +51,7 @@
   background-color: #19f574;
   border-radius: 5px;
   border: 2px solid #f1f1f1;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -66,26 +61,4 @@
 /* While scrolling (Chrome, Edge, Safari) */
 body.scrolling::-webkit-scrollbar-thumb {
   background-color: #0ec45a;
-  box-shadow: 0 0 8px #19f574;
-}
-
-/* Firefox equivalent scrollbar */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: #19f574 transparent;
-}
-
-/* While scrolling (Firefox only) */
-html.scrolling {
-  scrollbar-color: #0ec45a transparent;
-}
-
-@media (prefers-color-scheme: dark) {
-  ::-webkit-scrollbar-thumb {
-    background-color: #10d863;
-    border: 2px solid #222;
-  }
-  html {
-    scrollbar-color: #10d863 #222;
-  }
 }

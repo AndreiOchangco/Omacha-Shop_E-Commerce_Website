@@ -159,7 +159,7 @@ if ($resultOrder->num_rows > 0) {
 	<!--===============================================================================================-->
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -838,11 +838,11 @@ if ($resultOrder->num_rows > 0) {
 					?>
 				</section>
 
-				<!-- <section class="disproduct">
+				<section class="disproduct">
 					<?php
-					// while ($product = mysqli_fetch_assoc($query)) {
-					// 	// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
-					// 	$product_images = array_map('trim', explode(',', $product["p_image"]));
+					while ($product = mysqli_fetch_assoc($query)) {
+					// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
+					$product_images = array_map('trim', explode(',', $product["p_image"]));
 						?>
 						<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item toy">
 							Block2
@@ -879,10 +879,7 @@ if ($resultOrder->num_rows > 0) {
 								</form>
 							</div>
 						</div>
-						<!-- <?php
-					// }
-					?> -->
-				</section> -->
+				</section>
 
 
 
