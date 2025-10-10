@@ -288,11 +288,11 @@ $wishlist_count = 0;
                         <div class="menu-desktop">
                             <ul class="main-menu">
                                 <li class="active-menu">
-                                    <a href="#go-up">Home</a>
+                                    <a href="index.php">Home</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#shop-by-category">Categories</a></li>
-                                        <li><a href="#new-arrivals">Arrivals</a></li>
-                                        <li><a href="#blog">Blog</a></li>
+                                        <li><a href="index.php#shop-by-category">Categories</a></li>
+                                        <li><a href="index.php#new-arrivals">Arrivals</a></li>
+                                        <li><a href="index.php#blog">Blog</a></li>
                                     </ul>
 
                                 </li>
@@ -347,7 +347,7 @@ $wishlist_count = 0;
                                     <a href="register.php" class="btn2 btn-primary2 mt-1 "
                                     style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
                                     <ul class="profile-sub-menu">
-                                        <li><a href="user-profile.php">Profile</a></li>
+                                        <li><a href="#go-up">Profile</a></li>
                                         
                                         <li>
                                             <!-- Your toggle button -->
