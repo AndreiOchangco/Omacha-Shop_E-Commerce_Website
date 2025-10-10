@@ -1268,8 +1268,8 @@ if ($query->num_rows > 0) {
 	</script>
 	<!--===============================================================================================-->
 	<script src="../js/main.js"></script>
-	<script src="js/dark-mode.js"></script>
-	<script src="js/scroll.js"></script>
+	<script src="../js/dark-mode.js"></script>
+	<script src="../js/scroll.js"></script>
 
 </body>
 
