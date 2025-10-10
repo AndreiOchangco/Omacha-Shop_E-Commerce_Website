@@ -4952,6 +4952,11 @@ form{
 
 
 /*carouesel animation*/
+.containcarousel {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
 .carousel {
   margin: 100px auto;
   width: 90%;
@@ -4969,7 +4974,7 @@ form{
   align-items: center;
   justify-content: center;
   gap: 4em;
-  animation: spin 20.4s infinite linear;
+  animation: spin 22s infinite linear;
   padding-right: 4em;
 
 }
