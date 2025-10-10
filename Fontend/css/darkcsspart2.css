@@ -3,6 +3,11 @@ html, body {
     color: #f1f1f1;
 }
 
+.drkmde {
+    background-color: #232323 !important;
+    color: #f1f1f1 !important;
+}
+
 a, .navbar, .card, .footer, .limiter-menu-desktop, .wrap-menu-desktop, .top-bar, .animsition, .sec-banner, 
 section, footer, .icon-header, .profile-sub-menu, i.zmdi, .c17{
     background-color: #232323 !important;
@@ -27,8 +32,8 @@ footer h4, footer p{
 }
 
 i.fa-regular.fa-user.fa-sm{
-        background-color: #232323 !important;
-        color: #f1f1f1 !important;
+    background-color: #232323 !important;
+    color: #f1f1f1 !important;
 }
 
 .containcarousel, .carousel{

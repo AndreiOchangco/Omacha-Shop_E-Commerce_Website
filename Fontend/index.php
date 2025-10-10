@@ -156,9 +156,7 @@ if ($query->num_rows > 0) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
-<?php
-// PHP code block ends here
-?>
+
 <!-- Major CSS -->
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
@@ -1318,16 +1316,11 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</div>
-
 	<!-- banner end -->
 
 
-	<!-- Arrivals start -->
 
-
-	<!-- Arrivals start -->
-
-	<!-- latest new start -->
+	<!-- arrivals start -->
 	<section id="blog">
 		<div class="blog-heading">
 			<span>Latest News</span>
@@ -1431,7 +1424,8 @@ if ($query->num_rows > 0) {
 
 	</section>
 
-	<!-- latest new end -->
+	<!-- arrivals end -->
+
 
 
 	<!-- brand start -->
@@ -1468,7 +1462,6 @@ if ($query->num_rows > 0) {
 					<h4 class="stext-301 cl10 p-b-30">
 						Legal
 					</h4>
-
 					<ul>
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
@@ -1608,7 +1601,7 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</footer>
-	
+
 
 	<!-- Others -->
 
