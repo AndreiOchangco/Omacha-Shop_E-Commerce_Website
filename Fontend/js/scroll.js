@@ -1,9 +1,9 @@
 /*==================================================================
-[ Cross-Page Smooth Scrolling – Start at Top + 1s Delay ]
+[ Cross-Page Smooth Scrolling – Start at Top + 0.5s Delay ]
 ==================================================================*/
 document.addEventListener("DOMContentLoaded", function () {
   const scrollSpeed = 800; // scroll duration (ms)
-  const crossPageDelay = 1000; // wait before scrolling (ms)
+  const crossPageDelay = 500; // wait before scrolling (ms)
 
   if (typeof $ !== "undefined") {
     // Smooth scroll for same-page navigation

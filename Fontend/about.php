@@ -183,9 +183,6 @@ if ($result->num_rows > 0) {
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
 	<!--===============================================================================================-->
 
-	<!-- Light theme stylesheet -->
-	<link href="light-theme.css" rel="stylesheet" id="theme-link">
-
 </head>
 
 <style>
@@ -353,7 +350,7 @@ if ($result->num_rows > 0) {
 
 <body class="animsition">
 	<!-- Header -->
-	<header>
+	<header id="go-up">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
@@ -443,7 +440,7 @@ if ($result->num_rows > 0) {
 							</li>
 
 							<li>
-								<a href="about.php">About</a>
+								<a href="#go-up">About</a>
 							</li>
 
 							<li>
