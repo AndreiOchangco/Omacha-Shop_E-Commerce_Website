@@ -4386,41 +4386,7 @@ img.Imagealignment{
   max-height: 150px;
 }
 
-.container2{
-  max-width: 1040px;
-  margin: 0 auto;
-  padding-bottom: 100px;
-}
 
-.container2 h1{
-  position: relative;
-  margin-bottom: 60px;
-}
-
-.container2 h1::after{
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 4px;
-  background-color: #BFD8AF;
-  bottom: -20px;
-  top: 100px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
-.logo-slider .item1{
-  background-color: #fff;
-  box-shadow: 0 4px 5px #cacaca;
-  border-radius: 8px;
-  padding: 15px;
-  border: 3px dashed #D4E7C5;
-}
-
-.logo-slider .slick-slide{
-  margin: 15px;
-}
 
 .slick-dots li button::before{
   font-size: 15px;
@@ -4434,14 +4400,6 @@ img.Imagealignment{
 }
 .slick-dots li.slick-active button::before{
   color: #294B29;
-}
-
-
-.logo-slider .item1:hover{
-  display: block;
-  transition: all ease 0.2s;
-  transform: scale(1.15) translateY(-5px);
-  border: 3px dashed #ADBC9F;
 }
 
 .banner-start{
@@ -4990,4 +4948,45 @@ form{
 
 #button-cart:hover {
   background-color: #F4538A;
+}
+
+
+/*carouesel animation*/
+.carousel {
+  margin: 100px auto;
+  width: 90%;
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; 
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  animation: spin 20.4s infinite linear;
+  padding-right: 4em;
+
+}
+
+.card1 {
+  flex: 0 0 12em;
+  height: 5em;
+  padding: 1em;
+  background: cornflowerblue;
+  font-size: 3rem;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+}
+
+
+@keyframes spin {
+  from {translate: 0;}
+  to {translate: -100%;}
 }
