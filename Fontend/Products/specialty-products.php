@@ -238,7 +238,7 @@ if ($query->num_rows > 0) {
 <body class="animsition">
 
 	<!-- Header -->
-	<header class="header-v4">
+	<header class="header-v4" id="go-up">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
@@ -320,7 +320,7 @@ if ($query->num_rows > 0) {
 								<ul class="sub-menu">
 									<li><a href="convenience-products.php">Convenience</a></li>
 									<li><a href="shopping-products.php">Shopping</a></li>
-									<li><a href="specialty-products.php">Specialty</a></li>
+									<li><a href="#go-up">Specialty</a></li>
 									<li><a href="unsought-products.php">Unsought</a></li>
 									<li><a href="digital-products.php">Digital</a></li>
 								</ul>

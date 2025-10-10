@@ -298,7 +298,7 @@ if ($query->num_rows > 0) {
 <body class="animsition">
 
 	<!-- Header -->
-	<header class="header-v4">
+	<header class="header-v4" id="go-up">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
@@ -380,7 +380,7 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="shopping-cart.php">Cart</a>
+								<a href="#go-up">Cart</a>
 							</li>
 
 							<li>
