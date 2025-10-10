@@ -1318,16 +1318,11 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</div>
-
 	<!-- banner end -->
 
 
-	<!-- Arrivals start -->
 
-
-	<!-- Arrivals start -->
-
-	<!-- latest new start -->
+	<!-- arrivals start -->
 	<section id="blog">
 		<div class="blog-heading">
 			<span>Latest News</span>
@@ -1431,7 +1426,7 @@ if ($query->num_rows > 0) {
 
 	</section>
 
-	<!-- latest new end -->
+	<!-- arrivals end -->
 
 
 	<!-- brand start -->
@@ -1608,7 +1603,7 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</footer>
-	
+
 
 	<!-- Others -->
 
