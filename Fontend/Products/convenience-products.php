@@ -238,7 +238,7 @@ if ($query->num_rows > 0) {
 <body class="animsition">
 
 	<!-- Header -->
-	<header class="header-v4" id="go-up">
+	<header id="go-up">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->

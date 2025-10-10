@@ -169,6 +169,8 @@ if ($result->num_rows > 0) {
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/universal.css">
+	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 	<!--===============================================================================================-->
 	<style>
 		#button-cart {
@@ -265,7 +267,7 @@ if ($result->num_rows > 0) {
 <body class="animsition">
 
 	<!-- Header -->
-	<header class="header-v4">
+	<header id="go-up">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
@@ -273,57 +275,53 @@ if ($result->num_rows > 0) {
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
-							<p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
-									href="mailto:omachacontact@gmail.com"
-									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
+							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
+									href="mailto:omachashopofficial@gmail.com"
+									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
-							<p style="color: #F4538A"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #000; text-decoration: none;">+1922 4800</a></p>
+							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
 					<div class="col-lg-6 text-center text-lg-right">
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-								target="_blank" title="Visit the Reis Adventures fanpage.">
-								<i style="color: #49243E;" class="fab fa-facebook-f"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
+								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-								title="Visit the Reis Adventures Twitter.">
-								<i style="color: #49243E;" class="fab fa-twitter"></i>
+								title="Visit the Reis Omacha Shop Philippines Twitter.">
+								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-								target="_blank" title="Visit the Reis Adventures Linkedin.">
-								<i style="color: #49243E;" class="fab fa-linkedin-in"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
+								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-								target="_blank" title="Visit the Reis Adventures Instagram.">
-								<i style="color: #49243E;" class="fab fa-instagram"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
+								<i style="
+										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+								" class="fa-brands fa-square-instagram"></i>
 							</a>
-							<div class="data1">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b><?php echo $userLogin["userID"]; ?>
-										/</b></a>
-							</div>
-							<div class="data2">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b><?php echo $userLogin["userName"]; ?></b></a>
-							</div>
+							
+							
+							
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #FFEFEF;">
-				<nav class="limiter-menu-desktop container" style="background-color: #FFEFEF;">
+			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
-					<a href="index.html" class="navbar-brand">
-						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="images/icon.png">Omacha</h1>
+					<a href="index.php" class="navbar-brand">
+						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
+									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
@@ -331,33 +329,39 @@ if ($result->num_rows > 0) {
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.php">Home</a>
+								<ul class="sub-menu">
+									<li><a href="index.php#shop-by-category">Categories</a></li>
+									<li><a href="index.php#new-arrivals">Arrivals</a></li>
+									<li><a href="index.php#blog">Blog</a></li>
+								</ul>
 
 							</li>
 
-							<li class="label1" data-label1="hot">
-								<a href="product2.php">Shop</a>
+							<li class="label1" data-label1="new">
+							<a href="product.html">Shop</a>
 								<ul class="sub-menu">
-									<li><a href="0_12months.php">0-12 Months</a></li>
-									<li><a href="1_2years.php">1-2 Years</a></li>
-									<li><a href="3+years.php">3+ Years</a></li>
-									<li><a href="5+years.php">5+ Years</a></li>
+									<li><a href="./Products/convenience-products.php">Convenience</a></li>
+									<li><a href="./Products/shopping-products.php">Shopping</a></li>
+									<li><a href="./Products/specialty-products.php">Specialty</a></li>
+									<li><a href="./Products/unsought-products.php">Unsought</a></li>
+									<li><a href="./Products/digital-products.php">Digital</a></li>
 								</ul>
 							</li>
 
+							<li class="label1" data-label1="hot">
+								<a href="shopping-cart.php">Cart</a>
+							</li>
+
 							<li>
-								<a href="blog.php">Blog</a>
+								<a href="#go-up">Blog</a>
+							</li>
+
+							<li>
+								<a href="about.php">About</a>
 							</li>
 
 							<li>
 								<a href="contact.php">Contact</a>
-							</li>
-
-							<li>
-								<a href="about.php">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="about.php">About</a></li>
-									<li><a href="FAQ.php">Faq</a></li>
-								</ul>
 							</li>
 						</ul>
 					</div>
@@ -369,15 +373,34 @@ if ($result->num_rows > 0) {
 						</div>
 
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-							data-notify="<?php echo $order_count ?>">
+							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
 						<a href="wishlist.php"
 							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-							data-notify="<?php echo $wishlist_count ?>">
+							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
+							<li class="active-menu">
+								<a href="register.php" class="btn2 btn-primary2 mt-1 "
+								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
+								<ul class="profile-sub-menu">
+									<li><a href="user-profile.php">Profile</a></li>
+									
+									<li>
+										<!-- Your toggle button -->
+										<a id="darkModeToggle">
+											<span class="darkbtn">☀️</span>
+										</a>
+									</li>
+										
+
+									<li><a href="register.php">Logout</a></li>
+								</ul>
+							</li>
+						</div>
 					</div>
 				</nav>
 			</div>
