@@ -4990,6 +4990,12 @@ form{
   align-content: center;
 }
 
+.card1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
 
 @keyframes spin {
   from {translate: 0;}
