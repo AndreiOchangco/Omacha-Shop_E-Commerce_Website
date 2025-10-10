@@ -1439,7 +1439,7 @@ if ($query->num_rows > 0) {
 		 <h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
 		 <div class="carousel">
 			 <div class="group">
-				 <div class="card1"> <img src="images/Homepage-images/Samsung-logo.png"> </div>
+				 <div class="card1"> <img class="card1" src="images/Homepage-images/Samsung-logo.png"> </div>
 				 <div class="card1">2</div>
 				 <div class="card1">3</div>
 				 <div class="card1">4</div>
@@ -1456,7 +1456,6 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 		</div>
-
 	<!-- brand end -->
 
 
@@ -1609,6 +1608,9 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</footer>
+	
+
+	<!-- Others -->
 
 
 	<!-- Back to top -->
