@@ -1436,7 +1436,6 @@ if ($query->num_rows > 0) {
 
 	<!-- brand start -->
 	 <div class="containcarousel">
-
 		 <h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
 		 <div class="carousel">
 			 <div class="group">
@@ -1461,13 +1460,7 @@ if ($query->num_rows > 0) {
 	<!-- brand end -->
 
 
-
-
-
-
-
-
-
+	
 	<!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
 		<div class="container">
