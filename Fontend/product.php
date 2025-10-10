@@ -926,7 +926,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6  text">
 									Teddy bear
 								</a>
@@ -1030,7 +1030,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
 									Baby doll
 								</a>
@@ -1127,7 +1127,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
 									Rabbit doll
 								</a>
@@ -1230,7 +1230,7 @@ if ($query->num_rows > 0) {
 						</div>
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
 									Monkey toy
 								</a>
@@ -1332,7 +1332,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 textdeer">
 									Deer toy
 								</a>
@@ -1429,7 +1429,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
 									Moon pillow
 								</a>
@@ -1526,7 +1526,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
 									Pig pillow
 								</a>
@@ -1623,7 +1623,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text2">
 									Robot
 								</a>
@@ -1721,7 +1721,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
 									White tiger
 								</a>
@@ -1818,7 +1818,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
 									Snow man
 								</a>
@@ -1915,7 +1915,7 @@ if ($query->num_rows > 0) {
 
 						<div class="block2-txt flex-w flex-t p-t-14">
 							<div class="block2-txt-child1 flex-col-l ">
-								<a href="product-detail.html"
+								<a href="product-detail.php"
 									class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
 									Dog pillow
 								</a>
