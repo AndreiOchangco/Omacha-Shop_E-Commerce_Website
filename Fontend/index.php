@@ -156,9 +156,7 @@ if ($query->num_rows > 0) {
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
-<?php
-// PHP code block ends here
-?>
+
 <!-- Major CSS -->
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
