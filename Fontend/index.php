@@ -920,7 +920,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- retangle start -->
-	<div class="sec-banner bg0 p-t-80 p-b-50">
+	<div class="sec-banner bg0 p-t-100 p-b-40">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
@@ -1006,7 +1006,7 @@ if ($query->num_rows > 0) {
 	<!-- retangle end -->
 
 	<!-- Category Start -->
-	<div class="sec-banner bg0 p-t-80 p-b-50" id="shop-by-category">
+	<div class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
 		<div class="container text-center">
 			<h1 class="text-primary1 " style="padding-bottom: 50px;">Shop by Category</h1>
 			<div class="row">
@@ -1194,7 +1194,7 @@ if ($query->num_rows > 0) {
 		</div>
 	</div>
 
-	<section class="bg0 p-t-100 p-b-60" id="new-arrivals">
+	<section class="bg0 p-t-100 p-b-25" id="new-arrivals">
 		<div class="content">
 			<div class="container">
 				<div class="row justify-content-center mb-4">
@@ -1323,7 +1323,7 @@ if ($query->num_rows > 0) {
 
 	<!-- arrivals start -->
 	<section id="blog">
-		<div class="blog-heading">
+		<div class="blog-heading p-t-100 p-b-25">
 			<span>Latest News</span>
 			<h3>My Blog</h3>
 			<div class="blog-container">
@@ -1430,7 +1430,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- brand start -->
-	<div class="containcarousel p-t-80 p-b-35" id="top-brands">
+	<div class="containcarousel p-t-100 p-b-25" id="top-brands">
   	<h1 class="text-primary1" style="text-align: center;">Top Brands</h1>
 
 		<div class="carousel">
@@ -1459,7 +1459,7 @@ if ($query->num_rows > 0) {
 
 	
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-35">
+	<footer class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
