@@ -1440,7 +1440,7 @@ if ($query->num_rows > 0) {
 		 <div class="carousel">
 			 <div class="group">
 				 <div class="card1"> <img class="card1" src="images/Homepage-images/Samsung-logo.png"> </div>
-				 <div class="card1">2</div>
+				 <div class="card1"> <img class="card1" src="images/Homepage-images/apple-logo.png"> </div>
 				 <div class="card1">3</div>
 				 <div class="card1">4</div>
 				 <div class="card1">5</div>
