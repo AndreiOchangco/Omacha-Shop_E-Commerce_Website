@@ -1429,7 +1429,7 @@ if ($query->num_rows > 0) {
 	<!-- arrivals end -->
 
 
-	
+
 	<!-- brand start -->
 	 <div class="containcarousel">
 		 <h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
@@ -1464,7 +1464,6 @@ if ($query->num_rows > 0) {
 					<h4 class="stext-301 cl10 p-b-30">
 						Legal
 					</h4>
-
 					<ul>
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
