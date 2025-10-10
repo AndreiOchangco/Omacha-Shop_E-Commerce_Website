@@ -321,7 +321,7 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li class="label1" data-label1="new">
-							<a href="product.html">Shop</a>
+							<a href="product.php">Shop</a>
 								<ul class="sub-menu">
 									<li><a href="./Products/convenience-products.php">Convenience</a></li>
 									<li><a href="./Products/shopping-products.php">Shopping</a></li>
@@ -851,6 +851,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!--===============================================================================================-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
 	<script src="js/map-custom.js"></script>
+<!--===============================================================================================-->
+	<script>
+	(function() {
+	let scrollTimer;
+
+	window.addEventListener('scroll', () => {
+		// Add class for both HTML and BODY to ensure cross-browser compatibility
+		document.body.classList.add('scrolling');
+		document.documentElement.classList.add('scrolling');
+
+		clearTimeout(scrollTimer);
+		scrollTimer = setTimeout(() => {
+		document.body.classList.remove('scrolling');
+		document.documentElement.classList.remove('scrolling');
+		}, 600); // adjust delay if you want the glow to last longer
+	});
+	})();
+	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/dark-mode.js"></script>

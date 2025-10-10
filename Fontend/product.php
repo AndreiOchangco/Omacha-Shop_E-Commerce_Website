@@ -1,14 +1,162 @@
 <?php
-    require_once '../Admin/connection/connectData.php';
-    $sql = "SELECT * FROM product";
-    $query = mysqli_query($conn, $sql);
-?>
+require_once '../Admin/connection/connectData.php';
+    $sqlYear = "SELECT * FROM product where p_age = '0-12 months'";
+    $queryYear = mysqli_query($conn, $sqlYear);
 
+	include 'login.php';
+
+include('../Admin/connection/connectionpro.php');
+require_once '../Admin/connection/connectData.php';
+
+
+if (!isset($_SESSION["user"])) {
+	// Redirect user to the login page if not logged in
+	header("Location: login.html");
+	exit(); // Stop further execution of the script
+}
+
+$userName = $_SESSION["user"];
+// print_r($userName);
+$sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
+$queryLogin = mysqli_query($conn, $sqlLogin);
+// print_r($queryLogin);
+// Kiểm tra kết quả truy vấn
+
+// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+$row = $queryLogin->fetch_assoc();
+// Thêm thông tin từng hàng vào mảng $vuserLogin
+$userLogin = array(
+	"userID" => $row["userID"],
+	"userName" => $row["userName"],
+	"email" => $row["email"],
+);
+
+$sql = "SELECT * FROM product";
+$query = mysqli_query($conn, $sql);
+
+
+// Câu truy vấn SQL SELECT
+$sqlOrder = "SELECT 
+`order`.o_id, 
+`order`.u_id, 
+`order`.p_id, 
+`order`.o_price, 
+`order`.o_status, 
+`order`.o_quantity,
+product.p_type, 
+product.p_image, 
+product.p_name, 
+product.p_price 
+FROM 
+`order`
+INNER JOIN 
+product ON `order`.p_id = product.p_id";
+
+// Thực hiện truy vấn
+$resultOrder = $conn->query($sqlOrder);
+
+// Mảng chứa thông tin các đơn hàng
+$order_array = array();
+
+// Kiểm tra kết quả truy vấn
+if ($resultOrder->num_rows > 0) {
+	// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+	while ($row = $resultOrder->fetch_assoc()) {
+		if ($row['u_id'] == $userLogin['userID'] && $row['o_status'] == 0) {
+			// Thêm thông tin từng hàng vào mảng $order_array
+			$order_array[] = array(
+				"o_id" => $row["o_id"],
+				"u_id" => $row["u_id"],
+				"p_id" => $row["p_id"],
+				"o_price" => $row["o_price"],
+				"o_quantity" => $row["o_quantity"],
+				"o_status" => $row["o_status"],
+				"p_type" => $row["p_type"],
+				"p_image" => $row["p_image"],
+				"p_name" => $row["p_name"],
+				"p_price" => $row["p_price"]
+			);
+		}
+	};
+} else {
+	// echo "0 results";
+}
+
+
+function sumTotalPrice($order_array, $u_id)
+{
+	$totalPrice = 0; // Khởi tạo biến tổng giá tiền
+
+	// Duyệt qua từng sản phẩm trong giỏ hàng và tính tổng giá tiền
+	foreach ($order_array as $item) {
+		// Kiểm tra xem u_id của sản phẩm có khớp với u_id được chỉ định hay không
+		if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
+			// Tính giá tiền của mỗi sản phẩm (giá tiền * số lượng)
+			$productPrice = $item["p_price"] * $item["o_quantity"];
+
+			// Cộng vào tổng giá tiền
+			$totalPrice += $productPrice;
+		}
+	}
+
+	return $totalPrice; // Trả về tổng giá tiền
+}
+
+// Truy vấn để đếm số dòng trong bảng order
+$sql = "SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = '{$userLogin['userID']}' AND o_quantity > 0 AND o_status = 0";
+$result = $conn->query($sql);
+
+// Kiểm tra và hiển thị kết quả
+if ($result->num_rows > 0) {
+	$row = $result->fetch_assoc();
+	$order_count = $row["total_rows"];
+} else {
+	// echo "Không có dữ liệu trong bảng order";
+}
+
+// Truy vấn để đếm số dòng trong bảng order
+$sql = "SELECT COUNT(*) AS total_rows FROM wishlist";
+$result = $conn->query($sql);
+
+// Kiểm tra và hiển thị kết quả
+if ($result->num_rows > 0) {
+	$row = $result->fetch_assoc();
+	$wishlist_count = $row["total_rows"];
+} else {
+	// echo "Không có dữ liệu trong bảng order";
+}
+
+// Truy vấn thông tin chiết khấu dựa trên tên discount (d_name)
+$sqlDiscount = "SELECT * FROM discount";
+$query = mysqli_query($conn, $sqlDiscount);
+
+// Mảng chứa thông tin chiết khấu
+$discount = array();
+
+// Kiểm tra kết quả truy vấn
+if ($query->num_rows > 0) {
+	// Lặp qua từng hàng dữ liệu từ kết quả truy vấn
+	while ($row = $query->fetch_assoc()) {
+		// Thêm thông tin từng hàng vào mảng $discount
+		$discount = array(
+			"d_id" => $row["d_id"],
+			"d_name" => $row["d_name"],
+			"d_amount" => $row["d_amount"],
+			"d_description" => $row["d_description"],
+			"d_start_date" => $row["d_start_date"],
+			"d_end_date" => $row["d_end_date"]
+		);
+	}
+} else {
+	// Nếu không tìm thấy kết quả
+	// echo "0 results";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<title>Product</title>
+	<title>Omacha Shop | Product</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -28,7 +176,7 @@
 	<!--===============================================================================================-->
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -57,6 +205,8 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/product_res.css">
+	<link rel="stylesheet" href="css/universal.css">
+	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 
 	<!--===============================================================================================-->
 </head>
@@ -64,7 +214,7 @@
 <body class="animsition">
 
 	<!-- Header -->
-	<header>
+	<header id="go-up">
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
@@ -72,89 +222,94 @@
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
-							<p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
-									href="mailto:omachacontact@gmail.com"
-									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
+							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
+									href="mailto:omachashopofficial@gmail.com"
+									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
-							<p style="color: #F4538A"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #000; text-decoration: none;">+1922 4800</a></p>
+							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
 					<div class="col-lg-6 text-center text-lg-right">
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-								target="_blank" title="Visit the Reis Adventures fanpage.">
-								<i style="color: #49243E;" class="fab fa-facebook-f"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
+								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-								title="Visit the Reis Adventures Twitter.">
-								<i style="color: #49243E;" class="fab fa-twitter"></i>
+								title="Visit the Reis Omacha Shop Philippines Twitter.">
+								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-								target="_blank" title="Visit the Reis Adventures Linkedin.">
-								<i style="color: #49243E;" class="fab fa-linkedin-in"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
+								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-								target="_blank" title="Visit the Reis Adventures Instagram.">
-								<i style="color: #49243E;" class="fab fa-instagram"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
+								<i style="
+										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+								" class="fa-brands fa-square-instagram"></i>
 							</a>
-							<div class="data1">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.html" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b>Login
-										/</b></a>
-							</div>
-							<div class="data2">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.html" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b>Register</b></a>
-							</div>
+							
+							
+							
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #FFEFEF;">
-				<nav class="limiter-menu-desktop container" style="background-color: #FFEFEF;">
+			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
-					<a href="index.html" class="navbar-brand">
-						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="images/icon.png">Omacha</h1>
+					<a href="index.php" class="navbar-brand">
+						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
+									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="index.html">Home</a>
+								<a href="index.php">Home</a>
+								<ul class="sub-menu">
+									<li><a href="index.php#shop-by-category">Categories</a></li>
+									<li><a href="index.php#new-arrivals">Arrivals</a></li>
+									<li><a href="index.php#blog">Blog</a></li>
+									<li><a href="index.php#top-brands">Top Brands</a></li>
+								</ul>
 
+							</li>
+
+							<li class="label1" data-label1="new">
+							<a href="#go-up">Shop</a>
+								<ul class="sub-menu">
+									<li><a href="./Products/convenience-products.php">Convenience</a></li>
+									<li><a href="./Products/shopping-products.php">Shopping</a></li>
+									<li><a href="./Products/specialty-products.php">Specialty</a></li>
+									<li><a href="./Products/unsought-products.php">Unsought</a></li>
+									<li><a href="./Products/digital-products.php">Digital</a></li>
+								</ul>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="product.html">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">Homepage 1</a></li>
-									<li><a href="home-02.html">Homepage 2</a></li>
-									<li><a href="home-03.html">Homepage 3</a></li>
-								</ul>
+								<a href="shopping-cart.php">Cart</a>
 							</li>
 
 							<li>
-								<a href="blog.html">Blog</a>
+								<a href="blog.php">Blog</a>
 							</li>
 
 							<li>
-								<a href="contact.html">Contact</a>
+								<a href="about.php">About</a>
 							</li>
 
 							<li>
-								<a href="about.html">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="index.html">About</a></li>
-									<li><a href="home-02.html">Faq</a></li>
-								</ul>
+								<a href="contact.php">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -166,15 +321,34 @@
 						</div>
 
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-							data-notify="2">
+							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 
-						<a href="#"
+						<a href="wishlist.php"
 							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-							data-notify="0">
+							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
+							<li class="active-menu">
+								<a href="register.php" class="btn2 btn-primary2 mt-1 "
+								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
+								<ul class="profile-sub-menu">
+									<li><a href="user-profile.php">Profile</a></li>
+									
+									<li>
+										<!-- Your toggle button -->
+										<a id="darkModeToggle">
+											<span class="darkbtn">☀️</span>
+										</a>
+									</li>
+										
+
+									<li><a href="register.php">Logout</a></li>
+								</ul>
+							</li>
+						</div>
 					</div>
 				</nav>
 			</div>
@@ -386,6 +560,7 @@
 
 
 	<!-- Product -->
+	
 	<div class="bg0 m-t-23 p-b-140" id="product_res">
 
 		<div style="padding-top: 100px;" class="container">
@@ -1754,112 +1929,12 @@
 					</div>
 				</div>
 
-                <div>
-                <?php
-                    // Thực hiện truy vấn và lặp qua kết quả
-                    //$query = mysqli_query($conn, $sql);
-                    while ($product = mysqli_fetch_assoc($query)) {
-
-                        ?>
-                        <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
-                            <!-- Block2 -->
-                            <div class="block2">
-                                <div id="dog" class="block2-pic hov-img0 box10">
-                                    <img src="images/<?php echo $product['p_image']; ?>" alt="IMG-PRODUCT">
-
-                                    <div>
-                                        <i id="cart12" class=" fa-duotone fa-basket-shopping-simple hand-icon icon icon1"
-                                            style="--fa-primary-color: #d27014; --fa-secondary-color: #d27014;height: 40px; visibility: hidden; "></i>
-                                        <i id="love11" class="fa-light fa-heart hand-icon icon icon1 "
-                                            style="color: #ea931a;visibility: hidden;"></i>
-                                        <i id="view11" class="fa-solid fa-eye hand-icon icon" style="visibility: hidden;"></i>
-                                    </div>
-                                    <script>
-                                        const iconDiv10 = document.querySelector('#cart12');
-                                        var imageofdog = document.querySelector('#dog');
-
-                                        // Tạo sự kiện di chuột qua cho biểu tượng
-                                        imageofdog.addEventListener('mouseover', function () {
-                                            // Hiển thị biểu tượng
-                                            iconDiv10.style.visibility = 'visible';
-                                            iconDiv10.style.transform = 'translateY(-180px) translateX(240px) scale(2.0)';
-                                        });
-                                        imageofdog.addEventListener('mouseout', function () {
-                                            // Ẩn biểu tượng
-                                            iconDiv10.style.visibility = 'hidden';
-                                            iconDiv10.style.transform = 'translateY(-180px) translateX(260px) scale(2.0)';
-                                        });
-                                        // Tạo sự kiện di chuột ra khỏi biểu tượng
-                                    </script>
-                                    <script>
-                                        const iconlove11 = document.querySelector('#love12');
-                                        var imageofdog = document.querySelector('#dog');
-
-                                        // Tạo sự kiện di chuột qua cho biểu tượng
-                                        imageofdog.addEventListener('mouseover', function () {
-                                            // Hiển thị biểu tượng
-                                            iconlove11.style.visibility = 'visible';
-                                            iconlove11.style.transform = 'translateY(-160px) translateX(220px) scale(2.0)';
-                                        });
-                                        imageofdog.addEventListener('mouseout', function () {
-                                            // Ẩn biểu tượng
-                                            iconlove11.style.visibility = 'hidden';
-                                            iconlove11.style.transform = 'translateY(-160px) translateX(240px) scale(2.0)';
-                                        });
-                                        // Tạo sự kiện di chuột ra khỏi biểu tượng
-                                    </script>
-                                    <script>
-                                        const iconview11 = document.querySelector('#view12');
-                                        var imageofdog = document.querySelector('#dog');
-
-                                        // Tạo sự kiện di chuột qua cho biểu tượng
-                                        imageofdog.addEventListener('mouseover', function () {
-                                            // Hiển thị biểu tượng
-                                            iconview11.style.visibility = 'visible';
-                                            iconview11.style.transform = 'translateY(-230px) translateX(200px) scale(2.0)';
-                                        });
-                                        imageofdog.addEventListener('mouseout', function () {
-                                            // Ẩn biểu tượng
-                                            iconview11.style.visibility = 'hidden';
-                                            iconview11.style.transform = 'translateY(-230px) translateX(220px) scale(2.0)';
-                                        });
-                                        // Tạo sự kiện di chuột ra khỏi biểu tượng
-                                    </script>
-                                    <script>
-                                        const box10 = document.querySelector('.box10');
-                                        var imageofdog = document.querySelector('#dog');
-
-                                        // Thay đổi viền khi di chuột qua hình ảnh
-                                        imageofdog.addEventListener('mouseover', function () {
-                                            box10.style.borderColor = "#FEB5B5";
-                                        });
-
-                                        // Thay đổi viền khi di chuột ra khỏi hình ảnh
-                                        imageofdog.addEventListener('mouseout', function () {
-                                            box10.style.borderColor = "#000";
-                                        });
-                                    </script>
-                                </div>
-
-                                <div class="block2-txt flex-w flex-t p-t-14">
-                                    <div class="block2-txt-child1 flex-col-l ">
-                                        <a href="product-detail.html"
-                                            class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text">
-                                            <?php echo $product['p_name']; ?>
-                                        </a>
-                                        <p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6  text1"><?php echo $product['p_type']; ?></p>
-                                        <span class="stext-105 cl3 price">
-                                            $<?php echo $product['p_price']; ?>
-                                        </span>
-                                    </div>
 
 
-                                </div>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </div>
+
+
 				<!-- Load more -->
+
 			</div>
 		</div>
 
@@ -2015,6 +2090,7 @@
 				</div>
 			</div>
 		</footer>
+		
 
 
 		<!-- Back to top -->
@@ -2290,7 +2366,27 @@
 			});
 		</script>
 		<!--===============================================================================================-->
+		<script>
+		(function() {
+		let scrollTimer;
+
+		window.addEventListener('scroll', () => {
+			// Add class for both HTML and BODY to ensure cross-browser compatibility
+			document.body.classList.add('scrolling');
+			document.documentElement.classList.add('scrolling');
+
+			clearTimeout(scrollTimer);
+			scrollTimer = setTimeout(() => {
+			document.body.classList.remove('scrolling');
+			document.documentElement.classList.remove('scrolling');
+			}, 600); // adjust delay if you want the glow to last longer
+		});
+		})();
+		</script>
+		<!--===============================================================================================-->
 		<script src="js/main.js"></script>
+		<script src="js/dark-mode.js"></script>
+		<script src="js/scroll.js"></script>
 
 </body>
 

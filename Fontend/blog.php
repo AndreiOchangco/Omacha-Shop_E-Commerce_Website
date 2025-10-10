@@ -339,7 +339,7 @@ if ($result->num_rows > 0) {
 							</li>
 
 							<li class="label1" data-label1="new">
-							<a href="product.html">Shop</a>
+							<a href="product.php">Shop</a>
 								<ul class="sub-menu">
 									<li><a href="./Products/convenience-products.php">Convenience</a></li>
 									<li><a href="./Products/shopping-products.php">Shopping</a></li>
@@ -1333,11 +1333,30 @@ if ($result->num_rows > 0) {
 		});
 	</script>
 	<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script>
+	(function() {
+	let scrollTimer;
 
+	window.addEventListener('scroll', () => {
+		// Add class for both HTML and BODY to ensure cross-browser compatibility
+		document.body.classList.add('scrolling');
+		document.documentElement.classList.add('scrolling');
+
+		clearTimeout(scrollTimer);
+		scrollTimer = setTimeout(() => {
+		document.body.classList.remove('scrolling');
+		document.documentElement.classList.remove('scrolling');
+		}, 600); // adjust delay if you want the glow to last longer
+	});
+	})();
+	</script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="js/dark-mode.js"></script>
+    <script src="js/scroll.js"></script>
 
 </body>
 

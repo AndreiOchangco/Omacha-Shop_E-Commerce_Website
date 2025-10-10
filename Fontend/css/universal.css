@@ -5,30 +5,6 @@
     user-select: none; /* Standard */
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-body.scrolling::-webkit-scrollbar-thumb {
-  background: cornflowerblue;
-  border: 2px solid #f1f1f1;
-}
-
-body.scrolling::-webkit-scrollbar-thumb:hover {
-  background: #19f574;
-}
-
 .topbar-text {
     color: #19f574;
 }
@@ -57,4 +33,59 @@ body.scrolling::-webkit-scrollbar-thumb:hover {
 .digital-legend-color {
     --bg-opacity: 1;
     background-color: #5b25a1ff !important;
+}
+
+
+
+/* ─────────────────────────────── */
+/* 🌿 UNIVERSAL GREEN SCROLLBAR   */
+/* Works on Chrome, Edge, Safari, Firefox */
+/* ─────────────────────────────── */
+
+/* Default scrollbar style (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #19f574;
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #10d863;
+}
+
+/* While scrolling (Chrome, Edge, Safari) */
+body.scrolling::-webkit-scrollbar-thumb {
+  background-color: #0ec45a;
+  box-shadow: 0 0 8px #19f574;
+}
+
+/* Firefox equivalent scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #19f574 transparent;
+}
+
+/* While scrolling (Firefox only) */
+html.scrolling {
+  scrollbar-color: #0ec45a transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background-color: #10d863;
+    border: 2px solid #222;
+  }
+  html {
+    scrollbar-color: #10d863 #222;
+  }
 }

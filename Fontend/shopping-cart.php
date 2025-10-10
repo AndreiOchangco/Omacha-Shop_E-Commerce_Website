@@ -370,7 +370,7 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li class="label1" data-label1="new">
-							<a href="product.html">Shop</a>
+							<a href="product.php">Shop</a>
 								<ul class="sub-menu">
 									<li><a href="./Products/convenience-products.php">Convenience</a></li>
 									<li><a href="./Products/shopping-products.php">Shopping</a></li>
@@ -1023,6 +1023,24 @@ if ($query->num_rows > 0) {
 		});
 
 		
+	</script>
+	<!--===============================================================================================-->
+	<script>
+	(function() {
+	let scrollTimer;
+
+	window.addEventListener('scroll', () => {
+		// Add class for both HTML and BODY to ensure cross-browser compatibility
+		document.body.classList.add('scrolling');
+		document.documentElement.classList.add('scrolling');
+
+		clearTimeout(scrollTimer);
+		scrollTimer = setTimeout(() => {
+		document.body.classList.remove('scrolling');
+		document.documentElement.classList.remove('scrolling');
+		}, 600); // adjust delay if you want the glow to last longer
+	});
+	})();
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>

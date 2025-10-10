@@ -113,6 +113,7 @@ $wishlist_count = 0;
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/universal.css">
+    <link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 	
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
     <!-- link icon -->
@@ -298,7 +299,7 @@ $wishlist_count = 0;
                                 </li>
 
                                 <li class="label1" data-label1="new">
-                                <a href="product.html">Shop</a>
+                                <a href="product.php">Shop</a>
                                     <ul class="sub-menu">
                                         <li><a href="./Products/convenience-products.php">Convenience</a></li>
                                         <li><a href="./Products/shopping-products.php">Shopping</a></li>
@@ -644,6 +645,24 @@ $wishlist_count = 0;
                         ps.update();
                     })
                 });
+            </script>
+            <!--===============================================================================================-->
+            <script>
+            (function() {
+            let scrollTimer;
+
+            window.addEventListener('scroll', () => {
+                // Add class for both HTML and BODY to ensure cross-browser compatibility
+                document.body.classList.add('scrolling');
+                document.documentElement.classList.add('scrolling');
+
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(() => {
+                document.body.classList.remove('scrolling');
+                document.documentElement.classList.remove('scrolling');
+                }, 600); // adjust delay if you want the glow to last longer
+            });
+            })();
             </script>
             <!--===============================================================================================-->
             <script src="js/main.js"></script>
