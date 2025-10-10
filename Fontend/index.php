@@ -1435,27 +1435,28 @@ if ($query->num_rows > 0) {
 
 
 	<!-- brand start -->
-	<h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
-	<div class="carousel">
-		<div class="group">
-			<div class="card1">1</div>
-			<div class="card1">2</div>
-			<div class="card1">3</div>
-			<div class="card1">4</div>
-			<div class="card1">5</div>
-			<div class="card1">6</div>
-		</div>
-		<div aria-hidden class="group">
-			<div class="card1">1</div>
-			<div class="card1">2</div>
-			<div class="card1">3</div>
-			<div class="card1">4</div>
-			<div class="card1">5</div>
-			<div class="card1">6</div>
-		</div>
-		
+	 <div class="containcarousel">
 
-	</div>
+		 <h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
+		 <div class="carousel">
+			 <div class="group">
+				 <div class="card1">1</div>
+				 <div class="card1">2</div>
+				 <div class="card1">3</div>
+				 <div class="card1">4</div>
+				 <div class="card1">5</div>
+				 <div class="card1">6</div>
+				</div>
+				<div aria-hidden class="group">
+					<div class="card1">1</div>
+					<div class="card1">2</div>
+					<div class="card1">3</div>
+					<div class="card1">4</div>
+					<div class="card1">5</div>
+					<div class="card1">6</div>
+				</div>
+			</div>
+		</div>
 
 	<!-- brand end -->
 
