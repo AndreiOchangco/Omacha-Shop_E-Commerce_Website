@@ -1429,6 +1429,7 @@ if ($query->num_rows > 0) {
 	<!-- arrivals end -->
 
 
+	
 	<!-- brand start -->
 	 <div class="containcarousel">
 		 <h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
