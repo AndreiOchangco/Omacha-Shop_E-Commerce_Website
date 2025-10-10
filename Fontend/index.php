@@ -1442,7 +1442,7 @@ if ($query->num_rows > 0) {
 				 <div class="card1">6</div>
 				</div>
 				<div aria-hidden class="group">
-					<div class="card1">1</div>
+					<div class="card1"><img src="images/Homepage-images/Samsung-logo.png"></div>
 					<div class="card1">2</div>
 					<div class="card1">3</div>
 					<div class="card1">4</div>
