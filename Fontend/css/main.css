@@ -4956,6 +4956,7 @@ form{
   width: 100%;
   overflow: hidden;
 }
+
 .carousel {
   margin: 100px auto;
   width: 90%;
@@ -4965,7 +4966,7 @@ form{
 }
 
 .carousel::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 .group {
@@ -4973,30 +4974,34 @@ form{
   align-items: center;
   justify-content: center;
   gap: 4em;
-  animation: spin 22s infinite linear;
-  padding-right: 4em;
-
+  animation: spin 29s infinite linear;
+  padding-right: 3.2em;
 }
+
 
 .card1 {
   flex: 0 0 12em;
   height: 5em;
-  padding: 1em;
-  background: #d9d9d9;
+  border-radius: 0.4em;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   font-size: 3rem;
-  border-radius: .2em;
   text-align: center;
-  align-content: center;
+  padding: 20px;
 }
 
-.card1 img{
-  width: 100%;
+.card1 img {
   height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
+  width: auto;
+  object-fit: contain; 
+  display: block;
 }
 
+/* Animation */
 @keyframes spin {
-  from {translate: 0;}
-  to {translate: -100%;}
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }

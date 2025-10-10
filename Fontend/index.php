@@ -1429,27 +1429,30 @@ if ($query->num_rows > 0) {
 
 
 	<!-- brand start -->
-	 <div class="containcarousel">
-		 <h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
-		 <div class="carousel">
-			 <div class="group">
-				 <div class="card1"> <img class="card1" src="images/Homepage-images/Samsung-logo.png"> </div>
-				 <div class="card1"> <img class="card1" src="images/Homepage-images/apple-logo.png"> </div>
-				 <div class="card1">3</div>
-				 <div class="card1">4</div>
-				 <div class="card1">5</div>
-				 <div class="card1">6</div>
-				</div>
-				<div aria-hidden class="group">
-					<div class="card1"><img src="images/Homepage-images/Samsung-logo.png"></div>
-					<div class="card1">2</div>
-					<div class="card1">3</div>
-					<div class="card1">4</div>
-					<div class="card1">5</div>
-					<div class="card1">6</div>
-				</div>
-			</div>
-		</div>
+	<div class="containcarousel">
+  <h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
+
+  <div class="carousel">
+    <div class="group">
+      <div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
+      <div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
+      <div class="card1"><img src="images/Homepage-images/nike-logo.png" alt="Nike logo"></div>
+      <div class="card1"><img src="images/Homepage-images/uniqlo2-logo.png" alt="Uniqlo logo"></div>
+      <div class="card1"><img src="images/Homepage-images/pg-logo.png" alt="P&G logo"></div>
+      <div class="card1"><img src="images/Homepage-images/unilever-logo.png" alt="Unilever logo"></div>
+    </div>
+
+    <div aria-hidden class="group">
+      <div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
+      <div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
+      <div class="card1"><img src="images/Homepage-images/nike-logo.png" alt="Nike logo"></div>
+      <div class="card1"><img src="images/Homepage-images/uniqlo2-logo.png" alt="Uniqlo logo"></div>
+      <div class="card1"><img src="images/Homepage-images/pg-logo.png" alt="P&G logo"></div>
+      <div class="card1"><img src="images/Homepage-images/unilever-logo.png" alt="Unilever logo"></div>
+    </div>
+  </div>
+</div>
+
 	<!-- brand end -->
 
 
