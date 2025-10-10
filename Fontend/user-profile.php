@@ -388,9 +388,9 @@ $wishlist_count = 0;
                     </div>
                 </div>
 
-                <div class="mt-6">
+                <div class="mt-6" style="width: 200px; margin: auto; padding: auto;">
                     <a href="index.php"
-                    class="btn bg-purple-600 text-white px-5 py-2 rounded-lg hover:bg-purple-700 transition">
+                    class="flex-c-m stext-101 cl0 bg1 bor1 hov-btn2 p-lr-15 trans-04">
                     Back to Home
                     </a>
                 </div>
