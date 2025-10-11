@@ -155,13 +155,13 @@ $i = 0;
 // Tạo HTML cho tiêu đề và thông tin người mua
 $html .= '
 
-<p style="text-align:center; font-size:28px">OMACHA TOY STORE</p>
-<p style="text-align:center; font-size:18px"> 17 Nguyen Huu Tho Street</p>
-<p style="text-align:center; font-size:18px"> Phone: 0901234567</p>
+<p style="text-align:center; font-size:28px">OMACHA SHOP PHILIPPINES</p>
+<p style="text-align:center; font-size:18px"> Taguig City, Metro Manila, Philippines</p>
+<p style="text-align:center; font-size:18px"> omachashopofficial@gmail.com</p>
 
 <p style="text-align:center; font-size:28px"> Invoice</p>
 <p style="padding-left:100px"> Date: ' . $date .  '           Time: '. $time .  '</p>
-<p style="padding-left:100px"> Employee: Nguyen Thuy Khanh </p>
+<p style="padding-left:100px"> Employee: Andrei Ochangco </p>
 <p style="padding-left:100px"> Customer: ' . $userLogin["userName"] . '</p>
 
 
@@ -202,7 +202,7 @@ $html .= '
         <!-- Cột bên trái -->
         <td style="width: 50%; vertical-align: top; padding-left: 100px;">
             <p>Total Quantity of Items: ' . $order_count. '</p>
-            <p>Shipping: FreeShip </p>
+            <p>Shipping: Free Shipping Voucher </p>
         </td>
         <!-- Cột bên phải -->
         <td style="width: 50%; vertical-align: top; padding-left: 100px;">
@@ -233,5 +233,5 @@ $domPDF->setPaper('A4', 'portrait');
 $domPDF->render();
 
 // Xuất PDF ra trình duyệt hoặc lưu vào file
-$domPDF->stream('invoice.pdf');
+$domPDF->stream('omachashop-invoice.pdf');
 ?>

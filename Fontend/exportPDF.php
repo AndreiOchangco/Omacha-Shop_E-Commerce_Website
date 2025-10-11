@@ -155,7 +155,7 @@ $i = 0;
 // Tạo HTML cho tiêu đề và thông tin người mua
 $html .= '
 
-<p style="text-align:center; font-size:28px">OMACHA SHOP</p>
+<p style="text-align:center; font-size:28px">OMACHA SHOP PHILIPPINES</p>
 <p style="text-align:center; font-size:18px"> Taguig City, Metro Manila, Philippines</p>
 <p style="text-align:center; font-size:18px"> omachashopofficial@gmail.com</p>
 
