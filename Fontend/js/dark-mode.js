@@ -1,14 +1,22 @@
-/*==================================================================
-[ Universal Dark Mode Toggle ]
-==================================================================*/
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("darkModeToggle");
   const darkCss = document.getElementById("dark-mode-css");
 
-  // Make sure elements exist before running
   if (!toggle || !darkCss) return;
-
   const knob = toggle.querySelector(".darkbtn");
+
+  // --- Disable all transitions temporarily ---
+  function disableTransitionsTemporarily() {
+    const style = document.createElement("style");
+    style.id = "disable-transitions-style";
+    style.innerHTML = `*, *::before, *::after { transition: none !important; }`;
+    document.head.appendChild(style);
+
+    // Remove after short delay (once theme is applied)
+    setTimeout(() => {
+      style.remove();
+    }, 100);
+  }
 
   // --- Apply Saved Preference on Load ---
   const savedMode = localStorage.getItem("darkMode");
@@ -20,17 +28,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (knob) knob.textContent = "☀️";
   }
 
-  // --- Toggle Dark Mode on Click ---
+  // --- Toggle Dark Mode ---
   toggle.addEventListener("click", () => {
+    disableTransitionsTemporarily(); // Stop transitions instantly
     const isDark = !darkCss.hasAttribute("disabled");
 
     if (isDark) {
-      // Turn off dark mode
       darkCss.setAttribute("disabled", "");
       localStorage.setItem("darkMode", "disabled");
       if (knob) knob.textContent = "☀️";
     } else {
-      // Turn on dark mode
       darkCss.removeAttribute("disabled");
       localStorage.setItem("darkMode", "enabled");
       if (knob) knob.textContent = "🌙";
