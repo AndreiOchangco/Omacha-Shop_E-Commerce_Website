@@ -1,8 +1,20 @@
+// --- Prevent white flash before DOM loads ---
+(function() {
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "enabled") {
+    // Enable dark mode immediately before rendering
+    const link = document.getElementById("dark-mode-css");
+    if (link) link.removeAttribute("disabled");
+    document.documentElement.style.backgroundColor = "#121212"; // Optional dark fallback
+  }
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.getElementById("darkModeToggle");
   const darkCss = document.getElementById("dark-mode-css");
 
   if (!toggle || !darkCss) return;
+
   const knob = toggle.querySelector(".darkbtn");
 
   // --- Disable all transitions temporarily ---
@@ -12,13 +24,11 @@ document.addEventListener("DOMContentLoaded", function () {
     style.innerHTML = `*, *::before, *::after { transition: none !important; }`;
     document.head.appendChild(style);
 
-    // Remove after short delay (once theme is applied)
-    setTimeout(() => {
-      style.remove();
-    }, 100);
+    // Remove after a short delay once mode is applied
+    setTimeout(() => style.remove(), 150);
   }
 
-  // --- Apply Saved Preference on Load ---
+  // --- Apply saved preference ---
   const savedMode = localStorage.getItem("darkMode");
   if (savedMode === "enabled") {
     darkCss.removeAttribute("disabled");
@@ -28,19 +38,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (knob) knob.textContent = "☀️";
   }
 
-  // --- Toggle Dark Mode ---
+  // --- Toggle mode on click ---
   toggle.addEventListener("click", () => {
-    disableTransitionsTemporarily(); // Stop transitions instantly
+    disableTransitionsTemporarily();
+
     const isDark = !darkCss.hasAttribute("disabled");
 
     if (isDark) {
+      // Turn off dark mode
       darkCss.setAttribute("disabled", "");
       localStorage.setItem("darkMode", "disabled");
       if (knob) knob.textContent = "☀️";
+      document.documentElement.style.backgroundColor = "#ffffff";
     } else {
+      // Turn on dark mode
       darkCss.removeAttribute("disabled");
       localStorage.setItem("darkMode", "enabled");
       if (knob) knob.textContent = "🌙";
+      document.documentElement.style.backgroundColor = "#121212";
     }
   });
 });

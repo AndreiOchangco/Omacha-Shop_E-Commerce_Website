@@ -243,8 +243,8 @@
       x-transition:leave-end="opacity-0 transform -translate-x-20" @click.away="closeSideMenu"
       @keydown.escape="closeSideMenu">
       <div class="py-4 text-gray-500 dark:text-gray-400">
-        <a href="index.html" class="navbar-brand ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="index.php">
-          Omacha
+        <a href="index.php" class="navbar-brand ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="index.php">
+          Omacha Shop
         </a>
         <!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
