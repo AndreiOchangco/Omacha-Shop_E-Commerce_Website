@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const knob = toggle.querySelector(".darkbtn");
 
-  // --- Disable all transitions temporarily ---
+  // Disable all transitions temporarily (Since we can't disable CSS transitions directly)
   function disableTransitionsTemporarily() {
     const style = document.createElement("style");
     style.id = "disable-transitions-style";
