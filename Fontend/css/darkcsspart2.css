@@ -1,5 +1,5 @@
 html, body {
-    background-color: #181818;
+    background-color: #232323;
     color: #f1f1f1;
 }
 
@@ -8,14 +8,18 @@ html, body {
     color: #f1f1f1 !important;
 }
 
-a, .navbar, .card, .footer, .limiter-menu-desktop, .wrap-menu-desktop, .top-bar, .animsition, .sec-banner, 
-section, footer, .icon-header, .profile-sub-menu, i.zmdi, .c17{
+a, .card, .animsition, .sec-banner, section, .icon-header, .profile-sub-menu, i.zmdi, .c17{
     background-color: #232323 !important;
     color: #f1f1f1 !important;
 }
 
-footer h4, footer p{
-    background-color: #232323 !important;
+.navbar, .limiter-menu-desktop, .wrap-menu-desktop, .top-bar, .navbar a{
+    background-color: #181818 !important;
+    color: #f1f1f1 !important;
+}
+
+footer, footer h4, footer p{
+    background-color: #181818 !important;
     color: #f1f1f1 !important;
 }
 

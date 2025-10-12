@@ -5,7 +5,7 @@
     // Enable dark mode immediately before rendering
     const link = document.getElementById("dark-mode-css");
     if (link) link.removeAttribute("disabled");
-    document.documentElement.style.backgroundColor = "#121212"; // Optional dark fallback
+    document.documentElement.style.backgroundColor = "#232323"; // Optional dark fallback
   }
 })();
 
@@ -49,13 +49,13 @@ document.addEventListener("DOMContentLoaded", function () {
       darkCss.setAttribute("disabled", "");
       localStorage.setItem("darkMode", "disabled");
       if (knob) knob.textContent = "☀️";
-      document.documentElement.style.backgroundColor = "#ffffff";
+      document.documentElement.style.backgroundColor = "#f1f1f1";
     } else {
       // Turn on dark mode
       darkCss.removeAttribute("disabled");
       localStorage.setItem("darkMode", "enabled");
       if (knob) knob.textContent = "🌙";
-      document.documentElement.style.backgroundColor = "#121212";
+      document.documentElement.style.backgroundColor = "#232323";
     }
   });
 });
