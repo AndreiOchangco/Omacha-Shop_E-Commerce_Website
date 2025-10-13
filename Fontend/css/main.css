@@ -4959,7 +4959,7 @@ form{
 
 .carousel {
   margin: 100px auto;
-  width: 90%;
+  width: 80%;
   display: flex;
   overflow-x: auto;
   gap: 1em;
