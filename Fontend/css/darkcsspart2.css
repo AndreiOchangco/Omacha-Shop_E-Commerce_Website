@@ -8,17 +8,28 @@ html, body {
     color: #f1f1f1 !important;
 }
 
-a, .card, .animsition, .sec-banner, section, .icon-header, .profile-sub-menu, i.zmdi, .c17{
-    background-color: #232323 !important;
+.darkModetxt {
     color: #f1f1f1 !important;
 }
 
-.navbar, .limiter-menu-desktop, .wrap-menu-desktop, .top-bar, .navbar a{
+.darkModebg-black {
     background-color: #181818 !important;
     color: #f1f1f1 !important;
 }
 
-footer, footer h4, footer p{
+.top-bar, .card, .animsition, .sec-banner, section, .icon-header, .profile-sub-menu, i.zmdi, .c17{
+    background-color: #232323 !important;
+    color: #f1f1f1 !important;
+}
+
+.navbar, .limiter-menu-desktop, .wrap-menu-desktop, .navbar a, 
+.header-icons, .header-icons-mobile, .header-wrapicon2, .header-cart, .header-cart-wrapitem, 
+.header-cart-item-name, .header-cart-item-info, .header-cart-total, .header-cart-buttons a{
+    background-color: #181818 !important;
+    color: #f1f1f1 !important;
+}
+
+footer, footer h4, footer p, footer a, footer li a{
     background-color: #181818 !important;
     color: #f1f1f1 !important;
 }

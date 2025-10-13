@@ -1137,8 +1137,62 @@ if ($query->num_rows > 0) {
 		<div class="imgWrapper">
 			<img src="images/introduction1.jpg">
 		</div>
+		<div class="contentWrapper">
+			<div class="content2">
+				<span class="textWrapper">
+					<span>
+						<div class="title1">
+							<h1>The Unique Appeal Of Toy Time Toys & Games</h1>
+						</div>
+					</span>
+					<div class="intro1">
+						<div class="row2">
+							<div class="title2">
+								<div class="sticker1">
+									<img class="stick1" src="images/intro1.jpg">
+								</div>
+							</div>
+							<div class="khoi2">
+								<h1>Exclusive Toy Collections</h1>
+								<p>A curated array of sought-after treasures for passionate collectors worldwide.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="intro1">
+						<div class="row2">
+							<div class="title2">
+								<div class="sticker1">
+									<img class="stick1" src="images/intro2.jpg">
+								</div>
+							</div>
+							<div class="khoi2">
+								<h1>Collection Diversity</h1>
+								<p>A rich tapestry of unique treasures awaits discovery and varied treasures awaits..
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="intro1">
+						<div class="row2">
+							<div class="title2">
+								<div class="sticker1">
+									<img class="stick1" src="images/intro3.jpg">
+								</div>
+							</div>
+							<div class="khoi2">
+								<h1>Promotions</h1>
+								<p>Elevate Your Shopping Experience with Exclusive Deals and Special Discounts!.
+								</p>
+							</div>
+						</div>
+					</div>
 
-			<iframe src="https://www.youtube.com/embed/7m16dFI1AF8" frameborder="0"  width="420" height="345"></iframe>
+				</span>
+
+
+			</div>
+		</div>
 	</div>
 
 	<section class="bg0 p-t-100 p-b-25" id="new-arrivals">
