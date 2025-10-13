@@ -8,6 +8,15 @@ html, body {
     color: #f1f1f1 !important;
 }
 
+.darkModetxt {
+    color: #f1f1f1 !important;
+}
+
+.darkModebg-black {
+    background-color: #181818 !important;
+    color: #f1f1f1 !important;
+}
+
 .top-bar, .card, .animsition, .sec-banner, section, .icon-header, .profile-sub-menu, i.zmdi, .c17{
     background-color: #232323 !important;
     color: #f1f1f1 !important;

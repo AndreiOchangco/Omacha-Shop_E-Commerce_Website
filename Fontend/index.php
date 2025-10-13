@@ -338,6 +338,7 @@ if ($query->num_rows > 0) {
 						<div class="d-inline-flex align-items-center">
 							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
 									href="mailto:omachashopofficial@gmail.com"
+									class="darkModetxt"
 									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
 							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
@@ -430,22 +431,22 @@ if ($query->num_rows > 0) {
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search darkModebg-black">
 							<i class="zmdi zmdi-search"></i>
 						</div>
 
 						<a href="shopping-cart.php"
-							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart darkModebg-black"
 							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</a>
 
 						<a href="wishlist.php"
-							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
+							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti darkModebg-black"
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu darkModebg-black">
 							<li class="active-menu">
 								<a href="register.php" class="btn2 btn-primary2 mt-1 "
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
@@ -1007,9 +1008,9 @@ if ($query->num_rows > 0) {
 	<!-- retangle end -->
 
 	<!-- Category Start -->
-	<div class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
+	<div class="sec-banner bg0 p-t-100 p-b-40" id="shop-by-category">
 		<div class="container text-center">
-			<h1 class="text-primary1 " style="padding-bottom: 50px;">Shop by Category</h1>
+			<h1 class="text-primary1 ">Shop by Category</h1>
 			<div class="row">
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
 					<!-- Block1 -->
@@ -1141,7 +1142,7 @@ if ($query->num_rows > 0) {
 			<div class="content2">
 				<span class="textWrapper">
 					<span>
-						<div class="title1">
+						<div class="title1 darkModetxt">
 							<h1>The Unique Appeal Of Toy Time Toys & Games</h1>
 						</div>
 					</span>
@@ -1152,7 +1153,7 @@ if ($query->num_rows > 0) {
 									<img class="stick1" src="images/intro1.jpg">
 								</div>
 							</div>
-							<div class="khoi2">
+							<div class="khoi2 darkModetxt">
 								<h1>Exclusive Toy Collections</h1>
 								<p>A curated array of sought-after treasures for passionate collectors worldwide.
 								</p>
@@ -1166,7 +1167,7 @@ if ($query->num_rows > 0) {
 									<img class="stick1" src="images/intro2.jpg">
 								</div>
 							</div>
-							<div class="khoi2">
+							<div class="khoi2 darkModetxt">
 								<h1>Collection Diversity</h1>
 								<p>A rich tapestry of unique treasures awaits discovery and varied treasures awaits..
 								</p>
@@ -1180,7 +1181,7 @@ if ($query->num_rows > 0) {
 									<img class="stick1" src="images/intro3.jpg">
 								</div>
 							</div>
-							<div class="khoi2">
+							<div class="khoi2 darkModetxt">
 								<h1>Promotions</h1>
 								<p>Elevate Your Shopping Experience with Exclusive Deals and Special Discounts!.
 								</p>
@@ -1215,7 +1216,7 @@ if ($query->num_rows > 0) {
 						</a>
 						<div class="text-center">
 							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
 									Flower
 								</a>
 							</h5>
@@ -1231,7 +1232,7 @@ if ($query->num_rows > 0) {
 						</a>
 						<div class="text-center">
 							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
 									Flower
 								</a>
 							</h5>
@@ -1247,7 +1248,7 @@ if ($query->num_rows > 0) {
 						</a>
 						<div class="text-center">
 							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
 									Bear Baby Towel
 								</a>
 							</h5>
@@ -1263,7 +1264,7 @@ if ($query->num_rows > 0) {
 						</a>
 						<div class="text-center">
 							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
 									Elephant Jelly Cat
 								</a>
 							</h5>
@@ -1279,7 +1280,7 @@ if ($query->num_rows > 0) {
 						</a>
 						<div class="text-center">
 							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
 									Giraffe Jelly Cat
 								</a>
 							</h5>
@@ -1295,7 +1296,7 @@ if ($query->num_rows > 0) {
 						</a>
 						<div class="text-center">
 							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
 									Unicorn
 								</a>
 							</h5>
@@ -1314,7 +1315,7 @@ if ($query->num_rows > 0) {
 		<div class="intro-banner row">
 			<h1>Greatest prices and deals save 20%off baby</h1>
 			<div class="shop-now">
-				<a href="#">Shop now</a>
+				<a href="product.php">Shop now</a>
 			</div>
 		</div>
 	</div>
@@ -1325,8 +1326,7 @@ if ($query->num_rows > 0) {
 	<!-- arrivals start -->
 	<section id="blog">
 		<div class="blog-heading p-t-100 p-b-25">
-			<span>Latest News</span>
-			<h3>My Blog</h3>
+			<h3 class="text-primary1">Latest News</h3>
 			<div class="blog-container">
 				<div class="blog-box">
 					<div class="blog-img">
