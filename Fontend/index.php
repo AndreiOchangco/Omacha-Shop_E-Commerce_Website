@@ -391,7 +391,7 @@ if ($query->num_rows > 0) {
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="#go-up">Home</a>
-								<ul class="sub-menu">
+								<ul class="sub-menu darkModebg-black">
 									<li><a href="#shop-by-category">Categories</a></li>
 									<li><a href="#new-arrivals">Arrivals</a></li>
 									<li><a href="#blog">Blog</a></li>
@@ -402,7 +402,7 @@ if ($query->num_rows > 0) {
 
 							<li class="label1" data-label1="new">
 							<a href="product.php">Shop</a>
-								<ul class="sub-menu">
+								<ul class="sub-menu darkModebg-black">
 									<li><a href="./Products/convenience-products.php">Convenience</a></li>
 									<li><a href="./Products/shopping-products.php">Shopping</a></li>
 									<li><a href="./Products/specialty-products.php">Specialty</a></li>
