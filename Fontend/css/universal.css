@@ -14,12 +14,30 @@
     text-decoration: none;
 }
 
+.main-menu > li > a {
+  font-family: Poppins-Medium;
+  font-size: 14px;
+  color: black;
+  padding: 5px 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+
+
+
 .text-white {
     color: #fff !important;
 }
 
 .text-black {
     color: #000 !important;
+}
+
+.text-omacha {
+  color: #19f574;
 }
 
 .z-index-100 {
@@ -34,6 +52,7 @@
     --bg-opacity: 1;
     background-color: #5b25a1ff !important;
 }
+
 
 
 

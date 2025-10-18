@@ -459,6 +459,7 @@ if ($result->num_rows > 0) {
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
 							<p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
+									class="darkModetxt"
 									href="mailto:omachacontact@gmail.com"
 									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
 							<p class="text-body px-3">|</p>

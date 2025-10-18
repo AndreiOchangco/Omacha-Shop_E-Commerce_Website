@@ -401,17 +401,6 @@ html, body {
   margin: 0px 4px 0px 14px;
 }
 
-.main-menu > li > a {
-  font-family: Poppins-Medium;
-  font-size: 14px;
-  color: #867070;
-  padding: 5px 0px;
-  transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
 .header-v3 .main-menu > li > a {
   color: #F5E8C7;
 }
@@ -552,7 +541,7 @@ html, body {
 /*---------------------------------------------*/
 .main-menu > li:hover > a {
   text-decoration: none;
-  color: #481E14;
+  color: #19f574;
 }
 
 .main-menu > li:hover > .sub-menu {
@@ -576,7 +565,7 @@ html, body {
 
 .profile-menu > li:hover > a {
   text-decoration: none;
-  color: #481E14;
+  color: #19f574;
 }
 
 .profile-menu > li:hover > .profile-sub-menu {
@@ -594,7 +583,7 @@ html, body {
 }
 
 .profile-sub-menu > li:hover > a {
-  color: #6c7ae0;
+  color: #19f574;
   text-decoration: none;
 }
 
@@ -634,7 +623,7 @@ html, body {
 }
 
 .icon-header-item i:hover {
-  color: #481E14;
+  color: #19f574;
 }
 
 /*---------------------------------------------*/
@@ -728,7 +717,7 @@ html, body {
 }
 
 .wrap-search-header button:hover {
-  color: #481E14;
+  color: #19f574;
 }
 
 /*---------------------------------------------*/
@@ -787,7 +776,7 @@ html, body {
 
 /*---------------------------------------------*/
 .main-menu > li.active-menu > a {
-  color: #481E14;
+  color: #19f574;
 }
 
 
