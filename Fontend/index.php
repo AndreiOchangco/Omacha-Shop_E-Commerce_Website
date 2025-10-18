@@ -336,7 +336,8 @@ if ($query->num_rows > 0) {
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
-							<p style="color: #19f574"><i class="fa fa-envelope mr-2 darkModetxt"></i><a
+							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
+									class="darkModetxt"
 									href="mailto:omachashopofficial@gmail.com"
 									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
@@ -390,7 +391,7 @@ if ($query->num_rows > 0) {
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="#go-up">Home</a>
-								<ul class="sub-menu">
+								<ul class="sub-menu darkModebg-black">
 									<li><a href="#shop-by-category">Categories</a></li>
 									<li><a href="#new-arrivals">Arrivals</a></li>
 									<li><a href="#blog">Blog</a></li>
@@ -401,7 +402,7 @@ if ($query->num_rows > 0) {
 
 							<li class="label1" data-label1="new">
 							<a href="product.php">Shop</a>
-								<ul class="sub-menu">
+								<ul class="sub-menu darkModebg-black">
 									<li><a href="./Products/convenience-products.php">Convenience</a></li>
 									<li><a href="./Products/shopping-products.php">Shopping</a></li>
 									<li><a href="./Products/specialty-products.php">Specialty</a></li>
