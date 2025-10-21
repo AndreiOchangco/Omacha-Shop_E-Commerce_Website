@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,22 +12,15 @@
 </head>
 <body>
     <div class="auth-container">
-        <div class="auth-section signup signup-move">
-            <img src="OmachaShop-Logo2.png" alt="Welcome" class="auth-image">
-        </div>
         
         <div class="auth-form-container">
-            <h1 class="auth-form-heading">Sign up</h1>
+            <h1 class="auth-form-heading">Login</h1>
             <form action="" class="auth-form">
+           
                 <div class="auth-input-container">
                     <input type="text" class="auth-input-field" placeholder="Enter Username" id="name"/>
                     <label for="name" class="auth-input-label">Username</label>
                     <i class="input-icon fa fa-user"></i>
-                </div>
-                <div class="auth-input-container">
-                    <input type="text" class="auth-input-field" placeholder="Enter Email" id="name"/>
-                    <label for="name" class="auth-input-label">Email</label>
-                    <i class="input-icon fa fa-envelope"></i>
                 </div>
 
                   <div class="auth-input-container">
@@ -37,10 +30,14 @@
                     <i class="toggle-password fa fa-eye" id="togglePassword"></i>
                 </div>
 
-                <button class="auth-submit-button">Sign Up</button>
+                <button class="auth-submit-button">Login</button>
                     
-                <a href="./login.html" class="auth-link">Already have an Account?</a>
+                <a href="./index.html" class="auth-link">Don't have an Account?</a>
             </form>
+        </div>
+           <div class="auth-section login login-move">
+            <h1>Welcome <br /> back!</h1>
+            <p>Discover amazing features <br> by signing in</p>
         </div>
     </div>
     <script>
