@@ -3,29 +3,18 @@
 <head>
     <title>Omacha Shop | Sign Up</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/auth-form.css">
     <!-- link icon -->
     <link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
-    <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="container">
-        <form action="signup.php" method="post" autocomplete="off" class="sign-in-form">
-            <input type="checkbox" id="flip">
-            <div class="cover">
-                <div class="front">
-                    <img src="images/Omacha-Shop_3000x3000/OmachaShop-Logo1.png" alt="" class="logo">
-                </div>
-                <div class="back">
-                    <img class="backImg" src="images/background-image.png" alt="">
-                    <div class="text">
-                        <span class="text-1">Complete miles of journey <br> with one step</span>
-                        <span class="text-2">Let's get started</span>
-                    </div>
-                </div>
-            </div>
+    <div class="auth-container">
+        <form action="signup.php" method="post" autocomplete="off">
             <div class="forms">
                 <div class="form-content">
                     <div class="login-form">
