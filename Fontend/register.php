@@ -14,35 +14,50 @@
 </head>
 <body>
     <div class="auth-container">
-        <form action="signup.php" method="post" autocomplete="off">
-            <div class="forms">
-                <div class="form-content">
-                    <div class="login-form">
-                        <div class="title">Signup</div>
-                        <div class="input-boxes">
-                            <div class="input-box">
-                                <i class="fas fa-user"></i>
-                                <input type="text" name="userName" placeholder="Enter your name" required>
-                            </div>
-                            <div class="input-box">
-                                <i class="fas fa-envelope"></i>
-                                <input type="text" name="email" placeholder="Enter your email" required>
-                            </div>
-                            <div class="input-box">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" name="loginpassword" placeholder="Enter your password" required>
-                            </div>
-                            <div class="text"><a href="#">Forgot password?</a></div>
-                            <div class="button input-box">
-                                <input type="submit" value="Sign Up" class="sign-btn">
-                            </div>
-                            <div class="text sign-up-text">Already have an account? <a href="login.html">Login
-                                    now</a></div>
-                        </div>
+        <div class="auth-section signup signup-move">
+            <img src="OmachaShop-Logo2.png" alt="Welcome" class="auth-image">
+        </div>
+        <form action="signup.php" method="post" autocomplete="off" class="auth-form">
+            <div class="auth-form-container">
+                <h1 class="auth-form-heading">Sign up</h1>
+
+                    <div class="auth-input-container">
+                        <input type="text" name="userName" class="auth-input-field" id="name" placeholder="Enter your name" required>
+                        <label for="name" class="auth-input-label">Username</label>
+                        <i class="input-icon fa fa-user"></i>
                     </div>
-                </div>
+
+                    <div class="auth-input-container">
+                        <input type="text" name="email" class="auth-input-field" id="name" placeholder="Enter your email" required>
+                        <label for="name" class="auth-input-label">Email</label>
+                        <i class="input-icon fa fa-envelope"></i>
+                    </div>
+
+                    <div class="auth-input-container">
+                        <input type="password" name="loginpassword" class="auth-input-field" id="password" placeholder="Enter your password" required>
+                        <label for="name" class="auth-input-label">Password</label>
+                        <i class="input-icon fa fa-lock"></i>
+                        <i class="toggle-password fa fa-eye" id="togglePassword"></i>
+                    </div>
+
+                    <button class="auth-submit-button">Sign Up</button>
+                    
+                    <a href="login.html" class="auth-link">Already have an Account?</a>
             </div>
         </form>
     </div>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const togglePassword = document.getElementById('togglePassword');
+
+        togglePassword.addEventListener('click', () => {
+            const isPassword = passwordInput.getAttribute('type') === 'password';
+            passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+            togglePassword.classList.toggle('fa-eye');
+            togglePassword.classList.toggle('fa-eye-slash');
+    });
+    </script>
+
 </body>
 </html>
