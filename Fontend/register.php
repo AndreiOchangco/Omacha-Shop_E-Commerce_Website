@@ -15,7 +15,7 @@
 <body>
     <div class="auth-container">
         <div class="auth-section signup signup-move">
-            <img src="OmachaShop-Logo2.png" alt="Welcome" class="auth-image">
+            <img src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2_white.png" alt="Welcome" class="auth-image">
         </div>
         <form action="signup.php" method="post" autocomplete="off" class="auth-form">
             <div class="auth-form-container">

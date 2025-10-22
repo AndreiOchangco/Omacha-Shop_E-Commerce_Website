@@ -52,7 +52,11 @@
             passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
             togglePassword.classList.toggle('fa-eye');
             togglePassword.classList.toggle('fa-eye-slash');
-    });
+        });
+
+        window.onload = function(){
+            document.querySelectorAll('input').forEach(input=>input.value='');
+        };
     </script>
 
 </body>
