@@ -43,6 +43,10 @@
     </div>
 
     <script>
+        window.onload = function(){
+            document.querySelectorAll('input').forEach(input=>input.value='');
+        };
+        
         const passwordInput = document.getElementById('password');
         const togglePassword = document.getElementById('togglePassword');
 
@@ -53,9 +57,6 @@
             togglePassword.classList.toggle('fa-eye-slash');
         });
 
-        window.onload = function(){
-            document.querySelectorAll('input').forEach(input=>input.value='');
-        };
     </script>
 
 </body>
