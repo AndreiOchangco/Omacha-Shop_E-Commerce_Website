@@ -46,15 +46,6 @@
         window.onload = function(){
             document.querySelectorAll('input').forEach(input=>input.value='');
         };
-
-        document.querySelector('.auth-form').addEventListener('submit', e => {
-            const user = document.querySelector('input[name="user"]').value.trim();
-            const pass = document.querySelector('input[name="pass"]').value.trim();
-            if (!user || !pass) {
-                e.preventDefault();
-                alert('Please fill out all fields.');
-            }
-        });
         
         const passwordInput = document.getElementById('password');
         const togglePassword = document.getElementById('togglePassword');
