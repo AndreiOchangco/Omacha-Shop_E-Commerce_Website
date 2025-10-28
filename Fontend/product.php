@@ -275,7 +275,7 @@ if ($query->num_rows > 0) {
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="active-menu">
+							<li class="label1" data-label1="new">
 								<a href="index.php">Home</a>
 								<ul class="sub-menu">
 									<li><a href="index.php#shop-by-category">Categories</a></li>
@@ -286,7 +286,7 @@ if ($query->num_rows > 0) {
 
 							</li>
 
-							<li class="label1" data-label1="new">
+							<li class="active-menu">
 							<a href="#go-up">Shop</a>
 								<ul class="sub-menu">
 									<li><a href="./Products/convenience-products.php">Convenience</a></li>

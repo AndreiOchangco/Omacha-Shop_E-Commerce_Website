@@ -8,6 +8,25 @@ html, body {
     color: #f1f1f1 !important;
 }
 
+
+/* nav */
+
+.sub-menu a {
+  color: #eaeaea !important;
+  background-color:  #232323 !important;
+}
+
+ul.sub-menu {
+    background-color: #232323 !important;
+}
+
+.sub-menu > li:hover > a {
+  color: #19f574 !important;
+
+}
+
+
+
 .darkModetxt {
     color: #f1f1f1 !important;
 }
@@ -16,6 +35,19 @@ html, body {
   text-decoration: none;
   color: #19f574;
 }
+
+.main-menu a {
+    color : white !important;
+}
+
+.main-menu a:hover {
+    color : #19f574 !important;
+}
+/* nav */
+
+
+
+
 
 .darkModebg-black {
     background-color: #181818 !important;
