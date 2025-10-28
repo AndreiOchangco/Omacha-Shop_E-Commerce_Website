@@ -16,11 +16,11 @@ $userName = $_SESSION["user"];
 $sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
 $queryLogin = mysqli_query($conn, $sqlLogin);
 // print_r($queryLogin);
-// Kiểm tra kết quả truy vấn
+// Check query results
 
-// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+// Iterate through each row of data from the query results
 $row = $queryLogin->fetch_assoc();
-// Thêm thông tin từng hàng vào mảng $vuserLogin
+// Add each row's information into the $vuserLogin array
 $userLogin = array(
 	"userID" => $row["userID"],
 	"userName" => $row["userName"],
@@ -31,7 +31,7 @@ $sql = "SELECT * FROM product";
 $query = mysqli_query($conn, $sql);
 
 
-// Câu truy vấn SQL SELECT
+// SQL SELECT query
 $sqlOrder = "SELECT 
 `order`.o_id, 
 `order`.u_id, 
@@ -48,18 +48,18 @@ FROM
 INNER JOIN 
 product ON `order`.p_id = product.p_id";
 
-// Thực hiện truy vấn
+// Execute query
 $resultOrder = $conn->query($sqlOrder);
 
-// Mảng chứa thông tin các đơn hàng
+// Array containing order information
 $order_array = array();
 
-// Kiểm tra kết quả truy vấn
+// Check query results
 if ($resultOrder->num_rows > 0) {
-	// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+	// Iterate through each row of data from the query results
 	while ($row = $resultOrder->fetch_assoc()) {
 		if ($row['u_id'] == $userLogin['userID'] && $row['o_status'] == 0) {
-			// Thêm thông tin từng hàng vào mảng $order_array
+			// Add information for each row into the $order_array array
 			$order_array[] = array(
 				"o_id" => $row["o_id"],
 				"u_id" => $row["u_id"],
@@ -75,65 +75,65 @@ if ($resultOrder->num_rows > 0) {
 		}
 	};
 } else {
-	// echo "0 results";
+	echo "0 results";
 }
 
 
 function sumTotalPrice($order_array, $u_id)
 {
-	$totalPrice = 0; // Khởi tạo biến tổng giá tiền
+	$totalPrice = 0; // Initialize the total price variable
 
-	// Duyệt qua từng sản phẩm trong giỏ hàng và tính tổng giá tiền
+	// Browse through each product in the shopping cart and calculate the total price
 	foreach ($order_array as $item) {
-		// Kiểm tra xem u_id của sản phẩm có khớp với u_id được chỉ định hay không
+		// Check whether the product's u_id matches the specified u_id
 		if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
-			// Tính giá tiền của mỗi sản phẩm (giá tiền * số lượng)
+			// Calculate the price of each product (price * quantity)
 			$productPrice = $item["p_price"] * $item["o_quantity"];
 
-			// Cộng vào tổng giá tiền
+			// Add to the total price
 			$totalPrice += $productPrice;
 		}
 	}
 
-	return $totalPrice; // Trả về tổng giá tiền
+	return $totalPrice; // Return the total amount
 }
 
-// Truy vấn để đếm số dòng trong bảng order
+// Query to count the number of rows in the order table
 $sql = "SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = '{$userLogin['userID']}' AND o_quantity > 0 AND o_status = 0";
 $result = $conn->query($sql);
 
-// Kiểm tra và hiển thị kết quả
+// Check and display results
 if ($result->num_rows > 0) {
 	$row = $result->fetch_assoc();
 	$order_count = $row["total_rows"];
 } else {
-	// echo "Không có dữ liệu trong bảng order";
+	echo "There is no data in the order table";
 }
 
-// Truy vấn để đếm số dòng trong bảng order
+// Query to count the number of rows in the order table
 $sql = "SELECT COUNT(*) AS total_rows FROM wishlist";
 $result = $conn->query($sql);
 
-// Kiểm tra và hiển thị kết quả
+// Check and display the results
 if ($result->num_rows > 0) {
 	$row = $result->fetch_assoc();
 	$wishlist_count = $row["total_rows"];
 } else {
-	// echo "Không có dữ liệu trong bảng order";
+	echo "There is no data in the order table";
 }
 
-// Truy vấn thông tin chiết khấu dựa trên tên discount (d_name)
+// Query discount information based on the discount name (d_name)
 $sqlDiscount = "SELECT * FROM discount";
 $query = mysqli_query($conn, $sqlDiscount);
 
-// Mảng chứa thông tin chiết khấu
+// Array containing discount information
 $discount = array();
 
-// Kiểm tra kết quả truy vấn
+// Check query results
 if ($query->num_rows > 0) {
-	// Lặp qua từng hàng dữ liệu từ kết quả truy vấn
+	// Iterate through each row of data from the query results
 	while ($row = $query->fetch_assoc()) {
-		// Thêm thông tin từng hàng vào mảng $discount
+		// Add each row's information to the $discount array
 		$discount = array(
 			"d_id" => $row["d_id"],
 			"d_name" => $row["d_name"],
@@ -143,6 +143,8 @@ if ($query->num_rows > 0) {
 			"d_end_date" => $row["d_end_date"]
 		);
 	}
+} else {
+	echo "0 results";
 }
 ?>
 <!DOCTYPE html>
@@ -262,18 +264,18 @@ if ($query->num_rows > 0) {
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
 <style>
 	.btn-remove-product {
-    cursor: pointer; /* Đổi con trỏ chuột thành kiểu pointer khi di chuột qua */
+    cursor: pointer; /* Change the mouse cursor to a pointer style when hovering */
 	}
 
 	.btn-remove-product i {
-		color: #F4538A; /* Đổi màu của biểu tượng thành màu đỏ */
+		color: #F4538A; /* Change the color of the icon to red */
 	}
-	/* Định dạng hình ảnh sản phẩm */
+	/* Product image format */
 	.header-cart-item-img {
-		flex: 0 0 auto; /* Không co giãn hình ảnh */
-		width: 100px; /* Kích thước chiều rộng cố định */
-		height: auto; /* Chiều cao tự động */
-		margin-right: 20px; /* Khoảng cách giữa hình ảnh và văn bản */
+		flex: 0 0 auto; /* Do not stretch the image */
+		width: 100px; /* Fixed width size */
+		height: auto; /* Automatic height */
+		margin-right: 20px; /* The distance between image and text */
 	}
 
 	#button-add {
@@ -302,7 +304,7 @@ if ($query->num_rows > 0) {
 </head>
 
 <style>
-	/* Định dạng nút check out và view cart */
+	/* Format the check out and view cart buttons */
 	#btn-cart {
 			background-color: #F4538A;
 			color: #FFEFEF;
@@ -313,7 +315,7 @@ if ($query->num_rows > 0) {
 			color: #FFEFEF;
 		}
 
-		/* Định dạng nút delete */
+		/* Delete button format */
 		.btn-delete {
 			color: black;
 		}
