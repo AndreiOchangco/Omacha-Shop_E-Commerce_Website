@@ -7,52 +7,42 @@ if ($conn->connect_error) {
     die("Connection Failed: " . $conn->connect_error);
 }
 
-// Check if form data is sent
+// When form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user'], $_POST['pass'])) {
     $user = trim($_POST['user']);
     $pass = trim($_POST['pass']);
 
-    // 🔐 Admin credentials (should ideally be stored hashed in DB)
+    // Admin credentials
     $adminAccounts = [
         'admin' => '1234',
         'Omacha Shop' => 'm5}$|bkr0HnwkM}1hNZ$'
     ];
 
-    // Admin login check
+    // 🔹 1. Check if admin
     if (array_key_exists($user, $adminAccounts) && $pass === $adminAccounts[$user]) {
-        $_SESSION['user'] = 'admin';
-        header('Location: ../Admin/public/index.php');
-        exit;
+        $_SESSION['user'] = $user;
+        header('Location: index.php'); // Admin redirects to same folder for now
+        exit();
     }
 
-    // Normal user login (secure check with hashed password)
-    $stmt = $conn->prepare("SELECT userName, loginpassword FROM login WHERE userName = ?");
-    $stmt->bind_param("s", $user);
+    // 🔹 2. Check normal user in database
+    $stmt = $conn->prepare("SELECT * FROM login WHERE userName = ? AND loginpassword = ?");
+    $stmt->bind_param("ss", $user, $pass);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    if ($result->num_rows === 1) {
-        $row = $result->fetch_assoc();
-
-        // ✅ Use password_verify for security
-        if (password_verify($pass, $row['loginpassword'])) {
-            $_SESSION['user'] = $user;
-            header('Location: ../Fontend/index.php');
-            exit;
-        } else {
-            // Invalid password
-            $_SESSION['error'] = 'Invalid username or password';
-            header('Location: login.html');
-            exit;
-        }
+    if ($result && $result->num_rows > 0) {
+        $_SESSION['user'] = $user;
+        header('Location: index.php'); // ✅ Redirect to homepage
+        exit();
     } else {
-        // Username not found
-        $_SESSION['error'] = 'User not found';
+        $_SESSION['error'] = 'Invalid username or password';
         header('Location: login.html');
-        exit;
+        exit();
     }
 
     $stmt->close();
 }
+
 $conn->close();
 ?>

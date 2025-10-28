@@ -1,50 +1,66 @@
 <?php
-session_start();
+include 'login.php';
 
-// ✅ Only include your DB connection file once
+include('../Admin/connection/connectionpro.php');
 require_once '../Admin/connection/connectData.php';
 
-// ✅ Check if user is logged in
+
 if (!isset($_SESSION["user"])) {
+	// Redirect user to the login page if not logged in
 	header("Location: login.html");
-	exit();
+	exit(); // Stop further execution of the script
 }
 
 $userName = $_SESSION["user"];
+// print_r($userName);
+$sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
+$queryLogin = mysqli_query($conn, $sqlLogin);
+// print_r($queryLogin);
+// Kiểm tra kết quả truy vấn
 
-// ✅ Use prepared statement to get user info
-$stmt = $conn->prepare("SELECT * FROM login WHERE userName = ?");
-$stmt->bind_param("s", $userName);
-$stmt->execute();
-$result = $stmt->get_result();
-$row = $result->fetch_assoc();
-
-$userLogin = [
+// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+$row = $queryLogin->fetch_assoc();
+// Thêm thông tin từng hàng vào mảng $vuserLogin
+$userLogin = array(
 	"userID" => $row["userID"],
 	"userName" => $row["userName"],
 	"email" => $row["email"],
-];
-$stmt->close();
+);
 
-// ✅ Get product list
-$sqlProducts = "SELECT * FROM product";
-$queryProducts = $conn->query($sqlProducts);
+$sql = "SELECT * FROM product";
+$query = mysqli_query($conn, $sql);
 
-// ✅ Get orders (JOIN)
-$sqlOrder = "
-SELECT 
-	o.o_id, o.u_id, o.p_id, o.o_price, o.o_status, o.o_quantity,
-	p.p_type, p.p_image, p.p_name, p.p_price
-FROM `order` AS o
-INNER JOIN product AS p ON o.p_id = p.p_id
-";
+
+// Câu truy vấn SQL SELECT
+$sqlOrder = "SELECT 
+`order`.o_id, 
+`order`.u_id, 
+`order`.p_id, 
+`order`.o_price, 
+`order`.o_status, 
+`order`.o_quantity,
+product.p_type, 
+product.p_image, 
+product.p_name, 
+product.p_price 
+FROM 
+`order`
+INNER JOIN 
+product ON `order`.p_id = product.p_id";
+
+// Thực hiện truy vấn
 $resultOrder = $conn->query($sqlOrder);
 
-$order_array = [];
-if ($resultOrder && $resultOrder->num_rows > 0) {
+// Mảng chứa thông tin các đơn hàng
+$order_array = array();
+
+// Kiểm tra kết quả truy vấn
+if ($resultOrder->num_rows > 0) {
+	// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
 	while ($row = $resultOrder->fetch_assoc()) {
 		if ($row['u_id'] == $userLogin['userID'] && $row['o_status'] == 0) {
-			$order_array[] = [
+			// Thêm thông tin từng hàng vào mảng $order_array
+			$order_array[] = array(
 				"o_id" => $row["o_id"],
 				"u_id" => $row["u_id"],
 				"p_id" => $row["p_id"],
@@ -55,54 +71,80 @@ if ($resultOrder && $resultOrder->num_rows > 0) {
 				"p_image" => $row["p_image"],
 				"p_name" => $row["p_name"],
 				"p_price" => $row["p_price"]
-			];
+			);
 		}
-	}
+	};
+} else {
+	// echo "0 results";
 }
 
-// ✅ Function to calculate total price
+
 function sumTotalPrice($order_array, $u_id)
 {
-	$totalPrice = 0;
+	$totalPrice = 0; // Khởi tạo biến tổng giá tiền
+
+	// Duyệt qua từng sản phẩm trong giỏ hàng và tính tổng giá tiền
 	foreach ($order_array as $item) {
+		// Kiểm tra xem u_id của sản phẩm có khớp với u_id được chỉ định hay không
 		if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
-			$totalPrice += $item["p_price"] * $item["o_quantity"];
+			// Tính giá tiền của mỗi sản phẩm (giá tiền * số lượng)
+			$productPrice = $item["p_price"] * $item["o_quantity"];
+
+			// Cộng vào tổng giá tiền
+			$totalPrice += $productPrice;
 		}
 	}
-	return $totalPrice;
+
+	return $totalPrice; // Trả về tổng giá tiền
 }
 
-// ✅ Count user orders
-$stmt = $conn->prepare("SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = ? AND o_quantity > 0 AND o_status = 0");
-$stmt->bind_param("i", $userLogin['userID']);
-$stmt->execute();
-$result = $stmt->get_result();
-$order_count = ($result->num_rows > 0) ? $result->fetch_assoc()["total_rows"] : 0;
-$stmt->close();
+// Truy vấn để đếm số dòng trong bảng order
+$sql = "SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = '{$userLogin['userID']}' AND o_quantity > 0 AND o_status = 0";
+$result = $conn->query($sql);
 
-// ✅ Count wishlist items
-$result = $conn->query("SELECT COUNT(*) AS total_rows FROM wishlist");
-$wishlist_count = ($result && $result->num_rows > 0) ? $result->fetch_assoc()["total_rows"] : 0;
+// Kiểm tra và hiển thị kết quả
+if ($result->num_rows > 0) {
+	$row = $result->fetch_assoc();
+	$order_count = $row["total_rows"];
+} else {
+	// echo "Không có dữ liệu trong bảng order";
+}
 
-// ✅ Get discounts
-$query = $conn->query("SELECT * FROM discount");
-$discount = [];
-if ($query && $query->num_rows > 0) {
+// Truy vấn để đếm số dòng trong bảng order
+$sql = "SELECT COUNT(*) AS total_rows FROM wishlist";
+$result = $conn->query($sql);
+
+// Kiểm tra và hiển thị kết quả
+if ($result->num_rows > 0) {
+	$row = $result->fetch_assoc();
+	$wishlist_count = $row["total_rows"];
+} else {
+	// echo "Không có dữ liệu trong bảng order";
+}
+
+// Truy vấn thông tin chiết khấu dựa trên tên discount (d_name)
+$sqlDiscount = "SELECT * FROM discount";
+$query = mysqli_query($conn, $sqlDiscount);
+
+// Mảng chứa thông tin chiết khấu
+$discount = array();
+
+// Kiểm tra kết quả truy vấn
+if ($query->num_rows > 0) {
+	// Lặp qua từng hàng dữ liệu từ kết quả truy vấn
 	while ($row = $query->fetch_assoc()) {
-		$discount[] = [
+		// Thêm thông tin từng hàng vào mảng $discount
+		$discount = array(
 			"d_id" => $row["d_id"],
 			"d_name" => $row["d_name"],
 			"d_amount" => $row["d_amount"],
 			"d_description" => $row["d_description"],
 			"d_start_date" => $row["d_start_date"],
 			"d_end_date" => $row["d_end_date"]
-		];
+		);
 	}
 }
-
-$conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
