@@ -19,13 +19,13 @@
                 <h1 class="auth-form-heading">Login</h1>
 
                     <div class="auth-input-container">
-                        <input type="text" name="user" class="auth-input-field" placeholder="Enter your Username" required>
+                        <input type="text" name="user" class="auth-input-field" placeholder="Enter your Username" autocomplete="new-user" required>
                         <label class="auth-input-label">Username</label>
                         <i class="input-icon fa fa-user"></i>
                     </div>
 
                     <div class="auth-input-container">
-                        <input type="password" name="pass" class="auth-input-field" id="password" placeholder="Enter your password" required>
+                        <input type="password" name="pass" class="auth-input-field" id="password" placeholder="Enter your password" autocomplete="new-password" required>
                         <label class="auth-input-label">Password </label>
                         <i class="input-icon fa fa-lock"></i>
                         <i class="toggle-password fa fa-eye" id="togglePassword"></i>
@@ -46,6 +46,15 @@
         window.onload = function(){
             document.querySelectorAll('input').forEach(input=>input.value='');
         };
+
+        document.querySelector('.auth-form').addEventListener('submit', e => {
+            const user = document.querySelector('input[name="user"]').value.trim();
+            const pass = document.querySelector('input[name="pass"]').value.trim();
+            if (!user || !pass) {
+                e.preventDefault();
+                alert('Please fill out all fields.');
+            }
+        });
         
         const passwordInput = document.getElementById('password');
         const togglePassword = document.getElementById('togglePassword');
