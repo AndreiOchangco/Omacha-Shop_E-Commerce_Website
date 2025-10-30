@@ -275,42 +275,42 @@ if ($query->num_rows > 0) {
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="label1" data-label1="new">
-								<a href="index.php">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.php#shop-by-category">Categories</a></li>
-									<li><a href="index.php#new-arrivals">Arrivals</a></li>
-									<li><a href="index.php#blog">Blog</a></li>
-									<li><a href="index.php#top-brands">Top Brands</a></li>
+							<li>
+								<a class="index.php" href="index.php">Home</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="#shop-by-category">Categories</a></li>
+									<li><a class="darkModetxt" href="#new-arrivals">Arrivals</a></li>
+									<li><a class="darkModetxt" href="#blog">Blog</a></li>
+									<li><a class="darkModetxt" href="#top-brands">Top Brands</a></li>
 								</ul>
 
 							</li>
 
-							<li class="active-menu">
-							<a href="#go-up">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="./Products/convenience-products.php">Convenience</a></li>
-									<li><a href="./Products/shopping-products.php">Shopping</a></li>
-									<li><a href="./Products/specialty-products.php">Specialty</a></li>
-									<li><a href="./Products/unsought-products.php">Unsought</a></li>
-									<li><a href="./Products/digital-products.php">Digital</a></li>
+							<li class="label1" data-label1="new">
+							<a class="active-menu" href="#go-up">Shop</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="./Products/convenience-products.php">Convenience</a></li>
+									<li><a class="darkModetxt" href="./Products/shopping-products.php">Shopping</a></li>
+									<li><a class="darkModetxt" href="./Products/specialty-products.php">Specialty</a></li>
+									<li><a class="darkModetxt" href="./Products/unsought-products.php">Unsought</a></li>
+									<li><a class="darkModetxt" href="./Products/digital-products.php">Digital</a></li>
 								</ul>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="shopping-cart.php">Cart</a>
+								<a class="darkModetxt" href="shopping-cart.php">Cart</a>
 							</li>
 
 							<li>
-								<a href="blog.php">Blog</a>
+								<a class="darkModetxt" href="blog.php">Blog</a>
 							</li>
 
 							<li>
-								<a href="about.php">About</a>
+								<a class="darkModetxt" href="about.php">About</a>
 							</li>
 
 							<li>
-								<a href="contact.php">Contact</a>
+								<a class="darkModetxt" href="contact.php">Contact</a>
 							</li>
 						</ul>
 					</div>
