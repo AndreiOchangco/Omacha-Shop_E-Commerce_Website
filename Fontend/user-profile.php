@@ -1,9 +1,4 @@
 <?php
-// =============================
-//  User Profile Page (Dynamic)
-//  Omacha Shop - All-in-One Version
-// =============================
-
 // Start session
 session_start();
 
@@ -372,7 +367,7 @@ $wishlist_count = 0;
 
         <section class="container p-t-120 p-b-100">
             <div class="bg0 p-5 rounded-lg shadow-lg max-w-xl mx-auto text-center">
-                <img src="images/profile.png" alt="User Avatar" class="w-32 h-32 mx-auto rounded-full mb-4 shadow">
+                <img src="images/profile.png" alt="User Avatar" class="profile-avatar mb-4" style="width: 200px; height: 200px;">
                 <h2 class="ltext-103 cl2 p-b-10"><?php echo htmlspecialchars($userLogin['userName']); ?></h2>
                 <p class="stext-107 cl6 mb-4">User Profile</p>
 
