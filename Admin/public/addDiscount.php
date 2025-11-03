@@ -123,7 +123,7 @@
                 stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
               </svg>
-              <span class="ml-4">Manage Users</span>
+              <span class="ml-4">Manage User</span>
             </a>
           </li>
           

@@ -560,7 +560,7 @@
                     <th class="px-4 py-3">Name</th>
                     <th class="px-4 py-3">Star</th>
                     <th class="px-4 py-3">Email</th>
-                    <th class="px-4 py-3">Discription</th>
+                    <th class="px-4 py-3">Description</th>
                     <th class="px-4 py-3">Actions</th>
                   </tr>
                 </thead>

@@ -36,7 +36,7 @@
       <div class="py-4 text-gray-500 dark:text-gray-400">
         <!-- Logo desktop -->
         <a href="index.php" class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="index.php">
-          <h1 class="m-0 text-primary1 "><span class="text-dark1"><img class="Imagealignment" src="../../Fontend/images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha</h1>
+          <h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment" src="../../Fontend/images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha</h1>
         </a>
         
         <ul class="mt-6">
@@ -804,7 +804,7 @@
             <div
               class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800">
               <span class="flex items-center col-span-3">
-                Showing 1-2 of 100
+                Showing 1-5 of 20
               </span>
               <span class="col-span-2"></span>
               <!-- Pagination -->
@@ -837,12 +837,12 @@
                     <li>
                       <button
                         class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                        3
+                        19
                       </button>
                     </li>
                     <li>
                       <button class="px-3 py-1 rounded-md focus:outline-none focus:shadow-outline-purple">
-                        4
+                        20
                       </button>
                     </li>
                     <li>
