@@ -389,7 +389,7 @@ if ($query->num_rows > 0) {
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a class="index.php" href="#go-up">Home</a>
+								<a class="darkModetxt" href="#go-up">Home</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="#shop-by-category">Categories</a></li>
 									<li><a class="darkModetxt" href="#new-arrivals">Arrivals</a></li>
