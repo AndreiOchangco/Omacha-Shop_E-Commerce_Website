@@ -789,15 +789,15 @@
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
                 <label for="file1">Product 1 (Required) </label>
-                <input id="file1" name="p_image[]" type="file">
+                <input id="file1" name="p_image[]" type="text">
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
                 <label for="file2">Product 2 (Optional)</label>
-                <input id="file2" name="p_image[]" type="file">
+                <input id="file2" name="p_image[]" type="text">
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
                 <label for="file3">Product 3 (Optional)</label>
-                <input id="file3" name="p_image[]" type="file">
+                <input id="file3" name="p_image[]" type="text">
                 </div>
 
                 <div class="form-group text-gray-700 dark:text-gray-200">
