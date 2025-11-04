@@ -782,14 +782,36 @@
           </div>
         </header>
         <main class="h-full pb-16 overflow-y-auto">
-          <!-- Remove everything INSIDE this div to a really blank page -->
-          <div class="container px-6 mx-auto grid">
-            <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
-            >
-              Blank
-            </h2>
-          </div>
+            <form action="sendMessage.php" method="POST">
+            <div class="content">
+                <div class="container px-6 mx-auto grid">
+                <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Send Message to Customer</h2>
+                </div>
+                <div class="form-group text-gray-700 dark:text-gray-200">
+                <label for="file1">Product 1 (Required) </label>
+                <input id="file1" name="p_image[]" type="file">
+                </div>
+                <div class="form-group text-gray-700 dark:text-gray-200">
+                <label for="file2">Product 2 (Optional)</label>
+                <input id="file2" name="p_image[]" type="file">
+                </div>
+                <div class="form-group text-gray-700 dark:text-gray-200">
+                <label for="file3">Product 3 (Optional)</label>
+                <input id="file3" name="p_image[]" type="file">
+                </div>
+
+                <div class="form-group text-gray-700 dark:text-gray-200">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="p_description" rows="4"
+                    cols="50" placeholder="Description"></textarea>
+                </div>
+
+                <div class="form-group text-gray-700 dark:text-gray-200">
+                <button name="sbm" class="main-btn" type="submit">Add Product</button>
+                <a href="../../Fontend/product2.php" class="main-btn">User Interface</a>
+                </div>
+            </div>
+            </form>
         </main>
       </div>
     </div>
