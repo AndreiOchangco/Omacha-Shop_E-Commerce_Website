@@ -147,6 +147,26 @@ if ($query->num_rows > 0) {
 	// Nếu không tìm thấy kết quả
 	// echo "0 results";
 }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = htmlspecialchars(trim($_POST["name"]));
+    $email = htmlspecialchars(trim($_POST["email"]));
+    $subject = htmlspecialchars(trim($_POST["subject"]));
+    $message = htmlspecialchars(trim($_POST["message"]));
+
+    $to = "omachaofficialshop@gmail.com";
+    $headers = "From: $email";
+    $email_subject = "Contact Form: $subject";
+    $email_body = "You have received a new message from $name.\n\n".
+                  "Email: $email\n".
+                  "Message:\n$message";
+
+    if (mail($to, $email_subject, $email_body, $headers)) {
+        echo "<script>window.onload = function() { showModal('Message sent successfully!', true); }</script>";
+    } else {
+        echo "<script>window.onload = function() { showModal('Failed to send message. Please try again.', false); }</script>";
+    }
+}
 ?>
 <!-- Trang này dùng để điền form -->
 <!DOCTYPE html>
@@ -605,16 +625,20 @@ if ($query->num_rows > 0) {
 		<div class="contactForm">
 			<form action="notification_api.php" id="notificationForm">
 				<h1 class=" stext-121 sub-heading darkModetxt">Let's talk</h1>
-				<p class="para para2">
-					Contact us for a quote, help to join the them.
-				</p>
+
 				<input type="text" id="user" name="user" class="input" value="ADMIN" required>
 				<input type="text" id="title" name="title" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
 				<textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
 				
 				<button type="submit" id="sendmsg" class="input submit">Send Message</button>
 			</form>
-			<div id="result" class="result" style="display: none;"></div>
+			<!-- Modal for Notifications -->
+			<div id="resultModal" class="modal">
+				<div class="modal-content">
+					<span class="close-btn" onclick="closeModal()">&times;</span>
+					<div id="result" class="result"></div>
+				</div>
+			</div>
 
 			<div class="map-container">
 				<div class="mapBg"></div>
@@ -916,6 +940,9 @@ if ($query->num_rows > 0) {
 			document.getElementById('user').value = 'user-' + randomId;
 		});
 	</script>
+
+<!--===============================================================================================-->
+
 	<script>
 	(function() {
 	let scrollTimer;
@@ -935,6 +962,32 @@ if ($query->num_rows > 0) {
 	</script>
 
 <!--===============================================================================================-->
+
+	<script>
+    function showModal(message, isSuccess = true) {
+        const modal = document.getElementById('resultModal');
+        const result = document.getElementById('result');
+
+        result.textContent = message;
+        result.style.color = isSuccess ? 'green' : 'red';
+        modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('resultModal').style.display = 'none';
+    }
+
+    // Optional: close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('resultModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+    </script>
+
+<!--===============================================================================================-->
+
 	<script src="js/main.js"></script>
 	<script src="js/dark-mode.js"></script>
 	<script src="js/scroll.js"></script>
