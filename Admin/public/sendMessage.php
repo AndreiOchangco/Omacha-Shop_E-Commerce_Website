@@ -790,13 +790,13 @@
                 <div class="form-group text-gray-700 dark:text-gray-200">
 
                 <!-- change this -->
-                <input type="text" id="user" name="user" class="input" value="Enter a specific user..." required>
+                <input type="text" id="user" name="user" class="input" placeholder="Enter a specific user..." required>
 
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
 
                 <!-- change this -->
-                <input type="text" id="title" name="title" class="input" placeholder="From Admin!" required>
+                <input type="text" id="title" name="title" class="input" value="From Admin!" required>
 
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
@@ -806,13 +806,11 @@
                 <div class="form-group text-gray-700 dark:text-gray-200">
 
                 <!-- change this -->
-                <label for="description">Description</label>
                 <textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
                 </div>
 
                 <div class="form-group text-gray-700 dark:text-gray-200">
                 <button name="sbm" type="submit" class="btn">Send Notification</button>
-                <!-- <a href="../../Fontend/product2.php" class="main-btn">User Interface</a> -->
                 </div>
             </div>
             </form>
