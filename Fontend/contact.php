@@ -148,25 +148,12 @@ if ($query->num_rows > 0) {
 	// echo "0 results";
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars(trim($_POST["name"]));
-    $email = htmlspecialchars(trim($_POST["email"]));
-    $subject = htmlspecialchars(trim($_POST["subject"]));
-    $message = htmlspecialchars(trim($_POST["message"]));
-
-    $to = "omachaofficialshop@gmail.com";
-    $headers = "From: $email";
-    $email_subject = "Contact Form: $subject";
-    $email_body = "You have received a new message from $name.\n\n".
-                  "Email: $email\n".
-                  "Message:\n$message";
-
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        echo "<script>window.onload = function() { showModal('Message sent successfully!', true); }</script>";
-    } else {
-        echo "<script>window.onload = function() { showModal('Failed to send message. Please try again.', false); }</script>";
-    }
+if (mail($to, $email_subject, $email_body, $headers)) {
+    echo "<script>window.onload = function() { showModal('Message sent successfully!', true); }</script>";
+} else {
+    echo "<script>window.onload = function() { showModal('Failed to send message. Please try again.', false); }</script>";
 }
+
 ?>
 <!-- Trang này dùng để điền form -->
 <!DOCTYPE html>
@@ -633,14 +620,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				
 				<button type="submit" id="sendmsg" class="input submit">Send Message</button>
 			</form>
-			<!-- Modal for Notifications -->
-			<div id="resultModal" class="modal" style="display:none;">
+			<!-- Notification Modal -->
+			<div id="resultModal" class="modal" style="display: none;">
 				<div class="modal-content">
 					<span class="close-btn" onclick="closeModal()">&times;</span>
 					<div id="result" class="result"></div>
 				</div>
 			</div>
-
 
 			<div class="map-container">
 				<div class="mapBg"></div>
@@ -893,72 +879,91 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!--===============================================================================================-->
 
 	<script>
-	document.getElementById('notificationForm').addEventListener('submit', async function(e) {
+	document.addEventListener('DOMContentLoaded', function () {
+	const form = document.getElementById('notificationForm');
+	const modal = document.getElementById("resultModal");
+	const resultDiv = document.getElementById("result");
+
+	// Stop here if form doesn't exist
+	if (!form) return;
+
+	form.addEventListener('submit', async function (e) {
 		e.preventDefault();
 
 		const formData = new FormData(this);
 		const data = {
-			user: formData.get('user'),
-			title: formData.get('title'),
-			message: formData.get('message'),
+		user: formData.get('user'),
+		title: formData.get('title'),
+		message: formData.get('message'),
 		};
 
 		try {
-			const response = await fetch('notification_api.php', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(data)
-			});
-			
-			const result = await response.json();
-			showResult(result);
+		const response = await fetch('notification_api.php', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(data)
+		});
+
+		// Only try to read JSON if the request succeeded
+		if (!response.ok) {
+			throw new Error(`Server error: ${response.status}`);
+		}
+
+		const result = await response.json();
+		showModal(result);
 		} catch (error) {
-			showResult({ success: false, error: error.message });
+		// Only show error if it came from a user action
+		console.error("Notification error:", error);
+		showModal({ success: false, error: "Unable to connect to the server." });
 		}
 	});
 
-	// 🟩 Show result inside modal
-	function showResult(result) {
-		const resultDiv = document.getElementById('result');
-		const modal = document.getElementById('resultModal');
+	function showModal(result) {
+		if (!resultDiv || !modal) return;
 
 		if (result.success) {
-			resultDiv.innerHTML = `
-				<h4 style="color: green;">✅ Notification Sent!</h4>
-				<p><strong>Sent to user:</strong> ${result.user || result.topic}</p>
-				<p><a href="${result.url}" target="_blank">View Notification</a></p>
-			`;
+		resultDiv.innerHTML = `
+			<h4 style="color: green;">✅ Notification Sent!</h4>
+			<p><strong>Sent to:</strong> ${result.user || "Unknown"}</p>
+			${result.url ? `<p><a href="${result.url}" target="_blank">View Notification</a></p>` : ''}
+		`;
 		} else {
-			resultDiv.innerHTML = `
-				<h4 style="color: red;">❌ Failed to Send</h4>
-				<p><strong>Error:</strong> ${result.error}</p>
-			`;
+		resultDiv.innerHTML = `
+			<h4 style="color: red;">❌ Failed to Send</h4>
+			<p><strong>Error:</strong> ${result.error || 'Unknown error occurred.'}</p>
+		`;
 		}
 
 		// Show modal
-		modal.style.display = "block";
-	}
+		modal.style.display = "flex";
+		modal.classList.add("show");
 
-	// 🟥 Modal close function
-	function closeModal() {
-		const modal = document.getElementById("resultModal");
-		modal.style.display = "none";
-	}
-
-	// 🟨 Close modal when clicking outside
-	window.onclick = function(event) {
-		const modal = document.getElementById("resultModal");
-		if (event.target == modal) {
-			modal.style.display = "none";
+		// Auto-close after 5 seconds if success
+		if (result.success) {
+		setTimeout(closeModal, 5000);
 		}
 	}
 
-	// 🟦 Auto-generate random username on page load
-	window.addEventListener('load', function() {
+	function closeModal() {
+		modal.classList.remove("show");
+		setTimeout(() => (modal.style.display = "none"), 300);
+	}
+
+	// Close when clicking outside or pressing ×
+	window.onclick = function (event) {
+		if (event.target === modal) closeModal();
+	};
+	window.closeModal = closeModal; // allow inline onclick to work
+
+	// Optional: generate random user ID
+	const userInput = document.getElementById('user');
+	if (userInput && !userInput.value) {
 		const randomId = Math.random().toString(36).substring(2, 8);
-		document.getElementById('user').value = 'user-' + randomId;
+		userInput.value = 'user-' + randomId;
+	}
 	});
 	</script>
+
 
 <!--===============================================================================================-->
 
