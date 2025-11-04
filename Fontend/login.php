@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user'], $_POST['pass'
     // 🔹 1. Check if admin
     if (array_key_exists($user, $adminAccounts) && $pass === $adminAccounts[$user]) {
         $_SESSION['user'] = $user;
-        header('Location: index.php'); // Admin redirects to same folder for now
+        header('Location: ../Admin/public/index.php'); // Admin redirects to the admin dashboard
         exit();
     }
 
