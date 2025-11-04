@@ -224,7 +224,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="css/universal.css">
+	<link rel="stylesheet" type="text/css" href="css/universal.css">
+	<link rel="stylesheet" type="text/css" href="css/contact-modal.css">
 	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 	<!--===============================================================================================-->
 	<style>
@@ -263,53 +264,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	.btn-delete:hover {
 		color:#F4538A;
-	}
-
-	.modal {
-	display: none;
-	position: fixed;
-	z-index: 9999;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	justify-content: center;
-	align-items: center;
-	opacity: 0;
-	transition: opacity 0.3s ease;
-	}
-
-	/* When modal is visible */
-	.modal.show {
-	display: flex;
-	opacity: 1;
-	}
-
-	.modal-content {
-	background: #fff;
-	border-radius: 10px;
-	padding: 20px;
-	width: 90%;
-	max-width: 400px;
-	text-align: center;
-	transform: translateY(-20px);
-	transition: transform 0.3s ease;
-	}
-
-	.modal.show .modal-content {
-	transform: translateY(0);
-	}
-
-	.close-btn {
-	float: right;
-	font-size: 22px;
-	cursor: pointer;
-	color: #666;
-	}
-
-	.close-btn:hover {
-	color: #000;
 	}
 </style>
 
@@ -672,15 +626,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<div class="contactForm">
 			<form action="notification_api.php" id="notificationForm">
 				<h1 class=" stext-121 sub-heading darkModetxt">Let's talk</h1>
-<<<<<<< HEAD
-				<p class="para para2">
-					Contact us for a quote, help to join the them.
-				</p>
-=======
 
->>>>>>> 4854bcc02507b81815160b104457fe852fc58448
 				<input type="text" id="user" name="user" class="input" value="ADMIN" required>
-				<input type="text" id="title" name="title" class="input" placeholder="From 'username'." required>
+				<input type="text" id="title" name="title" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
 				<textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
 				
 				<button type="submit" id="sendmsg" class="input submit">Send Message</button>
