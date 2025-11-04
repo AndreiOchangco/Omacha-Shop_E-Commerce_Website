@@ -782,7 +782,7 @@
           </div>
         </header>
         <main class="h-full pb-16 overflow-y-auto">
-            <form action="sendMessage.php" method="POST">
+            <form id="notificationForm"action="sendMessage.php" method="POST">
             <div class="content">
                 <div class="container px-6 mx-auto grid">
                 <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Send Message to Customer</h2>
@@ -811,8 +811,8 @@
                 </div>
 
                 <div class="form-group text-gray-700 dark:text-gray-200">
-                <button name="sbm" class="main-btn" type="submit">Add Product</button>
-                <a href="../../Fontend/product2.php" class="main-btn">User Interface</a>
+                <button name="sbm" type="submit" class="btn">Send Notification</button>
+                <!-- <a href="../../Fontend/product2.php" class="main-btn">User Interface</a> -->
                 </div>
             </div>
             </form>
