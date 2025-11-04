@@ -148,12 +148,6 @@ if ($query->num_rows > 0) {
 	// echo "0 results";
 }
 
-if (mail($to, $email_subject, $email_body, $headers)) {
-    echo "<script>window.onload = function() { showModal('Message sent successfully!', true); }</script>";
-} else {
-    echo "<script>window.onload = function() { showModal('Failed to send message. Please try again.', false); }</script>";
-}
-
 ?>
 <!-- Trang này dùng để điền form -->
 <!DOCTYPE html>
