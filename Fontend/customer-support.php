@@ -152,7 +152,7 @@ if ($query->num_rows > 0) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Omacha Shop | Contact</title>
+	<title>Omacha Shop | Customer Support</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -593,7 +593,7 @@ if ($query->num_rows > 0) {
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-55">
-			Contact
+			Customer Support
 		</h2>
 	</section>	
 

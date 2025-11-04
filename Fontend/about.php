@@ -446,7 +446,10 @@ if ($result->num_rows > 0) {
 							</li>
 
 							<li>
-								<a href="contact.php">Contact</a>
+								<a class="darkModetxt" href="contact.php">Contact</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -697,7 +700,7 @@ if ($result->num_rows > 0) {
 
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
-		<h2 style="color: #000;" class="ltext-105 cl0 txt-center">
+		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-50">
 			About Us
 		</h2>
 	</section>
@@ -715,31 +718,31 @@ if ($result->num_rows > 0) {
 			<div class="row p-b-148">
 				<div class="col-md-7 col-lg-8">
 					<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
-						<h3 style="padding-left: 10%;" class="mtext-111 cl2 p-b-16">
+						<h3 style="padding-left: 5%;" class="mtext-111 cl2 p-b-16 text-omacha">
 							Our Story
 						</h3>
 
-						<p class="stext-113 cl6 p-b-26">
+						<p class="stext-113 cl6 p-b-26 darkModetxt" style="text-align: justify;">
 							We, the team at Omacha Store, take pride in being one of the leading destinations for
 							providing quality and diverse toys for children. Our mission is not only to offer
 							entertainment products but also to create enjoyable and educational experiences for every
 							child.
 						</p>
 
-						<p class="stext-113 cl6 p-b-26">
+						<p class="stext-113 cl6 p-b-26 darkModetxt" style="text-align: justify;">
 							Starting from a simple idea, we have gradually built and developed our store with an
 							unwavering commitment to providing the best products and the most attentive customer
 							service. With a passion for children's development and happiness, we constantly seek new and
 							creative ideas to provide exciting and educational experiences for kids.
 						</p>
 
-						<p class="stext-113 cl6 p-b-26">
+						<p class="stext-113 cl6 p-b-26 darkModetxt" style="text-align: justify;">
 							Over the years, Omacha Store has become a trusted destination for parents and children
 							alike. The trust and support of our customers are the greatest motivation that helps us to
 							continuously improve and grow every day.
 						</p>
 
-						<p class="stext-113 cl6 p-b-26">
+						<p class="stext-113 cl6 p-b-26 darkModetxt" style="text-align: justify;">
 							Join us on the journey to create memorable memories and nurture children's development
 							through the world of play!
 						</p>
@@ -747,7 +750,7 @@ if ($result->num_rows > 0) {
 				</div>
 
 				<div class="col-11 col-md-5 col-lg-4 m-lr-auto">
-					<div class="how-bor1 ">
+					<div class="how-bor1">
 						<div class="hov-img0">
 							<img src="images/About-Toy-1.webp" alt="IMG">
 						</div>
@@ -767,39 +770,38 @@ if ($result->num_rows > 0) {
 
 				<div class="order-md-2 col-md-7 col-lg-8 p-b-30">
 					<div class="p-t-7 p-l-85 p-l-15-lg p-l-0-md">
-						<h3 style="padding-left: 10%;" class="mtext-111 cl2 p-b-16">
+						<h3 style="padding-left: 5%;" class="mtext-111 cl2 p-b-16 text-omacha">
 							Our Mission
 						</h3>
 
-						<p class="stext-113 cl6 p-b-26">
+						<p class="stext-113 cl6 p-b-26 darkModetxt" style="text-align: justify;">
 							Our mission is to create a safe, convenient, and enjoyable shopping environment for parents
-							and their children.
-							We are committed to providing quality, safe, and age-appropriate toys that help children
-							develop comprehensively in mind and spirit.
+							and their children. We are committed to providing quality, safe, and age-appropriate toys
+							that help children develop comprehensively in mind and spirit.
 						</p>
 
 						<div class="stext-113 cl6 p-b-26">
-							<p class="stext-114 cl6 p-r-40 p-b-11">
+							<p class="stext-114 cl6 p-r-40 p-b-11 darkModetxt" style="text-align: justify;">
 								Additionally, we prioritize building a loving and supportive community where parents can
 								share experiences, knowledge, and useful information about caring for and educating
-								their children.
-								We believe that support and sharing will help families become stronger and happier.
+								their children. We believe that support and sharing will help families become stronger
+								and happier.
 							</p>
 
 							<div class="stext-113 cl6 p-b-26">
-								<p class="stext-114 cl6 p-r-40 p-b-11">
+								<p class="stext-114 cl6 p-r-40 p-b-11 darkModetxt" style="text-align: justify;">
 									Through each product and service we provide, we hope to contribute to the
 									development and happiness of every child, while creating memorable experiences for
 									each of our customers' families.
 								</p>
 
 								<div class="bor16 p-l-29 p-b-9 m-t-22">
-									<p class="stext-114 cl6 p-r-40 p-b-11">
+									<p class="stext-114 cl6 p-r-40 p-b-11 darkModetxt" style="text-align: justify;">
 										Coding with passion, creating with purpose, and innovating for a brighter
 										future.
 									</p>
 
-									<span class="stext-111 cl8">
+									<span class="stext-111 cl8 darkModetxt">
 										- My Team Slogan
 									</span>
 								</div>
@@ -807,12 +809,13 @@ if ($result->num_rows > 0) {
 						</div>
 					</div>
 				</div>
+			</div>
 	</section>
 
 	<!-- Team Members -->
 	<section class="bg0 p-t-75 p-b-30">
 		<div class="container">
-			<h3 style="text-align: center; " class="mtext-111 cl2 p-b-16">
+			<h3 style="text-align: center; " class="mtext-111 cl2 p-b-16 text-omacha">
 				Our Team
 			</h3>
 			<div class="row">
@@ -1054,7 +1057,7 @@ if ($result->num_rows > 0) {
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
-			<i class="zmdi zmdi-chevron-up"></i>
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>
 	</div>
 
@@ -1142,59 +1145,6 @@ if ($result->num_rows > 0) {
 				clearInterval(intervalIdSold);
 			}
 		}, 15);
-
-		// document.addEventListener('DOMContentLoaded', function() {
-		// 	const themeToggle = document.getElementById('theme-toggle');
-		// 	let isDarkMode = false;
-
-		// 	themeToggle.addEventListener('click', function() {
-		// 		isDarkMode = !isDarkMode;
-		// 		if (isDarkMode) {
-		// 			document.body.classList.add('dark-theme'); // Thêm lớp dark-theme cho body
-		// 		} else {
-		// 			document.body.classList.remove('dark-theme'); // Loại bỏ lớp dark-theme khỏi body
-		// 		}
-		// 	});
-
-		// 	// Kiểm tra nếu trình duyệt có hỗ trợ local storage và trạng thái chế độ tối đã được lưu trữ trước đó
-		// 	if (window.localStorage && localStorage.getItem('theme')) {
-		// 		const savedTheme = localStorage.getItem('theme');
-		// 		if (savedTheme === 'dark') {
-		// 			document.body.classList.add('dark-theme');
-		// 			isDarkMode = true;
-		// 		}
-		// 	}
-		// });
-
-		// // Lưu trạng thái chế độ tối hoặc sáng vào local storage khi người dùng thay đổi
-		// document.addEventListener('DOMContentLoaded', function() {
-		// 	const themeToggle = document.getElementById('theme-toggle');
-		// 	let isDarkMode = false;
-
-		// 	themeToggle.addEventListener('click', function() {
-		// 		isDarkMode = !isDarkMode;
-		// 		if (isDarkMode) {
-		// 			localStorage.setItem('theme', 'dark');
-		// 		} else {
-		// 			localStorage.setItem('theme', 'light');
-		// 		}
-		// 	});
-		// });
-
-		//const btn = document.querySelector(".btn-toggle");
-		//const theme = document.querySelector("#theme-link");
-
-		// Lắng nghe sự kiện click vào button
-		//btn.addEventListener("click", function () {
-			// Nếu URL đang là "ligh-theme.css"
-			//if (theme.getAttribute("href") == "light-theme.css") {
-				// thì chuyển nó sang "dark-theme.css"
-				//theme.href = "dark-theme.css";
-			//} else {
-				// và ngược lại
-				//theme.href = "light-theme.css";
-			//}
-		//});
 	</script>
 	<!--===============================================================================================-->
 	<script>
