@@ -592,7 +592,7 @@ if ($query->num_rows > 0) {
 
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
-		<h2 style="color: #000;" class="ltext-105 cl0 txt-center">
+		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-55">
 			Contact
 		</h2>
 	</section>	
@@ -601,11 +601,10 @@ if ($query->num_rows > 0) {
 	<!-- Content page -->
 	<section1>
 		<!-- <h4 class="sectionHeader">Contact Us</h4> -->
-		<h1 class="stext-121 heading">Get In Touch</h1>
-		<p class="para">this is description</p>
+		<h1 class="stext-121 heading darkModetxt">Get In Touch</h1>
 		<div class="contactForm">
 			<form action="notification_api.php" id="notificationForm">
-				<h1 class=" stext-121 sub-heading">Let's talk</h1>
+				<h1 class=" stext-121 sub-heading darkModetxt">Let's talk</h1>
 				<p class="para para2">
 					Contact us for a quote, help to join the them.
 				</p>
@@ -630,17 +629,21 @@ if ($query->num_rows > 0) {
 				<div class="method">
 					<i class="fa-duotone fa-location-check fa-beat-fade contactIcon" style="--fa-primary-color: #ee1153; --fa-secondary-color: #f4679f;"></i>
 					<article class="text">
-						<h1 class="stext-121 sub-heading">Location</h1>
-						<p class="para">17 Nguyen Huu Tho Street</p>
+						<h1 class="stext-121 sub-heading text-omacha">Location</h1>
+						<p class="para darkModetxt">Saint Louis College</p>
 					</article>
 				</div>
 
 				<div class="method">
 					<i class="fa-duotone fa-envelope fa-beat-fade contactIcon" style="--fa-primary-color: #dd2776; --fa-secondary-color: #f486c6;"></i>						
 					<article class="text">
-						<h1 class="stext-121 sub-heading">Email</h1>
-						<p class="para">
-							<a href="mailto:omachacontact@gmail.com">omachashopofficial@gmail.com</a>
+						<h1 class="stext-121 sub-heading text-omacha">Email</h1>
+						<p class="para darkModetxt">
+							<a
+							class="darkModetxt"
+							href="mailto:omachashopofficial@gmail.com"
+							style="color: #000; text-decoration: none;">omachashopofficial@gmail.com
+							</a>
 						</p>
 						
 					</article>
@@ -649,9 +652,13 @@ if ($query->num_rows > 0) {
 				<div class="method">
 					<i class="fa-duotone fa-phone-volume fa-beat-fade contactIcon" style="--fa-primary-color: #d71d55; --fa-secondary-color: #d6669c;"></i>					
 					<article class="text">
-						<h1 class="stext-121 sub-heading">Phone</h1>
-						<p class="para">
-							<a href="tel:+1922 4800">+1922 4800</a>
+						<h1 class="stext-121 sub-heading text-omacha">Phone</h1>
+						<p class="para darkModetxt">
+							<a 
+							class="darkModetxt"
+							href="tel:+1922 4800"
+							style="color: #000; text-decoration: none;">+1922 4800
+							</a>
 						</p>
 					</article>
 				</div>
@@ -663,44 +670,43 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32">
+	<footer class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Categories
+					<h4 class="stext-301 cl10 p-b-30">
+						Legal
 					</h4>
-
 					<ul>
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Women
+								Faq
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Men
+								Retailers
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shoes
+								Privacy Policy
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Watches
+								Cookies
 							</a>
 						</li>
 					</ul>
 				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Help
+					<h4 class="stext-301 cl10 p-b-30">
+						Services
 					</h4>
 
 					<ul>
@@ -712,7 +718,7 @@ if ($query->num_rows > 0) {
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Returns 
+								Returns
 							</a>
 						</li>
 
@@ -731,37 +737,39 @@ if ($query->num_rows > 0) {
 				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
+					<h4 class="stext-301 cl10 p-b-30">
 						GET IN TOUCH
 					</h4>
 
-					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+					<p class="stext-107 size-201">
+						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
+						on (+1) 96 716 6879
 					</p>
 
 					<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-facebook"></i>
+							<i class="fa-brands fa-facebook fa-lg" style="color: #ea539c;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-instagram"></i>
+							<i class="fa-brands fa-instagram fa-lg" style="color: #e151a5;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-pinterest-p"></i>
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #e74b7a;"></i>
 						</a>
 					</div>
 				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
+					<h4 class="stext-301 cl10 p-b-30">
 						Newsletter
 					</h4>
 
 					<form>
 						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
+								placeholder="email@example.com">
 							<div class="focus-input1 trans-04"></div>
 						</div>
 
@@ -799,8 +807,10 @@ if ($query->num_rows > 0) {
 
 				<p class="stext-107 cl6 txt-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
+						class="fa fa-heart-o" aria-hidden="true"></i> Group 5
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
 				</p>
 			</div>
@@ -811,7 +821,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
-			<i class="fa-solid fa-hand-pointer fa-shake fa-xl" style="color: #ff337a;"></i>
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>
 	</div>
 
