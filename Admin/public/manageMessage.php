@@ -80,7 +80,7 @@
           </li>
 
           <li class="relative px-6 py-3">
-            <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+            <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
               href="sendMessage.php">
               <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -164,7 +164,7 @@
             </a>
           </li>
           <li class="relative px-6 py-3">
-            <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+            <a class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
               href="manageMessage.php">
               <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -794,92 +794,105 @@
           </div>
         </header>
         <main class="h-full pb-16 overflow-y-auto">
-            <form id="notificationForm"action="sendMessage.php" method="POST">
-            <div class="content">
-                <div class="container px-6 mx-auto grid">
-                <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Send Message to Customer</h2>
+            <form id="notificationForm"action="manageMessage.php" method="GET">
+            <section class="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">📋 Manage Messages</h2>
+                <div id="messageList" class="space-y-4">
+                <p class="text-gray-500 text-sm">Fetching messages...</p>
                 </div>
-                <div class="form-group text-gray-700 dark:text-gray-200">
+            </section>
 
-                <!-- change this -->
-                <input type="text" id="user" name="user" class="input" placeholder="Enter a specific user..." required>
-
-                </div>
-                <div class="form-group text-gray-700 dark:text-gray-200">
-
-                <!-- change this -->
-                <input type="text" id="title" name="title" class="input" value="From Admin!" required>
-
-                </div>
-                <div class="form-group text-gray-700 dark:text-gray-200">
-
-                </div>
-
-                <div class="form-group text-gray-700 dark:text-gray-200">
-
-                <!-- change this -->
-                <textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
-                </div>
-
-                <div class="form-group text-gray-700 dark:text-gray-200">
-                <button name="sbm" type="submit" class="btn">Send Notification</button>
+            <div id="modalOverlay" class="hidden fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-sm text-center">
+                <h3 id="modalTitle" class="text-lg font-semibold mb-2"></h3>
+                <p id="modalMsg" class="text-sm text-gray-600 dark:text-gray-300"></p>
+                <button id="closeModal"
+                    class="mt-4 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-md text-sm">
+                    OK
+                </button>
                 </div>
             </div>
             </form>
         </main>
       </div>
     </div>
+
     <script>
-        document.getElementById('notificationForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(this);
-    const data = {
-        user: formData.get('user'),  // CHANGED: 'topic' to 'user'
-        title: formData.get('title'),
-        message: formData.get('message'),
-    };
-    
+    async function fetchMessagesOnce() {
+    const container = document.getElementById("messageList");
+    container.innerHTML = "<p class='text-gray-500 text-sm'>Fetching messages...</p>";
+
     try {
-        const response = await fetch('notification_api.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        });
-        
-        const result = await response.json();
-        showResult(result);
-    } catch (error) {
-        showResult({success: false, error: error.message});
-    }
-});
-        
-        function showResult(result) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.style.display = 'block';
-            
-            if (result.success) {
-                resultDiv.innerHTML = `
-                    <h4 style="color: green;">✅ Notification Sent!</h4>
-                    <p><strong>Sent to user:</strong> ${result.topic || result.user}</p>
-                    <p><a href="${result.url}" target="_blank">View Notification</a></p>
-                `;
-            } else {
-                resultDiv.innerHTML = `
-                    <h4 style="color: red;">❌ Failed to Send</h4>
-                    <p><strong>Error:</strong> ${result.error}</p>
-                `;
-            }
+        const res = await fetch("getMessages.php");
+        const data = await res.json();
+
+        if (data.error) {
+        container.innerHTML = `<p class='text-red-500 text-sm'>${data.error}</p>`;
+        return;
         }
 
-        // Generate random username on page load
-        window.addEventListener('load', function() {
-            const randomId = Math.random().toString(36).substring(2, 8);
-            document.getElementById('user').value = 'user-' + randomId;
+        if (data.length === 0) {
+        container.innerHTML = "<p class='text-gray-500 text-sm'>No messages found.</p>";
+        return;
+        }
+
+        container.innerHTML = "";
+
+        data.forEach(msg => {
+        const topic = msg.topic || "Unknown";
+        const time = msg.time ? new Date(msg.time * 1000).toLocaleString() : "Unknown time";
+        let title = msg.title?.trim() || "";
+        let messageText = msg.message?.trim() || "";
+
+        // 🧠 Detect and separate embedded title/message pairs like:
+        // "Title: From ReinFhaul Message: Testing for ADMIN"
+        if (messageText.includes("Title:") && messageText.includes("Message:")) {
+            const titleMatch = messageText.match(/Title:\s*(.*?)\s*Message:/i);
+            const msgMatch = messageText.match(/Message:\s*(.*)/i);
+            if (titleMatch) title = titleMatch[1].trim();
+            if (msgMatch) messageText = msgMatch[1].trim();
+        } else {
+            // fallback
+            title = title || "Untitled Message";
+            messageText = messageText || "(No message content)";
+        }
+
+        const card = document.createElement("div");
+        card.className =
+            "p-4 border dark:border-gray-700 rounded-lg bg-gray-50 dark:bg-gray-900 hover:shadow-md transition";
+
+        // 🧩 Clean structured format
+        card.innerHTML = `
+            <div class="flex justify-between items-center mb-2">
+            <span class="text-xs text-gray-500 dark:text-gray-400">${time}</span>
+            </div>
+            <div class="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+            <p><strong>Title:</strong> ${title}</p>
+            <p><strong>Message:</strong> ${messageText}</p>
+            </div>
+            <p class="text-xs text-gray-400 mt-2">Topic: <span class="font-medium">${topic}</span></p>
+        `;
+
+        container.appendChild(card);
         });
+    } catch (error) {
+        showModal("❌ Error", "Unable to fetch data from API.");
+    }
+    }
+
+    function showModal(title, message) {
+    const modal = document.getElementById("modalOverlay");
+    document.getElementById("modalTitle").textContent = title;
+    document.getElementById("modalMsg").textContent = message;
+    modal.classList.remove("hidden");
+    }
+
+    document.getElementById("closeModal").addEventListener("click", () => {
+    document.getElementById("modalOverlay").classList.add("hidden");
+    });
+
+    window.addEventListener("DOMContentLoaded", fetchMessagesOnce);
     </script>
+
   </body>
 </html>
-+
