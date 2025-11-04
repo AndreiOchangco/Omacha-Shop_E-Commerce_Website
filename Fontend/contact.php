@@ -610,9 +610,9 @@ if ($query->num_rows > 0) {
 					Contact us for a quote, help to join the them.
 				</p>
 				<input type="text" id="user" name="user" class="input" value="ADMIN" required>
-				<input type="text" id="title" name="title" placeholder="From 'username'." required>
+				<input type="text" id="title" name="title" class="input" placeholder="From 'username'." required>
 				<textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
-				<button type="submit" class="btn">Send Message</button>
+				<button type="submit" id="sendmsg" class="input submit">Send Message</button>
 			</form>
 			<div id="result" class="result" style="display: none;"></div>
 
