@@ -264,6 +264,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	.btn-delete:hover {
 		color:#F4538A;
 	}
+
+	.modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	}
+
+	/* When modal is visible */
+	.modal.show {
+	display: flex;
+	opacity: 1;
+	}
+
+	.modal-content {
+	background: #fff;
+	border-radius: 10px;
+	padding: 20px;
+	width: 90%;
+	max-width: 400px;
+	text-align: center;
+	transform: translateY(-20px);
+	transition: transform 0.3s ease;
+	}
+
+	.modal.show .modal-content {
+	transform: translateY(0);
+	}
+
+	.close-btn {
+	float: right;
+	font-size: 22px;
+	cursor: pointer;
+	color: #666;
+	}
+
+	.close-btn:hover {
+	color: #000;
+	}
 </style>
 
 <body class="animsition">
@@ -633,12 +680,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				<button type="submit" id="sendmsg" class="input submit">Send Message</button>
 			</form>
 			<!-- Modal for Notifications -->
-			<div id="resultModal" class="modal">
+			<div id="resultModal" class="modal" style="display:none;">
 				<div class="modal-content">
 					<span class="close-btn" onclick="closeModal()">&times;</span>
 					<div id="result" class="result"></div>
 				</div>
 			</div>
+
 
 			<div class="map-container">
 				<div class="mapBg"></div>
@@ -889,13 +937,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
 	<script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
+
 	<script>
-		document.getElementById('notificationForm').addEventListener('submit', async function(e) {
+	document.getElementById('notificationForm').addEventListener('submit', async function(e) {
 		e.preventDefault();
 
 		const formData = new FormData(this);
 		const data = {
-			user: formData.get('user'),  // CHANGED: 'topic' to 'user'
+			user: formData.get('user'),
 			title: formData.get('title'),
 			message: formData.get('message'),
 		};
@@ -903,42 +952,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		try {
 			const response = await fetch('notification_api.php', {
 				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
+				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify(data)
 			});
 			
 			const result = await response.json();
 			showResult(result);
-			} catch (error) {
-				showResult({success: false, error: error.message});
-			}
-		});
-		
-		function showResult(result) {
-			const resultDiv = document.getElementById('result');
-			resultDiv.style.display = 'block';
-			
-			if (result.success) {
-				resultDiv.innerHTML = `
-					<h4 style="color: green;">✅ Notification Sent!</h4>
-					<p><strong>Sent to user:</strong> ${result.topic || result.user}</p>
-					<p><a href="${result.url}" target="_blank">View Notification</a></p>
-				`;
-			} else {
-				resultDiv.innerHTML = `
-					<h4 style="color: red;">❌ Failed to Send</h4>
-					<p><strong>Error:</strong> ${result.error}</p>
-				`;
-			}
+		} catch (error) {
+			showResult({ success: false, error: error.message });
+		}
+	});
+
+	// 🟩 Show result inside modal
+	function showResult(result) {
+		const resultDiv = document.getElementById('result');
+		const modal = document.getElementById('resultModal');
+
+		if (result.success) {
+			resultDiv.innerHTML = `
+				<h4 style="color: green;">✅ Notification Sent!</h4>
+				<p><strong>Sent to user:</strong> ${result.user || result.topic}</p>
+				<p><a href="${result.url}" target="_blank">View Notification</a></p>
+			`;
+		} else {
+			resultDiv.innerHTML = `
+				<h4 style="color: red;">❌ Failed to Send</h4>
+				<p><strong>Error:</strong> ${result.error}</p>
+			`;
 		}
 
-		// Generate random username on page load
-		window.addEventListener('load', function() {
-			const randomId = Math.random().toString(36).substring(2, 8);
-			document.getElementById('user').value = 'user-' + randomId;
-		});
+		// Show modal
+		modal.style.display = "block";
+	}
+
+	// 🟥 Modal close function
+	function closeModal() {
+		const modal = document.getElementById("resultModal");
+		modal.style.display = "none";
+	}
+
+	// 🟨 Close modal when clicking outside
+	window.onclick = function(event) {
+		const modal = document.getElementById("resultModal");
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+
+	// 🟦 Auto-generate random username on page load
+	window.addEventListener('load', function() {
+		const randomId = Math.random().toString(36).substring(2, 8);
+		document.getElementById('user').value = 'user-' + randomId;
+	});
 	</script>
 
 <!--===============================================================================================-->
@@ -960,31 +1025,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	});
 	})();
 	</script>
-
-<!--===============================================================================================-->
-
-	<script>
-    function showModal(message, isSuccess = true) {
-        const modal = document.getElementById('resultModal');
-        const result = document.getElementById('result');
-
-        result.textContent = message;
-        result.style.color = isSuccess ? 'green' : 'red';
-        modal.style.display = 'flex';
-    }
-
-    function closeModal() {
-        document.getElementById('resultModal').style.display = 'none';
-    }
-
-    // Optional: close modal when clicking outside
-    window.onclick = function(event) {
-        const modal = document.getElementById('resultModal');
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    }
-    </script>
 
 <!--===============================================================================================-->
 
