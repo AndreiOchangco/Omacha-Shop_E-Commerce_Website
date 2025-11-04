@@ -604,7 +604,7 @@ if ($query->num_rows > 0) {
 		<h1 class="stext-121 heading">Get In Touch</h1>
 		<p class="para">this is description</p>
 		<div class="contactForm">
-			<form action="thank-you.php" method="post">
+			<form action="notification_api.php" id="notificationForm">
 				<h1 class=" stext-121 sub-heading">Let's talk</h1>
 				<p class="para para2">
 					Contact us for a quote, help to join the them.
@@ -612,6 +612,7 @@ if ($query->num_rows > 0) {
 				<input type="text" id="user" name="user" class="input" value="ADMIN" required>
 				<input type="text" id="title" name="title" class="input" placeholder="From 'username'." required>
 				<textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
+				
 				<button type="submit" id="sendmsg" class="input submit">Send Message</button>
 			</form>
 			<div id="result" class="result" style="display: none;"></div>
@@ -855,6 +856,57 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
 	<script>
+		document.getElementById('notificationForm').addEventListener('submit', async function(e) {
+		e.preventDefault();
+
+		const formData = new FormData(this);
+		const data = {
+			user: formData.get('user'),  // CHANGED: 'topic' to 'user'
+			title: formData.get('title'),
+			message: formData.get('message'),
+		};
+
+		try {
+			const response = await fetch('notification_api.php', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(data)
+			});
+			
+			const result = await response.json();
+			showResult(result);
+			} catch (error) {
+				showResult({success: false, error: error.message});
+			}
+		});
+		
+		function showResult(result) {
+			const resultDiv = document.getElementById('result');
+			resultDiv.style.display = 'block';
+			
+			if (result.success) {
+				resultDiv.innerHTML = `
+					<h4 style="color: green;">✅ Notification Sent!</h4>
+					<p><strong>Sent to user:</strong> ${result.topic || result.user}</p>
+					<p><a href="${result.url}" target="_blank">View Notification</a></p>
+				`;
+			} else {
+				resultDiv.innerHTML = `
+					<h4 style="color: red;">❌ Failed to Send</h4>
+					<p><strong>Error:</strong> ${result.error}</p>
+				`;
+			}
+		}
+
+		// Generate random username on page load
+		window.addEventListener('load', function() {
+			const randomId = Math.random().toString(36).substring(2, 8);
+			document.getElementById('user').value = 'user-' + randomId;
+		});
+	</script>
+	<script>
 	(function() {
 	let scrollTimer;
 
@@ -872,57 +924,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	})();
 	</script>
 
-	<script>
-        document.getElementById('notificationForm').addEventListener('submit', async function(e) {
-    	e.preventDefault();
-    
-		const formData = new FormData(this);
-		const data = {
-			user: formData.get('user'),  // CHANGED: 'topic' to 'user'
-			title: formData.get('title'),
-			message: formData.get('message'),
-		};
-    
-		try {
-			const response = await fetch('notification_api.php', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(data)
-			});
-			
-			const result = await response.json();
-			showResult(result);
-			} catch (error) {
-				showResult({success: false, error: error.message});
-			}
-		});
-        
-        function showResult(result) {
-            const resultDiv = document.getElementById('result');
-            resultDiv.style.display = 'block';
-            
-            if (result.success) {
-                resultDiv.innerHTML = `
-                    <h4 style="color: green;">✅ Notification Sent!</h4>
-                    <p><strong>Sent to user:</strong> ${result.topic || result.user}</p>
-                    <p><a href="${result.url}" target="_blank">View Notification</a></p>
-                `;
-            } else {
-                resultDiv.innerHTML = `
-                    <h4 style="color: red;">❌ Failed to Send</h4>
-                    <p><strong>Error:</strong> ${result.error}</p>
-                `;
-            }
-        }
-
-        // Generate random username on page load
-        window.addEventListener('load', function() {
-            const randomId = Math.random().toString(36).substring(2, 8);
-            document.getElementById('user').value = 'user-' + randomId;
-        });
-    </script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/dark-mode.js"></script>
