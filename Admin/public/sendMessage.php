@@ -788,22 +788,26 @@
                 <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Send Message to Customer</h2>
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
-                <label for="file1">Product 1 (Required) </label>
-                <input id="file1" name="p_image[]" type="text">
+
+                <!-- change this -->
+                <input type="text" id="user" name="user" class="input" value="Enter a specific user..." required>
+
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
-                <label for="file2">Product 2 (Optional)</label>
-                <input id="file2" name="p_image[]" type="text">
+
+                <!-- change this -->
+                <input type="text" id="title" name="title" class="input" placeholder="From Admin!" required>
+
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
-                <label for="file3">Product 3 (Optional)</label>
-                <input id="file3" name="p_image[]" type="text">
+
                 </div>
 
                 <div class="form-group text-gray-700 dark:text-gray-200">
+
+                <!-- change this -->
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" name="p_description" rows="4"
-                    cols="50" placeholder="Description"></textarea>
+                <textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
                 </div>
 
                 <div class="form-group text-gray-700 dark:text-gray-200">
@@ -815,6 +819,57 @@
         </main>
       </div>
     </div>
+    <script>
+        document.getElementById('notificationForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const data = {
+        user: formData.get('user'),  // CHANGED: 'topic' to 'user'
+        title: formData.get('title'),
+        message: formData.get('message'),
+    };
+    
+    try {
+        const response = await fetch('notification_api.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        showResult(result);
+    } catch (error) {
+        showResult({success: false, error: error.message});
+    }
+});
+        
+        function showResult(result) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            
+            if (result.success) {
+                resultDiv.innerHTML = `
+                    <h4 style="color: green;">✅ Notification Sent!</h4>
+                    <p><strong>Sent to user:</strong> ${result.topic || result.user}</p>
+                    <p><a href="${result.url}" target="_blank">View Notification</a></p>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <h4 style="color: red;">❌ Failed to Send</h4>
+                    <p><strong>Error:</strong> ${result.error}</p>
+                `;
+            }
+        }
+
+        // Generate random username on page load
+        window.addEventListener('load', function() {
+            const randomId = Math.random().toString(36).substring(2, 8);
+            document.getElementById('user').value = 'user-' + randomId;
+        });
+    </script>
   </body>
 </html>
 +

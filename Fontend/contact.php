@@ -672,9 +672,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<div class="contactForm">
 			<form action="notification_api.php" id="notificationForm">
 				<h1 class=" stext-121 sub-heading darkModetxt">Let's talk</h1>
+<<<<<<< HEAD
+				<p class="para para2">
+					Contact us for a quote, help to join the them.
+				</p>
+=======
 
+>>>>>>> 4854bcc02507b81815160b104457fe852fc58448
 				<input type="text" id="user" name="user" class="input" value="ADMIN" required>
-				<input type="text" id="title" name="title" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
+				<input type="text" id="title" name="title" class="input" placeholder="From 'username'." required>
 				<textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
 				
 				<button type="submit" id="sendmsg" class="input submit">Send Message</button>
