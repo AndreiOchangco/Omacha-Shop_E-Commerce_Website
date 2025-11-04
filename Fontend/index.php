@@ -424,6 +424,9 @@ if ($query->num_rows > 0) {
 
 							<li>
 								<a class="darkModetxt" href="contact.php">Contact</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="#shop-by-category">Customer Support</a></li>
+								</ul>
 							</li>
 						</ul>
 					</div>

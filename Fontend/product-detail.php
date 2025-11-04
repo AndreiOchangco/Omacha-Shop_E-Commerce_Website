@@ -227,16 +227,18 @@ if ($result->num_rows > 0) {
 	// echo "Không có dữ liệu trong bảng order";
 }
 
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<title>Product Details</title>
+	<title>Omacha Shop | Product</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="css/cart.css">
+	<link rel="stylesheet" href="css/box.css">
 	<!-- link icon -->
 	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
 		href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
@@ -248,8 +250,10 @@ if ($result->num_rows > 0) {
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
-	<!-- link icon -->
-	<link rel="icon" type="image/png" href="images/icon.png" />
+	<!--===============================================================================================-->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -277,43 +281,31 @@ if ($result->num_rows > 0) {
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
-	<!-- link icon -->
-	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
-		href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
+	<link rel="stylesheet" type="text/css" href="css/product_res.css">
+	<link rel="stylesheet" href="css/universal.css">
+	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
-
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
-
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
-
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
 	<!--===============================================================================================-->
 </head>
 
 <style>
 	/* CSS to change the size of the image */
 	.item-slick3 img {
-		width: 100%;
-		/* Set the width of the image to 100% of the parent element */
-		height: auto;
-		/* Allow the aspect ratio of the image to be maintained */
+	width: 100%; /* Set the width of the image to 100% of the parent element */
+	height: auto; /* Allow the aspect ratio of the image to be maintained */
 	}
 
 	/* # for id */
-	#font-size {
+	#font-size{
 		font-size: 20px;
-	}
+	} 
 
 	/* Setting size thumb image  */
-	.wrap-slick3-dots {
+	.wrap-slick3-dots{
 		width: 20%;
 	}
-
 	/* Setting size display image  */
-	.gallery-lb {
+	.gallery-lb{
 		width: 70%;
 	}
 
@@ -332,18 +324,15 @@ if ($result->num_rows > 0) {
 
 	/* Zoom Hover */
 	.zoom-container:hover img {
-		transform: scale(1.5);
-		/* Scale upsize 150% hover */
+		transform: scale(1.5); /* Scale upsize 150% hover */
 	}
-
 	/* Add cart */
 	#button-add {
 		border-radius: 8px;
 		padding: 10px;
 		background-color: #F4538A;
 		color: white;
-		margin-bottom: 10px;
-		/* Add margin to create space between buttons */
+		margin-bottom: 10px; /* Add margin to create space between buttons */
 		width: 75%;
 	}
 
@@ -366,44 +355,40 @@ if ($result->num_rows > 0) {
 		background-color: #F4538A;
 	}
 
-
+	
 	/* Radio button container style */
 	.size-204 {
-		display: flex;
-		/* Use flexbox for the container */
-		align-items: center;
-		/* Align items vertically */
+		display: flex; /* Use flexbox for the container */
+		align-items: center; /* Align items vertically */
 	}
 
 	/* Radio button style */
 	input[type="radio"] {
-		display: none;
-		/* Hide the default radio button */
+		display: none; /* Hide the default radio button */
 	}
 
 	/* Custom radio button style */
-	input[type="radio"]+label {
+	input[type="radio"] + label {
 		border-radius: 8px;
 		padding: 10px;
 		background-color: white;
 		color: black;
 		cursor: pointer;
-		margin-right: 10px;
-		/* Add margin to create space between buttons */
+		margin-right: 10px; /* Add margin to create space between buttons */
 	}
 
 	/* Styling for when radio button is checked */
-	input[type="radio"]:checked+label {
+	input[type="radio"]:checked + label {
 		background-color: black;
 		color: white;
 	}
 
-	#bolder {
+	#bolder{
 		font-weight: bolder;
 	}
 
 	.info-item {
-		margin-bottom: 10px;
+    	margin-bottom: 10px;
 	}
 
 	.info-label {
@@ -416,33 +401,9 @@ if ($result->num_rows > 0) {
 
 	/* Responsive styles for screens up to 800px */
 	@media (max-width: 800px) {
-
-		.col-lg-6,
-		.col-md-8,
-		.col-sm-10 {
-			width: 100%;
-			/* Make columns full width on small screens */
-		}
-	}
-
-	/* Định dạng nút check out và view cart */
-	#btn-cart {
-		background-color: #F4538A;
-		color: #FFEFEF;
-	}
-
-	#btn-cart:hover {
-		background-color: black;
-		color: #FFEFEF;
-	}
-
-	/* Định dạng nút delete */
-	.btn-delete {
-		color: black;
-	}
-
-	.btn-delete:hover {
-		color: #F4538A;
+	    .col-lg-6, .col-md-8, .col-sm-10 {
+	        width: 100%; /* Make columns full width on small screens */
+	    }
 	}
 </style>
 
@@ -458,58 +419,54 @@ if ($result->num_rows > 0) {
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
-							<p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
+							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
 									class="darkModetxt"
-									href="mailto:omachacontact@gmail.com"
-									style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
+									href="mailto:omachashopofficial@gmail.com"
+									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
-							<p style="color: #F4538A"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #000; text-decoration: none;">+1922 4800</a></p>
+							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
 					<div class="col-lg-6 text-center text-lg-right">
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-								target="_blank" title="Visit the Reis Adventures fanpage.">
-								<i style="color: #49243E;" class="fab fa-facebook-f"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
+								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-								title="Visit the Reis Adventures Twitter.">
-								<i style="color: #49243E;" class="fab fa-twitter"></i>
+								title="Visit the Reis Omacha Shop Philippines Twitter.">
+								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-								target="_blank" title="Visit the Reis Adventures Linkedin.">
-								<i style="color: #49243E;" class="fab fa-linkedin-in"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
+								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-								target="_blank" title="Visit the Reis Adventures Instagram.">
-								<i style="color: #49243E;" class="fab fa-instagram"></i>
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
+								<i style="
+										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+								" class="fa-brands fa-square-instagram"></i>
 							</a>
-							<div class="data1">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b><?php echo $userLogin["userID"]; ?>
-										/</b></a>
-							</div>
-							<div class="data2">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b><?php echo $userLogin["userName"]; ?></b></a>
-							</div>
+							
+							
+							
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #FFEFEF;">
-				<nav class="limiter-menu-desktop container" style="background-color: #FFEFEF;">
+			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
-						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-									src="images/icon.png">Omacha</h1>
+						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
+									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
@@ -517,17 +474,28 @@ if ($result->num_rows > 0) {
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a href="index.php">Home</a>
+								<ul class="sub-menu">
+									<li><a href="index.php#shop-by-category">Categories</a></li>
+									<li><a href="index.php#new-arrivals">Arrivals</a></li>
+									<li><a href="index.php#blog">Blog</a></li>
+									<li><a href="index.php#top-brands">Top Brands</a></li>
+								</ul>
 
 							</li>
 
-							<li class="label1" data-label1="hot">
-								<a href="product2.php">Shop</a>
+							<li class="label1" data-label1="new">
+							<a href="product.php">Shop</a>
 								<ul class="sub-menu">
-									<li><a href="0_12months.php">0-12 Months</a></li>
-									<li><a href="1_2years.php">1-2 Years</a></li>
-									<li><a href="3+years.php">3+ Years</a></li>
-									<li><a href="5+years.php">5+ Years</a></li>
+									<li><a href="./Products/convenience-products.php">Convenience</a></li>
+									<li><a href="./Products/shopping-products.php">Shopping</a></li>
+									<li><a href="./Products/specialty-products.php">Specialty</a></li>
+									<li><a href="./Products/unsought-products.php">Unsought</a></li>
+									<li><a href="./Products/digital-products.php">Digital</a></li>
 								</ul>
+							</li>
+
+							<li class="label1" data-label1="hot">
+								<a href="shopping-cart.php">Cart</a>
 							</li>
 
 							<li>
@@ -535,15 +503,11 @@ if ($result->num_rows > 0) {
 							</li>
 
 							<li>
-								<a href="contact.php">Contact</a>
+								<a href="about.php">About</a>
 							</li>
 
 							<li>
-								<a href="about.php">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="about.php">About</a></li>
-									<li><a href="FAQ.php">Faq</a></li>
-								</ul>
+								<a href="contact.php">Contact</a>
 							</li>
 						</ul>
 					</div>
@@ -554,16 +518,36 @@ if ($result->num_rows > 0) {
 							<i class="zmdi zmdi-search"></i>
 						</div>
 
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-							data-notify="<?php echo $order_count ?>">
+						<a href="shopping-cart.php"
+							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
-						</div>
+						</a>
 
 						<a href="wishlist.php"
 							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-							data-notify="<?php echo $wishlist_count ?>">
+							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
+							<li class="active-menu">
+								<a href="register.php" class="btn2 btn-primary2 mt-1 "
+								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
+								<ul class="profile-sub-menu">
+									<li><a href="user-profile.php">Profile</a></li>
+									
+									<li>
+										<!-- Your toggle button -->
+										<a id="darkModeToggle">
+											<span class="darkbtn">☀️</span>
+										</a>
+									</li>
+										
+
+									<li><a href="register.php">Logout</a></li>
+								</ul>
+							</li>
+						</div>
 					</div>
 				</nav>
 			</div>
@@ -582,8 +566,8 @@ if ($result->num_rows > 0) {
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
-				<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-					data-notify="<?php echo ($order_count); ?>">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
+					data-notify="2">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
@@ -604,47 +588,41 @@ if ($result->num_rows > 0) {
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<!-- <ul class="topbar-mobile">
-					<li>
-						<div class="left-top-bar">
-							Free shipping for standard order over $100
-						</div>
-					</li>
-
-					<li>
-						<div class="right-top-bar flex-w h-full">
-							<a href="#" class="flex-c-m p-lr-10 trans-04">
-								Help & FAQs
-							</a>
-
-							<a href="#" class="flex-c-m p-lr-10 trans-04">
-								My Account
-							</a>
-
-							<a href="#" class="flex-c-m p-lr-10 trans-04">
-								EN
-							</a>
-
-							<a href="#" class="flex-c-m p-lr-10 trans-04">
-								USD
-							</a>
-						</div>
-					</li>
-				</ul> -->
-
-			<ul class="main-menu-m">
+			<ul class="topbar-mobile">
 				<li>
-					<a href="index.php">Home</a>
-
+					<div class="left-top-bar ">
+						Free shipping for standard order over $100
+					</div>
 				</li>
 
 				<li>
-					<a href="product2.php">Shop</a>
+					<div class="right-top-bar flex-w h-full">
+						<a href="#" class="flex-c-m p-lr-10 trans-04">
+							Help & FAQs
+						</a>
+
+						<a href="#" class="flex-c-m p-lr-10 trans-04">
+							My Account
+						</a>
+
+						<a href="#" class="flex-c-m p-lr-10 trans-04">
+							EN
+						</a>
+
+						<a href="#" class="flex-c-m p-lr-10 trans-04">
+							USD
+						</a>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="main-menu-m">
+				<li>
+					<a href="index.html">Home</a>
 					<ul class="sub-menu-m">
-						<li><a href="0_12months.php">0-12 Months</a></li>
-						<li><a href="1_2years.php">1-2 Years</a></li>
-						<li><a href="3+years.php">3+ Years</a></li>
-						<li><a href="5+years.php">5+ Years</a></li>
+						<li><a href="index.html">Homepage 1</a></li>
+						<li><a href="home-02.html">Homepage 2</a></li>
+						<li><a href="home-03.html">Homepage 3</a></li>
 					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -652,19 +630,23 @@ if ($result->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="shoping-cart.php" class="label1 rs1" data-label1="hot">Cart</a>
+					<a href="product.html">Shop</a>
 				</li>
 
 				<li>
-					<a href="blog.php">Blog</a>
+					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
 				</li>
 
 				<li>
-					<a href="about.php">About</a>
+					<a href="blog.html">Blog</a>
 				</li>
 
 				<li>
-					<a href="contact.php">Contact</a>
+					<a href="about.html">About</a>
+				</li>
+
+				<li>
+					<a href="contact.html">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -703,76 +685,75 @@ if ($result->num_rows > 0) {
 
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
-					<span>Congratulations! You&#39;ve got <strong>Free Shipping!</strong></span>
-					<div class="progress1"></div>
-					<br>
-					<?php
-					// Duyệt qua mỗi sản phẩm trong giỏ hàng và hiển thị thông tin
-					foreach ($order_array as $item) {
-						// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
-						$p_images = array_map('trim', explode(',', $item["p_image"]));
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-01.jpg" alt="IMG">
+						</div>
 
-						// mới có u_id $userLogin["userID"], 555
-						if ($item["u_id"] == $userLogin["userID"] && $item["o_quantity"] > 0 && $item["o_status"] == 0) {
-							?>
-							<li class="header-cart-item m-b-20">
-								<div class="row">
-									<div class="col-md-3">
-										<div class="header-cart-item-img">
-											<!-- Hiện hình trong giỏ hàng -->
-											<img src="images/<?php echo $p_images[0]; ?>" alt="IMG">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div>
-											<!-- Hiện tên sản phẩm trong giỏ hàng -->
-											<a href="#"
-												class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
-										</div>
-										<!-- Hiện số lượng sản phẩm và giá tiền -->
-										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x
-											$<?php echo $item["p_price"]; ?></span>
-									</div>
-									<div class="col-md-3">
-										<form action="delete-cart2.php" method="post">
-											<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								White Shirt Pleat
+							</a>
 
-											<!-- Nút xóa tại đây -->
-											<input type="submit" value="X" name="delete-cart" class="btn-delete">
-											<!-- <//?php print_r($item['p_id']); ?> -->
-										</form>
-									</div>
-								</div>
-							</li>
-							<?php
-						}
-					}
-					?>
+							<span class="header-cart-item-info">
+								1 x $19.00
+							</span>
+						</div>
+					</li>
+
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-02.jpg" alt="IMG">
+						</div>
+
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								Converse All Star
+							</a>
+
+							<span class="header-cart-item-info">
+								1 x $39.00
+							</span>
+						</div>
+					</li>
+
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-03.jpg" alt="IMG">
+						</div>
+
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
+								Nixon Porter Leather
+							</a>
+
+							<span class="header-cart-item-info">
+								1 x $17.00
+							</span>
+						</div>
+					</li>
 				</ul>
-
 
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
-						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
-						<p>Total: $<?php echo $totalPrice; ?></p>
+						Total: $75.00
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
-						<a href="shopping-cart.php" id="btn-cart"
+						<a href="shoping-cart.html"
 							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 							View Cart
 						</a>
 
-						<a href="your-order.php" id="btn-cart"
+						<a href="shoping-cart.html"
 							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-							Your Order
+							Check Out
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
 
 
 	<!-- breadcrumb -->
@@ -783,7 +764,7 @@ if ($result->num_rows > 0) {
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<a href="product2.php" class="stext-109 cl8 hov-cl1 trans-04">
+			<a href="product.html" class="stext-109 cl8 hov-cl1 trans-04">
 				Men
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
@@ -802,38 +783,37 @@ if ($result->num_rows > 0) {
 				<div class="col-md-6 col-lg-7 p-b-30">
 					<div class="p-l-25 p-r-30 p-lr-0-lg">
 						<div class="wrap-slick3 flex-sb flex-w">
-							<div class="wrap-slick3-dots"></div>
+							<div class="wrap-slick3-dots"></div>							
 							<div class="slick3 gallery-lb">
 
 								<!-- Image 1 -->
-								<div class="item-slick3" data-thumb="images/<?php echo $product_images[0]; ?>">
+								<div class="item-slick3" data-thumb="images/teddy-bear-1.png">
 									<div class="wrap-pic-w pos-relative zoom-container">
-										<img src="images/<?php echo $product_images[0]; ?>" alt="IMG-PRODUCT">
+										<img src="images/teddy-bear-1.png" alt="IMG-PRODUCT">
 
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-											href="images/teddy-bear-1.png">
+										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/teddy-bear-1.png">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>
-								</div>
+								</div>				
 
 								<!-- Image 2 -->
-								<div class="item-slick3" data-thumb="images/<?php echo $product_images[1]; ?>">
+								<div class="item-slick3" data-thumb="images/teddy-bear-2.jpg">
 									<div class="wrap-pic-w pos-relative zoom-container">
-										<img src="images/<?php echo $product_images[1]; ?>" alt="IMG-PRODUCT">
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-											href="images/teddy-bear-2.jpg">
+										<img src="images/teddy-bear-2.jpg" alt="IMG-PRODUCT">
+
+										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/teddy-bear-2.jpg">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>
 								</div>
 
 								<!-- Image 3 -->
-								<div class="item-slick3" data-thumb="images/<?php echo $product_images[2]; ?>">
+								<div class="item-slick3" data-thumb="images/teddy-bear-3.jpg">
 									<div class="wrap-pic-w pos-relative zoom-container">
-										<img src="images/<?php echo $product_images[2]; ?>" alt="IMG-PRODUCT">
-										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-											href="images/teddy-bear-3.jpg">
+										<img src="images/teddy-bear-3.jpg" alt="IMG-PRODUCT">
+
+										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/teddy-bear-3.jpg">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>
@@ -843,21 +823,22 @@ if ($result->num_rows > 0) {
 						</div>
 					</div>
 				</div>
-
+					
 				<div class="col-md-6 col-lg-5 p-b-30">
 					<div class="p-r-50 p-t-5 p-lr-0-lg">
 						<h4 class="mtext-105 cl2 js-name-detail p-b-14">
-							<?php echo $product["p_name"]; ?>
+							Teddy Bear 
 						</h4>
 
 						<span class="mtext-106 cl2">
-							$ <?php echo $product["p_price"]; ?>
+							$9.99
 						</span>
 
 						<p class="stext-102 cl3 p-t-23">
-							<?php echo $product["p_description"]; ?>
+							A teddy bear is a popular plush toy, often designed in the shape of a small bear with soft plush fur. 
+							It is typically made from fabric materials such as sheepskin, fleece, or stuffed cotton and can come in various colors and styles.
 						</p>
-
+						
 						<!-- Size selection -->
 						<div class="p-t-33">
 							<div class="flex-w flex-r-m p-b-10">
@@ -918,311 +899,237 @@ if ($result->num_rows > 0) {
 							</div>
 						</div>
 
-						<div class="flex-w flex-r-m p-b-10">
-							<div class="size-204 flex-w flex-m respon6-next">
-								<div class="wrap-num-product flex-w m-r-20 m-tb-10">
-									<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-										<i class="fs-16 zmdi zmdi-minus"></i>
-									</div>
+							<div class="flex-w flex-r-m p-b-10">
+								<div class="size-204 flex-w flex-m respon6-next">
+									<div class="wrap-num-product flex-w m-r-20 m-tb-10">
+										<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+											<i class="fs-16 zmdi zmdi-minus"></i>
+										</div>
 
-									<input id="quantity-input" class="mtext-104 cl3 txt-center num-product"
-										type="number" name="num-product" value="<?php echo $quantity = 1; ?>">
+										<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
 
-									<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-										<i class="fs-16 zmdi zmdi-plus"></i>
+										<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+											<i class="fs-16 zmdi zmdi-plus"></i>
+										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="size-204 flex-w flex-m respon6-next">
-								<form action="add-to-cart.php" method="post">
-									<!-- Name input is add-to-order -->
-									<input type="submit" value="Add to cart" id="button-add" name="add-to-cart"
-										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-									<input type="hidden" name="p_id" value="<?php echo $product["p_id"]; ?>">
-									<input type="hidden" name="p_image" value="<?php echo $product["p_image"]; ?>">
-									<input type="hidden" name="p_name" value="<?php echo $product["p_name"]; ?>">
-									<input type="hidden" name="p_price" value="<?php echo $product["p_price"]; ?>">
-									<input type="hidden" name="p_type" value="<?php echo $product["p_type"]; ?>">
-									<input type="hidden" name="o_quantity" id="hidden-quantity"
-										value="<?php echo $quantity; ?>">
-									<input type="hidden" name="o_status" value="0"> <!-- Nằm trong giỏ hàng -->
-								</form>
+								<div class="size-204 flex-w flex-m respon6-next">
+									<button id="button-add" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+										Add to cart
+									</button>
 
-								<form action="buy-it-now.php" method="post">
-									<!-- Name input is buy-it-now -->
-									<input type="submit" value="Buy it now" id="button-buy" name="buy-it-now"
-										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-									<input type="hidden" name="p_id" value="<?php echo $product["p_id"]; ?>">
-									<input type="hidden" name="p_image" value="<?php echo $product["p_image"]; ?>">
-									<input type="hidden" name="p_name" value="<?php echo $product["p_name"]; ?>">
-									<input type="hidden" name="p_price" value="<?php echo $product["p_price"]; ?>">
-									<input type="hidden" name="p_type" value="<?php echo $product["p_type"]; ?>">
-									<input type="hidden" name="o_quantity" id="hidden-quantity-buy"
-										value="<?php echo $quantity; ?>">
-									<input type="hidden" name="o_status" value="0"> <!-- Nằm trong giỏ hàng -->
-								</form>
-							</div>
+									
+									<button id="button-buy" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-buycart-detail">
+										Buy it now
+									</button>
+								</div>
+							</div>	
 						</div>
-					</div>
 
-					<!--  -->
-					<div class="flex-w flex-m p-l-100 p-t-40 respon7">
-						<div class="flex-m bor9 p-r-10 m-r-11">
-							<a href="#"
-								class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100"
-								data-tooltip="Add to Wishlist">
-								<i class="zmdi zmdi-favorite"></i>
+						<!--  -->
+						<div class="flex-w flex-m p-l-100 p-t-40 respon7">
+							<div class="flex-m bor9 p-r-10 m-r-11">
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
+									<i class="zmdi zmdi-favorite"></i>
+								</a>
+							</div>
+
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+								<i class="fab fa-facebook"></i> <!-- Use "fab" for brand icons -->
+							</a>
+							
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							
+							<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+								<i class="fab fa-google-plus"></i>
 							</a>
 						</div>
-
-						<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-							data-tooltip="Facebook">
-							<i class="fab fa-facebook"></i> <!-- Use "fab" for brand icons -->
-						</a>
-
-						<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-							data-tooltip="Twitter">
-							<i class="fab fa-twitter"></i>
-						</a>
-
-						<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-							data-tooltip="Google Plus">
-							<i class="fab fa-google-plus"></i>
-						</a>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div class="bor10 m-t-50 p-t-43 p-b-40">
-			<!-- Tab01 -->
-			<div class="tab01">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs" role="tablist">
-					<li class="nav-item p-b-10">
-						<a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
-					</li>
+			<div class="bor10 m-t-50 p-t-43 p-b-40">
+				<!-- Tab01 -->
+				<div class="tab01">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item p-b-10">
+							<a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
+						</li>
 
-					<li class="nav-item p-b-10">
-						<a class="nav-link" data-toggle="tab" href="#information" role="tab">Additional information</a>
-					</li>
+						<li class="nav-item p-b-10">
+							<a class="nav-link" data-toggle="tab" href="#information" role="tab">Additional information</a>
+						</li>
 
-					<li class="nav-item p-b-10">
-						<a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews (1)</a>
-					</li>
-				</ul>
+						<li class="nav-item p-b-10">
+							<a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews (1)</a>
+						</li>
+					</ul>
 
-				<!-- Tab panes -->
-				<div class="tab-content p-t-43">
-					<!-- Description -->
-					<div class="tab-pane fade show active" id="description" role="tabpanel">
-						<div class="how-pos2 p-lr-15-md">
-							<p class="stext-102 cl6">
-								<b>Shape and Size:</b> Teddy bears often have a bear-like appearance, with two ears, a
-								round nose, and two round eyes.
-								The size of a teddy bear can vary from small to large.
-							</p>
+					<!-- Tab panes -->
+					<div class="tab-content p-t-43">
+						<!-- Description -->
+						<div class="tab-pane fade show active" id="description" role="tabpanel">
+							<div class="how-pos2 p-lr-15-md">
+								<p class="stext-102 cl6">
+									<b>Shape and Size:</b> Teddy bears often have a bear-like appearance, with two ears, a round nose, and two round eyes. 
+									The size of a teddy bear can vary from small to large.								
+								</p>
 
-							<p class="stext-102 cl6">
-								<b>Material: </b> The product is made from soft and safe fabric materials such as
-								sheepskin, fleece, cotton, or synthetic plush.
-								Sometimes, accessories like silk or velvet fabric may also be used to create accents.
+								<p class="stext-102 cl6">
+									<b>Material: </b> The product is made from soft and safe fabric materials such as sheepskin, fleece, cotton, or synthetic plush. 
+									Sometimes, accessories like silk or velvet fabric may also be used to create accents.
 
-							<p class="stext-102 cl6">
-								<b>Color: </b>Teddy bears can come in a variety of colors, from the natural brown of
-								real bears to vibrant colors like pink, blue, and yellow.
-								Colors are often chosen to reflect personality traits or create interesting accents for
-								the product.
-							</p>
+								<p class="stext-102 cl6">
+									<b>Color: </b>Teddy bears can come in a variety of colors, from the natural brown of real bears to vibrant colors like pink, blue, and yellow. 
+									Colors are often chosen to reflect personality traits or create interesting accents for the product.
+								</p>
 
-							<p class="stext-102 cl6">
-								<b>Accessories:</b> Some teddy bears may be adorned with accessories like knitted
-								sweaters, bow ties, or ribbons.
-								These accessories are often added to create unique styles or make the product more
-								adorable.
-							</p>
+								<p class="stext-102 cl6">
+									<b>Accessories:</b> Some teddy bears may be adorned with accessories like knitted sweaters, bow ties, or ribbons. 
+									These accessories are often added to create unique styles or make the product more adorable.
+								</p>
 
-							<p class="stext-102 cl6">
-								<b>Safety and Quality: </b>Teddy bear products are typically manufactured to high safety
-								standards, ensuring that they are safe for children and pose no health hazards.
-								The quality of the product is also ensured to ensure that the teddy bear is durable and
-								maintains its shape and color after repeated use.
-							</p>
-						</div>
-					</div>
-
-					<!-- Additional information -->
-					<div class="tab-pane fade" id="information" role="tabpanel">
-						<div style="margin-left: 50px;" class="how-pos2 p-lr-15-md">
-							<div class="row how-pos2 p-lr-15-md">
-								<div class="stext-102 cl6 col-md-6">
-									<div class="info-item">
-										<span class="info-label">Weight:</span>
-										<span class="info-value">0.79 kg</span>
-									</div>
-								</div>
-								<div class="stext-102 cl6 col-md-6">
-									<div class="info-item">
-										<span class="info-label">Dimensions:</span>
-										<span class="info-value">110 x 33 x 100 cm</span>
-									</div>
-								</div>
-								<div class="stext-102 cl6 col-md-6">
-									<div class="info-item">
-										<span class="info-label">Materials:</span>
-										<span class="info-value">60% cotton</span>
-									</div>
-								</div>
-								<div class="stext-102 cl6 col-md-6">
-									<div class="info-item">
-										<span class="info-label">Color:</span>
-										<span class="info-value">Black, Blue, Grey, Green, Red, White</span>
-									</div>
-								</div>
-								<div class="stext-102 cl6 col-md-6">
-									<div class="info-item">
-										<span class="info-label">Size:</span>
-										<span class="info-value">XL, L, M, S</span>
-									</div>
-								</div>
+								<p class="stext-102 cl6">
+									<b>Safety and Quality: </b>Teddy bear products are typically manufactured to high safety standards, ensuring that they are safe for children and pose no health hazards. 
+									The quality of the product is also ensured to ensure that the teddy bear is durable and maintains its shape and color after repeated use.							
+								</p>
 							</div>
 						</div>
-					</div>
 
-					<!-- - -->
-					<div class="tab-pane fade" id="reviews" role="tabpanel">
-						<div class="row">
-							<div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
-								<div class="p-b-30 m-lr-15-sm">
-									<!-- Review -->
-									<div class="flex-w flex-t p-b-68">
-										<div>
-											<div class="flex-w flex-sb-m p-b-17">
-												<span class="mtext-107 cl2 p-r-20">
-													Ariana Grande
-												</span>
-
-												<span class="fs-18 cl11">
-													<i class="zmdi zmdi-star"></i>
-													<i class="zmdi zmdi-star"></i>
-													<i class="zmdi zmdi-star"></i>
-													<i class="zmdi zmdi-star"></i>
-													<i class="zmdi zmdi-star-half"></i>
-												</span>
-											</div>
-
-											<p class="stext-102 cl6">
-												With soft materials and eye-catching colors, cotton buckets are the
-												perfect choice for children to play and simulate daily activities such
-												as bathing, cooking, or taking care of their small family.
-											</p>
+						<!-- Additional information -->
+						<div class="tab-pane fade" id="information" role="tabpanel">
+							<div style="margin-left: 50px;" class="how-pos2 p-lr-15-md">
+								<div class="row how-pos2 p-lr-15-md">
+									<div class="stext-102 cl6 col-md-6">
+										<div class="info-item">
+											<span class="info-label">Weight:</span>
+											<span class="info-value">0.79 kg</span>
 										</div>
 									</div>
+									<div class="stext-102 cl6 col-md-6">
+										<div class="info-item">
+											<span class="info-label">Dimensions:</span>
+											<span class="info-value">110 x 33 x 100 cm</span>
+										</div>
+									</div>
+									<div class="stext-102 cl6 col-md-6">
+										<div class="info-item">
+											<span class="info-label">Materials:</span>
+											<span class="info-value">60% cotton</span>
+										</div>
+									</div>
+									<div class="stext-102 cl6 col-md-6">
+										<div class="info-item">
+											<span class="info-label">Color:</span>
+											<span class="info-value">Black, Blue, Grey, Green, Red, White</span>
+										</div>
+									</div>
+									<div class="stext-102 cl6 col-md-6">
+										<div class="info-item">
+											<span class="info-label">Size:</span>
+											<span class="info-value">XL, L, M, S</span>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</div>
 
-									<div>
-										<?php
-										$sql = "SELECT * from review";
-										$query = mysqli_query($conn, $sql);
-										while ($review = mysqli_fetch_assoc($query)) {
-											?>
-											<div class="flex-w flex-t p-b-68">
-												<div>
-													<div class="flex-w flex-sb-m p-b-17">
-														<span class="mtext-107 cl2 p-r-20">
-															<?php echo $review['r_name']; ?>
-														</span>
-														<span class="fs-18 cl11">
-															<?php
-															// Tính toán và hiển thị số lượng sao
-															$stars = $review['r_star'];
-															for ($i = 1; $i <= 5; $i++) {
-																if ($i <= $stars) {
-																	echo '<i class="zmdi zmdi-star"></i>';
-																} else {
-																	echo '<i class="zmdi zmdi-star-outline"></i>';
-																}
-															}
-															?>
-														</span>
-													</div>
-													<p class="stext-102 cl6">
-														<?php echo $review['r_description']; ?>
-													</p>
+						<!-- - -->
+						<div class="tab-pane fade" id="reviews" role="tabpanel">
+							<div class="row">
+								<div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
+									<div class="p-b-30 m-lr-15-sm">
+										<!-- Review -->
+										<div class="flex-w flex-t p-b-68">
+											<div>
+												<div class="flex-w flex-sb-m p-b-17">
+													<span class="mtext-107 cl2 p-r-20">
+														Ariana Grande
+													</span>
+						
+													<span class="fs-18 cl11">
+														<i class="zmdi zmdi-star"></i>
+														<i class="zmdi zmdi-star"></i>
+														<i class="zmdi zmdi-star"></i>
+														<i class="zmdi zmdi-star"></i>
+														<i class="zmdi zmdi-star-half"></i>
+													</span>
+												</div>
+						
+												<p class="stext-102 cl6">
+													With soft materials and eye-catching colors, cotton buckets are the perfect choice for children to play and simulate daily activities such as bathing, cooking, or taking care of their small family.
+												</p>
+											</div>
+										</div>
+										
+										<!-- Add review -->
+										<form class="w-full">
+											<h5 class="mtext-108 cl2 p-b-7">
+												Add a review
+											</h5>
+						
+											<p class="stext-102 cl6">
+												Your email address will not be published. Required fields are marked *
+											</p>
+						
+											<div class="flex-w flex-m p-t-50 p-b-23">
+												<span class="stext-102 cl3 m-r-16">
+													Your Rating
+												</span>
+						
+												<span class="wrap-rating fs-18 cl11 pointer">
+													<i class="item-rating pointer zmdi zmdi-star-outline"></i>
+													<i class="item-rating pointer zmdi zmdi-star-outline"></i>
+													<i class="item-rating pointer zmdi zmdi-star-outline"></i>
+													<i class="item-rating pointer zmdi zmdi-star-outline"></i>
+													<i class="item-rating pointer zmdi zmdi-star-outline"></i>
+													<input class="dis-none" type="number" name="rating">
+												</span>
+											</div>
+						
+											<div class="row p-b-25">
+												<div class="col-12 p-b-5">
+													<label class="stext-102 cl3" for="review">Your review</label>
+													<textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10" id="review" name="review"></textarea>
+												</div>
+						
+												<div class="col-sm-6 p-b-5">
+													<label class="stext-102 cl3" for="name">Name</label>
+													<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="name" type="text" name="name">
+												</div>
+						
+												<div class="col-sm-6 p-b-5">
+													<label class="stext-102 cl3" for="email">Email</label>
+													<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email" type="text" name="email">
 												</div>
 											</div>
-										<?php } ?>
+						
+											<button class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10">
+												Submit
+											</button>
+										</form>
 									</div>
-
-
-									<!-- Add review -->
-									<form class="w-full" method="POST" enctype="multipart/form-data"
-										action="productdetail.php">
-										<h5 class="mtext-108 cl2 p-b-7">
-											Add a review
-										</h5>
-
-										<p class="stext-102 cl6">
-											Your email address will not be published. Required fields are marked *
-										</p>
-
-										<div class="flex-w flex-m p-t-50 p-b-23">
-											<span class="stext-102 cl3 m-r-16">
-												Your Rating
-											</span>
-
-											<span class="wrap-rating fs-18 cl11 pointer">
-												<i class="item-rating pointer zmdi zmdi-star-outline"></i>
-												<i class="item-rating pointer zmdi zmdi-star-outline"></i>
-												<i class="item-rating pointer zmdi zmdi-star-outline"></i>
-												<i class="item-rating pointer zmdi zmdi-star-outline"></i>
-												<i class="item-rating pointer zmdi zmdi-star-outline"></i>
-												<input class="dis-none" type="number" name="r_star">
-											</span>
-										</div>
-
-										<div class="row p-b-25">
-											<div class="col-12 p-b-5">
-												<label class="stext-102 cl3" for="review">Your review</label>
-												<textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10"
-													id="review" name="r_description"></textarea>
-											</div>
-
-											<div class="col-sm-6 p-b-5">
-												<label class="stext-102 cl3" for="name">Name</label>
-												<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="name" type="text"
-													name="r_name">
-											</div>
-
-											<div class="col-sm-6 p-b-5">
-												<label class="stext-102 cl3" for="email">Email</label>
-												<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email"
-													type="text" name="r_email">
-												<input type="hidden"
-													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-													style="background-color: white;" name="p_name"
-													value="<?php echo $product["p_name"]; ?>">
-												<input type="hidden" name="user"
-													value="<?php $userLogin["userName"]; ?>">
-											</div>
-										</div>
-
-										<button
-											class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10"
-											name="sbm">
-											Submit
-										</button>
-									</form>
 								</div>
-							</div>
+							</div>					
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
+			<span class="stext-107 cl6 p-lr-25">
+				SKU: JAK-01
+			</span>
 
-
+			<span class="stext-107 cl6 p-lr-25">
+				Categories: Jacket, Men
+			</span>
+		</div>
 	</section>
 
 
@@ -1242,19 +1149,240 @@ if ($result->num_rows > 0) {
 						<!-- Block2 -->
 						<div class="block2">
 							<div class="block2-pic hov-img0">
-								<img src="images/jellycat.png" alt="IMG-PRODUCT">
+								<img src="images/cute.jpg" alt="IMG-PRODUCT">
 
-								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Strawberry Jelly Cat
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Bunny Cute
+									</a>
+
+									<span class="stext-105 cl3">
+										$7.99
+									</span>
+								</div>
+
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0">
+								<img src="images/babydoll.jpg" alt="IMG-PRODUCT">
+
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									Quick View
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Baby Doll
+									</a>
+
+									<span class="stext-105 cl3">
+										$8.99
+									</span>
+								</div>
+
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0">
+								<img src="images/dog.jpg" alt="IMG-PRODUCT">
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									Quick View
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Dog
+									</a>
+
+									<span class="stext-105 cl3">
+										$5.99
+									</span>
+								</div>
+
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0">
+								<img src="images/beardollyellow.jpg" alt="IMG-PRODUCT">
+
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									Quick View
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Teddy Bear
+									</a>
+
+									<span class="stext-105 cl3">
+										$9.99
+									</span>
+								</div>
+
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0">
+								<img src="images/moon.png" alt="IMG-PRODUCT">
+
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									Quick View
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Moon pillow
+									</a>
+
+									<span class="stext-105 cl3">
+										$14.99
+									</span>
+								</div>
+
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0">
+								<img src="images/deer.png" alt="IMG-PRODUCT">
+
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									Quick View
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Deer toy
+									</a>
+
+									<span class="stext-105 cl3">
+										$19.99
+									</span>
+								</div>
+
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0">
+								<img src="images/robot.jpg" alt="IMG-PRODUCT">
+
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									Quick View
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Robot
+									</a>
+
+									<span class="stext-105 cl3">
+										$29.99
+									</span>
+								</div>
+
+								<div class="block2-txt-child2 flex-r p-t-3">
+									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
+						<!-- Block2 -->
+						<div class="block2">
+							<div class="block2-pic hov-img0">
+								<img src="images/pig.png" alt="IMG-PRODUCT">
+
+								<a href="#" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									Quick View
+								</a>
+							</div>
+
+							<div class="block2-txt flex-w flex-t p-t-14">
+								<div class="block2-txt-child1 flex-col-l ">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+										Pig pillow
 									</a>
 
 									<span class="stext-105 cl3">
@@ -1264,261 +1392,8 @@ if ($result->num_rows > 0) {
 
 								<div class="block2-txt-child2 flex-r p-t-3">
 									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
-											alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l"
-											src="images/icons/icon-heart-02.png" alt="ICON">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-pic hov-img0">
-								<img src="images/Elephant.png" alt="IMG-PRODUCT">
-
-								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-									Quick View
-								</a>
-							</div>
-
-							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Elephant Jelly Cat
-									</a>
-
-									<span class="stext-105 cl3">
-										$10.99
-									</span>
-								</div>
-
-								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
-											alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l"
-											src="images/icons/icon-heart-02.png" alt="ICON">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-pic hov-img0">
-								<img src="images/giraffe.png" alt="IMG-PRODUCT">
-								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-									Quick View
-								</a>
-							</div>
-
-							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Giraffe Jelly Cat
-									</a>
-
-									<span class="stext-105 cl3">
-										$12.99
-									</span>
-								</div>
-
-								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
-											alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l"
-											src="images/icons/icon-heart-02.png" alt="ICON">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-pic hov-img0">
-								<img src="images/beartowel.png" alt="IMG-PRODUCT">
-
-								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-									Quick View
-								</a>
-							</div>
-
-							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Bear Baby Tower
-									</a>
-
-									<span class="stext-105 cl3">
-										$12.99
-									</span>
-								</div>
-
-								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
-											alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l"
-											src="images/icons/icon-heart-02.png" alt="ICON">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-pic hov-img0">
-								<img src="images/Jelly Cat Flower.png" alt="IMG-PRODUCT">
-
-								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-									Quick View
-								</a>
-							</div>
-
-							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Flower Jelly Cat
-									</a>
-
-									<span class="stext-105 cl3">
-										$10.99
-									</span>
-								</div>
-
-								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
-											alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l"
-											src="images/icons/icon-heart-02.png" alt="ICON">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-pic hov-img0">
-								<img src="images/duck.png" alt="IMG-PRODUCT">
-
-								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-									Quick View
-								</a>
-							</div>
-
-							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Duck
-									</a>
-
-									<span class="stext-105 cl3">
-										$5.25
-									</span>
-								</div>
-
-								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
-											alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l"
-											src="images/icons/icon-heart-02.png" alt="ICON">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-pic hov-img0">
-								<img src="images/bearjellycat.png" alt="IMG-PRODUCT">
-
-								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-									Quick View
-								</a>
-							</div>
-
-							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Bear Jelly Cat
-									</a>
-
-									<span class="stext-105 cl3">
-										$10.99
-									</span>
-								</div>
-
-								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
-											alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l"
-											src="images/icons/icon-heart-02.png" alt="ICON">
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
-						<!-- Block2 -->
-						<div class="block2">
-							<div class="block2-pic hov-img0">
-								<img src="images/unicorn.png" alt="IMG-PRODUCT">
-
-								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-									Quick View
-								</a>
-							</div>
-
-							<div class="block2-txt flex-w flex-t p-t-14">
-								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Unicorn
-									</a>
-
-									<span class="stext-105 cl3">
-										$10.99
-									</span>
-								</div>
-
-								<div class="block2-txt-child2 flex-r p-t-3">
-									<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
-											alt="ICON">
-										<img class="icon-heart2 dis-block trans-04 ab-t-l"
-											src="images/icons/icon-heart-02.png" alt="ICON">
+										<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
+										<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
 									</a>
 								</div>
 							</div>
@@ -1529,154 +1404,156 @@ if ($result->num_rows > 0) {
 		</div>
 	</section>
 
-	    <!-- Footer -->
-		<footer class="bg3 p-t-75 p-b-32">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl10 p-b-30">
-                        Legal
-                    </h4>
+	<!-- Footer -->
+	<footer class="bg3 p-t-75 p-b-32">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Categories
+					</h4>
 
-                    <ul>
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Faq
-                            </a>
-                        </li>
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Women
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Retailers
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Men
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Privacy Policy
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shoes
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Cookies
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Watches
+							</a>
+						</li>
+					</ul>
+				</div>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl10 p-b-30">
-                        Services
-                    </h4>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Help
+					</h4>
 
-                    <ul>
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Track Order
-                            </a>
-                        </li>
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Order
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Returns
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Returns
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                Shipping
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shipping
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-                                FAQs
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								FAQs
+							</a>
+						</li>
+					</ul>
+				</div>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl10 p-b-30">
-                        GET IN TOUCH
-                    </h4>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						GET IN TOUCH
+					</h4>
 
-                    <p class="stext-107 cl7 size-201">
-                        Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
-                        on (+1) 96 716 6879
-                    </p>
+					<p class="stext-107 cl7 size-201">
+						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
+						on (+1) 96 716 6879
+					</p>
 
-                    <div class="p-t-27">
-                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa-brands fa-facebook fa-lg" style="color: #ea539c;"></i>
-                        </a>
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-facebook"></i>
+						</a>
 
-                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa-brands fa-instagram fa-lg" style="color: #e151a5;"></i>
-                        </a>
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-instagram"></i>
+						</a>
 
-                        <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa-brands fa-pinterest fa-lg" style="color: #e74b7a;"></i>
-                        </a>
-                    </div>
-                </div>
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa fa-pinterest-p"></i>
+						</a>
+					</div>
+				</div>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl10 p-b-30">
-                        Newsletter
-                    </h4>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl0 p-b-30">
+						Newsletter
+					</h4>
 
-                    <form>
-                        <div class="wrap-input1 w-full p-b-4">
-                            <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
-                                placeholder="email@example.com">
-                            <div class="focus-input1 trans-04"></div>
-                        </div>
+					<form>
+						<div class="wrap-input1 w-full p-b-4">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
+								placeholder="email@example.com">
+							<div class="focus-input1 trans-04"></div>
+						</div>
 
-                        <div class="p-t-18">
-                            <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+						<div class="p-t-18">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+								Subscribe
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
 
-            <div class="p-t-40">
-                <div class="flex-c-m flex-w p-b-18">
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-                    </a>
+			<div class="p-t-40">
+				<div class="flex-c-m flex-w p-b-18">
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+					</a>
 
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-                    </a>
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+					</a>
 
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-                    </a>
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+					</a>
 
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-                    </a>
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+					</a>
 
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-                    </a>
-                </div>
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+					</a>
+				</div>
 
-                <p class="stext-107 cl6 txt-center">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
-                        class="fa fa-heart-o" aria-hidden="true"></i> Group 5
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				<p class="stext-107 cl6 txt-center">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
+						class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+						target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com"
+						target="_blank">ThemeWagon</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-                </p>
-            </div>
-        </div>
-    </footer>
+				</p>
+			</div>
+		</div>
+	</footer>
 
 
 	<!-- Back to top -->
@@ -1950,6 +1827,7 @@ if ($result->num_rows > 0) {
 				image.css("transform-origin", posX + "% " + posY + "%");
 			});
 		});
+
 	</script>
 	<!--===============================================================================================-->
 	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -1967,82 +1845,9 @@ if ($result->num_rows > 0) {
 				ps.update();
 			})
 		});
-
-		document.getElementById("button-add").addEventListener("click", function () {
-			var productId = 123; // Thay đổi productId bằng ID thực của sản phẩm
-			var quantity = 1; // Số lượng sản phẩm, bạn có thể thay đổi tùy theo yêu cầu
-
-			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "add_to_cart.php", true);
-			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-			xhr.onreadystatechange = function () {
-				if (xhr.readyState === 4 && xhr.status === 200) {
-					// Xử lý phản hồi từ máy chủ (nếu cần)
-					console.log(xhr.responseText);
-				}
-			};
-			xhr.send("productId=" + productId + "&quantity=" + quantity);
-		});
-
-		// Người dùng lựa chọn số lượng sản phẩm để thêm vào giỏ hàng
-		document.addEventListener("DOMContentLoaded", function () {
-			var quantityInput = document.getElementById("quantity-input");
-			var hiddenQuantity = document.getElementById("hidden-quantity");
-			var hiddenQuantityBuy = document.getElementById("hidden-quantity-buy");
-
-			// Lắng nghe sự kiện thay đổi giá trị trong ô input
-			quantityInput.addEventListener("change", function () {
-				// Cập nhật giá trị biến quantity
-				var quantity = parseInt(this.value);
-				hiddenQuantity.value = quantity;
-				hiddenQuantityBuy.value = quantity;
-			});
-
-			// Lắng nghe sự kiện nhấn nút tăng giảm số lượng
-			var buttons = document.querySelectorAll(".btn-num-product-up, .btn-num-product-down");
-			buttons.forEach(function (button) {
-				button.addEventListener("click", function () {
-					// Cập nhật giá trị biến quantity
-					var currentValue = parseInt(quantityInput.value);
-					var newValue = this.classList.contains("btn-num-product-up") ? currentValue : currentValue;
-					quantityInput.value = newValue >= 1 ? newValue : 1;
-					hiddenQuantity.value = quantityInput.value;
-					hiddenQuantityBuy.value = quantityInput.value;
-				});
-			});
-		});
-
-		// Truyền biến PHP vào JavaScript
-		var images = "<?php echo $product["p_image"]; ?>";
-
-		// Tách chuỗi thành mảng
-		var imageArray = images.split(',');
-
-		// Container để chứa các hình ảnh
-		var container = document.getElementById('image-container');
-
-		// Duyệt qua từng hình ảnh trong mảng và tạo các phần tử hình ảnh
-		imageArray.forEach(function (imagePath, index) {
-			var img = document.createElement('img');
-			img.src = imagePath;
-
-			// Thêm các class màu sắc khác nhau dựa vào index
-			if (index % 3 === 0) {
-				img.classList.add('image-1');
-			} else if (index % 3 === 1) {
-				img.classList.add('image-2');
-			} else {
-				img.classList.add('image-3');
-			}
-
-			container.appendChild(img);
-		})
-
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
-
-
 </body>
 
 </html>
