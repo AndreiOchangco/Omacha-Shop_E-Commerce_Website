@@ -604,7 +604,7 @@ if ($query->num_rows > 0) {
 		<h1 class="stext-121 heading darkModetxt">Get In Touch</h1>
 		<div class="contactForm">
 			<form action="notification_api.php" id="notificationForm">
-				<h1 class=" stext-121 sub-heading darkModetxt">Let's talk</h1>
+				<h1 class=" stext-121 sub-heading darkModetxt">Ukinnam ardy</h1>
 				<p class="para para2">
 					Contact us for a quote, help to join the them.
 				</p>
