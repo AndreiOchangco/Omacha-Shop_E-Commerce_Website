@@ -40,6 +40,14 @@
   color: #19f574;
 }
 
+.bg-omacha {
+  background-color: #19f574;
+}
+
+.m-lf-minus-10 {
+    margin-left: -10px !important;
+}
+
 .z-index-100 {
     z-index: 100 !important;
 }
