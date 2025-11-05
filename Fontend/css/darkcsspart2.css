@@ -43,6 +43,11 @@ ul.sub-menu {
 .main-menu a:hover {
     color : #19f574 !important;
 }
+
+.main-menu > .active-menu >  a {
+    color: #19f574 !important;
+}
+
 /* nav */
 
 
@@ -100,5 +105,9 @@ div.block1.wrap-pic-w {
 }
 
 
+/* Add active home link color for dark mode */
+.active-menu > a {
+    color: #19f574 !important;
+}
 
 /* Add more dark mode styles as needed */
