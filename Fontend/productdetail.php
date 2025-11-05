@@ -875,15 +875,15 @@ if ($result->num_rows > 0) {
 
 				<div class="col-md-6 col-lg-5 p-b-30">
 					<div class="p-r-50 p-t-5 p-lr-0-lg">
-						<h4 class="mtext-105 cl2 js-name-detail p-b-14">
+						<h4 class="mtext-105 cl2 js-name-detail p-b-14 darkModetxt">
 							<?php echo $product["p_name"]; ?>
 						</h4>
 
-						<span class="mtext-106 cl2">
+						<span class="mtext-106 cl2 darkModetxt">
 							$ <?php echo $product["p_price"]; ?>
 						</span>
 
-						<p class="stext-102 cl3 p-t-23">
+						<p class="stext-102 cl3 p-t-23 darkModetxt">
 							<?php echo $product["p_description"]; ?>
 						</p>
 
