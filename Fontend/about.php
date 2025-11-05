@@ -16,9 +16,10 @@ $sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
 $queryLogin = mysqli_query($conn, $sqlLogin);
 // print_r($queryLogin);
 
-// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+// Loop through each row from the query results
 $row = $queryLogin->fetch_assoc();
-// Thêm thông tin từng hàng vào mảng $vuserLogin
+
+// Add information from each row to $vuserLogin array
 $userLogin = array(
 	"userID" => $row["userID"],
 	"userName" => $row["userName"],
@@ -30,7 +31,7 @@ $sql = "SELECT * FROM product";
 $query = mysqli_query($conn, $sql);
 
 
-// Câu truy vấn SQL SELECT
+// SQL SELECT query
 $sqlOrder = "SELECT 
 `order`.o_id, 
 `order`.u_id, 
@@ -47,14 +48,14 @@ FROM
 INNER JOIN 
 product ON `order`.p_id = product.p_id";
 
-// Thực hiện truy vấn
+// Execute query
 $resultOrder = $conn->query($sqlOrder);
 
-// Kiểm tra kết quả truy vấn
+// Check query results
 if ($resultOrder->num_rows > 0) {
-	// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+	// Loop through each row from query results
 	while ($row = $resultOrder->fetch_assoc()) {
-		// Thêm thông tin từng hàng vào mảng $order_array
+		// Add row information to $order_array
 		$order_array[] = array( // hãy giữ []
 			"o_id" => $row["o_id"],
 			"u_id" => $row["u_id"],
@@ -75,28 +76,30 @@ if ($resultOrder->num_rows > 0) {
 
 function sumTotalPrice($order_array, $u_id)
 {
-	$totalPrice = 0; // Khởi tạo biến tổng giá tiền
+	// Initialize total price variable
+	$totalPrice = 0; 
 
-	// Duyệt qua từng sản phẩm trong giỏ hàng và tính tổng giá tiền
+	// Loop through each product in cart and calculate total price
 	foreach ($order_array as $item) {
-		// Kiểm tra xem u_id của sản phẩm có khớp với u_id được chỉ định hay không
+		// Check if product u_id matches specified u_id
 		if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
-			// Tính giá tiền của mỗi sản phẩm (giá tiền * số lượng)
+			// Calculate price for each product (price * quantity)
 			$productPrice = $item["p_price"] * $item["o_quantity"];
 
-			// Cộng vào tổng giá tiền
+			// Add to total price
 			$totalPrice += $productPrice;
 		}
 	}
 
-	return $totalPrice; // Trả về tổng giá tiền
+	// Return total price
+	return $totalPrice; 
 }
 
-// Truy vấn để đếm số dòng trong bảng order
+// Query to count rows in order table
 $sql = "SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = '{$userLogin['userID']}' AND o_quantity > 0 AND o_status = 0";
 $result = $conn->query($sql);
 
-// Kiểm tra và hiển thị kết quả
+// Check and display results 
 if ($result->num_rows > 0) {
 	$row = $result->fetch_assoc();
 	$order_count = $row["total_rows"];
@@ -816,7 +819,7 @@ if ($result->num_rows > 0) {
 	<section class="bg0 p-t-75 p-b-30">
 		<div class="container">
 			<h3 style="text-align: center; " class="mtext-111 cl2 p-b-16 text-omacha">
-				Our Team
+				Our Developer Team
 			</h3>
 			<div class="row">
 
@@ -830,11 +833,12 @@ if ($result->num_rows > 0) {
 								<i class="fab fa-facebook"></i>
 							</a>
 						</div>
-						<div class="team-member-info">
-							<p>Nguyễn Thùy Khanh</p>
-							<p class="stext-113 cl6">Leader</p>
-							<p style="padding-top: 20px; font-weight: normal;">Welcome to our toy store! Explore a world
-								full of colors and creativity with us.</p>
+						<div class="team-member-info darkModetxt">
+							<p>Andrei Luise E. Ochangco</p>
+							<p class="stext-113 cl6">Full-stack Developer and Database Manager (Leader)</p>
+							<p style="padding-top: 20px; font-weight: normal;">Welcome to our Store! explore our products, 
+								enjoy a seamless shopping experience, 
+								and find something special today!</p>
 						</div>
 					</div>
 				</div>
@@ -849,9 +853,9 @@ if ($result->num_rows > 0) {
 								<i class="fab fa-facebook"></i>
 							</a>
 						</div>
-						<div class="team-member-info">
-							<p>Trần Hữu Đạt</p>
-							<p class="stext-113 cl6">Customer Support</p>
+						<div class="team-member-info darkModetxt">
+							<p>Louis Ricardo G. Servito</p>
+							<p class="stext-113 cl6">UI Designer and Frontend Developer</p>
 							<p style="padding-top: 20px; font-weight: normal;">Let us help you find joy and happiness
 								through each unique and exciting product</p>
 						</div>
@@ -868,9 +872,9 @@ if ($result->num_rows > 0) {
 								<i class="fab fa-facebook"></i>
 							</a>
 						</div>
-						<div class="team-member-info">
-							<p>Trần Bỉnh Quyền</p>
-							<p class="stext-113 cl6">Marketing Manager</p>
+						<div class="team-member-info darkModetxt">
+							<p>Mark Lester Rivera</p>
+							<p class="stext-113 cl6">Backend Developer</p>
 							<p style="padding-top:20px; font-weight: normal;">Experience the joy of childhood with our
 								quality and safe products.</p>
 						</div>
@@ -887,9 +891,66 @@ if ($result->num_rows > 0) {
 								<i class="fab fa-facebook"></i>
 							</a>
 						</div>
-						<div class="team-member-info">
-							<p>Dương Thị Thùy Linh</p>
-							<p class="stext-113 cl6">Product Manager</p>
+						<div class="team-member-info darkModetxt">
+							<p>Ardy A. Aquino</p>
+							<p class="stext-113 cl6">Backend Developer</p>
+							<p style="padding-top:20px; font-weight: normal;">With the diversity and variety of our
+								products, you'll surely find the perfect gift for every child in the family!</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Member 5 -->
+				<div class="col-md-3">
+					<div class="team-member">
+						<div class="team-member-img block2-pic hov-img0">
+							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
+							<a href="#"
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								<i class="fab fa-facebook"></i>
+							</a>
+						</div>
+						<div class="team-member-info darkModetxt">
+							<p>Brent Alabag</p>
+							<p class="stext-113 cl6">Backend Developer</p>
+							<p style="padding-top:20px; font-weight: normal;">With the diversity and variety of our
+								products, you'll surely find the perfect gift for every child in the family!</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Member 6 -->
+				<div class="col-md-3">
+					<div class="team-member">
+						<div class="team-member-img block2-pic hov-img0">
+							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
+							<a href="#"
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								<i class="fab fa-facebook"></i>
+							</a>
+						</div>
+						<div class="team-member-info darkModetxt">
+							<p>Vince Alvendia</p>
+							<p class="stext-113 cl6">Backend Developer</p>
+							<p style="padding-top:20px; font-weight: normal;">With the diversity and variety of our
+								products, you'll surely find the perfect gift for every child in the family!</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Team Member 7 -->
+				<div class="col-md-3">
+					<div class="team-member">
+						<div class="team-member-img block2-pic hov-img0">
+							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
+							<a href="#"
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								<i class="fab fa-facebook"></i>
+							</a>
+						</div>
+						<div class="team-member-info darkModetxt">
+							<p>Harvey Disu</p>
+							<p class="stext-113 cl6">Assistant</p>
 							<p style="padding-top:20px; font-weight: normal;">With the diversity and variety of our
 								products, you'll surely find the perfect gift for every child in the family!</p>
 						</div>
