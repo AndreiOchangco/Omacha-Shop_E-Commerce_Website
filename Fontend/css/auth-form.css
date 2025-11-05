@@ -67,6 +67,8 @@ body{
     position: absolute;
     top: 0;
     width: 5px;
+    background: linear-gradient( to bottom, #19f574,#19f574);
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
     z-index: 2;
 }
 
