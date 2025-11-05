@@ -1,89 +1,74 @@
-<!-- Trang này xử lí thêm vào giỏ hàng -->
-<!-- Name input is add-to-order -->
 <?php
-    include 'login.php';
+include 'login.php'; // Handles DB connection + session safely
 
-    
+// Redirect if not logged in
 if (!isset($_SESSION["user"])) {
-	// Redirect user to the login page if not logged in
-	header("Location: login.html");
-	exit(); // Stop further execution of the script
+    header("Location: login.html");
+    exit();
 }
 
-$userName = $_SESSION["user"];	
-// print_r($userName);
-$sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' " ;
-$queryLogin = mysqli_query($conn, $sqlLogin);
-// print_r($queryLogin);
-// Kiểm tra kết quả truy vấn
+$userName = $_SESSION["user"];
 
-// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
-$row = $queryLogin->fetch_assoc();
-	// Thêm thông tin từng hàng vào mảng $vuserLogin
-	$userLogin = array(
-		"userID" => $row["userID"],
-		"userName" => $row["userName"],
-		"email" => $row["email"],
-	);
-	
+// Fetch user details
+$sqlLogin = "SELECT * FROM `login` WHERE userName = ?";
+$stmt = $conn->prepare($sqlLogin);
+$stmt->bind_param("s", $userName);
+$stmt->execute();
+$result = $stmt->get_result();
 
+if (!$result || $result->num_rows === 0) {
+    die("User not found in database.");
+}
 
-    // Kết nối đến cơ sở dữ liệu
-    $servername = "localhost";
-    $username = "root"; // Thay thế bằng username của bạn
-    $password = ""; // Thay thế bằng mật khẩu của bạn
-    $dbname = "toy-shop"; // Thay thế bằng tên cơ sở dữ liệu của bạn
+$userLogin = $result->fetch_assoc();
+$u_id = $userLogin["userID"];
 
-    // Tạo kết nối
-    $conn = new mysqli($servername, $username, $password, $dbname);
+// Process Add-to-Cart request
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add-to-cart'])) {
+    // Get product data from form
+    $p_id = intval($_POST['p_id']);
+    $p_price = floatval($_POST['p_price']);
+    $o_quantity = intval($_POST['o_quantity']);
+    $o_status = intval($_POST['o_status']); // Usually 0 for "in cart"
 
-    // Kiểm tra kết nối
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-        
-    // Kiểm tra nếu form đã được submit
-    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add-to-cart'])) {
-        // Lấy dữ liệu từ form
-        $p_id = $_POST['p_id'];
-        $p_image = $_POST['p_image'];
-        $p_name = $_POST['p_name'];
-        $p_price = $_POST['p_price'];
-        $p_type = $_POST['p_type'];
-        $o_status = $_POST['o_status'];
-        $o_quantity = $_POST['o_quantity'];
-        $u_id = $userLogin["userID"];
-    
-        print_r($o_quantity);
+    // ✅ Check if product already exists in cart
+    $check_query = "SELECT * FROM `order` WHERE u_id = ? AND p_id = ? AND o_status = 0";
+    $stmt = $conn->prepare($check_query);
+    $stmt->bind_param("ii", $u_id, $p_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-        // Kiểm tra sản phẩm đã tồn tại trong giỏ hàng chưa
-        $check_query = "SELECT * FROM `order` WHERE u_id = $u_id AND p_id = $p_id AND o_status = 0";
-        $result = $conn->query($check_query);
-        $u_id = $userLogin["userID"];
-        if ($result->num_rows > 0) {
-            // Sản phẩm đã tồn tại trong giỏ hàng, tăng số lượng
-            $row = $result->fetch_assoc();
-            $p_id = $row['p_id'];
-            $o_id = $row['o_id'];
-            
-            $update_query = "UPDATE `order` SET o_quantity = o_quantity + '$o_quantity' WHERE o_id = $o_id AND p_id = $p_id AND u_id = $u_id";
-            if ($conn->query($update_query) === TRUE) {
-                header("Location: product2.php");
-            } else {
-                echo "Error updating record: " . $conn->error;
-            }
+    if ($result->num_rows > 0) {
+        // 🟡 Product already in cart → update quantity
+        $row = $result->fetch_assoc();
+        $o_id = $row['o_id'];
+
+        $update_query = "UPDATE `order` 
+                         SET o_quantity = o_quantity + ? 
+                         WHERE o_id = ? AND u_id = ?";
+        $stmt = $conn->prepare($update_query);
+        $stmt->bind_param("iii", $o_quantity, $o_id, $u_id);
+        if ($stmt->execute()) {
+            header("Location: product2.php");
+            exit();
         } else {
-            // Sản phẩm chưa tồn tại trong giỏ hàng, thêm mới
-            $insert_query = "INSERT INTO `order` (u_id, p_id, o_price, o_quantity, o_status)
-                             VALUES ($u_id, $p_id, $p_price, '$o_quantity', '$o_status')";
-            if ($conn->query($insert_query) === TRUE) {
-                header("Location: product2.php");
-            } else {
-                echo "Error inserting record: " . $conn->error;
-            }
+            echo "Error updating record: " . $conn->error;
         }
-    
-        // Đóng kết nối
-        $conn->close();
+
+    } else {
+        // 🟢 New product → insert into cart
+        $insert_query = "INSERT INTO `order` (u_id, p_id, o_price, o_quantity, o_status)
+                         VALUES (?, ?, ?, ?, ?)";
+        $stmt = $conn->prepare($insert_query);
+        $stmt->bind_param("iidii", $u_id, $p_id, $p_price, $o_quantity, $o_status);
+        if ($stmt->execute()) {
+            header("Location: product2.php");
+            exit();
+        } else {
+            echo "Error inserting record: " . $conn->error;
+        }
     }
+
+    $stmt->close();
+}
 ?>

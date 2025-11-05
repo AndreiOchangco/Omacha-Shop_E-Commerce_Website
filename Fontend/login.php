@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Database connection
 $conn = new mysqli('localhost', 'root', '', 'toy-shop');
@@ -7,7 +9,7 @@ if ($conn->connect_error) {
     die("Connection Failed: " . $conn->connect_error);
 }
 
-// When form is submitted
+// When form is submitted (login page only)
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user'], $_POST['pass'])) {
     $user = trim($_POST['user']);
     $pass = trim($_POST['pass']);
@@ -21,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user'], $_POST['pass'
     // 🔹 1. Check if admin
     if (array_key_exists($user, $adminAccounts) && $pass === $adminAccounts[$user]) {
         $_SESSION['user'] = $user;
-        header('Location: ../Admin/public/index.php'); // Admin redirects to the admin dashboard
+        header('Location: ../Admin/public/index.php');
         exit();
     }
 
@@ -33,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user'], $_POST['pass'
 
     if ($result && $result->num_rows > 0) {
         $_SESSION['user'] = $user;
-        header('Location: index.php'); // ✅ Redirect to homepage
+        header('Location: index.php');
         exit();
     } else {
         $_SESSION['error'] = 'Invalid username or password';
@@ -42,7 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['user'], $_POST['pass'
     }
 
     $stmt->close();
-}
 
-$conn->close();
+    // 🔸 Only close connection if running directly (not included)
+    if (basename($_SERVER['PHP_SELF']) === 'login.php') {
+        $conn->close();
+    }
+}
 ?>

@@ -463,7 +463,7 @@ if ($query->num_rows > 0) {
 									</li>
 										
 
-									<li><a href="register.php">Logout</a></li>
+									<li><a href="logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
