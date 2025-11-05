@@ -1084,13 +1084,13 @@ if ($result->num_rows > 0) {
 						<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item toy">
 							<!-- Block2 -->
 							<div class="block2">
-								<a href="product-detail.php?p_id=<?php echo $product['p_id']; ?>" class="block2-pic hov-img0"
+								<a href="productdetail.php?p_id=<?php echo $product['p_id']; ?>" class="block2-pic hov-img0"
 									style="border: 0.1px dashed #000; border-radius: 50px;">
 									<img id="image-size" src="images/<?php echo $product_images[0]; ?>" alt="IMG-PRODUCT">
 								</a>
 								<div class="block2-txt flex-w flex-t p-t-14">
 									<div class="block2-txt-child1 flex-col-l">
-										<a href="product-detail.php?p_id=<?php echo $product['p_id']; ?>"
+										<a href="productdetail.php?p_id=<?php echo $product['p_id']; ?>"
 											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 											<?php echo $product["p_name"]; ?>
 										</a>
