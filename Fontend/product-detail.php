@@ -473,41 +473,44 @@ if ($result->num_rows > 0) {
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="index.php">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.php#shop-by-category">Categories</a></li>
-									<li><a href="index.php#new-arrivals">Arrivals</a></li>
-									<li><a href="index.php#blog">Blog</a></li>
-									<li><a href="index.php#top-brands">Top Brands</a></li>
+								<a class="darkModetxt" href="#go-up">Home</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="#shop-by-category">Categories</a></li>
+									<li><a class="darkModetxt" href="#new-arrivals">Arrivals</a></li>
+									<li><a class="darkModetxt" href="#blog">Blog</a></li>
+									<li><a class="darkModetxt" href="#top-brands">Top Brands</a></li>
 								</ul>
 
 							</li>
 
 							<li class="label1" data-label1="new">
-							<a href="product.php">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="./Products/convenience-products.php">Convenience</a></li>
-									<li><a href="./Products/shopping-products.php">Shopping</a></li>
-									<li><a href="./Products/specialty-products.php">Specialty</a></li>
-									<li><a href="./Products/unsought-products.php">Unsought</a></li>
-									<li><a href="./Products/digital-products.php">Digital</a></li>
+							<a class="darkModetxt" href="product.php">Shop</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="./Products/convenience-products.php">Convenience</a></li>
+									<li><a class="darkModetxt" href="./Products/shopping-products.php">Shopping</a></li>
+									<li><a class="darkModetxt" href="./Products/specialty-products.php">Specialty</a></li>
+									<li><a class="darkModetxt" href="./Products/unsought-products.php">Unsought</a></li>
+									<li><a class="darkModetxt" href="./Products/digital-products.php">Digital</a></li>
 								</ul>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="shopping-cart.php">Cart</a>
+								<a class="darkModetxt" href="shopping-cart.php">Cart</a>
 							</li>
 
 							<li>
-								<a href="blog.php">Blog</a>
+								<a class="darkModetxt" href="blog.php">Blog</a>
 							</li>
 
 							<li>
-								<a href="about.php">About</a>
+								<a class="darkModetxt" href="about.php">About</a>
 							</li>
 
 							<li>
-								<a href="contact.php">Contact</a>
+								<a class="darkModetxt" href="contact.php">Contact</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -974,26 +977,26 @@ if ($result->num_rows > 0) {
 						<!-- Description -->
 						<div class="tab-pane fade show active" id="description" role="tabpanel">
 							<div class="how-pos2 p-lr-15-md">
-								<p class="stext-102 cl6">
+								<p class="stext-102 cl6 darkModetxt">
 									<b>Shape and Size:</b> Teddy bears often have a bear-like appearance, with two ears, a round nose, and two round eyes. 
 									The size of a teddy bear can vary from small to large.								
 								</p>
 
-								<p class="stext-102 cl6">
+								<p class="stext-102 cl6 darkModetxt">
 									<b>Material: </b> The product is made from soft and safe fabric materials such as sheepskin, fleece, cotton, or synthetic plush. 
 									Sometimes, accessories like silk or velvet fabric may also be used to create accents.
 
-								<p class="stext-102 cl6">
+								<p class="stext-102 cl6 darkModetxt">
 									<b>Color: </b>Teddy bears can come in a variety of colors, from the natural brown of real bears to vibrant colors like pink, blue, and yellow. 
 									Colors are often chosen to reflect personality traits or create interesting accents for the product.
 								</p>
 
-								<p class="stext-102 cl6">
+								<p class="stext-102 cl6 darkModetxt">
 									<b>Accessories:</b> Some teddy bears may be adorned with accessories like knitted sweaters, bow ties, or ribbons. 
 									These accessories are often added to create unique styles or make the product more adorable.
 								</p>
 
-								<p class="stext-102 cl6">
+								<p class="stext-102 cl6 darkModetxt">
 									<b>Safety and Quality: </b>Teddy bear products are typically manufactured to high safety standards, ensuring that they are safe for children and pose no health hazards. 
 									The quality of the product is also ensured to ensure that the teddy bear is durable and maintains its shape and color after repeated use.							
 								</p>
@@ -1005,31 +1008,31 @@ if ($result->num_rows > 0) {
 							<div style="margin-left: 50px;" class="how-pos2 p-lr-15-md">
 								<div class="row how-pos2 p-lr-15-md">
 									<div class="stext-102 cl6 col-md-6">
-										<div class="info-item">
+										<div class="info-item darkModetxt">
 											<span class="info-label">Weight:</span>
 											<span class="info-value">0.79 kg</span>
 										</div>
 									</div>
 									<div class="stext-102 cl6 col-md-6">
-										<div class="info-item">
+										<div class="info-item darkModetxt">
 											<span class="info-label">Dimensions:</span>
 											<span class="info-value">110 x 33 x 100 cm</span>
 										</div>
 									</div>
 									<div class="stext-102 cl6 col-md-6">
-										<div class="info-item">
+										<div class="info-item darkModetxt">
 											<span class="info-label">Materials:</span>
 											<span class="info-value">60% cotton</span>
 										</div>
 									</div>
 									<div class="stext-102 cl6 col-md-6">
-										<div class="info-item">
+										<div class="info-item darkModetxt">
 											<span class="info-label">Color:</span>
 											<span class="info-value">Black, Blue, Grey, Green, Red, White</span>
 										</div>
 									</div>
 									<div class="stext-102 cl6 col-md-6">
-										<div class="info-item">
+										<div class="info-item darkModetxt">
 											<span class="info-label">Size:</span>
 											<span class="info-value">XL, L, M, S</span>
 										</div>
@@ -1047,7 +1050,7 @@ if ($result->num_rows > 0) {
 										<div class="flex-w flex-t p-b-68">
 											<div>
 												<div class="flex-w flex-sb-m p-b-17">
-													<span class="mtext-107 cl2 p-r-20">
+													<span class="mtext-107 cl2 p-r-20 darkModetxt">
 														Ariana Grande
 													</span>
 						
@@ -1060,7 +1063,7 @@ if ($result->num_rows > 0) {
 													</span>
 												</div>
 						
-												<p class="stext-102 cl6">
+												<p class="stext-102 cl6 darkModetxt">
 													With soft materials and eye-catching colors, cotton buckets are the perfect choice for children to play and simulate daily activities such as bathing, cooking, or taking care of their small family.
 												</p>
 											</div>
@@ -1068,16 +1071,16 @@ if ($result->num_rows > 0) {
 										
 										<!-- Add review -->
 										<form class="w-full">
-											<h5 class="mtext-108 cl2 p-b-7">
+											<h5 class="mtext-108 cl2 p-b-7 darkModetxt">
 												Add a review
 											</h5>
 						
-											<p class="stext-102 cl6">
+											<p class="stext-102 cl6 darkModetxt">
 												Your email address will not be published. Required fields are marked *
 											</p>
 						
 											<div class="flex-w flex-m p-t-50 p-b-23">
-												<span class="stext-102 cl3 m-r-16">
+												<span class="stext-102 cl3 m-r-16 darkModetxt">
 													Your Rating
 												</span>
 						
@@ -1093,22 +1096,22 @@ if ($result->num_rows > 0) {
 						
 											<div class="row p-b-25">
 												<div class="col-12 p-b-5">
-													<label class="stext-102 cl3" for="review">Your review</label>
-													<textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10" id="review" name="review"></textarea>
+													<label class="stext-102 cl3 darkModetxt" for="review">Your review</label>
+													<textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10 darkModetxt" id="review" name="review"></textarea>
 												</div>
 						
 												<div class="col-sm-6 p-b-5">
-													<label class="stext-102 cl3" for="name">Name</label>
-													<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="name" type="text" name="name">
+													<label class="stext-102 cl3 darkModetxt" for="name">Name</label>
+													<input class="size-111 bor8 stext-102 cl2 p-lr-20 darkModetxt" id="name" type="text" name="name">
 												</div>
 						
 												<div class="col-sm-6 p-b-5">
-													<label class="stext-102 cl3" for="email">Email</label>
-													<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email" type="text" name="email">
+													<label class="stext-102 cl3 darkModetxt" for="email">Email</label>
+													<input class="size-111 bor8 stext-102 cl2 p-lr-20 darkModetxt" id="email" type="text" name="email">
 												</div>
 											</div>
 						
-											<button class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10">
+											<button class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 m-lf-minus-10 m-t-10 trans-04">
 												Submit
 											</button>
 										</form>
@@ -1121,12 +1124,12 @@ if ($result->num_rows > 0) {
 			</div>
 		</div>
 
-		<div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
-			<span class="stext-107 cl6 p-lr-25">
+		<div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15 drkmde">
+			<span class="stext-107 cl6 p-lr-25 darkModetxt">
 				SKU: JAK-01
 			</span>
 
-			<span class="stext-107 cl6 p-lr-25">
+			<span class="stext-107 cl6 p-lr-25 darkModetxt">
 				Categories: Jacket, Men
 			</span>
 		</div>
@@ -1137,7 +1140,7 @@ if ($result->num_rows > 0) {
 	<section class="sec-relate-product bg0 p-t-45 p-b-105">
 		<div class="container">
 			<div class="p-b-45">
-				<h3 class="ltext-106 cl5 txt-center">
+				<h3 class="ltext-106 cl5 txt-center darkModetxt">
 					Related Products
 				</h3>
 			</div>
@@ -1158,11 +1161,11 @@ if ($result->num_rows > 0) {
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 										Bunny Cute
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$7.99
 									</span>
 								</div>
@@ -1190,11 +1193,11 @@ if ($result->num_rows > 0) {
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 										Baby Doll
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$8.99
 									</span>
 								</div>
@@ -1221,11 +1224,11 @@ if ($result->num_rows > 0) {
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 										Dog
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$5.99
 									</span>
 								</div>
@@ -1253,11 +1256,11 @@ if ($result->num_rows > 0) {
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 										Teddy Bear
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$9.99
 									</span>
 								</div>
@@ -1285,11 +1288,11 @@ if ($result->num_rows > 0) {
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 										Moon pillow
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$14.99
 									</span>
 								</div>
@@ -1317,11 +1320,11 @@ if ($result->num_rows > 0) {
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 										Deer toy
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$19.99
 									</span>
 								</div>
@@ -1349,7 +1352,7 @@ if ($result->num_rows > 0) {
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 										Robot
 									</a>
 
@@ -1381,11 +1384,11 @@ if ($result->num_rows > 0) {
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 										Pig pillow
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$12.99
 									</span>
 								</div>
@@ -1848,6 +1851,7 @@ if ($result->num_rows > 0) {
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<script src="js/dark-mode.js"></script>
 </body>
 
 </html>

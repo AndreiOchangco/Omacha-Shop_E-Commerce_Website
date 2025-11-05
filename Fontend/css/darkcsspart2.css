@@ -8,7 +8,6 @@ html, body {
     color: #f1f1f1 !important;
 }
 
-
 /* nav */
 
 .sub-menu a {
@@ -56,6 +55,11 @@ ul.sub-menu {
 
 .darkModebg-black {
     background-color: #181818 !important;
+    color: #f1f1f1 !important;
+}
+
+.darkModebg-darkgray {
+    background-color: #232323 !important;
     color: #f1f1f1 !important;
 }
 
