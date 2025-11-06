@@ -489,7 +489,7 @@ if ($result->num_rows > 0) {
 									</li>
 										
 
-									<li><a href="register.php">Logout</a></li>
+									<li><a href="logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -818,7 +818,7 @@ if ($result->num_rows > 0) {
 	<!-- Team Members -->
 	<section class="bg0 p-t-75 p-b-30">
 		<div class="container">
-			<h3 style="text-align: center; " class="mtext-111 cl2 p-b-16 text-omacha">
+			<h3 style="text-align: center; font-size: 2.5rem; " class="mtext-111 cl2 p-b-16 m-b-50 text-omacha">
 				Our Developer Team
 			</h3>
 			<div class="row">
@@ -835,8 +835,8 @@ if ($result->num_rows > 0) {
 						</div>
 						<div class="team-member-info darkModetxt">
 							<p>Andrei Luise E. Ochangco</p>
-							<p class="stext-113 cl6">Full-stack Developer and Database Manager (Leader)</p>
-							<p style="padding-top: 20px; font-weight: normal;">Welcome to our Store! explore our products, 
+							<p class="stext-113 cl6">Full-stack Developer and Repository Manager</p>
+							<p style="padding-top: 20px; font-weight: normal; font-size: 1.25rem; ">Welcome to our Store! explore our products, 
 								enjoy a seamless shopping experience, 
 								and find something special today!</p>
 						</div>
@@ -856,7 +856,7 @@ if ($result->num_rows > 0) {
 						<div class="team-member-info darkModetxt">
 							<p>Louis Ricardo G. Servito</p>
 							<p class="stext-113 cl6">UI Designer and Frontend Developer</p>
-							<p style="padding-top: 20px; font-weight: normal;">Let us help you find joy and happiness
+							<p style="padding-top: 20px; font-weight: normal; font-size: 1.25rem; ">Let us help you find joy and happiness
 								through each unique and exciting product</p>
 						</div>
 					</div>
@@ -874,8 +874,8 @@ if ($result->num_rows > 0) {
 						</div>
 						<div class="team-member-info darkModetxt">
 							<p>Mark Lester Rivera</p>
-							<p class="stext-113 cl6">Backend Developer</p>
-							<p style="padding-top:20px; font-weight: normal;">Experience the joy of childhood with our
+							<p class="stext-113 cl6">Backend Developer and Sub-Frontend Developer</p>
+							<p style="padding-top:20px; font-weight: normal; font-size: 1.25rem; ">Experience the joy of childhood with our
 								quality and safe products.</p>
 						</div>
 					</div>
@@ -893,8 +893,8 @@ if ($result->num_rows > 0) {
 						</div>
 						<div class="team-member-info darkModetxt">
 							<p>Ardy A. Aquino</p>
-							<p class="stext-113 cl6">Backend Developer</p>
-							<p style="padding-top:20px; font-weight: normal;">With the diversity and variety of our
+							<p class="stext-113 cl6">Backend Developer and Sub-Frontend Developer</p>
+							<p style="padding-top:20px; font-weight: normal; font-size: 1.25rem; ">With the diversity and variety of our
 								products, you'll surely find the perfect gift for every child in the family!</p>
 						</div>
 					</div>
@@ -913,7 +913,7 @@ if ($result->num_rows > 0) {
 						<div class="team-member-info darkModetxt">
 							<p>Brent Alabag</p>
 							<p class="stext-113 cl6">Backend Developer</p>
-							<p style="padding-top:20px; font-weight: normal;">With the diversity and variety of our
+							<p style="padding-top:20px; font-weight: normal; font-size: 1.25rem; ">With the diversity and variety of our
 								products, you'll surely find the perfect gift for every child in the family!</p>
 						</div>
 					</div>
@@ -931,8 +931,8 @@ if ($result->num_rows > 0) {
 						</div>
 						<div class="team-member-info darkModetxt">
 							<p>Vince Alvendia</p>
-							<p class="stext-113 cl6">Backend Developer</p>
-							<p style="padding-top:20px; font-weight: normal;">With the diversity and variety of our
+							<p class="stext-113 cl6">Backend Developer and Database Manager</p>
+							<p style="padding-top:20px; font-weight: normal; font-size: 1.25rem; ">With the diversity and variety of our
 								products, you'll surely find the perfect gift for every child in the family!</p>
 						</div>
 					</div>
@@ -951,7 +951,7 @@ if ($result->num_rows > 0) {
 						<div class="team-member-info darkModetxt">
 							<p>Harvey Disu</p>
 							<p class="stext-113 cl6">Assistant</p>
-							<p style="padding-top:20px; font-weight: normal;">With the diversity and variety of our
+							<p style="padding-top:20px; font-weight: normal; font-size: 1.25rem; ">With the diversity and variety of our
 								products, you'll surely find the perfect gift for every child in the family!</p>
 						</div>
 					</div>

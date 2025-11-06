@@ -381,7 +381,7 @@ if ($query->num_rows > 0) {
 									</li>
 										
 
-									<li><a href="../register.php">Logout</a></li>
+									<li><a href="../logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -831,7 +831,7 @@ if ($query->num_rows > 0) {
                             </div>
                             <div class="block2-txt flex-w flex-t p-t-14">
                                 <div class="block2-txt-child1 flex-col-l">
-                                    <a href="../product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"><?php echo $product['p_name']; ?></a>
+                                    <a href="../product-detail.php" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"><?php echo $product['p_name']; ?></a>
                                     <p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1"><?php echo $product['p_type']; ?></p>
                                     <span class="stext-105 cl3 price">$<?php echo $product['p_price']; ?></span>
                                 </div>
