@@ -283,7 +283,7 @@ $wishlist_count = 0;
                         <!-- Menu desktop -->
                         <div class="menu-desktop">
                             <ul class="main-menu">
-                                <li class="active-menu">
+                                <li>
                                     <a href="index.php">Home</a>
                                     <ul class="sub-menu">
                                         <li><a href="index.php#shop-by-category">Categories</a></li>
@@ -348,7 +348,7 @@ $wishlist_count = 0;
                                     <a href="register.php" class="btn2 btn-primary2 mt-1 "
                                     style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
                                     <ul class="profile-sub-menu">
-                                        <li><a href="#go-up">Profile</a></li>
+                                        <li class="active-menu"><a href="#go-up">Profile</a></li>
                                         
                                         <li>
                                             <!-- Your toggle button -->
