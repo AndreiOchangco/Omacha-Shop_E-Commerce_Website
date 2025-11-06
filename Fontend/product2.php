@@ -145,7 +145,7 @@ if ($result->num_rows > 0) {
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="images/icon.png" />
+	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -303,19 +303,19 @@ if ($result->num_rows > 0) {
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="active-menu">
-								<a class="darkModetxt" href="#go-up">Home</a>
+							<li>
+								<a class="darkModetxt" href="index.php">Home</a>
 								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="#shop-by-category">Categories</a></li>
-									<li><a class="darkModetxt" href="#new-arrivals">Arrivals</a></li>
-									<li><a class="darkModetxt" href="#blog">Blog</a></li>
-									<li><a class="darkModetxt" href="#top-brands">Top Brands</a></li>
+									<li><a class="darkModetxt" href="index.php#shop-by-category">Categories</a></li>
+									<li><a class="darkModetxt" href="index.php#new-arrivals">Arrivals</a></li>
+									<li><a class="darkModetxt" href="index.php#blog">Blog</a></li>
+									<li><a class="darkModetxt" href="index.php#top-brands">Top Brands</a></li>
 								</ul>
 
 							</li>
 
-							<li class="label1" data-label1="new">
-							<a class="darkModetxt" href="product.php">Shop</a>
+							<li class="label1 active-menu" data-label1="new">
+							<a class="darkModetxt" href="#go-up">Shop</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="./Products/convenience-products.php">Convenience</a></li>
 									<li><a class="darkModetxt" href="./Products/shopping-products.php">Shopping</a></li>
@@ -719,9 +719,15 @@ if ($result->num_rows > 0) {
 		</div>
 	</div>
 
+	<!-- Title page -->
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
+		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-50">
+			General Products
+		</h2>
+	</section>
 
 	<!-- Product -->
-	<div class="bg0 m-t-60 p-b-140">
+	<div >
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
