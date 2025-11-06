@@ -1260,9 +1260,9 @@ if ($query->num_rows > 0) {
 	<!-- banner start -->
 	<div class="banner-start container">
 		<div class="intro-banner row">
-			<h1>Greatest prices and deals save 20%off baby</h1>
+			<h1>Greatest prices and deals save 20%off</h1>
 			<div class="shop-now">
-				<a href="#">Shop now</a>
+				<a href="product.php">Shop now</a>
 			</div>
 		</div>
 	</div>
