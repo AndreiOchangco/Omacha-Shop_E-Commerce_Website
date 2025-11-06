@@ -312,7 +312,7 @@ if ($query->num_rows > 0) {
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li class="active-menu">
+							<li>
 								<a href="index.php">Home</a>
 								<ul class="sub-menu">
 									<li><a href="index.php#shop-by-category">Categories</a></li>
@@ -346,7 +346,7 @@ if ($query->num_rows > 0) {
 								<a href="about.php">About</a>
 							</li>
 
-							<li>
+							<li class="active-menu">
 								<a class="darkModetxt" href="contact.php">Contact</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
