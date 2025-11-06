@@ -16,9 +16,9 @@ $userName = $_SESSION["user"];
 $sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
 $queryLogin = mysqli_query($conn, $sqlLogin);
 // print_r($queryLogin);
-// Kiểm tra kết quả truy vấn
+// Check the query result
 
-// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+// Loop through each row of data from the query result
 $row = $queryLogin->fetch_assoc();
 // Thêm thông tin từng hàng vào mảng $vuserLogin
 $userLogin = array(
@@ -31,7 +31,7 @@ $sql = "SELECT * FROM product";
 $query = mysqli_query($conn, $sql);
 
 
-// Câu truy vấn SQL SELECT
+// SQL SELECT query
 $sqlOrder = "SELECT 
 `order`.o_id, 
 `order`.u_id, 
@@ -48,15 +48,15 @@ FROM
 INNER JOIN 
 product ON `order`.p_id = product.p_id";
 
-// Thực hiện truy vấn
+// Execute the query
 $resultOrder = $conn->query($sqlOrder);
 
-// Mảng chứa thông tin các đơn hàng
+// Array that contains order information
 $order_array = array();
 
-// Kiểm tra kết quả truy vấn
+// Check the query result
 if ($resultOrder->num_rows > 0) {
-	// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+	// Loop through each row of data from the query result
 	while ($row = $resultOrder->fetch_assoc()) {
 		if ($row['u_id'] == $userLogin['userID'] && $row['o_status'] == 0) {
 			// Thêm thông tin từng hàng vào mảng $order_array
@@ -81,57 +81,57 @@ if ($resultOrder->num_rows > 0) {
 
 function sumTotalPrice($order_array, $u_id)
 {
-	$totalPrice = 0; // Khởi tạo biến tổng giá tiền
+	$totalPrice = 0; // Initialize the total price variable
 
-	// Duyệt qua từng sản phẩm trong giỏ hàng và tính tổng giá tiền
+	// Iterate over each product in the cart and calculate the total price
 	foreach ($order_array as $item) {
-		// Kiểm tra xem u_id của sản phẩm có khớp với u_id được chỉ định hay không
+		// Check if the product's u_id matches the specified u_id
 		if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
 			// Tính giá tiền của mỗi sản phẩm (giá tiền * số lượng)
 			$productPrice = $item["p_price"] * $item["o_quantity"];
 
-			// Cộng vào tổng giá tiền
+			// Add to the total price
 			$totalPrice += $productPrice;
 		}
 	}
 
-	return $totalPrice; // Trả về tổng giá tiền
+	return $totalPrice; // Return the total price
 }
 
-// Truy vấn để đếm số dòng trong bảng order
+// Query to count rows in the order table
 $sql = "SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = '{$userLogin['userID']}' AND o_quantity > 0 AND o_status = 0";
 $result = $conn->query($sql);
 
-// Kiểm tra và hiển thị kết quả
+// Check and display the result
 if ($result->num_rows > 0) {
 	$row = $result->fetch_assoc();
 	$order_count = $row["total_rows"];
 } else {
-	// echo "Không có dữ liệu trong bảng order";
+	// echo "No data in the order table";
 }
 
-// Truy vấn để đếm số dòng trong bảng order
+// Query to count rows in the order table
 $sql = "SELECT COUNT(*) AS total_rows FROM wishlist";
 $result = $conn->query($sql);
 
-// Kiểm tra và hiển thị kết quả
+// Check and display the result
 if ($result->num_rows > 0) {
 	$row = $result->fetch_assoc();
 	$wishlist_count = $row["total_rows"];
 } else {
-	// echo "Không có dữ liệu trong bảng order";
+	// echo "No data in the order table";
 }
 
 // Truy vấn thông tin chiết khấu dựa trên tên discount (d_name)
 $sqlDiscount = "SELECT * FROM discount";
 $query = mysqli_query($conn, $sqlDiscount);
 
-// Mảng chứa thông tin chiết khấu
+// Array that contains discount information
 $discount = array();
 
-// Kiểm tra kết quả truy vấn
+// Check the query result
 if ($query->num_rows > 0) {
-	// Lặp qua từng hàng dữ liệu từ kết quả truy vấn
+	// Loop through each row of data from the query result
 	while ($row = $query->fetch_assoc()) {
 		// Thêm thông tin từng hàng vào mảng $discount
 		$discount = array(
@@ -144,7 +144,7 @@ if ($query->num_rows > 0) {
 		);
 	}
 } else {
-	// Nếu không tìm thấy kết quả
+	// If no result is found
 	// echo "0 results";
 }
 ?>
@@ -225,15 +225,15 @@ if ($query->num_rows > 0) {
 
 		.btn-remove-product {
 			cursor: pointer;
-			/* Đổi con trỏ chuột thành kiểu pointer khi di chuột qua */
+			/* Change the cursor to pointer on hover */
 		}
 
 		.btn-remove-product i {
 			color: #F4538A;
-			/* Đổi màu của biểu tượng thành màu đỏ */
+			/* Change the icon color to red */
 		}
 
-		/* Định dạng hình ảnh sản phẩm */
+		/* Product image styling */
 		/* .header-cart-item-img {
 			flex: 0 0 auto;
 			
@@ -273,7 +273,7 @@ if ($query->num_rows > 0) {
 			color: white;
 		}
 
-		/* Định dạng nút check out và view cart */
+		/* Style checkout and view cart buttons */
 		#btn-cart {
 			background-color: #F4538A;
 			color: #FFEFEF;
@@ -284,7 +284,7 @@ if ($query->num_rows > 0) {
 			color: #FFEFEF;
 		}
 
-		/* Định dạng nút delete */
+		/* Style delete button */
 		.btn-delete {
 			color: black;
 		}
@@ -579,9 +579,9 @@ if ($query->num_rows > 0) {
 					<div class="progress1"></div>
 					<br>
 					<?php
-					// Duyệt qua mỗi sản phẩm trong giỏ hàng và hiển thị thông tin
+					// Iterate over each product in the cart and display information
 					foreach ($order_array as $item) {
-						// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
+						// Split the image string into an array and trim extra whitespace
 						$product_images = array_map('trim', explode(',', $item["p_image"]));
 						
 						// mới có u_id $userLogin["userID"], 555
@@ -591,23 +591,23 @@ if ($query->num_rows > 0) {
 								<div class="row">
 									<div class="col-md-3">
 										<div class="header-cart-item-img">
-											<!-- Hiện hình trong giỏ hàng -->
+											<!-- Show image in cart -->
 											<img src="images/<?php echo $product_images[0]; ?>" alt="IMG">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div >
-											<!-- Hiện tên sản phẩm trong giỏ hàng -->
+											<!-- Show product name in cart -->
 											<a href="#" class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
 										</div>
-										<!-- Hiện số lượng sản phẩm và giá tiền -->
+										<!-- Show product quantity and price -->
 										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x $<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
 										<form action="delete-cart2.php" method="post">											
 											<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
 
-											<!-- Nút xóa tại đây -->
+											<!-- Delete button here -->
 											<input type="submit" value="X" name="delete-cart" class="btn-delete">
 											<!-- <//?php print_r($item['p_id']); ?> -->
 										</form>
@@ -623,7 +623,7 @@ if ($query->num_rows > 0) {
 
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
-						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
+						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- change user -->
 						<p>Total: $<?php echo $totalPrice; ?></p>
 					</div>
 
@@ -675,7 +675,7 @@ if ($query->num_rows > 0) {
 
 								<?php foreach ($order_array as $item) : ?>
 									<?php if ($item['u_id'] == $userLogin['userID'] && $item["o_quantity"] > 0 && $item["o_status"] == 0) 
-									// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
+									// Split the image string into an array and trim extra whitespace
 									$p_images = array_map('trim', explode(',', $item["p_image"]));
 									?>
 									<tr class="table_row">
@@ -728,11 +728,11 @@ if ($query->num_rows > 0) {
 									<div class="">
 										<?php foreach ($order_array as $item) : ?>
 											<form id="form_<?php echo $item['p_id']; ?>" class="update-form" action="update-cart.php" method="post">
-												<!-- Các trường ẩn chứa thông tin của mỗi mục trong order -->
+												<!-- Hidden fields containing information for each order item -->
 												<input type="hidden" name="o_quantity" value="<?php echo $item["o_quantity"]; ?>">
 												<input type="hidden" name="p_id" value="<?php echo $item["p_id"]; ?>">
 											<?php endforeach; ?>
-											<!-- Nút cập nhật giỏ hàng -->
+											<!-- Update cart button -->
 											<input id="update-cart" type="submit" value="Update Cart" name="update-cart" class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
 											</form>
 									</div>
