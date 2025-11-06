@@ -434,7 +434,7 @@ if ($query->num_rows > 0) {
 									</li>
 										
 
-									<li><a href="register.php">Logout</a></li>
+									<li><a href="logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -651,7 +651,7 @@ if ($query->num_rows > 0) {
 			</a>
 
 			<span class="stext-109 cl4">
-				Shoping Cart
+				Shopping Cart
 			</span>
 		</div>
 	</div>
@@ -787,8 +787,10 @@ if ($query->num_rows > 0) {
 									<div class="rs1-select2 rs2-select2 bor8 bg0 m-b-12 m-t-9">
 										<select class="js-select2" name="time">
 											<option>Select a country...</option>
-											<option>USA</option>
-											<option>UK</option>
+											<option>Philippines</option>
+											<option>China</option>
+											<option>Japan</option>
+											<option>Korea</option>
 										</select>
 										<div class="dropDownSelect2"></div>
 									</div>
