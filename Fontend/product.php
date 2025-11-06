@@ -721,7 +721,7 @@ if ($result->num_rows > 0) {
 
 
 	<!-- Product -->
-	<div class="bg0 m-t-80 p-b-140">
+	<div >
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
