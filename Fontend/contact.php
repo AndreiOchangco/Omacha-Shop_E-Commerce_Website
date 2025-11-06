@@ -626,7 +626,7 @@ if ($query->num_rows > 0) {
 			</div>
 
 			<div class="map-container">
-				<div class="mapBg"></div>
+				
 				<div class="map">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.786852619814!2d120.31229760000001!3d16.6374632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33918d5e2a81bcfb%3A0xd9ee01c3a2281d87!2sOmacha%20Shop%20%7C%20E-commerce%20Website!5e0!3m2!1sen!2sph!4v1759728220314!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>

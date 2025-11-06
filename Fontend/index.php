@@ -1140,7 +1140,7 @@ if ($query->num_rows > 0) {
 		<div class="imgWrapper">
 			<img src="images/tshirt-ha.png">
 		</div>
-<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+<iframe  class="home-frame" width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
 </iframe>
 
 	</div>
