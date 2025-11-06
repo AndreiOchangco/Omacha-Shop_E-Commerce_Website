@@ -526,13 +526,14 @@ if ($result->num_rows > 0) {
 			</div>
 		</div>
 	</header>
+
 	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2">
+				<span class="mtext-103 cl2 darkModetxt">
 					Your Cart
 				</span>
 
@@ -543,20 +544,22 @@ if ($result->num_rows > 0) {
 
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
+					<br>
 					<?php
 					// Duyệt qua mỗi sản phẩm trong giỏ hàng và hiển thị thông tin
 					foreach ($order_array as $item) {
 						// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
-						$product_images = array_map('trim', explode(',', $item["p_image"]));
+						$p_images = array_map('trim', explode(',', $item["p_image"]));
+
 						// mới có u_id $userLogin["userID"], 555
-						if ($item["u_id"] == $userLogin["userID"] && $item["o_quantity"] > 0) {
+						if ($item["u_id"] == $userLogin["userID"] && $item["o_quantity"] > 0 && $item["o_status"] == 0) {
 							?>
 							<li class="header-cart-item m-b-20">
 								<div class="row">
 									<div class="col-md-3">
 										<div class="header-cart-item-img">
 											<!-- Hiện hình trong giỏ hàng -->
-											<img src="images/<?php echo $product_images[0]; ?>" alt="IMG">
+											<img src="images/<?php echo $p_images[0]; ?>" alt="IMG">
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -570,7 +573,7 @@ if ($result->num_rows > 0) {
 											$<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
-										<form action="delete-cart.php" method="post">
+										<form action="delete-cart2.php" method="post">
 											<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
 
 											<!-- Nút xóa tại đây -->

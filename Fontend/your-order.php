@@ -152,7 +152,7 @@ if ($query->num_rows > 0) {
 <html lang="en">
 
 <head>
-	<title>Omacha Shop | Wishlist</title>
+	<title>Omacha Shop | Order</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -511,7 +511,7 @@ if ($query->num_rows > 0) {
 
         <!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<!-- <ul class="topbar-mobile">
+			<ul class="topbar-mobile">
 					<li>
 						<div class="left-top-bar">
 							Free shipping for standard order over $100
@@ -537,7 +537,7 @@ if ($query->num_rows > 0) {
 							</a>
 						</div>
 					</li>
-				</ul> -->
+				</ul>
 
 			<ul class="main-menu-m">
 				<li>
@@ -599,7 +599,7 @@ if ($query->num_rows > 0) {
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2">
+				<span class="mtext-103 cl2 darkModetxt">
 					Your Cart
 				</span>
 
@@ -610,8 +610,6 @@ if ($query->num_rows > 0) {
 
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
-					<span>Congratulations! You&#39;ve got <strong>Free Shipping!</strong></span>
-					<div class="progress1"></div>
 					<br>
 					<?php
 					// Duyệt qua mỗi sản phẩm trong giỏ hàng và hiển thị thông tin

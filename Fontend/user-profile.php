@@ -368,6 +368,7 @@ $wishlist_count = 0;
             </div>
         </header>
 
+        <!-- Content page -->
         <section class="container p-t-120 p-b-100">
             <div class="bg0 p-5 rounded-lg shadow-lg max-w-xl mx-auto text-center">
                 <img src="images/profile.png" alt="User Avatar" class="profile-avatar mb-4" style="width: 200px; height: 200px;">

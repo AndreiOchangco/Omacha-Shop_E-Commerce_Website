@@ -483,7 +483,7 @@ if ($resultOrder->num_rows > 0) {
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2">
+				<span class="mtext-103 cl2 darkModetxt">
 					Your Cart
 				</span>
 
@@ -494,8 +494,6 @@ if ($resultOrder->num_rows > 0) {
 
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
-					<span>Congratulations! You&#39;ve got <strong>Free Shipping!</strong></span>
-					<div class="progress1"></div>
 					<br>
 					<?php
 					// Duyệt qua mỗi sản phẩm trong giỏ hàng và hiển thị thông tin
