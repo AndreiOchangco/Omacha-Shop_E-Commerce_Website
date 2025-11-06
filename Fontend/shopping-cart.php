@@ -370,18 +370,18 @@ if ($query->num_rows > 0) {
 
 							</li>
 
-							<li class="label1 active-menu" data-label1="new">
+							<li class="label1" data-label1="new">
 							<a href="product.php">Shop</a>
 								<ul class="sub-menu">
 									<li><a href="./Products/convenience-products.php">Convenience</a></li>
 									<li><a href="./Products/shopping-products.php">Shopping</a></li>
 									<li><a href="./Products/specialty-products.php">Specialty</a></li>
 									<li><a href="./Products/unsought-products.php">Unsought</a></li>
-									<li class="active-menu"><a href="./Products/digital-products.php">Digital</a></li>
+									<li><a href="./Products/digital-products.php">Digital</a></li>
 								</ul>
 							</li>
 
-							<li class="label1" data-label1="hot">
+							<li class="label1 active-menu" data-label1="hot">
 								<a href="#go-up">Cart</a>
 							</li>
 
