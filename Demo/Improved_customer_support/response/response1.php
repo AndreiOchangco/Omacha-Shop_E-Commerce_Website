@@ -92,7 +92,7 @@ function kb_response1() {
     [
       'id' => 'how_to_order',
       'titles' => ['how to order','place order','ordering steps','buy now','paano umorder','order tutorial'],
-      'answer' => "How to order: 1) Open a product and choose variation/quantity. 2) Tap Add to Cart or Buy Now. 3) Confirm address and shipping option. 4) Pick payment (COD, GCash, card). 5) Review fees/vouchers → Place Order. Save your Order ID."
+      'answer' => "How to order: 1) Open the product page and choose your desired product/s before selecting the size, color, and quantity. 2) Tap Add to Cart or Buy Now. 3) Confirm address and shipping option. 4) Pick payment (COD, GCash, card). 5) Review fees/vouchers → Place Order. Save your Order ID."
     ],
     [
       'id' => 'signup_create_account',
