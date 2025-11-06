@@ -318,8 +318,11 @@ $wishlist_count = 0;
                                 </li>
 
                                 <li>
-                                    <a href="contact.php">Contact</a>
-                                </li>
+								<a class="darkModetxt" href="contact.php">Contact</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
+								</ul>
+							</li>
                             </ul>
                         </div>
 
@@ -329,7 +332,7 @@ $wishlist_count = 0;
                                 <i class="zmdi zmdi-search"></i>
                             </div>
 
-                            <a href="shopping-cart.php"
+                            <a
 							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
 							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
@@ -355,7 +358,7 @@ $wishlist_count = 0;
                                         </li>
                                             
 
-                                        <li><a href="register.php">Logout</a></li>
+                                        <li><a href="logout.php">Logout</a></li>
                                     </ul>
                                 </li>
                             </div>
@@ -369,33 +372,27 @@ $wishlist_count = 0;
             <div class="bg0 p-5 rounded-lg shadow-lg max-w-xl mx-auto text-center">
                 <img src="images/profile.png" alt="User Avatar" class="profile-avatar mb-4" style="width: 200px; height: 200px;">
                 <h2 class="ltext-103 cl2 p-b-10"><?php echo htmlspecialchars($userLogin['userName']); ?></h2>
-                <p class="stext-107 cl6 mb-4">User Profile</p>
+                <p class="stext-107 cl6 mb-4 darkModetxt">User Profile</p>
 
                 <div class="text-left mx-auto w-4/5">
-                    <div class="flex justify-between border-b py-2">
+                    <div class="flex justify-between border-b py-2 darkModetxt">
                         <strong>User ID:</strong>
                         <span><?php echo $userLogin['userID']; ?></span>
                     </div>
-                    <div class="flex justify-between border-b py-2">
+                    <div class="flex justify-between border-b py-2 darkModetxt">
                         <strong>Email:</strong>
                         <span><?php echo htmlspecialchars($userLogin['email']); ?></span>
                     </div>
-                    <div class="flex justify-between border-b py-2">
+                    <div class="flex justify-between border-b py-2 darkModetxt">
                         <strong>Password:</strong>
                         <span>********</span>
                     </div>
                 </div>
-
-                <div class="mt-6" style="width: 200px; margin: auto; padding: auto;">
-                    <a href="index.php"
-                    class="flex-c-m stext-101 cl0 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-                    Back to Home
-                    </a>
-                </div>
             </div>
         </section>
 
-            <footer class="bg3 p-t-75 p-b-32">
+        <!-- Footer -->
+	<footer class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
@@ -541,6 +538,13 @@ $wishlist_count = 0;
 			</div>
 		</div>
 	</footer>
+
+    <!-- Back to top -->
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
+		</span>
+	</div>
 
             <!--===============================================================================================-->
             <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
