@@ -387,7 +387,7 @@ if ($query->num_rows > 0) {
 									</li>
 										
 
-									<li><a href="register.php">Logout</a></li>
+									<li><a href="logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -398,7 +398,7 @@ if ($query->num_rows > 0) {
 
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
-			<!-- Logo moblie -->		
+			<!-- Logo mobile -->		
 			<div class="logo-mobile">
 				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
 			</div>
@@ -429,7 +429,7 @@ if ($query->num_rows > 0) {
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<!-- <ul class="topbar-mobile">
+			<ul class="topbar-mobile">
 					<li>
 						<div class="left-top-bar">
 							Free shipping for standard order over $100
@@ -455,7 +455,7 @@ if ($query->num_rows > 0) {
 							</a>
 						</div>
 					</li>
-				</ul> -->
+				</ul>
 
 			<ul class="main-menu-m">
 				<li>

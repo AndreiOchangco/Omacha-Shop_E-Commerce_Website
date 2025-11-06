@@ -723,7 +723,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="#"
+                        href="admin-profile.php"
                       >
                         <svg
                           class="w-4 h-4 mr-3"
@@ -768,7 +768,7 @@
                     <li class="flex">
                       <a
                         class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
-                        href="#"
+                        href="../../Fontend/logout.php"
                       >
                         <svg
                           class="w-4 h-4 mr-3"
@@ -794,7 +794,7 @@
           </div>
         </header>
         <main class="h-full pb-16 overflow-y-auto">
-            <form id="notificationForm"action="sendMessage.php" method="POST">
+            <form id="notificationForm"action="sendMessage.php" method="POST" autocomplete="off">
             <div class="content">
                 <div class="container px-6 mx-auto grid">
                 <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Send Message to Customer</h2>
@@ -808,7 +808,7 @@
                 <div class="form-group text-gray-700 dark:text-gray-200">
 
                 <!-- change this -->
-                <input type="text" id="title" name="title" class="input" value="From Admin!" required>
+                <input type="text" id="title" name="title" class="input" value="From Admin" required>
 
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
