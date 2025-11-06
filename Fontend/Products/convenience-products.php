@@ -355,7 +355,7 @@ if ($query->num_rows > 0) {
 							<i class="zmdi zmdi-search"></i>
 						</div>
 
-						<a href="../shopping-cart.php"
+						<a 
 							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
 							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
