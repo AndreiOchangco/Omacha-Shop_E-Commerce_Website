@@ -322,7 +322,7 @@ $wishlist_count = 0;
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
 								</ul>
-							</li>
+							    </li>
                             </ul>
                         </div>
 
