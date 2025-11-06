@@ -1089,19 +1089,19 @@ if ($result->num_rows > 0) {
 							<!-- Block2 -->
 							<div class="block2">
 								<a href="productdetail.php?p_id=<?php echo $product['p_id']; ?>" class="block2-pic hov-img0"
-									style="border: 0.1px dashed #000; border-radius: 50px;">
+									style="border: 0.5px dashed #000; border-radius: 50px; background-color: #ffffffff;">
 									<img id="image-size" src="images/<?php echo $product_images[0]; ?>" alt="IMG-PRODUCT">
 								</a>
 								<div class="block2-txt flex-w flex-t p-t-14">
 									<div class="block2-txt-child1 flex-col-l">
 										<a href="productdetail.php?p_id=<?php echo $product['p_id']; ?>"
-											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
 											<?php echo $product["p_name"]; ?>
 										</a>
-										<p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1">
+										<p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1 darkModetxt">
 											<?php echo $product['p_type']; ?>
 										</p>
-										<span class="stext-105 cl3 price">$<?php echo $product['p_price']; ?></span>
+										<span class="stext-105 cl3 price darkModetxt">$<?php echo $product['p_price']; ?></span>
 									</div>
 									<div class="block2-txt-child2 flex-r p-t-3">
 										<a href="../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>"

@@ -1270,7 +1270,7 @@ if ($query->num_rows > 0) {
 
 
 
-	<!-- arrivals start -->
+	<!-- blog start -->
 	<section id="blog">
 		<div class="blog-heading p-t-100 p-b-25">
 			<span>Latest News</span>
@@ -1368,13 +1368,10 @@ if ($query->num_rows > 0) {
 					</div>
 				</div>
 			</div>
-
 		</div>
-
-
 	</section>
 
-	<!-- arrivals end -->
+	<!-- blog end -->
 
 
 
