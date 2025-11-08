@@ -1001,45 +1001,45 @@ if ($query->num_rows > 0) {
 	<!-- Category Start -->
 	<div class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
 		<div class="container text-center">
-			<h1 class="text-primary1 " style="padding-bottom: 50px;">Shop by Category</h1>
+			<h1 class="text-primary1 noselect">Shop by Category</h1>
 			<div class="row">
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/convenience_icon.png" alt="category-img">
-						<h5 class="stext-121">Convenience Products</h5>
+					<div class="block1 wrap-pic-w noselect">
+						<img class="category noselect" src="images/Homepage-images/convenience_icon.png" alt="category-img">
+						<h5 class="stext-121 noselect">Stuffed Animals</h5>
 					</div>
 				</div>
 
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block2 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/shopping_icon.png" alt="category-img">
-						<h5 class="stext-121">Shopping Products</h5>
+					<div class="block1 wrap-pic-w noselect">
+						<img class="category noselect" src="images/Homepage-images/shopping_icon.png" alt="category-img">
+						<h5 class="stext-121 noselect">Fantasy Animals</h5>
 					</div>
 				</div>
 
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block3 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/speciality_icon.png" alt="category-img">
-						<h5 class="stext-121">Specialty Products</h5>
+					<div class="block1 wrap-pic-w noselect">
+						<img class="category noselect" src="images/Homepage-images/speciality_icon.png" alt="category-img">
+						<h5 class="stext-121 noselect">Teddy Bears</h5>
 					</div>
 				</div>
 
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block4 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/unsought_icon.png" alt="category-img">
-						<h5 class="stext-121">Unsought Products</h5>
+					<div class="block1 wrap-pic-w noselect">
+						<img class="category noselect" src="images/Homepage-images/unsought_icon.png" alt="category-img">
+						<h5 class="stext-121 noselect">Soft Dolls</h5>
 					</div>
 				</div>	
 
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block5 -->
-					<div class="block1 wrap-pic-w">
-						<img class="category" src="images/Homepage-images/digital_icon.png" alt="category-img">
-						<h5 class="stext-121">Digital Products</h5>
+					<div class="block1 wrap-pic-w noselect">
+						<img class="category noselect" src="images/Homepage-images/digital_icon.png" alt="category-img">
+						<h5 class="stext-121 noselect">Plastic Toys</h5>
 					</div>
 				</div>
 			</div>
@@ -1049,16 +1049,16 @@ if ($query->num_rows > 0) {
 
 	<!-- hostpot start -->
 	<section>
-		<div class="container1">
+		<div class="container1 noselect">
 			<img src="images/hostspot.jpg" alt="img">
 			<div class="all-tooltips1"></div>
-			<div class="tooltip1 tooltip-1">
+			<div class="tooltip1 tooltip-1 noselect">
 				<div class="pin1"></div>
 				<div class="tooltip-content1">
 					<div class="col-title ">
-						<div class="text-center">
+						<div class="text-center noselect">
 							<h5 class="p-b-15">
-								<a href="product2.php" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="product2.php" class="ltext-111 cl2 hov-cl1 trans-04 noselect">
 									Bear Baby Tower
 								</a>
 							</h5>
@@ -1072,7 +1072,7 @@ if ($query->num_rows > 0) {
 					</div>
 				</div>
 			</div>
-			<div class="tooltip2 tooltip-2">
+			<div class="tooltip2 tooltip-2 noselect">
 				<div class="pin2"></div>
 				<div class="tooltip-content2">
 					<div class="col-title">
@@ -1093,7 +1093,7 @@ if ($query->num_rows > 0) {
 					</div>
 				</div>
 			</div>
-			<div class="tooltip3 tooltip-3">
+			<div class="tooltip3 tooltip-3 noselect">
 				<div class="pin3"></div>
 				<div class="tooltip-content3">
 					<div class="col-title">
