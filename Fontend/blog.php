@@ -662,7 +662,7 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail1.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail1.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink">
 												Making Your Kids' Special Day Memorable
 											</a>
 										</h5>
