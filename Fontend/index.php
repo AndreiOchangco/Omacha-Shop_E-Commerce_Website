@@ -331,7 +331,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar">
+			<div class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -380,13 +380,13 @@ if ($query->num_rows > 0) {
 				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
-					<a href="index.php" class="navbar-brand">
+					<a href="index.php" class="navbar-brand noselect">
 						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
 									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
-					<div class="menu-desktop">
+					<div class="menu-desktop noselect">
 						<ul class="main-menu">
 							<li class="active-menu">
 								<a class="darkModetxt" href="#go-up">Home</a>
@@ -432,7 +432,7 @@ if ($query->num_rows > 0) {
 					</div>
 
 					<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m">
+					<div class="wrap-icon-header flex-w flex-r-m noselect">
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
@@ -448,11 +448,11 @@ if ($query->num_rows > 0) {
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
-							<li class="active-menu">
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu noselect">
+							<li class="active-menu noselect">
 								<a href="register.php" class="btn2 btn-primary2 mt-1 "
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
-								<ul class="profile-sub-menu">
+								<ul class="profile-sub-menu noselect">
 									<li><a href="user-profile.php">Profile</a></li>
 									
 									<li>
@@ -722,11 +722,11 @@ if ($query->num_rows > 0) {
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2 darkModetxt">
+				<span class="mtext-103 cl2 darkModetxt noselect">
 					Your Cart
 				</span>
 
-				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart noselect">
 					<i class="zmdi zmdi-close"></i>
 				</div>
 			</div>
@@ -783,12 +783,12 @@ if ($query->num_rows > 0) {
 						<p>Total: $<?php echo $totalPrice; ?></p>
 					</div>
 
-					<div class="header-cart-buttons flex-w w-full">
-						<a href="shopping-cart.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+					<div class="header-cart-buttons flex-w w-full noselect">
+						<a href="shopping-cart.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10 noselect">
 							View Cart
 						</a>
 
-						<a href="your-order.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						<a href="your-order.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10 noselect">
 							Your Order
 						</a>
 					</div>
@@ -801,8 +801,8 @@ if ($query->num_rows > 0) {
 
 	<!-- Slider -->
 	<section class="section-slide m-t-10">
-		<div class="wrap-slick1">
-			<div class="slick1">
+		<div class="wrap-slick1 noselect">
+			<div class="slick1 noselect">
 				<div class="item-slick1" style="background-image: url(images/slide-22.png);">
 					<div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
@@ -916,13 +916,13 @@ if ($query->num_rows > 0) {
 	<div class="sec-banner bg0 p-t-100 p-b-40">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
 					<?php 
 						$query = mysqli_query($conn, $sqlDiscount);
 						while ($discount = mysqli_fetch_assoc($query)) {
 					?>
-						<div class="blocky wrap-pic-w">
+						<div class="blocky wrap-pic-w noselect">
 							<img class="clothes" src="images/Homepage-images/clothes_img.png" alt="IMG-BANNER">
 							<div class="blocky-content">
 								<div class="block2-txt-child1 flex-col-l">
@@ -946,9 +946,9 @@ if ($query->num_rows > 0) {
 				
 
 
-				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
-					<div class="blocky wrap-pic-w">
+					<div class="blocky wrap-pic-w noselect">
 						<img class="clothes" src="images/Homepage-images/digital_accessories.png" alt="IMG-BANNER">
 						<div class="blocky-content">
 							<div class="block2-txt-child1 flex-col-l">
@@ -971,9 +971,9 @@ if ($query->num_rows > 0) {
 				
 	
 
-				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
-					<div class="blocky wrap-pic-w">
+					<div class="blocky wrap-pic-w noselect">
 						<img class="clothes" src="images/Homepage-images/shoes_img.png" alt="IMG-BANNER">
 						<div class="blocky-content">
 							<div class="block2-txt-child1 flex-col-l">
@@ -1125,16 +1125,14 @@ if ($query->num_rows > 0) {
 
 
 	<!-- introduction test start-->
-	<div class="row1">
+	<div class="row1 noselect">
 		<div class="imgWrapper">
 			<img src="images/tshirt-ha.png">
 		</div>
-<iframe  class="home-frame" width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
-</iframe>
-
+		<iframe  class="home-frame" width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"></iframe>
 	</div>
 
-	<section class="bg0 p-t-100 p-b-25" id="new-arrivals">
+	<section class="bg0 p-t-100 p-b-25 noselect" id="new-arrivals">
 		<div class="content">
 			<div class="container">
 				<div class="row justify-content-center mb-4">
@@ -1249,7 +1247,7 @@ if ($query->num_rows > 0) {
 	
 
 	<!-- banner start -->
-	<div class="banner-start container">
+	<div class="banner-start container noselect">
 		<div class="intro-banner row">
 			<h1>Greatest prices and deals save 20%off</h1>
 			<div class="shop-now">
@@ -1263,7 +1261,7 @@ if ($query->num_rows > 0) {
 
 	<!-- blog start -->
 	<section id="blog">
-		<div class="blog-heading p-t-100 p-b-25">
+		<div class="blog-heading p-t-100 p-b-25 noselect">
 			<span>Latest News</span>
 			<h3>My Blog</h3>
 			<div class="blog-container">
@@ -1367,10 +1365,10 @@ if ($query->num_rows > 0) {
 
 
 	<!-- brand start -->
-	<div class="containcarousel p-t-100 p-b-25" id="top-brands">
-  	<h1 class="text-primary1" style="text-align: center;">Top Brands</h1>
+	<div class="containcarousel p-t-100 p-b-25 noselect" id="top-brands">
+  	<h1 class="text-primary1 noselect" style="text-align: center;">Top Brands</h1>
 
-		<div class="carousel">
+		<div class="carousel noselect">
 			<div class="group">
 			<div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
 			<div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
@@ -1396,8 +1394,8 @@ if ($query->num_rows > 0) {
 
 	
 	<!-- Footer -->
-	<footer class="bg3 p-t-100 p-b-25">
-		<div class="container">
+	<footer class="bg3 p-t-100 p-b-25 noselect">
+		<div class="container noselect">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl10 p-b-30">
