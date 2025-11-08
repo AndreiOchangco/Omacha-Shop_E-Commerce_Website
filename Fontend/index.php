@@ -1546,7 +1546,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Back to top -->
-	<div class="btn-back-to-top" id="myBtn">
+	<div class="btn-back-to-top noselect" id="myBtn">
 		<span class="symbol-btn-back-to-top">
 			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>
