@@ -800,7 +800,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Slider -->
-	<section class="section-slide">
+	<section class="section-slide m-t-10">
 		<div class="wrap-slick1">
 			<div class="slick1">
 				<div class="item-slick1" style="background-image: url(images/slide-22.png);">
