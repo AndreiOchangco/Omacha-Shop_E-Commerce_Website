@@ -663,7 +663,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>In the ever-evolving toy world, trends come and go, shaping...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail10.html" class="block1-btn stext-101 cl0 trans-09">
 												Read More
 											</a>
@@ -690,7 +690,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>Toys wield an incredible influence on the minds of children,...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail11.html" class="block1-btn stext-101 cl0 trans-09">
 												Read More
 											</a>

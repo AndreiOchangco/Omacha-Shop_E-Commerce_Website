@@ -662,12 +662,12 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail1.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink">
+											<a href="blog-detail1.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
 												Making Your Kids' Special Day Memorable
 											</a>
 										</h5>
 										<p>Planning memorable celebration for your child's special day involves...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail1.php"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
@@ -695,7 +695,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>Selecting toys that promote child development involves considering...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail2.html"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
@@ -723,7 +723,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>Toys wield significant influence on a child's learning journey, serving as...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail3.html"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
@@ -752,7 +752,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>Building worlds and collecting pieces with your young ones is not just...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail4.html"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
@@ -780,7 +780,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>Parenting is a journey filled with ups and downs, but ultimately, it's one...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail5.html"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
@@ -808,7 +808,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>When it comes to buying toys for children, safety should always be...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail6.html"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
@@ -837,7 +837,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>Sometimes, the smallest things can have the biggest impact, and...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail7.html"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
@@ -865,7 +865,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>Turn cooking into a learning experience by inviting your child...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 trans-05 m-t-10">
 											<a id="button-add" href="blog-detail8.html"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
@@ -894,7 +894,7 @@ if ($query->num_rows > 0) {
 											</a>
 										</h5>
 										<p>oys have experienced a remarkable evolution throughout history,...
-										<div class="block1-txt-child2 p-b-4 trans-05">
+										<div class="block1-txt-child2 p-b-4 trans-05 m-t-10">
 											<a id="button-add" href="blog-detail9.html"
 												class="block1-btn stext-101 cl0 trans-09">
 												Read More
