@@ -30,6 +30,14 @@ ul.sub-menu {
     color: #19f574 !important;
 }
 
+.darkModehyperlink-omacha{
+    color: #f1f1f1 !important;
+}
+
+.darkModehyperlink-omacha:hover{
+    color: #19f574 !important;
+}
+
 .darkModetxt {
     color: #f1f1f1 !important;
 }
