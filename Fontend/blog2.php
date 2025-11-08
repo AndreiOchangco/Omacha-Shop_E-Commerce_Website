@@ -150,7 +150,6 @@ if ($query->num_rows > 0) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<title>Omacha Shop | Blog</title>
 	<meta charset="UTF-8">
@@ -285,9 +284,8 @@ if ($query->num_rows > 0) {
 		}
 	</style>
 </head>
-
 <body class="animsition">
-
+	
 	<!-- Header -->
 	<header id="go-up">
 		<!-- Header desktop -->
@@ -436,7 +434,7 @@ if ($query->num_rows > 0) {
 
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
-			<!-- Logo moblie -->
+			<!-- Logo moblie -->		
 			<div class="logo-mobile">
 				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
 			</div>
@@ -447,13 +445,11 @@ if ($query->num_rows > 0) {
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
-					data-notify="2">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
-				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
-					data-notify="0">
+				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
 					<i class="zmdi zmdi-favorite-outline"></i>
 				</a>
 			</div>
@@ -511,7 +507,7 @@ if ($query->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="product2.php">Shop</a>
+					<a href="product.html">Shop</a>
 				</li>
 
 				<li>
@@ -519,15 +515,15 @@ if ($query->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="blog.php">Blog</a>
+					<a href="blog.html">Blog</a>
 				</li>
 
 				<li>
-					<a href="about.php">About</a>
+					<a href="about.html">About</a>
 				</li>
 
 				<li>
-					<a href="contact.php">Contact</a>
+					<a href="contact.html">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -631,6 +627,7 @@ if ($query->num_rows > 0) {
 	</div>
 
 
+
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
@@ -648,12 +645,11 @@ if ($query->num_rows > 0) {
 						<!-- item blog -->
 						<div class="container">
 							<div class="row">
-								<!-- First Column -->
+								<!-- Tenth Column -->
 								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail1.php">
-										<div class="card" style="border: none;">
-											<img src="images/blog-04.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
+									<a href="blog-detail10.html">
+										<div class="card zoom-img" style="border: none;">
+											<img src="images/8.jpg" alt="IMG-BLOG" style="border-radius: 10px;" class="zoomable-img">
 										</div>
 									</a>
 									<h5 class="card__heading h2"></h5>
@@ -662,26 +658,25 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail1.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												Making Your Kids' Special Day Memorable
+											<a href="blog-detail10.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+												What's Hot and What's Not in the Toy World
 											</a>
 										</h5>
-										<p>Planning memorable celebration for your child's special day involves...
+										<p>In the ever-evolving toy world, trends come and go, shaping...
 										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail1.php"
-												class="block1-btn stext-101 cl0 trans-09">
+											<a id="button-add" href="blog-detail10.html" class="block1-btn stext-101 cl0 trans-09">
 												Read More
 											</a>
 										</div>
 									</div>
 								</div>
 
-								<!-- Second Column -->
+
+								<!-- Eleventh Column -->
 								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail2.html">
-										<div class="card" style="border: none;">
-											<img src="images/blog-05.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
+									<a href="blog-detail11.html">
+										<div class="card zoom-img" style="border: none;">
+											<img src="images/10.jpg" alt="IMG-BLOG" style="border-radius: 10px; " class="zoomable-img">
 										</div>
 									</a>
 									<h5 class="card__heading h2"></h5>
@@ -690,229 +685,27 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail2.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												What Are the Best Toys for Child Development
+											<a href="blog-detail11.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+												The Incredible Impact of Toys On Young Minds
 											</a>
 										</h5>
-										<p>Selecting toys that promote child development involves considering...
+										<p>Toys wield an incredible influence on the minds of children,...
 										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail2.html"
-												class="block1-btn stext-101 cl0 trans-09">
+											<a id="button-add" href="blog-detail11.html" class="block1-btn stext-101 cl0 trans-09">
 												Read More
 											</a>
 										</div>
 									</div>
 								</div>
-
-								<!-- Third Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail3.html">
-										<div class="card" style="border: none;">
-											<img src="images/blog-06.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail3.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												How Do Toys Impact a Child's Learning
-											</a>
-										</h5>
-										<p>Toys wield significant influence on a child's learning journey, serving as...
-										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail3.html"
-												class="block1-btn stext-101 cl0 trans-09">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-
-								<!-- Fourth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail4.html">
-										<div class="card" style="border: none;">
-											<img src="images/02.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail4.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												Build Worlds, Collect Pieces With Your Young Ones
-											</a>
-										</h5>
-										<p>Building worlds and collecting pieces with your young ones is not just...
-										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail4.html"
-												class="block1-btn stext-101 cl0 trans-09">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<!-- Fifth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail5.html">
-										<div class="card" style="border: none;">
-											<img src="images/3.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail5.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												The Joys of Being a Parent: A Guide to Parenting
-											</a>
-										</h5>
-										<p>Parenting is a journey filled with ups and downs, but ultimately, it's one...
-										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail5.html"
-												class="block1-btn stext-101 cl0 trans-09">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<!-- Sixth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail6.html">
-										<div class="card" style="border: none;">
-											<img src="images/4.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail6.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												Essential Tips for Buying and Caring for Children' Toys
-											</a>
-										</h5>
-										<p>When it comes to buying toys for children, safety should always be...
-										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail6.html"
-												class="block1-btn stext-101 cl0 trans-09">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-
-								<!-- Seventh Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail7.html">
-										<div class="card" style="border: none;">
-											<img src="images/5.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail7.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												When a Little Toy Brings Everyone Together
-											</a>
-										</h5>
-										<p>Sometimes, the smallest things can have the biggest impact, and...
-										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail7.html"
-												class="block1-btn stext-101 cl0 trans-09">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<!-- Eighth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail8.html">
-										<div class="card" style="border: none;">
-											<img src="images/6.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail8.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												Fun Ways to Help Your Child Learn and Grow
-											</a>
-										</h5>
-										<p>Turn cooking into a learning experience by inviting your child...
-										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail8.html"
-												class="block1-btn stext-101 cl0 trans-09">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-
-								<!-- Ninth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail9.html">
-										<div class="card" style="border: none;">
-											<img src="images/7.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail9.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
-												Exploring the Evolution Toys Through the Years
-											</a>
-										</h5>
-										<p>oys have experienced a remarkable evolution throughout history,...
-										<div class="block1-txt-child2 p-b-4 trans-05">
-											<a id="button-add" href="blog-detail9.html"
-												class="block1-btn stext-101 cl0 trans-09">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
 							</div>
 						</div>
-
 						<!-- Pagination -->
 						<div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
-							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
+							<a href="blog.php" class="flex-c-m how-pagination1 trans-04 m-all-7">
 								1
 							</a>
 
-							<a href="blog2.php" class="flex-c-m how-pagination1 trans-04 m-all-7">
+							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
 								2
 							</a>
 						</div>
@@ -922,8 +715,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-4 col-lg-3 p-b-80">
 					<div class="side-menu">
 						<div class="bor17 of-hidden pos-relative">
-							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search"
-								placeholder="Search">
+							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search" placeholder="Search">
 
 							<button class="flex-c-m size-122 ab-t-r fs-18 cl4 hov-cl1 trans-04">
 								<i class="zmdi zmdi-search"></i>
@@ -959,7 +751,6 @@ if ($query->num_rows > 0) {
 										Soft Dolls
 									</a>
 								</li>
-
 							</ul>
 						</div>
 
@@ -971,10 +762,9 @@ if ($query->num_rows > 0) {
 							<ul>
 								<li class="flex-w flex-t p-b-30">
 									<a href="blog-detail1.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-04.jpg" href="blog-detail1.html" alt="PRODUCT"
-											class="product-img">
+										<img src="images/blog-04.jpg" href="blog-detail1.html" alt="PRODUCT" class="product-img">
 									</a>
-
+								
 									<div class="size-215 flex-col-t p-t-8">
 										<a href="blog-detail1.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
 											Making Your Kids' Special Day Memorable
@@ -984,13 +774,12 @@ if ($query->num_rows > 0) {
 										</span>
 									</div>
 								</li>
-
+								
 								<li class="flex-w flex-t p-b-30">
 									<a href="blog-detail2.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-05.jpg" href="blog-detail2.html" alt="PRODUCT"
-											class="product-img">
+										<img src="images/blog-05.jpg" href="blog-detail2.html" alt="PRODUCT" class="product-img">
 									</a>
-
+								
 									<div class="size-215 flex-col-t p-t-8">
 										<a href="blog-detail2.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
 											What Are the Best Toys for Child Development
@@ -1003,10 +792,9 @@ if ($query->num_rows > 0) {
 
 								<li class="flex-w flex-t p-b-30">
 									<a href="blog-detail3.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-06.jpg" href="blog-detail1.html" alt="PRODUCT"
-											class="product-img">
+										<img src="images/blog-06.jpg" href="blog-detail3.html" alt="PRODUCT" class="product-img">
 									</a>
-
+								
 									<div class="size-215 flex-col-t p-t-8">
 										<a href="blog-detail3.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
 											How Do Toys Impact a Child's Learning
@@ -1065,7 +853,7 @@ if ($query->num_rows > 0) {
 								<li class="p-b-7">
 									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
 										<span>
-											November 2023
+											November  2023
 										</span>
 
 										<span>
@@ -1130,18 +918,15 @@ if ($query->num_rows > 0) {
 							</h4>
 
 							<div class="flex-w m-r--5">
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									kids
 								</a>
 
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									sofy toys
 								</a>
 
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									toys
 								</a>
 
@@ -1151,9 +936,9 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 		</div>
-	</section>
-
-
+	</section>	
+	
+		
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-100 p-b-25">
@@ -1314,7 +1099,7 @@ if ($query->num_rows > 0) {
 		</span>
 	</div>
 
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
@@ -1377,5 +1162,4 @@ if ($query->num_rows > 0) {
     <script src="js/scroll.js"></script>
 
 </body>
-
 </html>
