@@ -640,7 +640,7 @@ if ($query->num_rows > 0) {
 			</a>
 
 			<span class="stext-109 cl4 darkModetxt">
-				Making Your Kids' Special Day Memorable
+				Fun Ways to Help Your Child Learn and Grow
 			</span>
 		</div>
 	</div>
@@ -654,7 +654,7 @@ if ($query->num_rows > 0) {
 					<div class="p-r-45 p-r-0-lg">
 						<!--  -->
 						<div class="wrap-pic-w how-pos5-parent img04">
-							<img src="images/blog-04.jpg" alt="IMG-BLOG">
+							<img src="images/6.jpg" alt="IMG-BLOG">
 
 							<div class="flex-col-c-m size-123 bg9 how-pos5">
 								<span class="ltext-107 cl2 txt-center">
@@ -690,15 +690,15 @@ if ($query->num_rows > 0) {
 							</span>
 
 							<h4 class="ltext-109 cl2 p-b-28 darkModetxt-omacha">
-								Making Your Kids' Special Day Memorable
+								Fun Ways to Help Your Child Learn and Grow
 							</h4>
 
 							<p style="text-align:justify; " class="stext-117 cl6 p-b-26 darkModetxt">
-								Planning a memorable celebration for your child's special day involves thoughtful consideration and creativity. First, consider your child's interests and preferences to choose a theme that resonates with them, whether it's a favorite cartoon character, a beloved hobby, or a fun adventure. Once you have a theme in mind, brainstorm ideas for decorations, activities, and entertainment that align with the chosen theme to create a cohesive and immersive experience.
+								Turn cooking into a learning experience by inviting your child to join you in the kitchen. Let them help with simple tasks like measuring ingredients, mixing, and decorating. This not only teaches them practical skills but also introduces concepts like math (measuring ingredients), science (mixing ingredients to create chemical reactions), and creativity (decorating dishes). Plus, they'll feel proud of their culinary creations and be more inclined to try new foods.
 							</p>
 
 							<p style="text-align:justify; " class="stext-117 cl6 p-b-26 darkModetxt">
-								Next, focus on creating a personalized and memorable experience for your child and their guests. Incorporate interactive games, crafts, and activities that engage children of all ages and encourage social interaction and creativity. Consider hiring entertainers such as magicians, face painters, or balloon artists to add an extra element of fun and excitement to the party. Additionally, don't forget to capture the special moments with photos or videos to create lasting memories for your child and their friends. By putting thought and effort into planning a unique and memorable celebration, you can ensure that your child's special day is truly unforgettable.
+								Encourage your child's love for music and movement by organizing dance parties or music jam sessions at home. Provide a variety of instruments like drums, shakers, or even homemade options like pots and pans. Dancing and making music together not only fosters creativity but also improves coordination and rhythm. You can also introduce educational songs that teach concepts like counting, the alphabet, or colors, making learning feel like playtime. These activities promote physical activity while stimulating cognitive development in a fun and engaging way.
 							</p>
 						</div>
 
@@ -798,7 +798,7 @@ if ($query->num_rows > 0) {
 
 									<div class="form-group">
 										<label for="">Comment</label>
-										<input type="text" class="form-control stext-111 size-124" name="commentText" placeholder="Comment" required>
+										<textarea type="text" class="form-control stext-111 size-124" name="commentText" placeholder="Comment" required></textarea>
 									</div>
 									<div class="form-group">
 										<label for="">Email</label>

@@ -156,7 +156,7 @@ if ($query->num_rows > 0) {
 <html lang="en">
 
 <head>
-	<title>Omacha Shop | Shopping Products</title>
+	<title>Omacha Shop | Plastic Toys</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
@@ -306,7 +306,7 @@ if ($query->num_rows > 0) {
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							<li>
+							<li class="active-menu">
 								<a href="../index.php">Home</a>
 								<ul class="sub-menu">
 									<li><a href="../index.php#shop-by-category">Categories</a></li>
@@ -319,12 +319,12 @@ if ($query->num_rows > 0) {
 
 							<li class="label1 active-menu" data-label1="new">
 							<a href="../product.php">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="convenience-products.php">Convenience</a></li>
-									<li class="active-menu"><a href="#go-up">Shopping</a></li>
-									<li><a href="specialty-products.php">Specialty</a></li>
-									<li><a href="unsought-products.php">Unsought</a></li>
-									<li><a href="digital-products.php">Digital</a></li>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="stuffed-animal-products.php">Stuffed Animals</a></li>
+									<li><a class="darkModetxt" href="fantasy-animal-products.php">Fantasy Animals</a></li>
+									<li><a class="darkModetxt" href="teddy-bear-products.php">Teddy Bears</a></li>
+									<li><a class="darkModetxt" href="soft-doll-products.php">Soft Dolls</a></li>
+									<li class="active-menu"><a href="#go-up">Plastic Toys</a></li>
 								</ul>
 							</li>
 
@@ -589,15 +589,15 @@ if ($query->num_rows > 0) {
 
 	<!-- home intro -->
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../images/background-image.png');">
-		<h2 style="color: #000;" class="ltext-105 cl0 txt-center">
-			Shopping Products
+	<section class="bg-img1 txt-center p-lr-15 p-tb-110 m-t-15" style="background-image: url('../images/background-image.png');">
+		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-50">
+			Plastic Toy Products
 		</h2>
 	</section>
 
 
 	<!-- Product -->
-	<div class=" m-t-23 p-b-140">
+	<div class="m-t-23 p-b-140">
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
@@ -605,35 +605,18 @@ if ($query->num_rows > 0) {
 						All Products
 					</button>
 
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-						Women
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-						Men
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-						Bag
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
-						Shoes
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
-						Watches
-					</button>
 				</div>
 
 				<div class="flex-w flex-c-m m-tb-10">
-					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter" style="border-radius: 40px;">
+					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter"
+						style="border-radius: 40px;">
 						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
 						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
 						Filter
 					</div>
 
-					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search" style="border-radius: 40px;">
+					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search"
+						style="border-radius: 40px;">
 						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
 						<i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
 						Search
@@ -648,7 +631,8 @@ if ($query->num_rows > 0) {
 							<i class="zmdi zmdi-search"></i>
 						</button>
 
-						<input id="searchproduct" class="mtext-107 cl2 size-114 plh2 p-r-15 nutsearch" type="text" name="search-product" placeholder="Search">
+						<input id="searchproduct" class="mtext-107 cl2 size-114 plh2 p-r-15 nutsearch" type="text"
+							name="search-product" placeholder="Search">
 
 						<button class="mybtn" id="buttonsearch_an">
 							<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search" style="width:40px;"></i>
@@ -662,8 +646,8 @@ if ($query->num_rows > 0) {
 
 
 				<script>
-					$(document).ready(function() {
-						$('#buttonsearch_an').click(function(event) {
+					$(document).ready(function () {
+						$('#buttonsearch_an').click(function (event) {
 							event.preventDefault(); // Ngăn chặn hành vi mặc định của form submit
 
 							var p_name = $('#searchproduct').val();
@@ -674,7 +658,7 @@ if ($query->num_rows > 0) {
 								data: {
 									p_name: p_name
 								},
-								success: function(response) {
+								success: function (response) {
 									console.log('aloo');
 									$('.showproduct').html(response);
 								}
@@ -684,8 +668,8 @@ if ($query->num_rows > 0) {
 				</script>
 
 				<script>
-					$(document).ready(function() {
-						$('#buttonsearch_an').click(function(event) {
+					$(document).ready(function () {
+						$('#buttonsearch_an').click(function (event) {
 							event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu
 							$('.disproduct').addClass('disproduct1'); // Thêm class disproduct1 vào phần tử có class disproduct
 						});
@@ -696,8 +680,66 @@ if ($query->num_rows > 0) {
 
 
 				<script>
-					$(document).ready(function() {
-						$('#\\$10').click(function(event) {
+					$(document).ready(function () {
+						$('#\\$5').click(function (event) {
+							event.preventDefault();
+							var pPrice = $(this).val();
+
+							// Gửi pPrice và giá trị mới 30 đến trang Filter$10.php bằng AJAX
+							$.ajax({
+								url: 'filter/Filter$5.php',
+								type: 'POST',
+								data: {
+									p_price: pPrice, // Gửi giá trị pPrice
+									// Gửi giá trị mới là 30
+								},
+								success: function (response) {
+									$('.showproduct').html(response); // In kết quả vào class showproduct
+								}
+							});
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#\\$5').click(function (event) {
+							event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu
+							$('.disproduct').addClass('disproduct1'); // Thêm class disproduct1 vào phần tử có class disproduct
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#\\$8').click(function (event) {
+							event.preventDefault();
+							var pPrice = $(this).val();
+
+							// Gửi pPrice và giá trị mới 30 đến trang Filter$10.php bằng AJAX
+							$.ajax({
+								url: 'filter/Filter$8.php',
+								type: 'POST',
+								data: {
+									p_price: pPrice, // Gửi giá trị pPrice
+									// Gửi giá trị mới là 30
+								},
+								success: function (response) {
+									$('.showproduct').html(response); // In kết quả vào class showproduct
+								}
+							});
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#\\$8').click(function (event) {
+							event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu
+							$('.disproduct').addClass('disproduct1'); // Thêm class disproduct1 vào phần tử có class disproduct
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#\\$10').click(function (event) {
 							event.preventDefault();
 							var pPrice = $(this).val();
 
@@ -709,7 +751,7 @@ if ($query->num_rows > 0) {
 									p_price: pPrice, // Gửi giá trị pPrice
 									// Gửi giá trị mới là 30
 								},
-								success: function(response) {
+								success: function (response) {
 									$('.showproduct').html(response); // In kết quả vào class showproduct
 								}
 							});
@@ -717,8 +759,95 @@ if ($query->num_rows > 0) {
 					});
 				</script>
 				<script>
-					$(document).ready(function() {
-						$('#\\$10').click(function(event) {
+					$(document).ready(function () {
+						$('#\\$10').click(function (event) {
+							event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu
+							$('.disproduct').addClass('disproduct1'); // Thêm class disproduct1 vào phần tử có class disproduct
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#\\$11').click(function (event) {
+							event.preventDefault();
+							var pPrice = $(this).val();
+
+							// Gửi pPrice và giá trị mới 30 đến trang Filter$10.php bằng AJAX
+							$.ajax({
+								url: 'filter/Filter$11.php',
+								type: 'POST',
+								data: {
+									p_price: pPrice, // Gửi giá trị pPrice
+									// Gửi giá trị mới là 30
+								},
+								success: function (response) {
+									$('.showproduct').html(response); // In kết quả vào class showproduct
+								}
+							});
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#\\$11').click(function (event) {
+							event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu
+							$('.disproduct').addClass('disproduct1'); // Thêm class disproduct1 vào phần tử có class disproduct
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#Cotton').click(function (event) {
+							event.preventDefault();
+							var pPrice = $(this).val();
+
+							// Gửi pPrice và giá trị mới 30 đến trang Filter$10.php bằng AJAX
+							$.ajax({
+								url: 'filter/FilterCotton.php',
+								type: 'POST',
+								data: {
+									p_price: pPrice, // Gửi giá trị pPrice
+									// Gửi giá trị mới là 30
+								},
+								success: function (response) {
+									$('.showproduct').html(response); // In kết quả vào class showproduct
+								}
+							});
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#Cotton').click(function (event) {
+							event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu
+							$('.disproduct').addClass('disproduct1'); // Thêm class disproduct1 vào phần tử có class disproduct
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#Plastic').click(function (event) {
+							event.preventDefault();
+							var pPrice = $(this).val();
+
+							// Gửi pPrice và giá trị mới 30 đến trang Filter$10.php bằng AJAX
+							$.ajax({
+								url: 'filter/FilterPlastic.php',
+								type: 'POST',
+								data: {
+									p_price: pPrice, // Gửi giá trị pPrice
+									// Gửi giá trị mới là 30
+								},
+								success: function (response) {
+									$('.showproduct').html(response); // In kết quả vào class showproduct
+								}
+							});
+						});
+					});
+				</script>
+				<script>
+					$(document).ready(function () {
+						$('#Plastic').click(function (event) {
 							event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu
 							$('.disproduct').addClass('disproduct1'); // Thêm class disproduct1 vào phần tử có class disproduct
 						});
@@ -734,20 +863,20 @@ if ($query->num_rows > 0) {
 
 							<ul>
 								<li class="p-b-6">
-									<button type="submit" value="10" id="$10">10-30 </button>
+									<button type="submit" value="$10" id="$5">5-8</button>
 								</li>
 
 								<li class="p-b-6">
-									<button type="submit" value="$20" id="$20">$20</button>
+									<button type="submit" value="$20" id="$8">8-9</button>
 								</li>
 
 								<li class="p-b-6">
-									<button type="submit" value="$30" id="$30">$30</button>
+									<button type="submit" value="$30" id="$10">10-11</button>
 								</li>
 
 
 								<li class="p-b-6">
-									<button type="submit" value="$50" id="$50">$50</button>
+									<button type="submit" value="$50" id="$11">11-13</button>
 								</li>
 
 
@@ -767,7 +896,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-6">
-									<button type="submit" value="Fur">Fur</button>
+									<button type="submit" value="Plastic" id="Plastic">Plastic</button>
 								</li>
 
 
@@ -786,15 +915,18 @@ if ($query->num_rows > 0) {
 							</div>
 
 							<div class="flex-w p-t-4 m-r--5">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#"
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									<button type="submit" value="Cute">Cute </button>
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									<button type="submit" value="fashion" >fashion</button>
+								<a href="#"
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+									<button type="submit" value="fashion">fashion</button>
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#"
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
 									<button type="submit" value="street">Streetstyle </button>
 								</a>
 
@@ -820,39 +952,45 @@ if ($query->num_rows > 0) {
 
 
 				<section class="disproduct">
-                    <?php
-                    while ($product = mysqli_fetch_assoc($queryYear)) {
-                    ?>
-                    <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item toy">
-                        <!-- Block2 -->
-                        <div class="block2">
-                            <div id="<?php echo $product['p_id']; ?>" class="block2-pic hov-img0" style="border: 0.1px dashed #000; border-radius: 50px;">
-                                <img src="../images/<?php echo $product['p_image']; ?>" alt="IMG-PRODUCT">
-                            </div>
-                            <div class="block2-txt flex-w flex-t p-t-14">
-                                <div class="block2-txt-child1 flex-col-l">
-                                    <a href="../product-detail.html" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"><?php echo $product['p_name']; ?></a>
-                                    <p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1"><?php echo $product['p_type']; ?></p>
-                                    <span class="stext-105 cl3 price">$<?php echo $product['p_price']; ?></span>
-                                </div>
-                                <div class="block2-txt-child2 flex-r p-t-3">
-                                    <a href="../../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                                        <img class="icon-heart1 dis-block trans-04" src="../images/icons/icon-heart-01.png" alt="ICON" href="../../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>">
-                                        <img class="icon-heart2 dis-block trans-04 ab-t-l" src="../images/icons/icon-heart-02.png" alt="ICON" href="../../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                    }
-                    ?>
-                </section>
-
-
-
-
-
+					<?php
+					while ($product = mysqli_fetch_assoc($query)) {
+						// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
+						$product_images = array_map('trim', explode(',', $product["p_image"]));
+						?>
+						<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item toy">
+							<!-- Block2 -->
+							<div class="block2">
+								<a href="../productdetail.php?p_id=<?php echo $product['p_id']; ?>" class="block2-pic hov-img0"
+									style="border: 0.5px dashed #000; border-radius: 50px; background-color: #ffffffff;">
+									<img id="image-size" src="../images/<?php echo $product_images[0]; ?>" alt="IMG-PRODUCT">
+								</a>
+								<div class="block2-txt flex-w flex-t p-t-14">
+									<div class="block2-txt-child1 flex-col-l">
+										<a href="../productdetail.php?p_id=<?php echo $product['p_id']; ?>"
+											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
+											<?php echo $product["p_name"]; ?>
+										</a>
+										<p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1 darkModetxt">
+											<?php echo $product['p_type']; ?>
+										</p>
+										<span class="stext-105 cl3 price darkModetxt">$<?php echo $product['p_price']; ?></span>
+									</div>
+									<div class="block2-txt-child2 flex-r p-t-3">
+										<a href="../../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>"
+											class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+											<img class="icon-heart1 dis-block trans-04" src="../images/icons/icon-heart-01.png"
+												alt="ICON">
+											<img class="icon-heart2 dis-block trans-04 ab-t-l"
+												src="../images/icons/icon-heart-02.png" alt="ICON">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<?php
+					}
+					?>
+				</section>
 
 			</div>
 		</div>

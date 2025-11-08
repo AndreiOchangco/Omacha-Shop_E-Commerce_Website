@@ -317,11 +317,11 @@ if ($result->num_rows > 0) {
 							<li class="label1 active-menu" data-label1="new">
 							<a class="darkModetxt" href="#go-up">Shop</a>
 								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="./Products/convenience-products.php">Convenience</a></li>
-									<li><a class="darkModetxt" href="./Products/shopping-products.php">Shopping</a></li>
-									<li><a class="darkModetxt" href="./Products/specialty-products.php">Specialty</a></li>
-									<li><a class="darkModetxt" href="./Products/unsought-products.php">Unsought</a></li>
-									<li><a class="darkModetxt" href="./Products/digital-products.php">Digital</a></li>
+									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
+									<li><a class="darkModetxt" href="./Products/fantasy-animal-products.php">Fantasy Animals</a></li>
+									<li><a class="darkModetxt" href="./Products/teddy-bear-products.php">Teddy Bears</a></li>
+									<li><a class="darkModetxt" href="./Products/soft-doll-products.php">Soft Dolls</a></li>
+									<li><a class="darkModetxt" href="./Products/plastic-toy-products.php">Plastic Toys</a></li>
 								</ul>
 							</li>
 
@@ -718,7 +718,7 @@ if ($result->num_rows > 0) {
 	</div>
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-10" style="background-image: url('images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
 			General Products
 		</h2>
@@ -1119,11 +1119,6 @@ if ($result->num_rows > 0) {
 					}
 					?>
 				</section>
-
-
-
-
-
 
 			</div>
 		</div>

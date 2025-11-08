@@ -486,11 +486,11 @@ if ($result->num_rows > 0) {
 							<li class="label1" data-label1="new">
 							<a class="darkModetxt" href="product.php">Shop</a>
 								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="./Products/convenience-products.php">Convenience</a></li>
-									<li><a class="darkModetxt" href="./Products/shopping-products.php">Shopping</a></li>
-									<li><a class="darkModetxt" href="./Products/specialty-products.php">Specialty</a></li>
-									<li><a class="darkModetxt" href="./Products/unsought-products.php">Unsought</a></li>
-									<li><a class="darkModetxt" href="./Products/digital-products.php">Digital</a></li>
+									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
+									<li><a class="darkModetxt" href="./Products/fantasy-animal-products.php">Fantasy Animals</a></li>
+									<li><a class="darkModetxt" href="./Products/teddy-bear-products.php">Teddy Bears</a></li>
+									<li><a class="darkModetxt" href="./Products/soft-doll-products.php">Soft Dolls</a></li>
+									<li><a class="darkModetxt" href="./Products/plastic-toy-products.php">Plastic Toys</a></li>
 								</ul>
 							</li>
 

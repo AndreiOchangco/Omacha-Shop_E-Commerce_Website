@@ -780,7 +780,10 @@ if ($query->num_rows > 0) {
 						<!-- HTML content starts after PHP code -->
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								<h3 class="panel-title">Create Comment</h3>
+								<h3 class="panel-title mtext-113 p-b-5 darkModetxt-omacha">Leave a Comment</h3>
+                                <p class="stext-107 cl6">
+								Your email address will not be published.
+							    </p>
 							</div>
 							<br><br>
 							<div class="panel-body">
@@ -790,22 +793,22 @@ if ($query->num_rows > 0) {
 
 									<div class="form-group">
 										<label for="">Your Name</label>
-										<input type="text" class="form-control" name="commentName" placeholder="Name" value="<?php echo htmlspecialchars($userLogin['userName']); ?>">
+										<input type="text" class="form-control stext-111" name="commentName" placeholder="Name" value="<?php echo htmlspecialchars($userLogin['userName']); ?>">
 									</div>
 
 									<div class="form-group">
 										<label for="">Comment</label>
-										<input type="text" class="form-control" name="commentText" placeholder="Comment" required>
+										<input type="text" class="form-control stext-111 size-124" name="commentText" placeholder="Comment" required>
 									</div>
 									<div class="form-group">
 										<label for="">Email</label>
-										<input type="email" class="form-control" name="email" placeholder="Email" value="<?php echo htmlspecialchars($userLogin['email']); ?>">
+										<input type="email" class="form-control stext-111" name="email" placeholder="Email" value="<?php echo htmlspecialchars($userLogin['email']); ?>">
 									</div>
 									<div class="form-group">
 										<label for="">Date/Time</label>
-										<input type="date" class="form-control" name="dateComment" required>
+										<input type="date" class="form-control stext-111" name="dateComment" required>
 									</div>
-									<button type="submit" class="btn btn-primary darkModeBtn" name="addComment">Post Comment</button>
+									<button type="submit" class="flex-c-m stext-101 cl0 size-125 btn btn-primary darkModeBtn m-t-10" name="addComment"><strong>Post Comment</strong></button>
 								</form>
 								<?php
 								// Handle errors if any
@@ -815,42 +818,6 @@ if ($query->num_rows > 0) {
 								?>
 							</div>
 						</div>
-						<br><br><br><br>
-
-						<?php
-						// Show title
-						echo "<h2>Comments</h2><br>";
-
-						// Display comments
-						if ($result && $result->num_rows > 0) {
-							while ($row = $result->fetch_assoc()) {
-								echo '<div class="single_comment_area">';
-								echo '<div class="comment-content">';
-								echo '<h6>Date/Time: ' . $row["dateComment"] . '</h6><br>';
-								echo '<h6>Name: ' . $row["commentName"] . '</h6><br>';
-								echo '<h4>' . $row["commentText"] . '</h4><br>';
-								// Add reply form if there's no reply yet
-								if (empty($row["replyText"])) {
-									echo '<form action="" method="POST" role="form">';
-									echo '<input type="hidden" name="commentID" value="' . $row["IDcomment"] . '">';
-									echo '<div class="form-group">';
-									echo '<label for="">Reply</label>';
-									echo '<input type="text" class="form-control" name="replyText" placeholder="reply">';
-									echo '</div>';
-									echo '<button type="submit" style="margin-bottom: 30px; " class="btn btn-primary darkModeBtn" name="addReply">Post Reply</button>';
-									echo '</form>';
-								} else { // Display existing reply
-									echo '<br><h6>Reply: <br>' . $row["replyText"] . '</h6><br>';
-								}
-								echo '</div>';
-								echo '</div>';
-							}
-						} else {
-							echo "No comments available";
-						}
-						// Đóng kết nối đến cơ sở dữ liệu
-						$conn->close();
-						?>
 					</div>
 				</div>
 				
@@ -871,26 +838,32 @@ if ($query->num_rows > 0) {
 
 							<ul>
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+									<a href="stuffed-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Stuffed Animals
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+									<a href="fantasy-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Fantasy Animals
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
-										Teddies
+									<a href="teddy-bear-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+										Teddy Bears
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+									<a href="soft-doll-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Soft Dolls
+									</a>
+								</li>
+
+								<li class="bor18">
+									<a href="plastic-toy-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+										Plastic Toys
 									</a>
 								</li>
 							</ul>
@@ -1019,7 +992,7 @@ if ($query->num_rows > 0) {
 								<li class="p-b-7">
 									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
-											Swptember 2023
+											September 2023
 										</span>
 
 										<span>
