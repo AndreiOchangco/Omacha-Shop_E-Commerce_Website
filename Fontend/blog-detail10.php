@@ -16,11 +16,11 @@ $userName = $_SESSION["user"];
 $sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
 $queryLogin = mysqli_query($conn, $sqlLogin);
 // print_r($queryLogin);
-// Kiểm tra kết quả truy vấn
+// Check query results
 
-// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+// Iterate through each row of data from the query results
 $row = $queryLogin->fetch_assoc();
-// Thêm thông tin từng hàng vào mảng $vuserLogin
+// Add each row's information into the $vuserLogin array
 $userLogin = array(
 	"userID" => $row["userID"],
 	"userName" => $row["userName"],
@@ -31,7 +31,7 @@ $sql = "SELECT * FROM product";
 $query = mysqli_query($conn, $sql);
 
 
-// Câu truy vấn SQL SELECT
+// SQL SELECT query
 $sqlOrder = "SELECT 
 `order`.o_id, 
 `order`.u_id, 
@@ -48,18 +48,18 @@ FROM
 INNER JOIN 
 product ON `order`.p_id = product.p_id";
 
-// Thực hiện truy vấn
+// Execute query
 $resultOrder = $conn->query($sqlOrder);
 
-// Mảng chứa thông tin các đơn hàng
+// Array containing order information
 $order_array = array();
 
-// Kiểm tra kết quả truy vấn
+// Check query results
 if ($resultOrder->num_rows > 0) {
-	// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+	// Iterate through each row of data from the query results
 	while ($row = $resultOrder->fetch_assoc()) {
 		if ($row['u_id'] == $userLogin['userID'] && $row['o_status'] == 0) {
-			// Thêm thông tin từng hàng vào mảng $order_array
+			// Add information for each row into the $order_array array
 			$order_array[] = array(
 				"o_id" => $row["o_id"],
 				"u_id" => $row["u_id"],
@@ -75,65 +75,65 @@ if ($resultOrder->num_rows > 0) {
 		}
 	};
 } else {
-	// echo "0 results";
+	echo "0 results";
 }
 
 
 function sumTotalPrice($order_array, $u_id)
 {
-	$totalPrice = 0; // Khởi tạo biến tổng giá tiền
+	$totalPrice = 0; // Initialize the total price variable
 
-	// Duyệt qua từng sản phẩm trong giỏ hàng và tính tổng giá tiền
+	// Browse through each product in the shopping cart and calculate the total price
 	foreach ($order_array as $item) {
-		// Kiểm tra xem u_id của sản phẩm có khớp với u_id được chỉ định hay không
+		// Check whether the product's u_id matches the specified u_id
 		if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
-			// Tính giá tiền của mỗi sản phẩm (giá tiền * số lượng)
+			// Calculate the price of each product (price * quantity)
 			$productPrice = $item["p_price"] * $item["o_quantity"];
 
-			// Cộng vào tổng giá tiền
+			// Add to the total price
 			$totalPrice += $productPrice;
 		}
 	}
 
-	return $totalPrice; // Trả về tổng giá tiền
+	return $totalPrice; // Return the total amount
 }
 
-// Truy vấn để đếm số dòng trong bảng order
+// Query to count the number of rows in the order table
 $sql = "SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = '{$userLogin['userID']}' AND o_quantity > 0 AND o_status = 0";
 $result = $conn->query($sql);
 
-// Kiểm tra và hiển thị kết quả
+// Check and display results
 if ($result->num_rows > 0) {
 	$row = $result->fetch_assoc();
 	$order_count = $row["total_rows"];
 } else {
-	// echo "Không có dữ liệu trong bảng order";
+	echo "There is no data in the order table";
 }
 
-// Truy vấn để đếm số dòng trong bảng order
+// Query to count the number of rows in the order table
 $sql = "SELECT COUNT(*) AS total_rows FROM wishlist";
 $result = $conn->query($sql);
 
-// Kiểm tra và hiển thị kết quả
+// Check and display the results
 if ($result->num_rows > 0) {
 	$row = $result->fetch_assoc();
 	$wishlist_count = $row["total_rows"];
 } else {
-	// echo "Không có dữ liệu trong bảng order";
+	echo "There is no data in the order table";
 }
 
-// Truy vấn thông tin chiết khấu dựa trên tên discount (d_name)
+// Query discount information based on the discount name (d_name)
 $sqlDiscount = "SELECT * FROM discount";
 $query = mysqli_query($conn, $sqlDiscount);
 
-// Mảng chứa thông tin chiết khấu
+// Array containing discount information
 $discount = array();
 
-// Kiểm tra kết quả truy vấn
+// Check query results
 if ($query->num_rows > 0) {
-	// Lặp qua từng hàng dữ liệu từ kết quả truy vấn
+	// Iterate through each row of data from the query results
 	while ($row = $query->fetch_assoc()) {
-		// Thêm thông tin từng hàng vào mảng $discount
+		// Add each row's information to the $discount array
 		$discount = array(
 			"d_id" => $row["d_id"],
 			"d_name" => $row["d_name"],
@@ -144,25 +144,20 @@ if ($query->num_rows > 0) {
 		);
 	}
 } else {
-	// Nếu không tìm thấy kết quả
-	// echo "0 results";
+	echo "0 results";
 }
-
 ?>
-<!-- Trang này dùng để điền form -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Omacha Shop | Contact</title>
+	<title>Omacha Shop | Blog</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
-
-
 	<!-- link icon -->
 	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
 		href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
-
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
 
@@ -171,13 +166,9 @@ if ($query->num_rows > 0) {
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-
 	<!-- link icon -->
 	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -195,61 +186,106 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
-	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/universal.css">
-	<link rel="stylesheet" type="text/css" href="css/contact-modal.css">
+	<link rel="stylesheet" href="css/universal.css">
 	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 	<!--===============================================================================================-->
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+		#button-cart {
+			border-radius: 10px;
+			padding: 10px;
+			background-color: black;
+			color: white;
+		}
+
+		#button-cart:hover {
+			background-color: #F4538A;
+		}
+
+		/* CSS for image zoom effect */
+		.zoomable-img {
+			transition: transform 0.3s ease-in-out;
+			/* Add transition for smooth effect */
+		}
+
+		.zoomable-img:hover {
+			transform: scale(1.1);
+			/* Increase scale on hover */
+		}
+
+		.blog-articles {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.full-unstyled-link {
+			/* text-decoration: none; */
+			color: currentColor;
+			/* display: block; */
+			display: inline-block;
+		}
+
+		.btn-remove-product {
+			cursor: pointer;
+			/* Đổi con trỏ chuột thành kiểu pointer khi di chuột qua */
+		}
+
+		.btn-remove-product i {
+			color: #F4538A;
+			/* Đổi màu của biểu tượng thành màu đỏ */
+		}
+
+		#button-add {
+			border-radius: 10px;
+			padding: 10px;
+			background-color: #F4538A;
+			color: white;
+			margin-right: 10px;
+			/* Add margin to create space between buttons */
+		}
+
+		#button-add:hover {
+			background-color: black;
+		}
+
+		/* Định dạng hình ảnh sản phẩm */
+		.header-cart-item-img {
+			flex: 0 0 auto;
+			/* Không co giãn hình ảnh */
+			width: 100px;
+			/* Kích thước chiều rộng cố định */
+			height: auto;
+			/* Chiều cao tự động */
+			margin-right: 20px;
+			/* Khoảng cách giữa hình ảnh và văn bản */
+		}
+
+
+		/* Định dạng nút check out và view cart */
+		#btn-cart {
+			background-color: #F4538A;
+			color: #FFEFEF;
+		}
+
+		#btn-cart:hover {
+			background-color: black;
+			color: #FFEFEF;
+		}
+
+		/* Định dạng nút delete */
+		.btn-delete {
+			color: black;
+		}
+
+		.btn-delete:hover {
+			color: #F4538A;
+		}
 	</style>
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
-	<!-- link icon -->
-	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
-		href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
-
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
-
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css">
-
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css">
-
-	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css">
 </head>
 
-<style>
-	/* Định dạng nút check out và view cart */
-	#btn-cart {
-		background-color: #F4538A;
-		color: #FFEFEF;
-	}
-
-	#btn-cart:hover {
-		background-color: black;
-		color: #FFEFEF;
-	}
-
-	/* Định dạng nút delete */
-	.btn-delete {
-		color: black;
-	}
-
-	.btn-delete:hover {
-		color:#F4538A;
-	}
-</style>
-
 <body class="animsition">
-	
 	<!-- Header -->
 	<header id="go-up">
 		<!-- Header desktop -->
@@ -338,7 +374,7 @@ if ($query->num_rows > 0) {
 								<a href="shopping-cart.php">Cart</a>
 							</li>
 
-							<li>
+							<li class="active-menu">
 								<a href="blog.php">Blog</a>
 							</li>
 
@@ -346,7 +382,7 @@ if ($query->num_rows > 0) {
 								<a href="about.php">About</a>
 							</li>
 
-							<li class="active-menu">
+							<li>
 								<a class="darkModetxt" href="contact.php">Contact</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
@@ -398,7 +434,7 @@ if ($query->num_rows > 0) {
 
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
-			<!-- Logo mobile -->		
+			<!-- Logo moblie -->		
 			<div class="logo-mobile">
 				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
 			</div>
@@ -429,7 +465,7 @@ if ($query->num_rows > 0) {
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<ul class="topbar-mobile">
+				<ul class="topbar-mobile">
 					<li>
 						<div class="left-top-bar">
 							Free shipping for standard order over $100
@@ -459,17 +495,11 @@ if ($query->num_rows > 0) {
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.php">Home</a>
-					
-				</li>
-
-				<li>
-					<a href="product2.php">Shop</a>
+					<a href="index.html">Home</a>
 					<ul class="sub-menu-m">
-					<li><a href="0_12months.php">0-12 Months</a></li>
-						<li><a href="1_2years.php">1-2 Years</a></li>
-						<li><a href="3+years.php">3+ Years</a></li>
-						<li><a href="5+years.php">5+ Years</a></li>
+						<li><a href="index.html">Homepage 1</a></li>
+						<li><a href="home-02.html">Homepage 2</a></li>
+						<li><a href="home-03.html">Homepage 3</a></li>
 					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -477,19 +507,23 @@ if ($query->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="shoping-cart.php" class="label1 rs1" data-label1="hot">Cart</a>
+					<a href="product.html">Shop</a>
 				</li>
 
 				<li>
-					<a href="blog.php">Blog</a>
+					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
 				</li>
 
 				<li>
-					<a href="about.php">About</a>
+					<a href="blog.html">Blog</a>
 				</li>
 
 				<li>
-					<a href="contact.php">Contact</a>
+					<a href="about.html">About</a>
+				</li>
+
+				<li>
+					<a href="contact.html">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -592,89 +626,433 @@ if ($query->num_rows > 0) {
 		</div>
 	</div>
 
+	<!-- breadcrumb -->
+	<div class="container m-t-50">
+		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
+				Home
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
 
-	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
-		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-55">
-			Contact
-		</h2>
-	</section>	
+			<a href="blog.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
+				Blog
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
+
+			<span class="stext-109 cl4 darkModetxt">
+				What's Hot and What's Not in the Toy World
+			</span>
+		</div>
+	</div>
 
 
 	<!-- Content page -->
-	<section1>
-		<!-- <h4 class="sectionHeader">Contact Us</h4> -->
-		<h1 class="stext-122 heading darkModetxt">Get In Touch</h1>
-		<div class="contactForm">
-			<form action="notification_api.php" id="notificationForm">
-				<h1 class=" stext-121 sub-heading darkModetxt">Let's talk</h1>
+	<section class="bg0 p-t-52 p-b-20">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-lg-9 p-b-80">
+					<div class="p-r-45 p-r-0-lg">
+						<!--  -->
+						<div class="wrap-pic-w how-pos5-parent img04">
+							<img src="images/8.jpg" alt="IMG-BLOG">
 
-				<input type="text" id="user" name="user" class="input" value="ADMIN" required>
-				<input type="text" id="title" name="title" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
-				<textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
+							<div class="flex-col-c-m size-123 bg9 how-pos5">
+								<span class="ltext-107 cl2 txt-center">
+									14
+								</span>
+
+								<span class="stext-109 cl3 txt-center">
+									Feb 2024
+								</span>
+							</div>
+						</div>
+
+						<div class="p-t-32">
+							<span class="flex-w flex-m stext-111 cl2 p-b-19 darkModetxt">
+								<span>
+									<span class="cl4 darkModetxt">By</span> John Mathew
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
+
+								<span>
+									14 Feb, 2024
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
+
+								<span>
+									Kids, Sofy toys, Toys  
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
+
+								<span>
+									8 Comments
+								</span>
+							</span>
+
+							<h4 class="ltext-109 cl2 p-b-28 darkModetxt-omacha">
+								What's Hot and What's Not in the Toy World
+							</h4>
+
+							<p style="text-align:justify; " class="stext-117 cl6 p-b-26 darkModetxt">
+								In the ever-evolving toy world, trends come and go, shaping the preferences of children and parents alike. Today, STEM (Science, Technology, Engineering, and Mathematics) toys are gaining popularity as parents seek to introduce their children to educational yet entertaining play experiences. These toys encourage critical thinking, problem-solving, and innovation, preparing kids for future success in a technology-driven world.
+							</p>
+
+							<p style="text-align:justify; " class="stext-117 cl6 p-b-26 darkModetxt">
+								Conversely, traditional toys like dolls and action figures remain timeless classics, offering endless imaginative possibilities. However, with the rise of digital entertainment, such as video games and interactive apps, some traditional toys face stiff competition. Yet, even in this digital age, there's a growing appreciation for toys that promote hands-on, unplugged play, striking a balance between virtual and real-world experiences.
+							</p>
+						</div>
+
+						<div class="flex-w flex-t p-t-16">
+							<span class="size-216 stext-116 cl8 p-t-4 darkModetxt">
+								Tags
+							</span>
+
+							<div class="flex-w size-217">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									kids
+								</a>
+
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									sofy toys
+								</a>
+
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									toys
+								</a>
+							</div>
+						</div>
+						<br><br><br><br>
+						<!-- comment -->
+						<?php
+						require_once 'connect.php';
+
+						$error = '';
+
+						// Add Comment
+						if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['addComment'])) {
+							$name = $_POST['commentName'];
+							$date = $_POST['dateComment'];
+							$cmt = $_POST['commentText'];
+							$email = $_POST['email'];
+
+							// Validate input fields if needed
+
+							// Check if the combination of name, date, comment text, and email is unique
+							$sql_check_unique = "SELECT * FROM comments WHERE commentName='$name' AND dateComment='$date' AND commentText='$cmt' AND email='$email'";
+							$result_check_unique = mysqli_query($conn, $sql_check_unique);
+							if (mysqli_num_rows($result_check_unique) > 0) {
+								$error = "Email hoặc ngày đã tồn tại.";
+							} else {
+								// Insert new comment into the database
+								$sql = "INSERT INTO comments (commentName, dateComment, commentText, email) 
+										VALUES ('$name', '$date', '$cmt', '$email')";
+								if (mysqli_query($conn, $sql)) {
+									header('location: blog-detail1]].php');
+									exit; // Make sure to exit after redirecting
+								} else {
+									$error = 'Có lỗi, vui lòng thử lại';
+								}
+							}
+						}
+
+						// Add Reply
+						if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['addReply'])) {
+							$commentID = $_POST['commentID'];
+							$replyText = $_POST['replyText'];
+
+							// Validate input fields if needed
+
+							// Update the comments table with the reply
+							$sql_update_reply = "UPDATE comments SET replyText='$replyText' WHERE IDcomment='$commentID'";
+							if (mysqli_query($conn, $sql_update_reply)) {
+								header('location: blog-detail1.php');
+								exit; // Make sure to exit after redirecting
+							} else {
+								$error = 'Có lỗi, vui lòng thử lại';
+							}
+						}
+
+						// Retrieve comments from the database
+						$sql_select_comments = "SELECT * FROM comments";
+						$result = mysqli_query($conn, $sql_select_comments);
+						?>
+
+						<!-- HTML content starts after PHP code -->
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title mtext-113 p-b-5 darkModetxt-omacha">Leave a Comment</h3>
+                                <p class="stext-107 cl6">
+								Your email address will not be published.
+							    </p>
+							</div>
+							<br><br>
+							<div class="panel-body">
+								<form action="" method="POST" role="form">
+									<!-- Add hidden input field for id -->
+									<input type="hidden" name="id" value="">
+
+									<div class="form-group">
+										<label for="">Your Name</label>
+										<input type="text" class="form-control stext-111" name="commentName" placeholder="Name" value="<?php echo htmlspecialchars($userLogin['userName']); ?>">
+									</div>
+
+									<div class="form-group">
+										<label for="">Comment</label>
+										<textarea type="text" class="form-control stext-111 size-124" name="commentText" placeholder="Comment" required></textarea>
+									</div>
+									<div class="form-group">
+										<label for="">Email</label>
+										<input type="email" class="form-control stext-111" name="email" placeholder="Email" value="<?php echo htmlspecialchars($userLogin['email']); ?>">
+									</div>
+									<div class="form-group">
+										<label for="">Date/Time</label>
+										<input type="date" class="form-control stext-111" name="dateComment" required>
+									</div>
+									<button type="submit" class="flex-c-m stext-101 cl0 size-125 btn btn-primary darkModeBtn m-t-10" name="addComment"><strong>Post Comment</strong></button>
+								</form>
+								<?php
+								// Handle errors if any
+								if ($error) {
+									echo "<p>Error: $error</p>";
+								}
+								?>
+							</div>
+						</div>
+					</div>
+				</div>
 				
-				<button type="submit" id="sendmsg" class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 m-lf-minus-10 m-t-10 trans-04">Send Message</button>
-			</form>
-			<!-- Notification Modal -->
-			<div id="resultModal" class="modal" style="display: none;">
-				<div class="modal-content">
-					<span class="close-btn" onclick="closeModal()">&times;</span>
-					<div id="result" class="result"></div>
+				<div class="col-md-4 col-lg-3 p-b-80">
+					<div class="side-menu">
+						<div class="bor17 of-hidden pos-relative">
+							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search" placeholder="Search">
+
+							<button class="flex-c-m size-122 ab-t-r fs-18 cl4 hov-cl1 trans-04">
+								<i class="zmdi zmdi-search"></i>
+							</button>
+						</div>
+
+						<div class="p-t-55">
+							<h4 class="mtext-112 cl2 p-b-33 darkModetxt-omacha">
+								Categories
+							</h4>
+
+							<ul>
+								<li class="bor18">
+									<a href="stuffed-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+										Stuffed Animals
+									</a>
+								</li>
+
+								<li class="bor18">
+									<a href="fantasy-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+										Fantasy Animals
+									</a>
+								</li>
+
+								<li class="bor18">
+									<a href="teddy-bear-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+										Teddy Bears
+									</a>
+								</li>
+
+								<li class="bor18">
+									<a href="soft-doll-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+										Soft Dolls
+									</a>
+								</li>
+
+								<li class="bor18">
+									<a href="plastic-toy-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+										Plastic Toys
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="p-t-65">
+							<h4 class="mtext-112 cl2 p-b-33 darkModetxt-omacha">
+								Recent Post
+							</h4>
+
+							<ul>
+								<li class="flex-w flex-t p-b-30">
+									<a href="blog-detail1.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-04.jpg" href="blog-detail1.php" alt="PRODUCT" class="product-img zoomable-img">
+									</a>
+								
+									<div class="size-215 flex-col-t p-t-8">
+										<a href="blog-detail1.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
+											Making Your Kids' Special Day Memorable
+										</a>
+										<span class="stext-116 cl6 p-t-20 darkModetxt">
+											John Mathew | 14 Feb 2024
+										</span>
+									</div>
+								</li>
+								
+								<li class="flex-w flex-t p-b-30">
+									<a href="blog-detail2.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-05.jpg" href="blog-detail2.php" alt="PRODUCT" class="product-img zoomable-img">
+									</a>
+								
+									<div class="size-215 flex-col-t p-t-8">
+										<a href="blog-detail2.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
+											What Are the Best Toys for Child Development
+										</a>
+										<span class="stext-116 cl6 p-t-20 darkModetxt">
+											John Mathew | 14 Feb 2024
+										</span>
+									</div>
+								</li>
+
+								<li class="flex-w flex-t p-b-30">
+									<a href="blog-detail3.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-06.jpg" href="blog-detail3.php" alt="PRODUCT" class="product-img zoomable-img">
+									</a>
+								
+									<div class="size-215 flex-col-t p-t-8">
+										<a href="blog-detail3.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
+											How Do Toys Impact a Child's Learning
+										</a>
+										<span class="stext-116 cl6 p-t-20 darkModetxt">
+											John Mathew | 14 Feb 2024
+										</span>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+
+						<div class="p-t-55">
+							<h4 class="mtext-112 cl2 p-b-20 darkModetxt-omacha">
+								Archive
+							</h4>
+
+							<ul>
+								<li class="p-b-7">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
+										<span>
+											February 2024
+										</span>
+
+										<span>
+											(9)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-b-7">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
+										<span>
+											January 2024
+										</span>
+
+										<span>
+											(39)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-b-7">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
+										<span>
+											December 2023
+										</span>
+
+										<span>
+											(29)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-b-7">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
+										<span>
+											November  2023
+										</span>
+
+										<span>
+											(35)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-b-7">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
+										<span>
+											October 2023
+										</span>
+
+										<span>
+											(22)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-b-7">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
+										<span>
+											September 2023
+										</span>
+
+										<span>
+											(32)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-b-7">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
+										<span>
+											August 2023
+										</span>
+
+										<span>
+											(21)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-b-7">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
+										<span>
+											July 2023
+										</span>
+
+										<span>
+											(26)
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="p-t-50">
+							<h4 class="mtext-112 cl2 p-b-27 darkModetxt-omacha">
+								Tags
+							</h4>
+
+							<div class="flex-w m-r--5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									kids
+								</a>
+
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									sofy toys
+								</a>
+
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									toys
+								</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-
-			<div class="map-container">
-				
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.786852619814!2d120.31229760000001!3d16.6374632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33918d5e2a81bcfb%3A0xd9ee01c3a2281d87!2sOmacha%20Shop%20%7C%20E-commerce%20Website!5e0!3m2!1sen!2sph!4v1759728220314!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				
-			</div>
-			
-			<div class="contactMethod">
-
-				<div class="method">
-					<i class="fa-duotone fa-location-check fa-beat-fade contactIcon" style="--fa-primary-color: #ee1153; --fa-secondary-color: #f4679f;"></i>
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Location</h1>
-						<p class="para darkModetxt">Saint Louis College</p>
-					</article>
-				</div>
-
-				<div class="method">
-					<i class="fa-duotone fa-envelope fa-beat-fade contactIcon" style="--fa-primary-color: #dd2776; --fa-secondary-color: #f486c6;"></i>						
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Email</h1>
-						<p class="para darkModetxt">
-							<a
-							class="darkModetxt"
-							href="mailto:omachashopofficial@gmail.com"
-							style="color: #000; text-decoration: none;">omachashopofficial@gmail.com
-							</a>
-						</p>
-						
-					</article>
-				</div>
-
-				<div class="method">
-					<i class="fa-duotone fa-phone-volume fa-beat-fade contactIcon" style="--fa-primary-color: #d71d55; --fa-secondary-color: #d6669c;"></i>					
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Phone</h1>
-						<p class="para darkModetxt">
-							<a 
-							class="darkModetxt"
-							href="tel:+1922 4800"
-							style="color: #000; text-decoration: none;">+1922 4800
-							</a>
-						</p>
-					</article>
-				</div>
-			</div>
-
 		</div>
-	</section1>
-
-
+	</section>	
+	
+		
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-100 p-b-25">
@@ -825,6 +1203,9 @@ if ($query->num_rows > 0) {
 	</footer>
 
 
+	<!-- Others -->
+
+
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
@@ -832,136 +1213,43 @@ if ($query->num_rows > 0) {
 		</span>
 	</div>
 
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/bootstrap/js/popper.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/select2/select2.min.js"></script>
 	<script>
-		$(".js-select2").each(function(){
+		$(".js-select2").each(function () {
 			$(this).select2({
 				minimumResultsForSearch: 20,
 				dropdownParent: $(this).next('.dropDownSelect2')
 			});
 		})
 	</script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
-<!--===============================================================================================-->
+	<!--===============================================================================================-->
 	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
-		$('.js-pscroll').each(function(){
-			$(this).css('position','relative');
-			$(this).css('overflow','hidden');
+		$('.js-pscroll').each(function () {
+			$(this).css('position', 'relative');
+			$(this).css('overflow', 'hidden');
 			var ps = new PerfectScrollbar(this, {
 				wheelSpeed: 1,
 				scrollingThreshold: 1000,
 				wheelPropagation: false,
 			});
 
-			$(window).on('resize', function(){
+			$(window).on('resize', function () {
 				ps.update();
 			})
 		});
 	</script>
-<!--===============================================================================================-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="js/map-custom.js"></script>
-<!--===============================================================================================-->
-
-	<script>
-	document.addEventListener('DOMContentLoaded', function () {
-	const form = document.getElementById('notificationForm');
-	const modal = document.getElementById("resultModal");
-	const resultDiv = document.getElementById("result");
-
-	// Stop here if form doesn't exist
-	if (!form) return;
-
-	form.addEventListener('submit', async function (e) {
-		e.preventDefault();
-
-		const formData = new FormData(this);
-		const data = {
-		user: formData.get('user'),
-		title: formData.get('title'),
-		message: formData.get('message'),
-		};
-
-		try {
-		const response = await fetch('notification_api.php', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(data)
-		});
-
-		// Only try to read JSON if the request succeeded
-		if (!response.ok) {
-			throw new Error(`Server error: ${response.status}`);
-		}
-
-		const result = await response.json();
-		showModal(result);
-		} catch (error) {
-		// Only show error if it came from a user action
-		console.error("Notification error:", error);
-		showModal({ success: false, error: "Unable to connect to the server." });
-		}
-	});
-
-	function showModal(result) {
-		if (!resultDiv || !modal) return;
-
-		if (result.success) {
-		resultDiv.innerHTML = `
-			<h4 style="color: green;">✅ Notification Sent!</h4>
-			<p><strong>Sent to:</strong> ${result.user || "Unknown"}</p>
-			${result.url ? `<p><a href="${result.url}" target="_blank">View Notification</a></p>` : ''}
-		`;
-		} else {
-		resultDiv.innerHTML = `
-			<h4 style="color: red;">❌ Failed to Send</h4>
-			<p><strong>Error:</strong> ${result.error || 'Unknown error occurred.'}</p>
-		`;
-		}
-
-		// Show modal
-		modal.style.display = "flex";
-		modal.classList.add("show");
-
-		// Auto-close after 5 seconds if success
-		if (result.success) {
-		setTimeout(closeModal, 5000);
-		}
-	}
-
-	function closeModal() {
-		modal.classList.remove("show");
-		setTimeout(() => (modal.style.display = "none"), 300);
-	}
-
-	// Close when clicking outside or pressing ×
-	window.onclick = function (event) {
-		if (event.target === modal) closeModal();
-	};
-	window.closeModal = closeModal; // allow inline onclick to work
-
-	// Optional: generate random user ID
-	const userInput = document.getElementById('user');
-	if (userInput && !userInput.value) {
-		const randomId = Math.random().toString(36).substring(2, 8);
-		userInput.value = 'user-' + randomId;
-	}
-	});
-	</script>
-
-
-<!--===============================================================================================-->
-
+	<!--===============================================================================================-->
 	<script>
 	(function() {
 	let scrollTimer;
@@ -979,12 +1267,13 @@ if ($query->num_rows > 0) {
 	});
 	})();
 	</script>
-
-<!--===============================================================================================-->
-
+	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="js/dark-mode.js"></script>
-	<script src="js/scroll.js"></script>
+    <script src="js/scroll.js"></script>
 
 </body>
 </html>

@@ -1,13 +1,9 @@
 <?php
+
+include '../login.php';
+
+include ('../../Admin/connection/connectionpro.php');
 require_once '../../Admin/connection/connectData.php';
-    $sqlYear = "SELECT * FROM product where p_age = '0-12 months'";
-    $queryYear = mysqli_query($conn, $sqlYear);
-
-	include '../login.php';
-
-include('../../Admin/connection/connectionpro.php');
-require_once '../../Admin/connection/connectData.php';
-
 
 if (!isset($_SESSION["user"])) {
 	// Redirect user to the login page if not logged in
@@ -20,7 +16,6 @@ $userName = $_SESSION["user"];
 $sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
 $queryLogin = mysqli_query($conn, $sqlLogin);
 // print_r($queryLogin);
-// Kiểm tra kết quả truy vấn
 
 // Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
 $row = $queryLogin->fetch_assoc();
@@ -31,9 +26,9 @@ $userLogin = array(
 	"email" => $row["email"],
 );
 
+
 $sql = "SELECT * FROM product";
 $query = mysqli_query($conn, $sql);
-
 
 // Câu truy vấn SQL SELECT
 $sqlOrder = "SELECT 
@@ -55,29 +50,24 @@ product ON `order`.p_id = product.p_id";
 // Thực hiện truy vấn
 $resultOrder = $conn->query($sqlOrder);
 
-// Mảng chứa thông tin các đơn hàng
-$order_array = array();
-
 // Kiểm tra kết quả truy vấn
 if ($resultOrder->num_rows > 0) {
 	// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
 	while ($row = $resultOrder->fetch_assoc()) {
-		if ($row['u_id'] == $userLogin['userID'] && $row['o_status'] == 0) {
-			// Thêm thông tin từng hàng vào mảng $order_array
-			$order_array[] = array(
-				"o_id" => $row["o_id"],
-				"u_id" => $row["u_id"],
-				"p_id" => $row["p_id"],
-				"o_price" => $row["o_price"],
-				"o_quantity" => $row["o_quantity"],
-				"o_status" => $row["o_status"],
-				"p_type" => $row["p_type"],
-				"p_image" => $row["p_image"],
-				"p_name" => $row["p_name"],
-				"p_price" => $row["p_price"]
-			);
-		}
-	};
+		// Thêm thông tin từng hàng vào mảng $order_array
+		$order_array[] = array( // hãy giữ []
+			"o_id" => $row["o_id"],
+			"u_id" => $row["u_id"],
+			"p_id" => $row["p_id"],
+			"o_price" => $row["o_price"],
+			"o_quantity" => $row["o_quantity"],
+			"o_status" => $row["o_status"],
+			"p_type" => $row["p_type"],
+			"p_image" => $row["p_image"],
+			"p_name" => $row["p_name"],
+			"p_price" => $row["p_price"]
+		);
+	}
 } else {
 	// echo "0 results";
 }
@@ -126,31 +116,7 @@ if ($result->num_rows > 0) {
 	// echo "Không có dữ liệu trong bảng order";
 }
 
-// Truy vấn thông tin chiết khấu dựa trên tên discount (d_name)
-$sqlDiscount = "SELECT * FROM discount";
-$query = mysqli_query($conn, $sqlDiscount);
 
-// Mảng chứa thông tin chiết khấu
-$discount = array();
-
-// Kiểm tra kết quả truy vấn
-if ($query->num_rows > 0) {
-	// Lặp qua từng hàng dữ liệu từ kết quả truy vấn
-	while ($row = $query->fetch_assoc()) {
-		// Thêm thông tin từng hàng vào mảng $discount
-		$discount = array(
-			"d_id" => $row["d_id"],
-			"d_name" => $row["d_name"],
-			"d_amount" => $row["d_amount"],
-			"d_description" => $row["d_description"],
-			"d_start_date" => $row["d_start_date"],
-			"d_end_date" => $row["d_end_date"]
-		);
-	}
-} else {
-	// Nếu không tìm thấy kết quả
-	// echo "0 results";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -163,11 +129,10 @@ if ($query->num_rows > 0) {
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<link rel="stylesheet" href="../css/cart.css">
+	<link rel="stylesheet" href="../cart.css">
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
-	<!-- link icon -->
-	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome" href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
+	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+		href="../css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
 
@@ -179,7 +144,8 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-	<link rel="icon" type="image/png" href="images/icons/favicon.png" />
+	<!-- link icon -->
+	<link rel="icon" type="image/png" href="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
@@ -207,9 +173,9 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../css/util.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<link rel="stylesheet" type="text/css" href="../disproduct.css">
-	<link rel="stylesheet" href="../css/universal.css">
+	<link rel="stylesheet" type="text/css" href="../css/universal.css">
 	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="../css/darkcsspart2.css" disabled>
+	<link rel="stylesheet" href="../disproduct.css">
 	<!--===============================================================================================-->
 </head>
 
@@ -232,6 +198,44 @@ if ($query->num_rows > 0) {
 
 	.btn-delete:hover {
 		color: #F4538A;
+	}
+
+	.bear2 {
+		position: absolute;
+		left: 25%;
+		top: 0px;
+	}
+
+	.bear3 {
+		position: absolute;
+		left: 50%;
+		top: 0px;
+	}
+
+	.bear4 {
+		position: absolute;
+		left: 75%;
+		top: 0px;
+	}
+
+	.duck1 {
+		width: 260%;
+	}
+
+	.duck5 {
+		width: 260%;
+	}
+
+	.bear6 {
+		position: absolute;
+		left: 25%;
+		top: 21%;
+	}
+
+	#image-size{
+		width: 100%;
+        height: 300px; /* Đặt chiều cao cố định */
+        object-fit: cover; /* Giúp ảnh căn giữa và không bị biến dạng */
 	}
 </style>
 
@@ -259,36 +263,29 @@ if ($query->num_rows > 0) {
 					<div class="col-lg-6 text-center text-lg-right">
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-								target="_blank" title="Visit the Reis Adventures fanpage.">
+								target="_blank" title="Visit the Omacha Shop Philippines page.">
 								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-								title="Visit the Reis Adventures Twitter.">
+								title="Visit the Omacha Shop Philippines Twitter.">
 								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-								target="_blank" title="Visit the Reis Adventures Linkedin.">
+								target="_blank" title="Visit the Omacha Shop Philippines Linkedin.">
 								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-								target="_blank" title="Visit the Reis Adventures Instagram.">
+								target="_blank" title="Visit the Omacha Shop Philippines Instagram.">
 								<i style="
 										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
 										-webkit-background-clip: text;
 										-webkit-text-fill-color: transparent;
 								" class="fa-brands fa-square-instagram"></i>
 							</a>
-							<div class="data1">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b><?php echo $userLogin["userID"];?>
-										/</b></a>
-							</div>
-							<div class="data2">
-								<i style="color: #49243E;" class=""></i>
-								<a href="register.php" class="btn2 btn-primary2 mt-1"
-									style="color: #49243E;"><b><?php echo $userLogin["userName"];?></b></a>
-							</div>
+							
+							
+							
 						</div>
 					</div>
 				</div>
@@ -299,7 +296,7 @@ if ($query->num_rows > 0) {
 
 					<!-- Logo desktop -->
 					<a href="../index.php" class="navbar-brand">
-						<h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
+						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
 									src="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
@@ -307,18 +304,18 @@ if ($query->num_rows > 0) {
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a href="../index.php">Home</a>
-								<ul class="sub-menu">
-									<li><a href="../index.php#shop-by-category">Categories</a></li>
-									<li><a href="../index.php#new-arrivals">Arrivals</a></li>
-									<li><a href="../index.php#blog">Blog</a></li>
-									<li><a href="../index.php#top-brands">Top Brands</a></li>
+								<a class="darkModetxt" href="../index.php">Home</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="../index.php#shop-by-category">Categories</a></li>
+									<li><a class="darkModetxt" href="../index.php#new-arrivals">Arrivals</a></li>
+									<li><a class="darkModetxt" href="../index.php#blog">Blog</a></li>
+									<li><a class="darkModetxt" href="../index.php#top-brands">Top Brands</a></li>
 								</ul>
 
 							</li>
 
 							<li class="label1 active-menu" data-label1="new">
-							<a href="../product.php">Shop</a>
+								<a class="darkModetxt" href="../product.php">Shop</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="stuffed-animal-products.php">Stuffed Animals</a></li>
 									<li><a class="darkModetxt" href="fantasy-animal-products.php">Fantasy Animals</a></li>
@@ -329,15 +326,15 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="../shopping-cart.php">Cart</a>
+								<a class="darkModetxt" href="../shopping-cart.php">Cart</a>
 							</li>
 
 							<li>
-								<a href="../blog.php">Blog</a>
+								<a class="darkModetxt" href="../blog.php">Blog</a>
 							</li>
 
 							<li>
-								<a href="../about.php">About</a>
+								<a class="darkModetxt" href="../about.php">About</a>
 							</li>
 
 							<li>
@@ -381,7 +378,7 @@ if ($query->num_rows > 0) {
 									</li>
 										
 
-									<li><a href="../register.php">Logout</a></li>
+									<li><a href="../logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -392,9 +389,13 @@ if ($query->num_rows > 0) {
 
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
-			<!-- Logo moblie -->		
+			<!-- Logo moblie -->
 			<div class="logo-mobile">
-				<a href="../index.html"><img src="../images/icons/logo-01.png" alt="IMG-LOGO"></a>
+				<a href="../index.html" class="navbar-brand">
+
+					<img class="Imagealignment" src="../images/icon.png">
+
+				</a>
 			</div>
 
 			<!-- Icon header -->
@@ -403,11 +404,13 @@ if ($query->num_rows > 0) {
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
+				<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+					data-notify="<?php print_r($order_count); ?>">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
-				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
+				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
+					data-notify="0">
 					<i class="zmdi zmdi-favorite-outline"></i>
 				</a>
 			</div>
@@ -453,17 +456,24 @@ if ($query->num_rows > 0) {
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="../index.php">Home</a>
-					
+					<a class="darkModetxt" href="../index.php">Home</a>
+					<ul class="sub-menu-m darkModebg-black">
+						<li><a class="darkModetxt" href="../index.php#shop-by-category">Categories</a></li>
+						<li><a class="darkModetxt" href="../index.php#new-arrivals">Arrivals</a></li>
+						<li><a class="darkModetxt" href="../index.php#blog">Blog</a></li>
+						<li><a class="darkModetxt" href="../index.php#top-brands">Top Brands</a></li>
+					</ul>
+
 				</li>
 
 				<li>
-					<a href="../product2.php">Shop</a>
-					<ul class="sub-menu-m">
-					<li><a href="0_12months.php">0-12 Months</a></li>
-						<li><a href="1_2years.php">1-2 Years</a></li>
-						<li><a href="3+years.php">3+ Years</a></li>
-						<li><a href="5+years.php">5+ Years</a></li>
+					<a class="active-menu" href="../product.php">Shop</a>
+					<ul class="sub-menu-m darkModebg-black">
+						<li><a class="darkModetxt" href="stuffed-animal-products.php">Stuffed Animals</a></li>
+						<li><a class="darkModetxt" href="fantasy-animal-products.php">Fantasy Animals</a></li>
+						<li><a class="darkModetxt" href="teddy-bear-products.php">Teddy Bears</a></li>
+						<li class="active-menu"><a href="#go-up">Soft Dolls</a></li>
+						<li><a class="darkModetxt" href="plastic-toy-products.php">Plastic Toys</a></li>
 					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -471,19 +481,22 @@ if ($query->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="../shopping-cart.php" class="label1 rs1" data-label1="hot">Cart</a>
+					<a href="../shopping-cart.php" class="label1 rs1 darkModetxt" data-label1="hot">Cart</a>
 				</li>
 
 				<li>
-					<a href="../blog.php">Blog</a>
+					<a class="darkModetxt" href="../blog.php">Blog</a>
 				</li>
 
 				<li>
-					<a href="../about.php">About</a>
+					<a class="darkModetxt" href="../about.php">About</a>
 				</li>
 
 				<li>
-					<a href="../contact.php">Contact</a>
+					<a class="darkModetxt" href="../contact.php">Contact</a>
+					<ul class="sub-menu-m darkModebg-black">
+						<li><a class="darkModetxt" href="../customer-support.php">Customer Support</a></li>
+					</ul>
 				</li>
 			</ul>
 		</div>
@@ -491,26 +504,151 @@ if ($query->num_rows > 0) {
 		<!-- Modal Search -->
 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
-				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-					<img src="../images/icons/icon-close2.png" alt="CLOSE">
-				</button>
-
-				<form class="wrap-search-header flex-w p-l-15">
-					<button class="flex-c-m trans-04">
-						<i class="zmdi zmdi-search"></i>
-					</button>
-					<input class="plh3" type="text" name="search" placeholder="Search...">
-				</form>
+				<section class="bg0 p-t-62 p-b-60">
+					<div class="content">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="search-container">
+									<h1>🐻 What are you looking for?</h1>
+									<form class="search-box" action="#" method="GET">
+										<input type="text" placeholder="Search" name="search">
+										<button type="submit"><i class="fas fa-search"></i></button>
+										<!-- Using Font Awesome search icon -->
+									</form>
+									<div class="popular-searches">
+										<span>Popular searches:</span>
+										<a href="#" class="tag">Featured</a>
+										<a href="#" class="tag">Trendy</a>
+										<a href="#" class="tag">Sale</a>
+										<a href="#" class="tag">New</a>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="row justify-content-center mb-4">
+								<div class="col-12 text-left">
+									<h2>Recommended products</h2>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<!-- Recommended products -->
+								<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+									<a href="#">
+										<div class="card zoom-img" style="border-radius: 20px;">
+											<img src="../images/jellycat.png" alt="Product Image" class="img-fluid"
+												style="border-radius: 20px;">
+										</div>
+									</a>
+									<div class="text-center">
+										<h5 class="p-b-15">
+											<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+												Flower
+											</a>
+										</h5>
+										<p>$12.99</p>
+									</div>
+								</div>
+								<!-- Repeat the above block for other recommended products -->
+								<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+									<a href="#">
+										<div class="card zoom-img" style="border-radius: 20px;">
+											<img src="../images/Jelly Cat Flower.png" alt="Product Image" class="img-fluid"
+												style="border-radius: 20px;">
+										</div>
+									</a>
+									<div class="text-center">
+										<h5 class="p-b-15">
+											<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+												Flower
+											</a>
+										</h5>
+										<p>$10.99</p>
+									</div>
+								</div>
+								<!-- Repeat the above block for other recommended products -->
+								<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+									<a href="#">
+										<div class="card zoom-img" style="border-radius: 20px;">
+											<img src="../images/beartowel.png" alt="Product Image" class="img-fluid"
+												style="border-radius: 20px;">
+										</div>
+									</a>
+									<div class="text-center">
+										<h5 class="p-b-15">
+											<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+												Bear Baby Towel
+											</a>
+										</h5>
+										<p>$12.99</p>
+									</div>
+								</div>
+								<!-- Repeat the above block for other recommended products -->
+								<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+									<a href="#">
+										<div class="card zoom-img" style="border-radius: 20px;">
+											<img src="../images/Elephant.png" alt="Product Image" class="img-fluid"
+												style="border-radius: 20px;">
+										</div>
+									</a>
+									<div class="text-center">
+										<h5 class="p-b-15">
+											<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+												Elephant Jelly Cat
+											</a>
+										</h5>
+										<p>$10.99</p>
+									</div>
+								</div>
+								<!-- Repeat the above block for other recommended products -->
+								<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+									<a href="#">
+										<div class="card zoom-img" style="border-radius: 20px;">
+											<img src="../images/giraffe.png" alt="Product Image" class="img-fluid"
+												style="border-radius: 20px;">
+										</div>
+									</a>
+									<div class="text-center">
+										<h5 class="p-b-15">
+											<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+												Giraffe Jelly Cat
+											</a>
+										</h5>
+										<p>$12.99</p>
+									</div>
+								</div>
+								<!-- Repeat the above block for other recommended products -->
+								<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+									<a href="#">
+										<div class="card zoom-img" style="border-radius: 20px;">
+											<img src="../images/unicorn.png" alt="Product Image" class="img-fluid"
+												style="border-radius: 20px;">
+										</div>
+									</a>
+									<div class="text-center">
+										<h5 class="p-b-15">
+											<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+												Unicorn
+											</a>
+										</h5>
+										<p>$10.99</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 	</header>
+
 	<!-- Cart -->
 	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2">
+				<span class="mtext-103 cl2 darkModetxt">
 					Your Cart
 				</span>
 
@@ -521,36 +659,36 @@ if ($query->num_rows > 0) {
 
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
-					<span>Congratulations! You&#39;ve got <strong>Free Shipping!</strong></span>
-					<div class="progress1"></div>
 					<br>
 					<?php
 					// Duyệt qua mỗi sản phẩm trong giỏ hàng và hiển thị thông tin
 					foreach ($order_array as $item) {
 						// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
 						$product_images = array_map('trim', explode(',', $item["p_image"]));
-						
+
 						// mới có u_id $userLogin["userID"], 555
 						if ($item["u_id"] == $userLogin["userID"] && $item["o_quantity"] > 0 && $item["o_status"] == 0) {
-					?>
+							?>
 							<li class="header-cart-item m-b-20">
 								<div class="row">
 									<div class="col-md-3">
 										<div class="header-cart-item-img">
 											<!-- Hiện hình trong giỏ hàng -->
-											<img src="images/<?php echo $product_images[0]; ?>" alt="IMG">
+											<img src="../images/<?php echo $product_images[0]; ?>" alt="IMG">
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div >
+										<div>
 											<!-- Hiện tên sản phẩm trong giỏ hàng -->
-											<a href="#" class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
+											<a href="#"
+												class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
 										</div>
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
-										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x $<?php echo $item["p_price"]; ?></span>
+										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x
+											$<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
-										<form action="delete-cart2.php" method="post">											
+										<form action="../delete-cart2.php" method="post">
 											<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
 
 											<!-- Nút xóa tại đây -->
@@ -560,7 +698,7 @@ if ($query->num_rows > 0) {
 									</div>
 								</div>
 							</li>
-					<?php
+							<?php
 						}
 					}
 					?>
@@ -574,11 +712,13 @@ if ($query->num_rows > 0) {
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
-						<a href="shopping-cart.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						<a href="../shopping-cart.php" id="btn-cart"
+							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 							View Cart
 						</a>
 
-						<a href="your-order.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						<a href="../your-order.php" id="btn-cart"
+							class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
 							Your Order
 						</a>
 					</div>
@@ -587,21 +727,19 @@ if ($query->num_rows > 0) {
 		</div>
 	</div>
 
-	<!-- home intro -->
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-110 m-t-15" style="background-image: url('../images/background-image.png');">
-		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-50">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-10" style="background-image: url('../images/background-image.png');">
+		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
 			Soft Doll Products
 		</h2>
 	</section>
 
-
 	<!-- Product -->
-	<div class="m-t-23 p-b-140">
+	<div >
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+					<button class="stext-106 cl6 hov1 trans-04 m-r-32 m-tb-5 how-active1 darkModehyperlink-omacha" data-filter="*">
 						All Products
 					</button>
 
@@ -967,7 +1105,7 @@ if ($query->num_rows > 0) {
 								<div class="block2-txt flex-w flex-t p-t-14">
 									<div class="block2-txt-child1 flex-col-l">
 										<a href="../productdetail.php?p_id=<?php echo $product['p_id']; ?>"
-											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
+											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 											<?php echo $product["p_name"]; ?>
 										</a>
 										<p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1 darkModetxt">
@@ -998,162 +1136,158 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32" id="footer_res">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-lg-3 p-b-50">
-						<h4 class="stext-301 cl0 p-b-30">
-							Categories
-						</h4>
-
-						<ul>
-							<li class="p-b-10">
-								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Women
-								</a>
-							</li>
-
-							<li class="p-b-10">
-								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Men
-								</a>
-							</li>
-
-							<li class="p-b-10">
-								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Shoes
-								</a>
-							</li>
-
-							<li class="p-b-10">
-								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Watches
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="col-sm-6 col-lg-3 p-b-50">
-						<h4 class="stext-301 cl0 p-b-30">
-							Help
-						</h4>
-
-						<ul>
-							<li class="p-b-10">
-								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Track Order
-								</a>
-							</li>
-
-							<li class="p-b-10">
-								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Returns
-								</a>
-							</li>
-
-							<li class="p-b-10">
-								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									Shipping
-								</a>
-							</li>
-
-							<li class="p-b-10">
-								<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-									FAQs
-								</a>
-							</li>
-						</ul>
-					</div>
-
-					<div class="col-sm-6 col-lg-3 p-b-50">
-						<h4 class="stext-301 cl0 p-b-30">
-							GET IN TOUCH
-						</h4>
-
-						<p class="stext-107 cl7 size-201">
-							Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call
-							us
-							on (+1) 96 716 6879
-						</p>
-
-						<div class="p-t-27">
-							<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-								<i class="fa fa-facebook"></i>
+	<footer class="bg3 p-t-100 p-b-25">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl10 p-b-30">
+						Legal
+					</h4>
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Faq
 							</a>
+						</li>
 
-							<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-								<i class="fa fa-instagram"></i>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Retailers
 							</a>
+						</li>
 
-							<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-								<i class="fa fa-pinterest-p"></i>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Privacy Policy
 							</a>
-						</div>
-					</div>
+						</li>
 
-					<div class="col-sm-6 col-lg-3 p-b-50">
-						<h4 class="stext-301 cl0 p-b-30">
-							Newsletter
-						</h4>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Cookies
+							</a>
+						</li>
+					</ul>
+				</div>
 
-						<form>
-							<div class="wrap-input1 w-full p-b-4">
-								<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
-									placeholder="omachashopofficial@gmail.com">
-								<div class="focus-input1 trans-04"></div>
-							</div>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl10 p-b-30">
+						Services
+					</h4>
 
-							<div class="p-t-18">
-								<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-									Subscribe
-								</button>
-							</div>
-						</form>
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Order
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Returns
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shipping
+							</a>
+						</li>
+
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								FAQs
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl10 p-b-30">
+						GET IN TOUCH
+					</h4>
+
+					<p class="stext-107 size-201">
+						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
+						on (+1) 96 716 6879
+					</p>
+
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa-brands fa-facebook fa-lg" style="color: #19f574;"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa-brands fa-instagram fa-lg" style="color: #19f574;"></i>
+						</a>
+
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #19f574;"></i>
+						</a>
 					</div>
 				</div>
 
-				<div class="p-t-40">
-					<div class="flex-c-m flex-w p-b-18">
-						<a href="#" class="m-all-1">
-							<img src="../images/icons/icon-pay-01.png" alt="ICON-PAY">
-						</a>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl10 p-b-30">
+						Newsletter
+					</h4>
 
-						<a href="#" class="m-all-1">
-							<img src="../images/icons/icon-pay-02.png" alt="ICON-PAY">
-						</a>
+					<form>
+						<div class="wrap-input1 w-full p-b-4">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
+								placeholder="email@example.com">
+							<div class="focus-input1 trans-04"></div>
+						</div>
 
-						<a href="#" class="m-all-1">
-							<img src="../images/icons/icon-pay-03.png" alt="ICON-PAY">
-						</a>
-
-						<a href="#" class="m-all-1">
-							<img src="../images/icons/icon-pay-04.png" alt="ICON-PAY">
-						</a>
-
-						<a href="#" class="m-all-1">
-							<img src="../images/icons/icon-pay-05.png" alt="ICON-PAY">
-						</a>
-					</div>
-
-					<p class="stext-107 cl6 txt-center">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> All rights reserved |Made with <i
-							class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
-							target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com"
-							target="_blank">ThemeWagon</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-					</p>
+						<div class="p-t-18">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
+								Subscribe
+							</button>
+						</div>
+					</form>
 				</div>
 			</div>
-		</footer>
+
+			<div class="p-t-40">
+				<div class="flex-c-m flex-w p-b-18">
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+					</a>
+
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+					</a>
+				</div>
+
+				<p class="stext-107 cl6 txt-center">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
+						class="fa fa-heart-o" aria-hidden="true"></i> Group 5
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+				</p>
+			</div>
+		</div>
+	</footer>
 
 
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
-			<i class="zmdi zmdi-chevron-up"></i>
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>
 	</div>
 
@@ -1179,7 +1313,8 @@ if ($query->num_rows > 0) {
 										<div class="wrap-pic-w pos-relative">
 											<img src="../images/product-detail-01.jpg" alt="IMG-PRODUCT">
 
-											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="../images/product-detail-01.jpg">
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
+												href="../images/product-detail-01.jpg">
 												<i class="fa fa-expand"></i>
 											</a>
 										</div>
@@ -1189,7 +1324,8 @@ if ($query->num_rows > 0) {
 										<div class="wrap-pic-w pos-relative">
 											<img src="../images/product-detail-02.jpg" alt="IMG-PRODUCT">
 
-											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="../images/product-detail-02.jpg">
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
+												href="../images/product-detail-02.jpg">
 												<i class="fa fa-expand"></i>
 											</a>
 										</div>
@@ -1199,7 +1335,8 @@ if ($query->num_rows > 0) {
 										<div class="wrap-pic-w pos-relative">
 											<img src="../images/product-detail-03.jpg" alt="IMG-PRODUCT">
 
-											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="../images/product-detail-03.jpg">
+											<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
+												href="../images/product-detail-03.jpg">
 												<i class="fa fa-expand"></i>
 											</a>
 										</div>
@@ -1271,14 +1408,16 @@ if ($query->num_rows > 0) {
 												<i class="fs-16 zmdi zmdi-minus"></i>
 											</div>
 
-											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+											<input class="mtext-104 cl3 txt-center num-product" type="number"
+												name="num-product" value="1">
 
 											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
 												<i class="fs-16 zmdi zmdi-plus"></i>
 											</div>
 										</div>
 
-										<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+										<button
+											class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
 											Add to cart
 										</button>
 									</div>
@@ -1288,20 +1427,25 @@ if ($query->num_rows > 0) {
 							<!--  -->
 							<div class="flex-w flex-m p-l-100 p-t-40 respon7">
 								<div class="flex-m bor9 p-r-10 m-r-11">
-									<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">
+									<a href="#"
+										class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100"
+										data-tooltip="Add to Wishlist">
 										<i class="zmdi zmdi-favorite"></i>
 									</a>
 								</div>
 
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Facebook">
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
+									data-tooltip="Facebook">
 									<i class="fa fa-facebook"></i>
 								</a>
 
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Twitter">
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
+									data-tooltip="Twitter">
 									<i class="fa fa-twitter"></i>
 								</a>
 
-								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100" data-tooltip="Google Plus">
+								<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
+									data-tooltip="Google Plus">
 									<i class="fa fa-google-plus"></i>
 								</a>
 							</div>
@@ -1322,7 +1466,7 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 	<script src="../vendor/select2/select2.min.js"></script>
 	<script>
-		$(".js-select2").each(function() {
+		$(".js-select2").each(function () {
 			$(this).select2({
 				minimumResultsForSearch: 20,
 				dropdownParent: $(this).next('.dropDownSelect2')
@@ -1343,7 +1487,7 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 	<script src="../vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 	<script>
-		$('.gallery-lb').each(function() { // the containers for all your galleries
+		$('.gallery-lb').each(function () { // the containers for all your galleries
 			$(this).magnificPopup({
 				delegate: 'a', // the selector for gallery item
 				type: 'image',
@@ -1359,13 +1503,13 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 	<script src="../vendor/sweetalert/sweetalert.min.js"></script>
 	<script>
-		$('.js-addwish-b2, .js-addwish-detail').on('click', function(e) {
+		$('.js-addwish-b2, .js-addwish-detail').on('click', function (e) {
 			e.preventDefault();
 		});
 
-		$('.js-addwish-b2').each(function() {
+		$('.js-addwish-b2').each(function () {
 			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-			$(this).on('click', function() {
+			$(this).on('click', function () {
 				swal(nameProduct, "is added to wishlist !", "success");
 
 				$(this).addClass('js-addedwish-b2');
@@ -1373,10 +1517,10 @@ if ($query->num_rows > 0) {
 			});
 		});
 
-		$('.js-addwish-detail').each(function() {
+		$('.js-addwish-detail').each(function () {
 			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
 
-			$(this).on('click', function() {
+			$(this).on('click', function () {
 				swal(nameProduct, "is added to wishlist !", "success");
 
 				$(this).addClass('js-addedwish-detail');
@@ -1386,9 +1530,9 @@ if ($query->num_rows > 0) {
 
 		/*---------------------------------------------*/
 
-		$('.js-addcart-detail').each(function() {
+		$('.js-addcart-detail').each(function () {
 			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
-			$(this).on('click', function() {
+			$(this).on('click', function () {
 				swal(nameProduct, "is added to cart !", "success");
 			});
 		});
@@ -1396,7 +1540,7 @@ if ($query->num_rows > 0) {
 	<!--===============================================================================================-->
 	<script src="../vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
-		$('.js-pscroll').each(function() {
+		$('.js-pscroll').each(function () {
 			$(this).css('position', 'relative');
 			$(this).css('overflow', 'hidden');
 			var ps = new PerfectScrollbar(this, {
@@ -1405,28 +1549,10 @@ if ($query->num_rows > 0) {
 				wheelPropagation: false,
 			});
 
-			$(window).on('resize', function() {
+			$(window).on('resize', function () {
 				ps.update();
 			})
 		});
-	</script>
-	<!--===============================================================================================-->
-	<script>
-	(function() {
-	let scrollTimer;
-
-	window.addEventListener('scroll', () => {
-		// Add class for both HTML and BODY to ensure cross-browser compatibility
-		document.body.classList.add('scrolling');
-		document.documentElement.classList.add('scrolling');
-
-		clearTimeout(scrollTimer);
-		scrollTimer = setTimeout(() => {
-		document.body.classList.remove('scrolling');
-		document.documentElement.classList.remove('scrolling');
-		}, 600); // adjust delay if you want the glow to last longer
-	});
-	})();
 	</script>
 	<!--===============================================================================================-->
 	<script src="../js/main.js"></script>

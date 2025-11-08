@@ -1,13 +1,13 @@
 <?php
 
-include 'login.php';
+include '../login.php';
 
-include ('../Admin/connection/connectionpro.php');
-require_once '../Admin/connection/connectData.php';
+include ('../../Admin/connection/connectionpro.php');
+require_once '../../Admin/connection/connectData.php';
 
 if (!isset($_SESSION["user"])) {
 	// Redirect user to the login page if not logged in
-	header("Location: login.html");
+	header("Location: ../login.html");
 	exit(); // Stop further execution of the script
 }
 
@@ -122,17 +122,17 @@ if ($result->num_rows > 0) {
 <html lang="en">
 
 <head>
-	<title>Omacha Shop | General Products</title>
+	<title>Omacha Shop | Stuffed Animals</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-	<link rel="stylesheet" href="cart.css">
+	<link rel="stylesheet" href="../cart.css">
 	<!-- link icon -->
 	<link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
-		href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
+		href="../css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d">
 
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
 
@@ -145,37 +145,37 @@ if ($result->num_rows > 0) {
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
+	<link rel="icon" type="image/png" href="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/linearicons-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/slick/slick.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/MagnificPopup/magnific-popup.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/universal.css">
-	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
-	<link rel="stylesheet" href="disproduct.css">
+	<link rel="stylesheet" type="text/css" href="../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/universal.css">
+	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="../css/darkcsspart2.css" disabled>
+	<link rel="stylesheet" href="../disproduct.css">
 	<!--===============================================================================================-->
 </head>
 
@@ -263,20 +263,20 @@ if ($result->num_rows > 0) {
 					<div class="col-lg-6 text-center text-lg-right">
 						<div class="d-inline-flex align-items-center">
 							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-								target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
+								target="_blank" title="Visit the Omacha Shop Philippines page.">
 								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-								title="Visit the Reis Omacha Shop Philippines Twitter.">
+								title="Visit the Omacha Shop Philippines Twitter.">
 								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
 							</a>
 							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-								target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
+								target="_blank" title="Visit the Omacha Shop Philippines Linkedin.">
 								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
 							</a>
 							<a class="text-primary px-3"
 								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-								target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
+								target="_blank" title="Visit the Omacha Shop Philippines Instagram.">
 								<i style="
 										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
 										-webkit-background-clip: text;
@@ -295,16 +295,16 @@ if ($result->num_rows > 0) {
 				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
-					<a href="index.php" class="navbar-brand">
+					<a href="../index.php" class="navbar-brand">
 						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
-									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
+									src="../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a class="darkModetxt" href="index.php">Home</a>
+								<a class="darkModetxt" href="../index.php">Home</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="../index.php#shop-by-category">Categories</a></li>
 									<li><a class="darkModetxt" href="../index.php#new-arrivals">Arrivals</a></li>
@@ -315,9 +315,9 @@ if ($result->num_rows > 0) {
 							</li>
 
 							<li class="label1 active-menu" data-label1="new">
-							<a class="darkModetxt" href="../product.php">Shop</a>
+								<a class="darkModetxt" href="../product.php">Shop</a>
 								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="stuffed-animal-products.php">Stuffed Animals</a></li>
+									<li class="active-menu"><a href="#go-up">Stuffed Animals</a></li>
 									<li><a class="darkModetxt" href="fantasy-animal-products.php">Fantasy Animals</a></li>
 									<li><a class="darkModetxt" href="teddy-bear-products.php">Teddy Bears</a></li>
 									<li><a class="darkModetxt" href="soft-doll-products.php">Soft Dolls</a></li>
@@ -456,17 +456,24 @@ if ($result->num_rows > 0) {
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="../index.php">Home</a>
+					<a class="darkModetxt" href="../index.php">Home</a>
+					<ul class="sub-menu-m darkModebg-black">
+						<li><a class="darkModetxt" href="../index.php#shop-by-category">Categories</a></li>
+						<li><a class="darkModetxt" href="../index.php#new-arrivals">Arrivals</a></li>
+						<li><a class="darkModetxt" href="../index.php#blog">Blog</a></li>
+						<li><a class="darkModetxt" href="../index.php#top-brands">Top Brands</a></li>
+					</ul>
 
 				</li>
 
 				<li>
-					<a href="../product2.php">Shop</a>
-					<ul class="sub-menu-m">
-						<li><a href="0_12months.php">0-12 Months</a></li>
-						<li><a href="1_2years.php">1-2 Years</a></li>
-						<li><a href="3+years.php">3+ Years</a></li>
-						<li><a href="5+years.php">5+ Years</a></li>
+					<a class="active-menu" href="../product.php">Shop</a>
+					<ul class="sub-menu-m darkModebg-black">
+						<li class="active-menu"><a href="#go-up">Stuffed Animals</a></li>
+						<li><a class="darkModetxt" href="fantasy-animal-products.php">Fantasy Animals</a></li>
+						<li><a class="darkModetxt" href="teddy-bear-products.php">Teddy Bears</a></li>
+						<li><a class="darkModetxt" href="soft-doll-products.php">Soft Dolls</a></li>
+						<li><a class="darkModetxt" href="plastic-toy-products.php">Plastic Toys</a></li>
 					</ul>
 					<span class="arrow-main-menu-m">
 						<i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -474,19 +481,22 @@ if ($result->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="../shoping-cart.php" class="label1 rs1" data-label1="hot">Cart</a>
+					<a href="../shopping-cart.php" class="label1 rs1 darkModetxt" data-label1="hot">Cart</a>
 				</li>
 
 				<li>
-					<a href="../blog.php">Blog</a>
+					<a class="darkModetxt" href="../blog.php">Blog</a>
 				</li>
 
 				<li>
-					<a href="../about.php">About</a>
+					<a class="darkModetxt" href="../about.php">About</a>
 				</li>
 
 				<li>
-					<a href="../contact.php">Contact</a>
+					<a class="darkModetxt" href="../contact.php">Contact</a>
+					<ul class="sub-menu-m darkModebg-black">
+						<li><a class="darkModetxt" href="../customer-support.php">Customer Support</a></li>
+					</ul>
 				</li>
 			</ul>
 		</div>
@@ -729,7 +739,7 @@ if ($result->num_rows > 0) {
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+					<button class="stext-106 cl6 hov1 trans-04 m-r-32 m-tb-5 how-active1 darkModehyperlink-omacha" data-filter="*">
 						All Products
 					</button>
 
@@ -1095,7 +1105,7 @@ if ($result->num_rows > 0) {
 								<div class="block2-txt flex-w flex-t p-t-14">
 									<div class="block2-txt-child1 flex-col-l">
 										<a href="../productdetail.php?p_id=<?php echo $product['p_id']; ?>"
-											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
+											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 											<?php echo $product["p_name"]; ?>
 										</a>
 										<p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1 darkModetxt">
@@ -1125,7 +1135,7 @@ if ($result->num_rows > 0) {
 	</div>
 
 
-	    <!-- Footer -->
+	<!-- Footer -->
 	<footer class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
@@ -1204,15 +1214,15 @@ if ($result->num_rows > 0) {
 
 					<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-facebook fa-lg" style="color: #ea539c;"></i>
+							<i class="fa-brands fa-facebook fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-instagram fa-lg" style="color: #e151a5;"></i>
+							<i class="fa-brands fa-instagram fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-pinterest fa-lg" style="color: #e74b7a;"></i>
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #19f574;"></i>
 						</a>
 					</div>
 				</div>
@@ -1230,7 +1240,7 @@ if ($result->num_rows > 0) {
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
 								Subscribe
 							</button>
 						</div>
@@ -1241,23 +1251,23 @@ if ($result->num_rows > 0) {
 			<div class="p-t-40">
 				<div class="flex-c-m flex-w p-b-18">
 					<a href="#" class="m-all-1">
-						<img src="../images/icons/icon-pay-01.png" alt="ICON-PAY">
+						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="../images/icons/icon-pay-02.png" alt="ICON-PAY">
+						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="../images/icons/icon-pay-03.png" alt="ICON-PAY">
+						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="../images/icons/icon-pay-04.png" alt="ICON-PAY">
+						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="../images/icons/icon-pay-05.png" alt="ICON-PAY">
+						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
 					</a>
 				</div>
 

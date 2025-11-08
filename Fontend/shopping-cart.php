@@ -372,12 +372,12 @@ if ($query->num_rows > 0) {
 
 							<li class="label1" data-label1="new">
 							<a href="product.php">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="./Products/convenience-products.php">Convenience</a></li>
-									<li><a href="./Products/shopping-products.php">Shopping</a></li>
-									<li><a href="./Products/specialty-products.php">Specialty</a></li>
-									<li><a href="./Products/unsought-products.php">Unsought</a></li>
-									<li><a href="./Products/digital-products.php">Digital</a></li>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
+									<li><a class="darkModetxt" href="./Products/fantasy-animal-products.php">Fantasy Animals</a></li>
+									<li><a class="darkModetxt" href="./Products/teddy-bear-products.php">Teddy Bears</a></li>
+									<li><a class="darkModetxt" href="./Products/soft-doll-products.php">Soft Dolls</a></li>
+									<li><a class="darkModetxt" href="./Products/plastic-toy-products.php">Plastic Toys</a></li>
 								</ul>
 							</li>
 
@@ -837,44 +837,43 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32">
+	<footer class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Categories
+					<h4 class="stext-301 cl10 p-b-30">
+						Legal
 					</h4>
-
 					<ul>
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Women
+								Faq
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Men
+								Retailers
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Shoes
+								Privacy Policy
 							</a>
 						</li>
 
 						<li class="p-b-10">
 							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-								Watches
+								Cookies
 							</a>
 						</li>
 					</ul>
 				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-						Help
+					<h4 class="stext-301 cl10 p-b-30">
+						Services
 					</h4>
 
 					<ul>
@@ -905,42 +904,44 @@ if ($query->num_rows > 0) {
 				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
+					<h4 class="stext-301 cl10 p-b-30">
 						GET IN TOUCH
 					</h4>
 
-					<p class="stext-107 cl7 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+					<p class="stext-107 size-201">
+						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
+						on (+1) 96 716 6879
 					</p>
 
 					<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-facebook"></i>
+							<i class="fa-brands fa-facebook fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-instagram"></i>
+							<i class="fa-brands fa-instagram fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa fa-pinterest-p"></i>
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #19f574;"></i>
 						</a>
 					</div>
 				</div>
 
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
+					<h4 class="stext-301 cl10 p-b-30">
 						Newsletter
 					</h4>
 
 					<form>
 						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
+								placeholder="email@example.com">
 							<div class="focus-input1 trans-04"></div>
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
 								Subscribe
 							</button>
 						</div>
@@ -973,9 +974,9 @@ if ($query->num_rows > 0) {
 
 				<p class="stext-107 cl6 txt-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;<script>
-						document.write(new Date().getFullYear());
-					</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
+						class="fa fa-heart-o" aria-hidden="true"></i> Group 5
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
 				</p>

@@ -361,12 +361,12 @@ if ($query->num_rows > 0) {
 
 							<li class="label1" data-label1="new">
 							<a href="product.php">Shop</a>
-								<ul class="sub-menu">
-									<li><a href="./Products/convenience-products.php">Convenience</a></li>
-									<li><a href="./Products/shopping-products.php">Shopping</a></li>
-									<li><a href="./Products/specialty-products.php">Specialty</a></li>
-									<li><a href="./Products/unsought-products.php">Unsought</a></li>
-									<li><a href="./Products/digital-products.php">Digital</a></li>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
+									<li><a class="darkModetxt" href="./Products/fantasy-animal-products.php">Fantasy Animals</a></li>
+									<li><a class="darkModetxt" href="./Products/teddy-bear-products.php">Teddy Bears</a></li>
+									<li><a class="darkModetxt" href="./Products/soft-doll-products.php">Soft Dolls</a></li>
+									<li><a class="darkModetxt" href="./Products/plastic-toy-products.php">Plastic Toys</a></li>
 								</ul>
 							</li>
 
@@ -1133,15 +1133,15 @@ if ($query->num_rows > 0) {
 
 					<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-facebook fa-lg" style="color: #ea539c;"></i>
+							<i class="fa-brands fa-facebook fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-instagram fa-lg" style="color: #e151a5;"></i>
+							<i class="fa-brands fa-instagram fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-pinterest fa-lg" style="color: #e74b7a;"></i>
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #19f574;"></i>
 						</a>
 					</div>
 				</div>

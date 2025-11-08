@@ -729,7 +729,7 @@ if ($result->num_rows > 0) {
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+					<button class="stext-106 cl6 hov1 trans-04 m-r-32 m-tb-5 how-active1 darkModehyperlink-omacha" data-filter="*">
 						All Products
 					</button>
 
@@ -1095,7 +1095,7 @@ if ($result->num_rows > 0) {
 								<div class="block2-txt flex-w flex-t p-t-14">
 									<div class="block2-txt-child1 flex-col-l">
 										<a href="productdetail.php?p_id=<?php echo $product['p_id']; ?>"
-											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModetxt">
+											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 											<?php echo $product["p_name"]; ?>
 										</a>
 										<p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1 darkModetxt">
@@ -1125,7 +1125,7 @@ if ($result->num_rows > 0) {
 	</div>
 
 
-	    <!-- Footer -->
+	<!-- Footer -->
 	<footer class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
@@ -1204,15 +1204,15 @@ if ($result->num_rows > 0) {
 
 					<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-facebook fa-lg" style="color: #ea539c;"></i>
+							<i class="fa-brands fa-facebook fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-instagram fa-lg" style="color: #e151a5;"></i>
+							<i class="fa-brands fa-instagram fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-pinterest fa-lg" style="color: #e74b7a;"></i>
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #19f574;"></i>
 						</a>
 					</div>
 				</div>
@@ -1230,7 +1230,7 @@ if ($result->num_rows > 0) {
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
 								Subscribe
 							</button>
 						</div>
