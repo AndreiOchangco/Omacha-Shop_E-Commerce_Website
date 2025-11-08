@@ -50,6 +50,36 @@ ul.sub-menu {
     color: #19f574 !important;
 }
 
+.darkModeBtn {
+    background-color: #19f574 !important;
+    border-color: #19f574;
+    color: #181818 !important;
+}
+
+.darkModeBtn:hover {
+    background-color: #16c261 !important;
+    border-color: #16c261;
+    color: #181818 !important;
+}
+
+.darkModeBtn-outline {
+    background-color: transparent !important;
+    border-color: #f1f1f1 !important;
+    color: #f1f1f1 !important;
+}
+
+.darkModeBtn-outline:hover {
+    background-color: #19f574 !important;
+    border-color: #19f574 !important;
+    color: #232323 !important;
+}
+
+.darkModeBtn-ActiveOutline {
+    background-color: #19f574 !important;
+    border-color: #19f574 !important;
+    color: #232323 !important;
+}
+
 .main-menu > li:hover > a {
   text-decoration: none;
   color: #19f574;

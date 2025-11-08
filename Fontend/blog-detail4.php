@@ -150,7 +150,6 @@ if ($query->num_rows > 0) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<title>Omacha Shop | Blog</title>
 	<meta charset="UTF-8">
@@ -287,7 +286,6 @@ if ($query->num_rows > 0) {
 </head>
 
 <body class="animsition">
-
 	<!-- Header -->
 	<header id="go-up">
 		<!-- Header desktop -->
@@ -377,7 +375,7 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li class="active-menu">
-								<a href="#go-up">Blog</a>
+								<a href="blog.php">Blog</a>
 							</li>
 
 							<li>
@@ -436,7 +434,7 @@ if ($query->num_rows > 0) {
 
 		<!-- Header Mobile -->
 		<div class="wrap-header-mobile">
-			<!-- Logo moblie -->
+			<!-- Logo moblie -->		
 			<div class="logo-mobile">
 				<a href="index.html"><img src="images/icons/logo-01.png" alt="IMG-LOGO"></a>
 			</div>
@@ -447,13 +445,11 @@ if ($query->num_rows > 0) {
 					<i class="zmdi zmdi-search"></i>
 				</div>
 
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
-					data-notify="2">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 
-				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
-					data-notify="0">
+				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
 					<i class="zmdi zmdi-favorite-outline"></i>
 				</a>
 			</div>
@@ -469,33 +465,33 @@ if ($query->num_rows > 0) {
 
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<ul class="topbar-mobile">
-				<li>
-					<div class="left-top-bar">
-						Free shipping for standard order over $100
-					</div>
-				</li>
+				<ul class="topbar-mobile">
+					<li>
+						<div class="left-top-bar">
+							Free shipping for standard order over $100
+						</div>
+					</li>
 
-				<li>
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							Help & FAQs
-						</a>
+					<li>
+						<div class="right-top-bar flex-w h-full">
+							<a href="#" class="flex-c-m p-lr-10 trans-04">
+								Help & FAQs
+							</a>
 
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							My Account
-						</a>
+							<a href="#" class="flex-c-m p-lr-10 trans-04">
+								My Account
+							</a>
 
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							EN
-						</a>
+							<a href="#" class="flex-c-m p-lr-10 trans-04">
+								EN
+							</a>
 
-						<a href="#" class="flex-c-m p-lr-10 trans-04">
-							USD
-						</a>
-					</div>
-				</li>
-			</ul>
+							<a href="#" class="flex-c-m p-lr-10 trans-04">
+								USD
+							</a>
+						</div>
+					</li>
+				</ul>
 
 			<ul class="main-menu-m">
 				<li>
@@ -511,7 +507,7 @@ if ($query->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="product2.php">Shop</a>
+					<a href="product.html">Shop</a>
 				</li>
 
 				<li>
@@ -519,15 +515,15 @@ if ($query->num_rows > 0) {
 				</li>
 
 				<li>
-					<a href="blog.php">Blog</a>
+					<a href="blog.html">Blog</a>
 				</li>
 
 				<li>
-					<a href="about.php">About</a>
+					<a href="about.html">About</a>
 				</li>
 
 				<li>
-					<a href="contact.php">Contact</a>
+					<a href="contact.html">Contact</a>
 				</li>
 			</ul>
 		</div>
@@ -630,101 +626,238 @@ if ($query->num_rows > 0) {
 		</div>
 	</div>
 
+	<!-- breadcrumb -->
+	<div class="container m-t-50">
+		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
+				Home
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
 
-	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
-		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
-			Blog
-		</h2>
-	</section>
+			<a href="blog.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
+				Blog
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
+
+			<span class="stext-109 cl4 darkModetxt">
+				Build Worlds, Collect Pieces With Your Young Ones
+			</span>
+		</div>
+	</div>
 
 
 	<!-- Content page -->
-	<section class="bg0 p-t-62 p-b-60">
+	<section class="bg0 p-t-52 p-b-20">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-lg-9 p-b-80">
 					<div class="p-r-45 p-r-0-lg">
-						<!-- item blog -->
-						<div class="container">
-							<div class="row">
-								<!-- Tenth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail10.php">
-										<div class="card" style="border: none;">
-											<img src="images/8.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail10.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												What's Hot and What's Not in the Toy World
-											</a>
-										</h5>
-										<p>In the ever-evolving toy world, trends come and go, shaping...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail10.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
+						<!--  -->
+						<div class="wrap-pic-w how-pos5-parent img04">
+							<img src="images/02.jpg" alt="IMG-BLOG">
 
-								<!-- Eleventh Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail11.php">
-										<div class="card" style="border: none;">
-											<img src="images/10.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail11.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												The Incredible Impact of Toys On Young Minds
-											</a>
-										</h5>
-										<p>Toys wield an incredible influence on the minds of children,...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail11.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
+							<div class="flex-col-c-m size-123 bg9 how-pos5">
+								<span class="ltext-107 cl2 txt-center">
+									14
+								</span>
 
+								<span class="stext-109 cl3 txt-center">
+									Feb 2024
+								</span>
 							</div>
 						</div>
 
-						<!-- Pagination -->
-						<div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
-							<a href="blog.php" class="flex-c-m how-pagination1 trans-04 m-all-7 darkModeBtn-outline">
-								1
-							</a>
+						<div class="p-t-32">
+							<span class="flex-w flex-m stext-111 cl2 p-b-19 darkModetxt">
+								<span>
+									<span class="cl4 darkModetxt">By</span> John Mathew
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
 
-							<a href="blog2.php" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1 darkModeBtn-ActiveOutline">
-								2
-							</a>
+								<span>
+									14 Feb, 2024
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
+
+								<span>
+									Kids, Sofy toys, Toys  
+									<span class="cl12 m-l-4 m-r-6">|</span>
+								</span>
+
+								<span>
+									8 Comments
+								</span>
+							</span>
+
+							<h4 class="ltext-109 cl2 p-b-28 darkModetxt-omacha">
+								Build Worlds, Collect Pieces With Your Young Ones
+							</h4>
+
+							<p style="text-align:justify; " class="stext-117 cl6 p-b-26 darkModetxt">
+								Building worlds and collecting pieces with your young ones is not just about creating physical structures; it's about fostering creativity, imagination, and bonding. Whether it's constructing elaborate Lego creations, piecing together puzzles, or designing imaginative landscapes with building blocks, these activities provide valuable opportunities for children to explore their creativity and problem-solving skills.
+							</p>
+
+							<p style="text-align:justify; " class="stext-117 cl6 p-b-26 darkModetxt">
+								Moreover, engaging in such activities promotes collaboration and communication as children work together to bring their ideas to life. Through building and collecting, children learn important concepts such as spatial awareness, pattern recognition, and perseverance. As parents or caregivers, participating in these activities with your young ones not only strengthens your bond but also allows you to witness their growth and development firsthand. So, dive into the world of building and collecting with your children, and watch as their imaginations soar and their confidence grows with each piece they add to their creations.
+							</p>
 						</div>
+
+						<div class="flex-w flex-t p-t-16">
+							<span class="size-216 stext-116 cl8 p-t-4 darkModetxt">
+								Tags
+							</span>
+
+							<div class="flex-w size-217">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									kids
+								</a>
+
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									sofy toys
+								</a>
+
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+									toys
+								</a>
+							</div>
+						</div>
+						<br><br><br><br>
+						<!-- comment -->
+						<?php
+						require_once 'connect.php';
+
+						$error = '';
+
+						// Add Comment
+						if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['addComment'])) {
+							$name = $_POST['commentName'];
+							$date = $_POST['dateComment'];
+							$cmt = $_POST['commentText'];
+							$email = $_POST['email'];
+
+							// Validate input fields if needed
+
+							// Check if the combination of name, date, comment text, and email is unique
+							$sql_check_unique = "SELECT * FROM comments WHERE commentName='$name' AND dateComment='$date' AND commentText='$cmt' AND email='$email'";
+							$result_check_unique = mysqli_query($conn, $sql_check_unique);
+							if (mysqli_num_rows($result_check_unique) > 0) {
+								$error = "Email hoặc ngày đã tồn tại.";
+							} else {
+								// Insert new comment into the database
+								$sql = "INSERT INTO comments (commentName, dateComment, commentText, email) 
+										VALUES ('$name', '$date', '$cmt', '$email')";
+								if (mysqli_query($conn, $sql)) {
+									header('location: blog-detail1]].php');
+									exit; // Make sure to exit after redirecting
+								} else {
+									$error = 'Có lỗi, vui lòng thử lại';
+								}
+							}
+						}
+
+						// Add Reply
+						if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['addReply'])) {
+							$commentID = $_POST['commentID'];
+							$replyText = $_POST['replyText'];
+
+							// Validate input fields if needed
+
+							// Update the comments table with the reply
+							$sql_update_reply = "UPDATE comments SET replyText='$replyText' WHERE IDcomment='$commentID'";
+							if (mysqli_query($conn, $sql_update_reply)) {
+								header('location: blog-detail1.php');
+								exit; // Make sure to exit after redirecting
+							} else {
+								$error = 'Có lỗi, vui lòng thử lại';
+							}
+						}
+
+						// Retrieve comments from the database
+						$sql_select_comments = "SELECT * FROM comments";
+						$result = mysqli_query($conn, $sql_select_comments);
+						?>
+
+						<!-- HTML content starts after PHP code -->
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+								<h3 class="panel-title">Create Comment</h3>
+							</div>
+							<br><br>
+							<div class="panel-body">
+								<form action="" method="POST" role="form">
+									<!-- Add hidden input field for id -->
+									<input type="hidden" name="id" value="">
+
+									<div class="form-group">
+										<label for="">Your Name</label>
+										<input type="text" class="form-control" name="commentName" placeholder="Name" value="<?php echo htmlspecialchars($userLogin['userName']); ?>">
+									</div>
+
+									<div class="form-group">
+										<label for="">Comment</label>
+										<input type="text" class="form-control" name="commentText" placeholder="Comment" required>
+									</div>
+									<div class="form-group">
+										<label for="">Email</label>
+										<input type="email" class="form-control" name="email" placeholder="Email" value="<?php echo htmlspecialchars($userLogin['email']); ?>">
+									</div>
+									<div class="form-group">
+										<label for="">Date/Time</label>
+										<input type="date" class="form-control" name="dateComment" required>
+									</div>
+									<button type="submit" class="btn btn-primary darkModeBtn" name="addComment">Post Comment</button>
+								</form>
+								<?php
+								// Handle errors if any
+								if ($error) {
+									echo "<p>Error: $error</p>";
+								}
+								?>
+							</div>
+						</div>
+						<br><br><br><br>
+
+						<?php
+						// Show title
+						echo "<h2>Comments</h2><br>";
+
+						// Display comments
+						if ($result && $result->num_rows > 0) {
+							while ($row = $result->fetch_assoc()) {
+								echo '<div class="single_comment_area">';
+								echo '<div class="comment-content">';
+								echo '<h6>Date/Time: ' . $row["dateComment"] . '</h6><br>';
+								echo '<h6>Name: ' . $row["commentName"] . '</h6><br>';
+								echo '<h4>' . $row["commentText"] . '</h4><br>';
+								// Add reply form if there's no reply yet
+								if (empty($row["replyText"])) {
+									echo '<form action="" method="POST" role="form">';
+									echo '<input type="hidden" name="commentID" value="' . $row["IDcomment"] . '">';
+									echo '<div class="form-group">';
+									echo '<label for="">Reply</label>';
+									echo '<input type="text" class="form-control" name="replyText" placeholder="reply">';
+									echo '</div>';
+									echo '<button type="submit" style="margin-bottom: 30px; " class="btn btn-primary darkModeBtn" name="addReply">Post Reply</button>';
+									echo '</form>';
+								} else { // Display existing reply
+									echo '<br><h6>Reply: <br>' . $row["replyText"] . '</h6><br>';
+								}
+								echo '</div>';
+								echo '</div>';
+							}
+						} else {
+							echo "No comments available";
+						}
+						// Đóng kết nối đến cơ sở dữ liệu
+						$conn->close();
+						?>
 					</div>
 				</div>
-
+				
 				<div class="col-md-4 col-lg-3 p-b-80">
 					<div class="side-menu">
 						<div class="bor17 of-hidden pos-relative">
-							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search"
-								placeholder="Search">
+							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search" placeholder="Search">
 
 							<button class="flex-c-m size-122 ab-t-r fs-18 cl4 hov-cl1 trans-04">
 								<i class="zmdi zmdi-search"></i>
@@ -732,7 +865,7 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-55">
-							<h4 class="mtext-112 cl2 p-b-33 text-omacha">
+							<h4 class="mtext-112 cl2 p-b-33 darkModetxt-omacha">
 								Categories
 							</h4>
 
@@ -760,7 +893,6 @@ if ($query->num_rows > 0) {
 										Soft Dolls
 									</a>
 								</li>
-
 							</ul>
 						</div>
 
@@ -819,7 +951,7 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-55">
-							<h4 class="mtext-112 cl2 p-b-20 text-omacha">
+							<h4 class="mtext-112 cl2 p-b-20 darkModetxt-omacha">
 								Archive
 							</h4>
 
@@ -863,7 +995,7 @@ if ($query->num_rows > 0) {
 								<li class="p-b-7">
 									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
-											November 2023
+											November  2023
 										</span>
 
 										<span>
@@ -923,35 +1055,31 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-50">
-							<h4 class="mtext-112 cl2 p-b-27 text-omacha">
+							<h4 class="mtext-112 cl2 p-b-27 darkModetxt-omacha">
 								Tags
 							</h4>
 
 							<div class="flex-w m-r--5">
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									kids
 								</a>
 
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									sofy toys
 								</a>
 
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									toys
 								</a>
-
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-
-
+	</section>	
+	
+		
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-100 p-b-25">
@@ -1058,7 +1186,7 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
 								Subscribe
 							</button>
 						</div>
@@ -1112,7 +1240,7 @@ if ($query->num_rows > 0) {
 		</span>
 	</div>
 
-	<!--===============================================================================================-->
+<!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="vendor/animsition/js/animsition.min.js"></script>
@@ -1175,5 +1303,4 @@ if ($query->num_rows > 0) {
     <script src="js/scroll.js"></script>
 
 </body>
-
 </html>

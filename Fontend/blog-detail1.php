@@ -375,7 +375,7 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li class="active-menu">
-								<a href="#go-up">Blog</a>
+								<a href="blog.php">Blog</a>
 							</li>
 
 							<li>
@@ -629,17 +629,17 @@ if ($query->num_rows > 0) {
 	<!-- breadcrumb -->
 	<div class="container m-t-50">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 				Home
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<a href="blog.html" class="stext-109 cl8 hov-cl1 trans-04">
+			<a href="blog.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 				Blog
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<span class="stext-109 cl4">
+			<span class="stext-109 cl4 darkModetxt">
 				Making Your Kids' Special Day Memorable
 			</span>
 		</div>
@@ -668,9 +668,9 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-32">
-							<span class="flex-w flex-m stext-111 cl2 p-b-19">
+							<span class="flex-w flex-m stext-111 cl2 p-b-19 darkModetxt">
 								<span>
-									<span class="cl4">By</span> John Mathew
+									<span class="cl4 darkModetxt">By</span> John Mathew
 									<span class="cl12 m-l-4 m-r-6">|</span>
 								</span>
 
@@ -693,30 +693,30 @@ if ($query->num_rows > 0) {
 								Making Your Kids' Special Day Memorable
 							</h4>
 
-							<p class="stext-117 cl6 p-b-26">
+							<p style="text-align:justify; " class="stext-117 cl6 p-b-26 darkModetxt">
 								Planning a memorable celebration for your child's special day involves thoughtful consideration and creativity. First, consider your child's interests and preferences to choose a theme that resonates with them, whether it's a favorite cartoon character, a beloved hobby, or a fun adventure. Once you have a theme in mind, brainstorm ideas for decorations, activities, and entertainment that align with the chosen theme to create a cohesive and immersive experience.
 							</p>
 
-							<p class="stext-117 cl6 p-b-26">
+							<p style="text-align:justify; " class="stext-117 cl6 p-b-26 darkModetxt">
 								Next, focus on creating a personalized and memorable experience for your child and their guests. Incorporate interactive games, crafts, and activities that engage children of all ages and encourage social interaction and creativity. Consider hiring entertainers such as magicians, face painters, or balloon artists to add an extra element of fun and excitement to the party. Additionally, don't forget to capture the special moments with photos or videos to create lasting memories for your child and their friends. By putting thought and effort into planning a unique and memorable celebration, you can ensure that your child's special day is truly unforgettable.
 							</p>
 						</div>
 
 						<div class="flex-w flex-t p-t-16">
-							<span class="size-216 stext-116 cl8 p-t-4">
+							<span class="size-216 stext-116 cl8 p-t-4 darkModetxt">
 								Tags
 							</span>
 
 							<div class="flex-w size-217">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									kids
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									sofy toys
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									toys
 								</a>
 							</div>
@@ -780,7 +780,7 @@ if ($query->num_rows > 0) {
 						<!-- HTML content starts after PHP code -->
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								<h3 class="panel-title">Comment</h3>
+								<h3 class="panel-title">Create Comment</h3>
 							</div>
 							<br><br>
 							<div class="panel-body">
@@ -789,23 +789,23 @@ if ($query->num_rows > 0) {
 									<input type="hidden" name="id" value="">
 
 									<div class="form-group">
-										<label for="">You Name</label>
-										<input type="text" class="form-control" name="commentName" placeholder="Name*...">
+										<label for="">Your Name</label>
+										<input type="text" class="form-control" name="commentName" placeholder="Name" value="<?php echo htmlspecialchars($userLogin['userName']); ?>">
 									</div>
 
 									<div class="form-group">
 										<label for="">Comment</label>
-										<input type="text" class="form-control" name="commentText" placeholder="Comment*...">
+										<input type="text" class="form-control" name="commentText" placeholder="Comment" required>
 									</div>
 									<div class="form-group">
 										<label for="">Email</label>
-										<input type="email" class="form-control" name="email" placeholder="Email*...">
+										<input type="email" class="form-control" name="email" placeholder="Email" value="<?php echo htmlspecialchars($userLogin['email']); ?>">
 									</div>
 									<div class="form-group">
-										<label for="">Date time</label>
-										<input type="date" class="form-control" name="dateComment">
+										<label for="">Date/Time</label>
+										<input type="date" class="form-control" name="dateComment" required>
 									</div>
-									<button type="submit" class="btn btn-primary" name="addComment">Post Comment</button>
+									<button type="submit" class="btn btn-primary darkModeBtn" name="addComment">Post Comment</button>
 								</form>
 								<?php
 								// Handle errors if any
@@ -826,7 +826,7 @@ if ($query->num_rows > 0) {
 							while ($row = $result->fetch_assoc()) {
 								echo '<div class="single_comment_area">';
 								echo '<div class="comment-content">';
-								echo '<h6>Date Time: ' . $row["dateComment"] . '</h6><br>';
+								echo '<h6>Date/Time: ' . $row["dateComment"] . '</h6><br>';
 								echo '<h6>Name: ' . $row["commentName"] . '</h6><br>';
 								echo '<h4>' . $row["commentText"] . '</h4><br>';
 								// Add reply form if there's no reply yet
@@ -835,9 +835,9 @@ if ($query->num_rows > 0) {
 									echo '<input type="hidden" name="commentID" value="' . $row["IDcomment"] . '">';
 									echo '<div class="form-group">';
 									echo '<label for="">Reply</label>';
-									echo '<input type="text" class="form-control" name="replyText" placeholder="reply*...">';
+									echo '<input type="text" class="form-control" name="replyText" placeholder="reply">';
 									echo '</div>';
-									echo '<button type="submit" class="btn btn-primary" name="addReply">Post Reply</button>';
+									echo '<button type="submit" style="margin-bottom: 30px; " class="btn btn-primary darkModeBtn" name="addReply">Post Reply</button>';
 									echo '</form>';
 								} else { // Display existing reply
 									echo '<br><h6>Reply: <br>' . $row["replyText"] . '</h6><br>';
@@ -865,31 +865,31 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-55">
-							<h4 class="mtext-112 cl2 p-b-33 text-omacha">
+							<h4 class="mtext-112 cl2 p-b-33 darkModetxt-omacha">
 								Categories
 							</h4>
 
 							<ul>
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModetxt">
+									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Stuffed Animals
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModetxt">
+									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Fantasy Animals
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModetxt">
+									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Teddies
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModetxt">
+									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Soft Dolls
 									</a>
 								</li>
@@ -897,18 +897,18 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-65">
-							<h4 class="mtext-112 cl2 p-b-33 text-omacha">
+							<h4 class="mtext-112 cl2 p-b-33 darkModetxt-omacha">
 								Recent Post
 							</h4>
 
 							<ul>
 								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail1.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-04.jpg" href="blog-detail1.html" alt="PRODUCT" class="product-img">
+									<a href="blog-detail1.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-04.jpg" href="blog-detail1.php" alt="PRODUCT" class="product-img zoomable-img">
 									</a>
 								
 									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail1.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
+										<a href="blog-detail1.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 											Making Your Kids' Special Day Memorable
 										</a>
 										<span class="stext-116 cl6 p-t-20 darkModetxt">
@@ -918,12 +918,12 @@ if ($query->num_rows > 0) {
 								</li>
 								
 								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail2.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-05.jpg" href="blog-detail2.html" alt="PRODUCT" class="product-img">
+									<a href="blog-detail2.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-05.jpg" href="blog-detail2.php" alt="PRODUCT" class="product-img zoomable-img">
 									</a>
 								
 									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail2.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
+										<a href="blog-detail2.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 											What Are the Best Toys for Child Development
 										</a>
 										<span class="stext-116 cl6 p-t-20 darkModetxt">
@@ -933,12 +933,12 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail3.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-06.jpg" href="blog-detail3.html" alt="PRODUCT" class="product-img">
+									<a href="blog-detail3.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-06.jpg" href="blog-detail3.php" alt="PRODUCT" class="product-img zoomable-img">
 									</a>
 								
 									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail3.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
+										<a href="blog-detail3.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 											How Do Toys Impact a Child's Learning
 										</a>
 										<span class="stext-116 cl6 p-t-20 darkModetxt">
@@ -951,13 +951,13 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-55">
-							<h4 class="mtext-112 cl2 p-b-20 text-omacha">
+							<h4 class="mtext-112 cl2 p-b-20 darkModetxt-omacha">
 								Archive
 							</h4>
 
 							<ul>
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											February 2024
 										</span>
@@ -969,7 +969,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											January 2024
 										</span>
@@ -981,7 +981,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											December 2023
 										</span>
@@ -993,7 +993,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											November  2023
 										</span>
@@ -1005,7 +1005,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											October 2023
 										</span>
@@ -1017,7 +1017,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											Swptember 2023
 										</span>
@@ -1029,7 +1029,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											August 2023
 										</span>
@@ -1041,7 +1041,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											July 2023
 										</span>
@@ -1055,20 +1055,20 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-50">
-							<h4 class="mtext-112 cl2 p-b-27">
+							<h4 class="mtext-112 cl2 p-b-27 darkModetxt-omacha">
 								Tags
 							</h4>
 
 							<div class="flex-w m-r--5">
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									kids
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									sofy toys
 								</a>
 
-								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									toys
 								</a>
 							</div>
@@ -1186,7 +1186,7 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
 								Subscribe
 							</button>
 						</div>

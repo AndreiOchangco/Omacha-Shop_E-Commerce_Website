@@ -662,14 +662,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail1.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail1.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												Making Your Kids' Special Day Memorable
 											</a>
 										</h5>
 										<p>Planning memorable celebration for your child's special day involves...
 										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail1.php"
-												class="block1-btn stext-101 cl0 trans-09">
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -690,14 +690,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail2.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail2.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												What Are the Best Toys for Child Development
 											</a>
 										</h5>
 										<p>Selecting toys that promote child development involves considering...
 										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail2.html"
-												class="block1-btn stext-101 cl0 trans-09">
+											<a id="button-add" href="blog-detail2.php"
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -706,7 +706,7 @@ if ($query->num_rows > 0) {
 
 								<!-- Third Column -->
 								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail3.html">
+									<a href="blog-detail3.php">
 										<div class="card" style="border: none;">
 											<img src="images/blog-06.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
 												class="zoomable-img">
@@ -718,14 +718,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail3.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail3.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												How Do Toys Impact a Child's Learning
 											</a>
 										</h5>
 										<p>Toys wield significant influence on a child's learning journey, serving as...
 										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail3.html"
-												class="block1-btn stext-101 cl0 trans-09">
+											<a id="button-add" href="blog-detail3.php"
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -735,7 +735,7 @@ if ($query->num_rows > 0) {
 
 								<!-- Fourth Column -->
 								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail4.html">
+									<a href="blog-detail4.php">
 										<div class="card" style="border: none;">
 											<img src="images/02.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
 												class="zoomable-img">
@@ -747,14 +747,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail4.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail4.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												Build Worlds, Collect Pieces With Your Young Ones
 											</a>
 										</h5>
 										<p>Building worlds and collecting pieces with your young ones is not just...
 										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail4.html"
-												class="block1-btn stext-101 cl0 trans-09">
+											<a id="button-add" href="blog-detail4.php"
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -775,14 +775,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail5.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail5.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												The Joys of Being a Parent: A Guide to Parenting
 											</a>
 										</h5>
 										<p>Parenting is a journey filled with ups and downs, but ultimately, it's one...
 										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail5.html"
-												class="block1-btn stext-101 cl0 trans-09">
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -803,14 +803,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail6.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail6.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												Essential Tips for Buying and Caring for Children' Toys
 											</a>
 										</h5>
 										<p>When it comes to buying toys for children, safety should always be...
 										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail6.html"
-												class="block1-btn stext-101 cl0 trans-09">
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -832,14 +832,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail7.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail7.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												When a Little Toy Brings Everyone Together
 											</a>
 										</h5>
 										<p>Sometimes, the smallest things can have the biggest impact, and...
 										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
 											<a id="button-add" href="blog-detail7.html"
-												class="block1-btn stext-101 cl0 trans-09">
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -860,14 +860,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail8.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail8.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												Fun Ways to Help Your Child Learn and Grow
 											</a>
 										</h5>
 										<p>Turn cooking into a learning experience by inviting your child...
 										<div class="block1-txt-child2 p-b-4 trans-05 m-t-10">
 											<a id="button-add" href="blog-detail8.html"
-												class="block1-btn stext-101 cl0 trans-09">
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -889,14 +889,14 @@ if ($query->num_rows > 0) {
 									<div class="text-left">
 										<h5 class="card__heading h2"></h5>
 										<h5 class="p-b-15">
-											<a href="blog-detail9.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModetxt">
+											<a href="blog-detail9.html" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
 												Exploring the Evolution Toys Through the Years
 											</a>
 										</h5>
 										<p>oys have experienced a remarkable evolution throughout history,...
 										<div class="block1-txt-child2 p-b-4 trans-05 m-t-10">
 											<a id="button-add" href="blog-detail9.html"
-												class="block1-btn stext-101 cl0 trans-09">
+												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
 												Read More
 											</a>
 										</div>
@@ -908,11 +908,11 @@ if ($query->num_rows > 0) {
 
 						<!-- Pagination -->
 						<div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
-							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1">
+							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1 darkModeBtn-ActiveOutline">
 								1
 							</a>
 
-							<a href="blog2.php" class="flex-c-m how-pagination1 trans-04 m-all-7">
+							<a href="blog2.php" class="flex-c-m how-pagination1 trans-04 m-all-7 darkModeBtn-outline">
 								2
 							</a>
 						</div>
@@ -937,25 +937,25 @@ if ($query->num_rows > 0) {
 
 							<ul>
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModetxt">
+									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Stuffed Animals
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModetxt">
+									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Fantasy Animals
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModetxt">
+									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Teddies
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModetxt">
+									<a href="#" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Soft Dolls
 									</a>
 								</li>
@@ -964,19 +964,18 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-65">
-							<h4 class="mtext-112 cl2 p-b-33 text-omacha">
+							<h4 class="mtext-112 cl2 p-b-33 darkModetxt-omacha">
 								Recent Post
 							</h4>
 
 							<ul>
 								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail1.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-04.jpg" href="blog-detail1.html" alt="PRODUCT"
-											class="product-img">
+									<a href="blog-detail1.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-04.jpg" href="blog-detail1.php" alt="PRODUCT" class="product-img zoomable-img">
 									</a>
-
+								
 									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail1.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
+										<a href="blog-detail1.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 											Making Your Kids' Special Day Memorable
 										</a>
 										<span class="stext-116 cl6 p-t-20 darkModetxt">
@@ -984,15 +983,14 @@ if ($query->num_rows > 0) {
 										</span>
 									</div>
 								</li>
-
+								
 								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail2.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-05.jpg" href="blog-detail2.html" alt="PRODUCT"
-											class="product-img">
+									<a href="blog-detail2.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-05.jpg" href="blog-detail2.php" alt="PRODUCT" class="product-img zoomable-img">
 									</a>
-
+								
 									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail2.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
+										<a href="blog-detail2.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 											What Are the Best Toys for Child Development
 										</a>
 										<span class="stext-116 cl6 p-t-20 darkModetxt">
@@ -1002,13 +1000,12 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail3.html" class="wrap-pic-w hov-ovelay1 m-r-20">
-										<img src="images/blog-06.jpg" href="blog-detail1.html" alt="PRODUCT"
-											class="product-img">
+									<a href="blog-detail3.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
+										<img src="images/blog-06.jpg" href="blog-detail3.php" alt="PRODUCT" class="product-img zoomable-img">
 									</a>
-
+								
 									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail3.html" class="stext-116 cl8 hov-cl1 trans-04 darkModetxt">
+										<a href="blog-detail3.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 											How Do Toys Impact a Child's Learning
 										</a>
 										<span class="stext-116 cl6 p-t-20 darkModetxt">
@@ -1027,7 +1024,7 @@ if ($query->num_rows > 0) {
 
 							<ul>
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											February 2024
 										</span>
@@ -1039,7 +1036,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											January 2024
 										</span>
@@ -1051,7 +1048,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											December 2023
 										</span>
@@ -1063,7 +1060,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											November 2023
 										</span>
@@ -1075,7 +1072,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											October 2023
 										</span>
@@ -1087,7 +1084,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											Swptember 2023
 										</span>
@@ -1099,7 +1096,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											August 2023
 										</span>
@@ -1111,7 +1108,7 @@ if ($query->num_rows > 0) {
 								</li>
 
 								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModetxt">
+									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
 											July 2023
 										</span>
@@ -1131,17 +1128,17 @@ if ($query->num_rows > 0) {
 
 							<div class="flex-w m-r--5">
 								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									kids
 								</a>
 
 								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									sofy toys
 								</a>
 
 								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
+									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
 									toys
 								</a>
 
