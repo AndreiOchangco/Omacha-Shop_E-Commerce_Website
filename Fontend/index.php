@@ -797,15 +797,6 @@ if ($query->num_rows > 0) {
 		</div>
 	</div>
 
-	<!-- carousel start-->
-
-
-
-
-
-	<!-- carousel end-->
-
-
 
 
 	<!-- Slider -->
