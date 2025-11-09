@@ -23,7 +23,7 @@ body {
   transform: scale(1);
   transition: transform 0.3s ease;
   overflow: hidden;
-  box-shadow: 0 25px 50px -20px rgba(8, 8, 8, 0.551);
+  box-shadow: 0 25px 50px -20px #0808088d;
   background-size: cover;
   background-position: center;
   background-color: #eaeaea;
@@ -71,7 +71,7 @@ body {
 }
 
 .details-container {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   border-radius: 1rem;
   padding: 1.5rem;
   width: 45%;
@@ -96,11 +96,11 @@ body {
 }
 
 .avatar-container {
-  background-color: rgb(255, 255, 255); 
+  background-color: #ffffff; 
 }
 
 .details-container {
-  background-color: rgb(255, 255, 255); 
+  background-color: #ffffff; 
 }
 
 .detail strong, .detail span {
