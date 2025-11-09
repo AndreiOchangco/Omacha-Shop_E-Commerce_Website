@@ -824,11 +824,12 @@ if ($result->num_rows > 0) {
 				<!-- Team Member 1 -->
 				<div class="col-md-3">
 					<div class="team-member">
-						<div class="team-member-img block2-pic hov-img0">
+						<div style="border-radius: 100%;" class="team-member-img block2-pic hov-img0">
 							<img src="images/ThuyKhanh1.jpg" alt="Team Member 1">
-							<a href="#"
+							<a href="https://github.com/AndreiOchangco"
+								target="_blank"
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								<i class="fab fa-facebook"></i>
+								<i class="fab fa-github"></i>
 							</a>
 						</div>
 						<div class="team-member-info darkModetxt">
@@ -844,11 +845,12 @@ if ($result->num_rows > 0) {
 				<!-- Team Member 2 -->
 				<div class="col-md-3">
 					<div class="team-member">
-						<div class="team-member-img block2-pic hov-img0">
+						<div style="border-radius: 100%;" class="team-member-img block2-pic hov-img0">
 							<img src="images/HuuDat1.jpg" alt="Team Member 2">
-							<a href="#"
+							<a href="https://github.com/Lone-collab"
+								target="_blank"
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								<i class="fab fa-facebook"></i>
+								<i class="fab fa-github"></i>
 							</a>
 						</div>
 						<div class="team-member-info darkModetxt">
@@ -863,11 +865,12 @@ if ($result->num_rows > 0) {
 				<!-- Team Member 3 -->
 				<div class="col-md-3">
 					<div class="team-member">
-						<div class="team-member-img block2-pic hov-img0">
+						<div style="border-radius: 100%;" class="team-member-img block2-pic hov-img0">
 							<img src="images/BinhQuyen1.jpg" alt="Team Member 3">
-							<a href="#"
+							<a href="https://github.com/hit00ri"
+								target="_blank"
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								<i class="fab fa-facebook"></i>
+								<i class="fab fa-github"></i>
 							</a>
 						</div>
 						<div class="team-member-info darkModetxt">
@@ -882,11 +885,12 @@ if ($result->num_rows > 0) {
 				<!-- Team Member 4 -->
 				<div class="col-md-3">
 					<div class="team-member">
-						<div class="team-member-img block2-pic hov-img0">
+						<div style="border-radius: 100%;" class="team-member-img block2-pic hov-img0">
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
-							<a href="#"
+							<a href="https://github.com/ardy05aquino-creator"
+								target="_blank"
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								<i class="fab fa-facebook"></i>
+								<i class="fab fa-github"></i>
 							</a>
 						</div>
 						<div class="team-member-info darkModetxt">
@@ -901,11 +905,12 @@ if ($result->num_rows > 0) {
 				<!-- Team Member 5 -->
 				<div class="col-md-3">
 					<div class="team-member">
-						<div class="team-member-img block2-pic hov-img0">
+						<div style="border-radius: 100%;" class="team-member-img block2-pic hov-img0">
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
 							<a href="#"
+								target="_blank"
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								<i class="fab fa-facebook"></i>
+								<i class="fab fa-github"></i>
 							</a>
 						</div>
 						<div class="team-member-info darkModetxt">
@@ -920,11 +925,12 @@ if ($result->num_rows > 0) {
 				<!-- Team Member 6 -->
 				<div class="col-md-3">
 					<div class="team-member">
-						<div class="team-member-img block2-pic hov-img0">
+						<div style="border-radius: 100%;" class="team-member-img block2-pic hov-img0">
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
 							<a href="#"
+								target="_blank"
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								<i class="fab fa-facebook"></i>
+								<i class="fab fa-github"></i>
 							</a>
 						</div>
 						<div class="team-member-info darkModetxt">
@@ -939,11 +945,12 @@ if ($result->num_rows > 0) {
 				<!-- Team Member 7 -->
 				<div class="col-md-3">
 					<div class="team-member">
-						<div class="team-member-img block2-pic hov-img0">
+						<div style="border-radius: 100%;" class="team-member-img block2-pic hov-img0">
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
 							<a href="#"
+								target="_blank"
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
-								<i class="fab fa-facebook"></i>
+								<i class="fab fa-github"></i>
 							</a>
 						</div>
 						<div class="team-member-info darkModetxt">
