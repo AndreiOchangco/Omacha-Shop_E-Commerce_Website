@@ -110,8 +110,6 @@ ul.sub-menu {
 
 
 
-
-
 .darkModebg-black {
     background-color: #181818 !important;
     color: #f1f1f1 !important;
@@ -176,3 +174,15 @@ div.block1.wrap-pic-w {
 /* Add more dark mode styles as needed */
 
 
+.profile-card {
+    background-color: #181818 !important;
+    box-shadow: 0 25px 50px -20px #000000 !important;
+}
+
+.details-container {
+    background-color: #ffffff !important;
+}
+
+.username {
+    color: #f1f1f1 !important;
+}
