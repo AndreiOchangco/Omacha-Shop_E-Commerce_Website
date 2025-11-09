@@ -761,7 +761,7 @@ if ($query->num_rows > 0) {
 	<!-- breadcrumb -->
 	<div class="container">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-80 p-lr-0-lg">
-			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink">
+			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink">
 				Home
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
@@ -782,11 +782,11 @@ if ($query->num_rows > 0) {
 						<div class="wrap-table-shopping-cart">
 							<table class="table-shopping-cart">
 								<tr class="table_head">
-									<th class="column-1 darkModetxt">Product</th>
-									<th class="column-2"></th>
-									<th class="column-3 darkModetxt">Price</th>
-									<th class="column-4 darkModetxt">Quantity</th>
-									<th class="column-5 darkModetxt">Total</th>
+									<th style="text-align: center;" class="column-1 darkModetxt">Product</th>
+									<th style="text-align: center;" class="column-2 darkModetxt">Name</th>
+									<th style="text-align: center;" class="column-3 darkModetxt">Price</th>
+									<th style="text-align: center;" class="column-4 darkModetxt">Quantity</th>
+									<th style="text-align: center;" class="column-5 darkModetxt">Total</th>
 								</tr>
 
 								<?php foreach ($order_array as $item) : ?>
@@ -800,22 +800,22 @@ if ($query->num_rows > 0) {
 												<img src="images/<?php echo $p_images[0]; ?>" alt="IMG">
 											</div>
 										</td>
-										<td class="column-2"><?php echo $item["p_name"]; ?></td>
-										<td id="price_<?php echo $item['p_id']; ?>" class="column-3">$ <?php echo $item["p_price"]; ?></td>
+										<td style="text-align: center;" class="column-2 darkModetxt"><?php echo $item["p_name"]; ?></td>
+										<td style="text-align: center;" class="column-3 darkModetxt" id="price_<?php echo $item['p_id']; ?>" class="column-3">$ <?php echo $item["p_price"]; ?></td>
 										<td class="column-4">
 											<div class="wrap-num-product flex-w m-l-auto m-r-0">
-												<div class="btn-down cl8 hov-btn3 trans-04 flex-c-m" onclick="decreaseQuantity(<?php echo $item['p_id']; ?>)">
-													<i class="fs-16 zmdi zmdi-minus"></i>
+												<div class="btn-down cl8 hov-btn3 trans-04 flex-c-m darkModeBtn-outline" onclick="decreaseQuantity(<?php echo $item['p_id']; ?>)">
+													<h1 style="margin-bottom: -2px; margin-left: 3px;">-</h1>
 												</div>
 
 												<input id="quantity_<?php echo $item['p_id']; ?>" class="mtext-104 cl3 txt-center num-product cart-quantity-input" type="number" name="num-product1" value="<?php echo $item["o_quantity"]; ?>" onchange="updateTotalPrice(<?php echo $item['p_id']; ?>, this.value)">
 
-												<div class="btn-up cl8 hov-btn3 trans-04 flex-c-m" onclick="increaseQuantity(<?php echo $item['p_id']; ?>)">
-													<i class="fs-16 zmdi zmdi-plus"></i>
+												<div class="btn-up cl8 hov-btn3 trans-04 flex-c-m darkModeBtn-outline" onclick="increaseQuantity(<?php echo $item['p_id']; ?>)">
+													<h1>+</h1>
 												</div>
 											</div>
 										</td>
-										<td id="total_<?php echo $item['p_id']; ?>" class="column-5">$ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
+										<td style="text-align: center;" id="total_<?php echo $item['p_id']; ?>" class="column-5 darkModetxt">$ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
 									</tr>
 								<?php endforeach; ?>
 							</table>
@@ -826,21 +826,19 @@ if ($query->num_rows > 0) {
 						<div class="">
 							<div class="row">
 								<div class="col-md-4">
-									<div class="flex-w flex-m m-r-20 m-tb-5">
+									<div class="flex-w flex-m m-r-20 m-tb-15">
 										<input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Coupon Code">
 									</div>
 								</div>
 
-								<div class="col-md-4">
-									<div  id="update-cart" class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
-										<a style="color: white;" href="shopping-cart-coupon.php">Apply coupon</a>
-									</div>
-									
-
+								<div class="col-md-4 m-tb-15">
+									<a  id="update-cart" href="shopping-cart-coupon.php" class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5 darkModeBtn">
+										Apply coupon
+									</a>
 								</div>
 
 
-								<div class="col-md-4">
+								<div class="col-md-4 m-tb-15">
 									<div class="">
 										<?php foreach ($order_array as $item) : ?>
 											<form id="form_<?php echo $item['p_id']; ?>" class="update-form" action="update-cart.php" method="post">
@@ -849,7 +847,7 @@ if ($query->num_rows > 0) {
 												<input type="hidden" name="p_id" value="<?php echo $item["p_id"]; ?>">
 											<?php endforeach; ?>
 											<!-- Update cart button -->
-											<input id="update-cart" type="submit" value="Update Cart" name="update-cart" class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
+											<input id="update-cart" type="submit" value="Update Cart" name="update-cart" class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5 darkModeBtn">
 											</form>
 									</div>
 								</div>
@@ -865,19 +863,19 @@ if ($query->num_rows > 0) {
 
 				<div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
 					<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
-						<h4 class="mtext-109 cl2 p-b-30">
+						<h4 class="mtext-109 cl2 p-b-30 darkModetxt-omacha">
 							Cart Totals
 						</h4>
 
 						<div class="flex-w flex-t bor12 p-b-13">
 							<div class="size-208">
-								<span class="stext-110 cl2">
+								<span class="stext-110 cl2 darkModetxt">
 									Subtotal:
 								</span>
 							</div>
 
 							<div class="size-209">
-								<span class="mtext-110 cl2">
+								<span class="mtext-110 cl2 darkModetxt">
 									$ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?>
 								</span>
 							</div>
@@ -885,18 +883,18 @@ if ($query->num_rows > 0) {
 
 						<div class="flex-w flex-t bor12 p-t-15 p-b-30">
 							<div class="size-208 w-full-ssm">
-								<span class="stext-110 cl2">
+								<span class="stext-110 cl2 darkModetxt">
 									Shipping:
 								</span>
 							</div>
 
 							<div class="size-209 p-r-18 p-r-0-sm w-full-ssm">
-								<p class="stext-111 cl6 p-t-2">
+								<p style="text-align: justify;" class="stext-111 cl6 p-t-2 darkModetxt">
 									There are no shipping methods available. Please double check your address, or contact us if you need any help.
 								</p>
 
 								<div class="p-t-15">
-									<span class="stext-112 cl8">
+									<span class="stext-112 cl8 darkModetxt">
 										Calculate Shipping
 									</span>
 
@@ -920,7 +918,7 @@ if ($query->num_rows > 0) {
 									</div>
 
 									<div class="flex-w">
-										<div id="button" class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer">
+										<div id="button" class="flex-c-m stext-101 cl2 size-115 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer darkModeBtn">
 											Update Totals
 										</div>
 									</div>
@@ -931,19 +929,19 @@ if ($query->num_rows > 0) {
 
 						<div class="flex-w flex-t p-t-27 p-b-33">
 							<div class="size-208">
-								<span class="mtext-101 cl2">
+								<span class="mtext-101 cl2 darkModetxt">
 									Total:
 								</span>
 							</div>
 
 							<div class="size-209 p-t-1">
-								<span class="mtext-110 cl2">
+								<span class="mtext-110 cl2 darkModetxt">
 									$ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?>
 								</span>
 							</div>
 						</div>
 
-						<a href="buy-product.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">Proceed to Checkout</a>
+						<a href="buy-product.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer darkModeBtn">Proceed to Checkout</a>
 											
 					</div>
 				</div>

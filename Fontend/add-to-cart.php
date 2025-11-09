@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add-to-cart'])) {
         $stmt = $conn->prepare($update_query);
         $stmt->bind_param("iii", $o_quantity, $o_id, $u_id);
         if ($stmt->execute()) {
-            header("Location: product2.php");
+            header("Location: product.php");
             exit();
         } else {
             echo "Error updating record: " . $conn->error;
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add-to-cart'])) {
         $stmt = $conn->prepare($insert_query);
         $stmt->bind_param("iidii", $u_id, $p_id, $p_price, $o_quantity, $o_status);
         if ($stmt->execute()) {
-            header("Location: product2.php");
+            header("Location: product.php");
             exit();
         } else {
             echo "Error inserting record: " . $conn->error;

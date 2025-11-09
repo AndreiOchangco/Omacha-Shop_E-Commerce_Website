@@ -51,6 +51,10 @@ ul.sub-menu {
     color: #f1f1f1 !important;
 }
 
+.darkModetxt-blk {
+    color: #181818 !important;
+}
+
 .darkModehyperlink{
     color: #f1f1f1 !important;
 }
@@ -66,8 +70,8 @@ ul.sub-menu {
 }
 
 .darkModeBtn:hover {
-    background-color: #16c261 !important;
-    border-color: #16c261;
+    background-color: #2ebb6c !important;
+    border-color: #2ebb6c !important;
     color: #181818 !important;
 }
 
