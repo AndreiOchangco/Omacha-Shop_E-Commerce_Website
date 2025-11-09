@@ -760,13 +760,13 @@ if ($query->num_rows > 0) {
 
 	<!-- breadcrumb -->
 	<div class="container">
-		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-80 p-lr-0-lg">
+			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink">
 				Home
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<span class="stext-109 cl4">
+			<span class="stext-109 cl4 darkModetxt">
 				Shopping Cart
 			</span>
 		</div>
@@ -782,11 +782,11 @@ if ($query->num_rows > 0) {
 						<div class="wrap-table-shopping-cart">
 							<table class="table-shopping-cart">
 								<tr class="table_head">
-									<th class="column-1">Product</th>
+									<th class="column-1 darkModetxt">Product</th>
 									<th class="column-2"></th>
-									<th class="column-3">Price</th>
-									<th class="column-4">Quantity</th>
-									<th class="column-5">Total</th>
+									<th class="column-3 darkModetxt">Price</th>
+									<th class="column-4 darkModetxt">Quantity</th>
+									<th class="column-5 darkModetxt">Total</th>
 								</tr>
 
 								<?php foreach ($order_array as $item) : ?>
