@@ -816,7 +816,7 @@ if ($result->num_rows > 0) {
 	<!-- Team Members -->
 	<section class="bg0 p-t-75 p-b-30">
 		<div class="container">
-			<h3 style="text-align: center; font-size: 2.5rem; " class="mtext-111 cl2 p-b-16 m-b-50 text-omacha">
+			<h3 style="text-align: center; font-size: 25px; " class="mtext-111 cl2 p-b-16 m-b-50 text-omacha">
 				Our Developer Team
 			</h3>
 			<div class="row">
@@ -826,7 +826,7 @@ if ($result->num_rows > 0) {
 					<div class="team-member">
 						<div class="team-member-img block2-pic hov-img0">
 							<img src="images/ThuyKhanh1.jpg" alt="Team Member 1">
-							<a href="#"
+							<a href="#"	
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
 								<i class="fab fa-facebook"></i>
 							</a>
