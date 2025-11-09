@@ -816,7 +816,7 @@ if ($result->num_rows > 0) {
 	<!-- Team Members -->
 	<section class="bg0 p-t-75 p-b-30">
 		<div class="container">
-			<h3 style="text-align: center; font-size: 2.5rem; " class="mtext-111 cl2 p-b-16 m-b-50 text-omacha">
+			<h3 style="text-align: center; font-size: 25px; " class="mtext-111 cl2 p-b-16 m-b-50 text-omacha">
 				Our Developer Team
 			</h3>
 			<div class="row justify-content-center text-center">
