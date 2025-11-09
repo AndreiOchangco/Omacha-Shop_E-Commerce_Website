@@ -798,7 +798,7 @@ if ($query->num_rows > 0) {
 
 									<div class="form-group">
 										<label for="">Comment</label>
-										<input type="text" class="form-control stext-111 size-124" name="commentText" placeholder="Comment" required>
+										<textarea type="text" class="form-control stext-111 size-124" name="commentText" placeholder="Comment" required></textarea>
 									</div>
 									<div class="form-group">
 										<label for="">Email</label>

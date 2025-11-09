@@ -246,7 +246,7 @@ if ($result->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar">
+			<div class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -295,13 +295,13 @@ if ($result->num_rows > 0) {
 				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
-					<a href="index.php" class="navbar-brand">
+					<a href="index.php" class="navbar-brand noselect">
 						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
 									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
-					<div class="menu-desktop">
+					<div class="menu-desktop noselect">
 						<ul class="main-menu">
 							<li>
 								<a class="darkModetxt" href="index.php">Home</a>
@@ -347,7 +347,7 @@ if ($result->num_rows > 0) {
 					</div>
 
 					<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m">
+					<div class="wrap-icon-header flex-w flex-r-m noselect">
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
@@ -633,12 +633,12 @@ if ($result->num_rows > 0) {
 	</header>
 
 	<!-- Cart -->
-	<div class="wrap-header-cart js-panel-cart">
+	<div class="wrap-header-cart js-panel-cart noselect">
 		<div class="s-full js-hide-cart"></div>
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2 darkModetxt">
+				<span class="mtext-103 cl2 darkModetxt noselect">
 					Your Cart
 				</span>
 
@@ -718,7 +718,7 @@ if ($result->num_rows > 0) {
 	</div>
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-10" style="background-image: url('images/background-image.png');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-10 noselect" style="background-image: url('images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
 			General Products
 		</h2>
@@ -726,7 +726,7 @@ if ($result->num_rows > 0) {
 
 	<!-- Product -->
 	<div >
-		<div class="container">
+		<div class="container noselect">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
 					<button class="stext-106 cl6 hov1 trans-04 m-r-32 m-tb-5 how-active1 darkModehyperlink-omacha" data-filter="*">
@@ -1131,8 +1131,8 @@ if ($result->num_rows > 0) {
 
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-100 p-b-25">
-		<div class="container">
+	<footer class="bg3 p-t-100 p-b-25 noselect">
+		<div class="container noselect">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl10 p-b-30">
@@ -1280,7 +1280,7 @@ if ($result->num_rows > 0) {
 
 
 	<!-- Back to top -->
-	<div class="btn-back-to-top" id="myBtn">
+	<div class="btn-back-to-top noselect" id="myBtn">
 		<span class="symbol-btn-back-to-top">
 			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>

@@ -457,7 +457,7 @@ if ($result->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar">
+			<div class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -506,14 +506,14 @@ if ($result->num_rows > 0) {
 				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
-					<a href="index.php" class="navbar-brand">
+					<a href="index.php" class="navbar-brand noselect">
 						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
 									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
-						<ul class="main-menu">
+						<ul class="main-menu noselect">
 							<li class="active-menu">
 								<a class="darkModetxt" href="index.php">Home</a>
 								<ul class="sub-menu darkModebg-black">
@@ -558,7 +558,7 @@ if ($result->num_rows > 0) {
 					</div>
 
 					<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m">
+					<div class="wrap-icon-header flex-w flex-r-m noselect">
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
@@ -719,9 +719,9 @@ if ($result->num_rows > 0) {
 	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>
 
-		<div class="header-cart flex-col-l p-l-65 p-r-25">
+		<div class="header-cart flex-col-l p-l-65 p-r-25 noselect">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2 darkModetxt">
+				<span class="mtext-103 cl2 darkModetxt noselect">
 					Your Cart
 				</span>
 
@@ -803,20 +803,20 @@ if ($result->num_rows > 0) {
 
 
 	<!-- breadcrumb -->
-	<div class="container">
-		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+	<div class="container noselect">
+		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg m-t-50">
+			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 				Home
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<a href="product2.php" class="stext-109 cl8 hov-cl1 trans-04">
-				Men
+			<a href="product.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
+				Product
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<span class="stext-109 cl4">
-				Lightweight Jacket
+			<span class="stext-109 cl4 darkModetxt">
+				<?php echo $product["p_name"]; ?>
 			</span>
 		</div>
 	</div>
@@ -824,7 +824,7 @@ if ($result->num_rows > 0) {
 
 	<!-- Product Detail -->
 	<section class="sec-product-detail bg0 p-t-65 p-b-60">
-		<div class="container">
+		<div class="container noselect">
 			<div class="row">
 				<div class="col-md-6 col-lg-7 p-b-30">
 					<div class="p-l-25 p-r-30 p-lr-0-lg">
@@ -833,34 +833,34 @@ if ($result->num_rows > 0) {
 							<div class="slick3 gallery-lb">
 
 								<!-- Image 1 -->
-								<div class="item-slick3" data-thumb="images/<?php echo $product_images[0]; ?>">
-									<div class="wrap-pic-w pos-relative zoom-container">
+								<div style="background-color: #ffffffff;" class="item-slick3" data-thumb="images/<?php echo $product_images[0]; ?>">
+									<div style="background-color: #ffffffff;" class="wrap-pic-w pos-relative zoom-container">
 										<img src="images/<?php echo $product_images[0]; ?>" alt="IMG-PRODUCT">
 
 										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-											href="images/teddy-bear-1.png">
+											href="images/<?php echo $product_images[0]; ?>">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>
 								</div>
 
 								<!-- Image 2 -->
-								<div class="item-slick3" data-thumb="images/<?php echo $product_images[1]; ?>">
-									<div class="wrap-pic-w pos-relative zoom-container">
+								<div style="background-color: #ffffffff;" class="item-slick3" data-thumb="images/<?php echo $product_images[1]; ?>">
+									<div style="background-color: #ffffffff;" class="wrap-pic-w pos-relative zoom-container">
 										<img src="images/<?php echo $product_images[1]; ?>" alt="IMG-PRODUCT">
 										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-											href="images/teddy-bear-2.jpg">
+											href="images/<?php echo $product_images[1]; ?>">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>
 								</div>
 
 								<!-- Image 3 -->
-								<div class="item-slick3" data-thumb="images/<?php echo $product_images[2]; ?>">
-									<div class="wrap-pic-w pos-relative zoom-container">
+								<div style="background-color: #ffffffff;" class="item-slick3" data-thumb="images/<?php echo $product_images[2]; ?>">
+									<div style="background-color: #ffffffff;" class="wrap-pic-w pos-relative zoom-container">
 										<img src="images/<?php echo $product_images[2]; ?>" alt="IMG-PRODUCT">
 										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
-											href="images/teddy-bear-3.jpg">
+											href="images/<?php echo $product_images[2]; ?>">
 											<i class="fa fa-expand"></i>
 										</a>
 									</div>
@@ -871,8 +871,8 @@ if ($result->num_rows > 0) {
 					</div>
 				</div>
 
-				<div class="col-md-6 col-lg-5 p-b-30">
-					<div class="p-r-50 p-t-5 p-lr-0-lg">
+				<div class="col-md-6 col-lg-5 p-b-30 noselect">
+					<div class="p-r-50 p-t-5 p-lr-0-lg noselect">
 						<h4 class="mtext-105 cl2 js-name-detail p-b-14 darkModetxt">
 							<?php echo $product["p_name"]; ?>
 						</h4>
@@ -948,15 +948,15 @@ if ($result->num_rows > 0) {
 						<div class="flex-w flex-r-m p-b-10">
 							<div class="size-204 flex-w flex-m respon6-next">
 								<div class="wrap-num-product flex-w m-r-20 m-tb-10">
-									<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-										<i class="fs-16 zmdi zmdi-minus"></i>
+									<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m darkModeBtn-outline">
+										<h1 style="margin-top: -5px;">-</h1>
 									</div>
 
 									<input id="quantity-input" class="mtext-104 cl3 txt-center num-product"
 										type="number" name="num-product" value="<?php echo $quantity = 1; ?>">
 
-									<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-										<i class="fs-16 zmdi zmdi-plus"></i>
+									<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m darkModeBtn-outline">
+										<h1>+</h1>
 									</div>
 								</div>
 							</div>
@@ -994,7 +994,7 @@ if ($result->num_rows > 0) {
 					</div>
 
 					<!--  -->
-					<div class="flex-w flex-m p-l-100 p-t-40 respon7">
+					<div class="flex-w flex-m p-l-100 p-t-40 respon7 noselect">
 						<div class="flex-m bor9 p-r-10 m-r-11">
 							<a href="#"
 								class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100"
@@ -1024,19 +1024,19 @@ if ($result->num_rows > 0) {
 
 		<div class="bor10 m-t-50 p-t-43 p-b-40">
 			<!-- Tab01 -->
-			<div class="tab01">
+			<div class="tab01 noselect">
 				<!-- Nav tabs -->
 				<ul class="nav nav-tabs" role="tablist">
 					<li class="nav-item p-b-10">
-						<a class="nav-link active" data-toggle="tab" href="#description" role="tab">Description</a>
+						<a class="nav-link darkModehyperlink-omacha darkModebg-darkgray" data-toggle="tab" href="#description" role="tab">Description</a>
 					</li>
 
 					<li class="nav-item p-b-10">
-						<a class="nav-link" data-toggle="tab" href="#information" role="tab">Additional information</a>
+						<a class="nav-link darkModehyperlink-omacha darkModebg-darkgray" data-toggle="tab" href="#information" role="tab">Additional information</a>
 					</li>
 
 					<li class="nav-item p-b-10">
-						<a class="nav-link" data-toggle="tab" href="#reviews" role="tab">Reviews (1)</a>
+						<a class="nav-link darkModehyperlink-omacha darkModebg-darkgray" data-toggle="tab" href="#reviews" role="tab">Reviews</a>
 					</li>
 				</ul>
 
@@ -1045,32 +1045,32 @@ if ($result->num_rows > 0) {
 					<!-- Description -->
 					<div class="tab-pane fade show active" id="description" role="tabpanel">
 						<div class="how-pos2 p-lr-15-md">
-							<p class="stext-102 cl6">
+							<p class="stext-102 cl6 darkModetxt">
 								<b>Shape and Size:</b> Teddy bears often have a bear-like appearance, with two ears, a
 								round nose, and two round eyes.
 								The size of a teddy bear can vary from small to large.
 							</p>
 
-							<p class="stext-102 cl6">
+							<p class="stext-102 cl6 darkModetxt">
 								<b>Material: </b> The product is made from soft and safe fabric materials such as
 								sheepskin, fleece, cotton, or synthetic plush.
 								Sometimes, accessories like silk or velvet fabric may also be used to create accents.
 
-							<p class="stext-102 cl6">
+							<p class="stext-102 cl6 darkModetxt">
 								<b>Color: </b>Teddy bears can come in a variety of colors, from the natural brown of
 								real bears to vibrant colors like pink, blue, and yellow.
 								Colors are often chosen to reflect personality traits or create interesting accents for
 								the product.
 							</p>
 
-							<p class="stext-102 cl6">
+							<p class="stext-102 cl6 darkModetxt">
 								<b>Accessories:</b> Some teddy bears may be adorned with accessories like knitted
 								sweaters, bow ties, or ribbons.
 								These accessories are often added to create unique styles or make the product more
 								adorable.
 							</p>
 
-							<p class="stext-102 cl6">
+							<p class="stext-102 cl6 darkModetxt">
 								<b>Safety and Quality: </b>Teddy bear products are typically manufactured to high safety
 								standards, ensuring that they are safe for children and pose no health hazards.
 								The quality of the product is also ensured to ensure that the teddy bear is durable and
@@ -1085,32 +1085,32 @@ if ($result->num_rows > 0) {
 							<div class="row how-pos2 p-lr-15-md">
 								<div class="stext-102 cl6 col-md-6">
 									<div class="info-item">
-										<span class="info-label">Weight:</span>
-										<span class="info-value">0.79 kg</span>
+										<span class="info-label darkModetxt">Weight:</span>
+										<span class="info-value darkModetxt">0.79 kg</span>
 									</div>
 								</div>
 								<div class="stext-102 cl6 col-md-6">
 									<div class="info-item">
-										<span class="info-label">Dimensions:</span>
-										<span class="info-value">110 x 33 x 100 cm</span>
+										<span class="info-label darkModetxt">Dimensions:</span>
+										<span class="info-value darkModetxt">110 x 33 x 100 cm</span>
 									</div>
 								</div>
 								<div class="stext-102 cl6 col-md-6">
 									<div class="info-item">
-										<span class="info-label">Materials:</span>
-										<span class="info-value">60% cotton</span>
+										<span class="info-label darkModetxt">Materials:</span>
+										<span class="info-value darkModetxt">60% cotton</span>
 									</div>
 								</div>
 								<div class="stext-102 cl6 col-md-6">
 									<div class="info-item">
-										<span class="info-label">Color:</span>
-										<span class="info-value">Black, Blue, Grey, Green, Red, White</span>
+										<span class="info-label darkModetxt">Color:</span>
+										<span class="info-value darkModetxt">Black, Blue, Grey, Green, Red, White</span>
 									</div>
 								</div>
 								<div class="stext-102 cl6 col-md-6">
 									<div class="info-item">
-										<span class="info-label">Size:</span>
-										<span class="info-value">XL, L, M, S</span>
+										<span class="info-label darkModetxt">Size:</span>
+										<span class="info-value darkModetxt">XL, L, M, S</span>
 									</div>
 								</div>
 							</div>
@@ -1123,30 +1123,6 @@ if ($result->num_rows > 0) {
 							<div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
 								<div class="p-b-30 m-lr-15-sm">
 									<!-- Review -->
-									<div class="flex-w flex-t p-b-68">
-										<div>
-											<div class="flex-w flex-sb-m p-b-17">
-												<span class="mtext-107 cl2 p-r-20">
-													Ariana Grande
-												</span>
-
-												<span class="fs-18 cl11">
-													<i class="zmdi zmdi-star"></i>
-													<i class="zmdi zmdi-star"></i>
-													<i class="zmdi zmdi-star"></i>
-													<i class="zmdi zmdi-star"></i>
-													<i class="zmdi zmdi-star-half"></i>
-												</span>
-											</div>
-
-											<p class="stext-102 cl6">
-												With soft materials and eye-catching colors, cotton buckets are the
-												perfect choice for children to play and simulate daily activities such
-												as bathing, cooking, or taking care of their small family.
-											</p>
-										</div>
-									</div>
-
 									<div>
 										<?php
 										$sql = "SELECT * from review";
@@ -1156,24 +1132,24 @@ if ($result->num_rows > 0) {
 											<div class="flex-w flex-t p-b-68">
 												<div>
 													<div class="flex-w flex-sb-m p-b-17">
-														<span class="mtext-107 cl2 p-r-20">
+														<span class="mtext-107 cl2 p-r-20 darkModetxt-omacha">
 															<?php echo $review['r_name']; ?>
 														</span>
-														<span class="fs-18 cl11">
+														<span class="fs-18 cl11 drkmde">
 															<?php
 															// Tính toán và hiển thị số lượng sao
 															$stars = $review['r_star'];
 															for ($i = 1; $i <= 5; $i++) {
 																if ($i <= $stars) {
-																	echo '<i class="zmdi zmdi-star"></i>';
+																	echo '<i class="zmdi zmdi-star drkmde"></i>';
 																} else {
-																	echo '<i class="zmdi zmdi-star-outline"></i>';
+																	echo '<i class="zmdi zmdi-star-outline drkmde"></i>';
 																}
 															}
 															?>
 														</span>
 													</div>
-													<p class="stext-102 cl6">
+													<p class="stext-102 cl6 darkModetxt">
 														<?php echo $review['r_description']; ?>
 													</p>
 												</div>
@@ -1185,16 +1161,16 @@ if ($result->num_rows > 0) {
 									<!-- Add review -->
 									<form class="w-full" method="POST" enctype="multipart/form-data"
 										action="productdetail.php">
-										<h5 class="mtext-108 cl2 p-b-7">
+										<h5 class="mtext-108 cl2 p-b-7 darkModetxt-omacha">
 											Add a review
 										</h5>
 
-										<p class="stext-102 cl6">
+										<p class="stext-102 cl6 darkModetxt">
 											Your email address will not be published. Required fields are marked *
 										</p>
 
-										<div class="flex-w flex-m p-t-50 p-b-23">
-											<span class="stext-102 cl3 m-r-16">
+										<div class="flex-w flex-m p-t-30 p-b-23">
+											<span class="stext-102 cl3 m-r-16 darkModetxt-omacha">
 												Your Rating
 											</span>
 
@@ -1209,33 +1185,34 @@ if ($result->num_rows > 0) {
 										</div>
 
 										<div class="row p-b-25">
-											<div class="col-12 p-b-5">
-												<label class="stext-102 cl3" for="review">Your review</label>
-												<textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10"
-													id="review" name="r_description"></textarea>
-											</div>
-
-											<div class="col-sm-6 p-b-5">
-												<label class="stext-102 cl3" for="name">Name</label>
+											
+											<div class="col-sm-6 p-tb-5">
+												<label class="stext-102 cl3 darkModetxt-omacha" for="name">Name</label>
 												<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="name" type="text"
-													name="r_name">
+												name="r_name" placeholder="Name" value="<?php echo htmlspecialchars($userLogin['userName']); ?>" required>
+											</div>
+											
+											<div class="col-sm-6 p-tb-5">
+												<label class="stext-102 cl3 darkModetxt-omacha" for="email">Email</label>
+												<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email"
+												type="text" name="r_email" placeholder="Email" value="<?php echo htmlspecialchars($userLogin['email']); ?>" required>
+												<input type="hidden"
+												class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
+												style="background-color: white;" name="p_name"
+												value="<?php echo $product["p_name"]; ?>">
+												<input type="hidden" name="user"
+												value="<?php $userLogin["userName"]; ?>">
 											</div>
 
-											<div class="col-sm-6 p-b-5">
-												<label class="stext-102 cl3" for="email">Email</label>
-												<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email"
-													type="text" name="r_email">
-												<input type="hidden"
-													class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-													style="background-color: white;" name="p_name"
-													value="<?php echo $product["p_name"]; ?>">
-												<input type="hidden" name="user"
-													value="<?php $userLogin["userName"]; ?>">
+											<div class="col-12 p-b-5">
+												<label class="stext-102 cl3 darkModetxt-omacha" for="review">Your review</label>
+												<textarea class="size-110 bor8 stext-102 cl2 p-lr-20 p-tb-10"
+													id="review" name="r_description" placeholder="Review" required></textarea>
 											</div>
 										</div>
 
 										<button
-											class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10"
+											class="flex-c-m stext-101 cl0 size-112 bg7 bor11 hov-btn3 p-lr-15 trans-04 m-b-10 darkModeBtn"
 											name="sbm">
 											Submit
 										</button>
@@ -1255,9 +1232,9 @@ if ($result->num_rows > 0) {
 
 	<!-- Related Products -->
 	<section class="sec-relate-product bg0 p-t-45 p-b-105">
-		<div class="container">
+		<div class="container noselect">
 			<div class="p-b-45">
-				<h3 class="ltext-106 cl5 txt-center">
+				<h3 class="ltext-106 cl5 txt-center darkModetxt-omacha">
 					Related Products
 				</h3>
 			</div>
@@ -1268,24 +1245,24 @@ if ($result->num_rows > 0) {
 					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 						<!-- Block2 -->
 						<div class="block2">
-							<div class="block2-pic hov-img0">
-								<img src="images/jellycat.png" alt="IMG-PRODUCT">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
+								<img src="images/tiger2.png" alt="IMG-PRODUCT">
 
 								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1 lightModeBtn darkModeBtn">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
-										Strawberry Jelly Cat
+									<a href="productdetail.php?p_id=13"
+										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
+										Tiger Ring
 									</a>
 
-									<span class="stext-105 cl3">
-										$12.99
+									<span class="stext-105 cl3 darkModetxt">
+										$8.49
 									</span>
 								</div>
 
@@ -1304,23 +1281,23 @@ if ($result->num_rows > 0) {
 					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 						<!-- Block2 -->
 						<div class="block2">
-							<div class="block2-pic hov-img0">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
 								<img src="images/Elephant.png" alt="IMG-PRODUCT">
 
 								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1 lightModeBtn darkModeBtn">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="productdetail.php?p_id=3"
+										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 										Elephant Jelly Cat
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$10.99
 									</span>
 								</div>
@@ -1340,22 +1317,22 @@ if ($result->num_rows > 0) {
 					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 						<!-- Block2 -->
 						<div class="block2">
-							<div class="block2-pic hov-img0">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
 								<img src="images/giraffe.png" alt="IMG-PRODUCT">
 								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1 lightModeBtn darkModeBtn">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="productdetail.php?p_id=9"
+										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 										Giraffe Jelly Cat
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$12.99
 									</span>
 								</div>
@@ -1375,23 +1352,23 @@ if ($result->num_rows > 0) {
 					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 						<!-- Block2 -->
 						<div class="block2">
-							<div class="block2-pic hov-img0">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
 								<img src="images/beartowel.png" alt="IMG-PRODUCT">
 
 								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1 lightModeBtn darkModeBtn">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="productdetail.php?p_id=10"
+										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 										Bear Baby Tower
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$12.99
 									</span>
 								</div>
@@ -1411,23 +1388,23 @@ if ($result->num_rows > 0) {
 					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 						<!-- Block2 -->
 						<div class="block2">
-							<div class="block2-pic hov-img0">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
 								<img src="images/Jelly Cat Flower.png" alt="IMG-PRODUCT">
 
 								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1 lightModeBtn darkModeBtn">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="productdetail.php?p_id=11"
+										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 										Flower Jelly Cat
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$10.99
 									</span>
 								</div>
@@ -1447,23 +1424,23 @@ if ($result->num_rows > 0) {
 					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 						<!-- Block2 -->
 						<div class="block2">
-							<div class="block2-pic hov-img0">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
 								<img src="images/duck.png" alt="IMG-PRODUCT">
 
 								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1 lightModeBtn darkModeBtn">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="productdetail.php?p_id=14"
+										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 										Duck
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$5.25
 									</span>
 								</div>
@@ -1483,23 +1460,23 @@ if ($result->num_rows > 0) {
 					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 						<!-- Block2 -->
 						<div class="block2">
-							<div class="block2-pic hov-img0">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
 								<img src="images/bearjellycat.png" alt="IMG-PRODUCT">
 
 								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1 lightModeBtn darkModeBtn">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="productdetail.php?p_id=8"
+										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 										Bear Jelly Cat
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$10.99
 									</span>
 								</div>
@@ -1519,23 +1496,23 @@ if ($result->num_rows > 0) {
 					<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 						<!-- Block2 -->
 						<div class="block2">
-							<div class="block2-pic hov-img0">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
 								<img src="images/unicorn.png" alt="IMG-PRODUCT">
 
 								<a href="#"
-									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+									class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1 lightModeBtn darkModeBtn">
 									Quick View
 								</a>
 							</div>
 
 							<div class="block2-txt flex-w flex-t p-t-14">
 								<div class="block2-txt-child1 flex-col-l ">
-									<a href="product-detail.html"
-										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+									<a href="productdetail.php?p_id=4"
+										class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 										Unicorn
 									</a>
 
-									<span class="stext-105 cl3">
+									<span class="stext-105 cl3 darkModetxt">
 										$10.99
 									</span>
 								</div>
@@ -1558,7 +1535,7 @@ if ($result->num_rows > 0) {
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-100 p-b-25">
-		<div class="container">
+		<div class="container noselect">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
 					<h4 class="stext-301 cl10 p-b-30">
@@ -1706,7 +1683,7 @@ if ($result->num_rows > 0) {
 
 
 	<!-- Back to top -->
-	<div class="btn-back-to-top" id="myBtn">
+	<div class="btn-back-to-top noselect" id="myBtn">
 		<span class="symbol-btn-back-to-top">
 			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>
