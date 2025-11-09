@@ -25,6 +25,18 @@
   -moz-transition: all 0.4s;
 }
 
+.lightModeBtn {
+    background-color: #19f574 !important;
+    border-color: #19f574;
+    color: #181818 !important;
+}
+
+.lightModeBtn:hover {
+    background-color: #16c261 !important;
+    border-color: #16c261;
+    color: #181818 !important;
+}
+
 
 
 

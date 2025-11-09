@@ -24,6 +24,12 @@ ul.sub-menu {
 
 }
 
+.darkModetxt-omacha-active {
+    color: #19f574 !important;
+    font-weight: bold !important;
+    background-color: #232323 !important;
+}
+
 
 
 .darkModetxt-omacha {

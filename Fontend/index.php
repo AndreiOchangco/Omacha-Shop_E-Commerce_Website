@@ -1001,7 +1001,7 @@ if ($query->num_rows > 0) {
 	<!-- Category Start -->
 	<div class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
 		<div class="container text-center">
-			<h1 class="text-primary1 noselect">Shop by Category</h1>
+			<h1 class="text-primary1 m-t-50 noselect">Shop by Category</h1>
 			<div class="row">
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
@@ -1132,7 +1132,7 @@ if ($query->num_rows > 0) {
 		<iframe  class="home-frame" width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"></iframe>
 	</div>
 
-	<section class="bg0 p-t-100 p-b-25 noselect" id="new-arrivals">
+	<section class="bg0 p-t-120 p-b-25 noselect" id="new-arrivals">
 		<div class="content">
 			<div class="container">
 				<div class="row justify-content-center mb-4">
@@ -1145,98 +1145,122 @@ if ($query->num_rows > 0) {
 				<div class="row">
 					<!-- Recommended products -->
 					<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-						<a href="#">
-							<div class="card zoom-img" style="border-radius: 20px;">
-								<img src="images/jellycat.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+						<a href="productdetail.php?p_id=13">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
+								<img src="images/tiger2.png" alt="IMG-PRODUCT">
 							</div>
 						</a>
 						<div class="text-center">
-							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
-									Flower
+							<div class="p-b-15 m-t-10">
+								<a href="productdetail.php?p_id=13"
+									class="stext-110 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
+									Tiger Ring
 								</a>
-							</h5>
-							<p>$12.99</p>
+
+								<p class="stext-105 cl3 darkModetxt">
+									$8.49
+								</p>
+							</div>
 						</div>
 					</div>
 					<!-- Repeat the above block for other recommended products -->
 					<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-						<a href="#">
-							<div class="card zoom-img" style="border-radius: 20px;">
-								<img src="images/Jelly Cat Flower.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+						<a href="productdetail.php?p_id=3">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
+								<img src="images/Elephant.png" alt="IMG-PRODUCT">
 							</div>
 						</a>
 						<div class="text-center">
-							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
-									Flower
-								</a>
-							</h5>
-							<p>$10.99</p>
-						</div>
-					</div>
-					<!-- Repeat the above block for other recommended products -->
-					<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-						<a href="#">
-							<div class="card zoom-img" style="border-radius: 20px;">
-								<img src="images/beartowel.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
-							</div>
-						</a>
-						<div class="text-center">
-							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
-									Bear Baby Towel
-								</a>
-							</h5>
-							<p>$12.99</p>
-						</div>
-					</div>
-					<!-- Repeat the above block for other recommended products -->
-					<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-						<a href="#">
-							<div class="card zoom-img" style="border-radius: 20px;">
-								<img src="images/Elephant.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
-							</div>
-						</a>
-						<div class="text-center">
-							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+							<div class="p-b-15 m-t-10">
+								<a href="productdetail.php?p_id=3"
+									class="stext-110 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 									Elephant Jelly Cat
 								</a>
-							</h5>
-							<p>$10.99</p>
+
+								<p class="stext-105 cl3 darkModetxt">
+									$10.99
+								</p>
+							</div>
 						</div>
 					</div>
 					<!-- Repeat the above block for other recommended products -->
 					<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-						<a href="#">
-							<div class="card zoom-img" style="border-radius: 20px;">
-								<img src="images/giraffe.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+						<a href="productdetail.php?p_id=9">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
+								<img src="images/giraffe.png" alt="IMG-PRODUCT">
 							</div>
 						</a>
 						<div class="text-center">
-							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+							<div class="p-b-15 m-t-10">
+								<a href="productdetail.php?p_id=9"
+									class="stext-110 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
 									Giraffe Jelly Cat
 								</a>
-							</h5>
-							<p>$12.99</p>
+
+								<p class="stext-105 cl3 darkModetxt">
+									$12.99
+								</p>
+							</div>
 						</div>
 					</div>
 					<!-- Repeat the above block for other recommended products -->
 					<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
-						<a href="#">
-							<div class="card zoom-img" style="border-radius: 20px;">
-								<img src="images/unicorn.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+						<a href="productdetail.php?p_id=13">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
+								<img src="images/beartowel.png" alt="IMG-PRODUCT">
 							</div>
 						</a>
 						<div class="text-center">
-							<h5 class="p-b-15">
-								<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
-									Unicorn
+							<div class="p-b-15 m-t-10">
+								<a href="productdetail.php?p_id=13"
+									class="stext-110 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
+									Bear Baby Tower
 								</a>
-							</h5>
-							<p>$10.99</p>
+
+								<p class="stext-105 cl3 darkModetxt">
+									$12.99
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- Repeat the above block for other recommended products -->
+					<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+						<a href="productdetail.php?p_id=13">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
+								<img src="images/Jelly Cat Flower.png" alt="IMG-PRODUCT">
+							</div>
+						</a>
+						<div class="text-center">
+							<div class="p-b-15 m-t-10">
+								<a href="productdetail.php?p_id=13"
+									class="stext-110 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
+									Flower Jelly Cat
+								</a>
+
+								<p class="stext-105 cl3 darkModetxt">
+									$10.99
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- Repeat the above block for other recommended products -->
+					<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+						<a href="productdetail.php?p_id=14">
+							<div style="border: 0.5px dashed #000; border-radius: 25px; background-color: #ffffffff;" class="block2-pic hov-img0">
+								<img src="images/duck.png" alt="IMG-PRODUCT">
+							</div>
+						</a>
+						<div class="text-center">
+							<div class="p-b-15 m-t-10">
+								<a href="productdetail.php?p_id=14"
+									class="stext-110 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 darkModehyperlink-omacha">
+									Duck
+								</a>
+
+								<p class="stext-105 cl3 darkModetxt">
+									$5.25
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1262,97 +1286,88 @@ if ($query->num_rows > 0) {
 	<!-- blog start -->
 	<section id="blog">
 		<div class="blog-heading p-t-100 p-b-25 noselect">
-			<span>Latest News</span>
-			<h3>My Blog</h3>
+			<h3 class="darkModetxt-omacha">My Blog</h3>
 			<div class="blog-container">
-				<div class="blog-box">
-					<div class="blog-img">
-						<img src="images/02.jpg" alt="Blog">
-					</div>
-					<div class="blog-text">
-						<span>03 July 2023 / Toy Shop</span>
-						<a href="#" class="blog-title">Cherishing Your Kids Special Day With Their Ultimate Faves</a>
-						<p>Create Lasting Memories on Your Kid's Special Day with Top Shop's Ultimate Favorites
-							Collection</p>
-						<div class="readmore">
-							<a href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="blog-box">
-					<div class="blog-img">
-						<img src="images/3.jpg" alt="Blog">
-					</div>
-					<div class="blog-text">
-						<span>12 Jan 2024 / Toy Shop</span>
-						<a href="#" class="blog-title">Top 10 Must-Have Toy Shop Picks for Your Child's Birthday
-							Bash</a>
-						<p>Discover the top 10 must-have toys from our shop, making your child's birthday bash
-							unforgettable.</p>
-						<div class="readmore">
-							<a href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="blog-box">
-					<div class="blog-img">
-						<img src="images/blog-06.jpg" alt="Blog">
-					</div>
-					<div class="blog-text">
-						<span>5 Jan 2024 / Toy Shop</span>
-						<a href="#" class="blog-title">The Joy of Giving: How Toy Shop Gifts Can Make Birthdays Extra
-							Special</a>
-						<p>Experience the joy of giving with toy shop gifts, making birthdays extra special for your
-							little ones.</p>
-						<div class="readmore">
-							<a href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="blog-box">
-					<div class="blog-img">
-						<img src="images/blog-05.jpg" alt="Blog">
-					</div>
-					<div class="blog-text">
-						<span>02 Mar 2024 / Toy Shop</span>
-						<a href="#" class="blog-title">Unleashing Creativity: DIY Toy Crafts for Rainy Day Fun</a>
-						<p>Rainy Day Creativity: Engage Kids with Exciting DIY Toy Crafts for Endless Indoor Fun and
-							Imagination</p>
-						<div class="readmore">
-							<a href="#">Read More</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="blog-box">
+				<div class="blog-box darkModebg-darkgray">
 					<div class="blog-img">
 						<img src="images/blog-04.jpg" alt="Blog">
 					</div>
-					<div class="blog-text">
-						<span>14 Mar 2024 / Toy Shop</span>
-						<a href="#" class="blog-title">Eco-Friendly Toys: Choosing Options for a Greener Planet</a>
-						<p>Explore Eco-Friendly Toys for Conscious Consumers Committed to Preserving Our Planet's
-							Future.</p>
-						<div class="readmore">
-							<a href="#">Read More</a>
+					<div style="margin-top: -15px;" class="blog-text">
+						<span class="darkModetxt">John Mathew | 14 Feb 2024</span>
+						<a href="blog-detail1.php" class="blog-title darkModehyperlink-omacha">Making Your Kids' Special Day Memorable</a>
+						<p style="text-align: justify; " class="darkModetxt">Planning a memorable celebration for your child's special day involves thoughtful consideration and creativity.</p>
+						<div class="readmore darkModeBtn">
+							<a href="blog-detail1.php">Read More</a>
 						</div>
 					</div>
 				</div>
 
-				<div class="blog-box">
+				<div class="blog-box darkModebg-darkgray">
 					<div class="blog-img">
-						<img src="images/6.jpg" alt="Blog">
+						<img src="images/blog-05.jpg" alt="Blog">
 					</div>
-					<div class="blog-text">
-						<span>18 Feb 2024 / Toy Shop</span>
-						<a href="#" class="blog-title">The Future of Play: Exploring STEM Toys for Young Innovators</a>
-						<p>Unlocking Potential: Dive into STEM Toys, Nurturing Young Minds to Innovate and Thrive in
-							Tomorrow's World.</p>
-						<div class="readmore">
-							<a href="#">Read More</a>
+					<div style="margin-top: -15px;" class="blog-text">
+						<span class="darkModetxt">John Mathew | 14 Feb 2024</span>
+						<a href="blog-detail2.php" class="blog-title darkModehyperlink-omacha">What Are the Best Toys for Child Development</a>
+						<p style="text-align: justify; " class="darkModetxt">Selecting toys that promote child development involves considering various factors.</p>
+						<div class="readmore darkModeBtn">
+							<a href="blog-detail2.php">Read More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="blog-box darkModebg-darkgray">
+					<div class="blog-img">
+						<img src="images/blog-06.jpg" alt="Blog">
+					</div>
+					<div style="margin-top: -15px;" class="blog-text">
+						<span class="darkModetxt">John Mathew | 14 Feb 2024</span>
+						<a href="blog-detail3.php" class="blog-title darkModehyperlink-omacha">How Do Toys Impact a Child's Learning Ways</a>
+						<p style="text-align: justify; " class="darkModetxt">Toys wield significant influence on a child's learning journey, serving as more than just objects of amusement.</p>
+						<div class="readmore darkModeBtn">
+							<a href="blog-detail3.php">Read More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="blog-box darkModebg-darkgray">
+					<div class="blog-img">
+						<img src="images/02.jpg" alt="Blog">
+					</div>
+					<div style="margin-top: -15px;" class="blog-text">
+						<span class="darkModetxt">John Mathew | 14 Feb 2024</span>
+						<a href="blog-detail4.php" class="blog-title darkModehyperlink-omacha">Build Worlds, Collect Pieces With Your Young Ones</a>
+						<p style="text-align: justify; " class="darkModetxt">Through building and collecting, children learn important concepts.</p>
+						<div class="readmore darkModeBtn">
+							<a href="blog-detail4.php">Read More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="blog-box darkModebg-darkgray">
+					<div class="blog-img">
+						<img src="images/3.jpg" alt="Blog">
+					</div>
+					<div style="margin-top: -15px;" class="blog-text">
+						<span class="darkModetxt">John Mathew | 14 Feb 2024</span>
+						<a href="blog-detail5.php" class="blog-title darkModehyperlink-omacha">The Joys of Being a Parent: A Guide to Parenting</a>
+						<p style="text-align: justify; " class="darkModetxt">Parenting is a journey filled with ups and downs, but it's one of the most rewarding experiences in life.</p>
+						<div class="readmore darkModeBtn">
+							<a href="blog-detail5.php">Read More</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="blog-box darkModebg-darkgray">
+					<div class="blog-img">
+						<img src="images/4.jpg" alt="Blog">
+					</div>
+					<div style="margin-top: -15px;" class="blog-text">
+						<span class="darkModetxt">John Mathew | 14 Feb 2024</span>
+						<a href="blog-detail6.php" class="blog-title darkModehyperlink-omacha">Essential Tips for Buying and Caring for Kids' Toys</a>
+						<p style="text-align: justify; " class="darkModetxt">Caring for kids' toys is essential to prolong their lifespan and maintain their safety.</p>
+						<div class="readmore darkModeBtn">
+							<a href="blog-detail6.php">Read More</a>
 						</div>
 					</div>
 				</div>
@@ -1365,8 +1380,8 @@ if ($query->num_rows > 0) {
 
 
 	<!-- brand start -->
-	<div class="containcarousel p-t-100 p-b-25 noselect" id="top-brands">
-  	<h1 class="text-primary1 noselect" style="text-align: center;">Top Brands</h1>
+	<div class="containcarousel p-t-100 p-b-40 noselect" id="top-brands">
+  	<h1 class="text-primary1 m-t-30 noselect" style="text-align: center;">Top Brands</h1>
 
 		<div class="carousel noselect">
 			<div class="group">
