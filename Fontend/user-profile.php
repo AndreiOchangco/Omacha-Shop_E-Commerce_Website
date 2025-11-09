@@ -371,7 +371,7 @@ $wishlist_count = 0;
         </header>
 
 
-        <!-- Content page (override) -->
+        <!-- Content page (override)w -->
      <section class="profile-section">
   <div class="profile-card">
 
