@@ -819,7 +819,7 @@ if ($result->num_rows > 0) {
 			<h3 style="text-align: center; font-size: 2.5rem; " class="mtext-111 cl2 p-b-16 m-b-50 text-omacha">
 				Our Developer Team
 			</h3>
-			<div class="row">
+			<div class="row justify-content-center text-center">
 
 				<!-- Team Member 1 -->
 				<div class="col-md-3">
