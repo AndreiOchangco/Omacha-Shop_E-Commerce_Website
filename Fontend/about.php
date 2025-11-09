@@ -724,7 +724,7 @@ if ($result->num_rows > 0) {
 						</h3>
 
 						<p class="stext-113 cl6 p-b-26 darkModetxt" style="text-align: justify;">
-							We, the team at Omacha Store, take pride in being one of the leading destinations for
+							We, the team at Omacha Shop, take pride in being one of the leading destinations for
 							providing quality and diverse toys for children. Our mission is not only to offer
 							entertainment products but also to create enjoyable and educational experiences for every
 							child.
@@ -796,7 +796,7 @@ if ($result->num_rows > 0) {
 									each of our customers' families.
 								</p>
 
-								<div class="bor16 p-l-29 p-b-9 m-t-22">
+								<div style="border-radius: 0px 10px 10px 0px; " class="bor16 p-l-29 p-b-9 m-t-22 p-tb-10">
 									<p class="stext-114 cl6 p-r-40 p-b-11 darkModetxt" style="text-align: justify;">
 										Coding with passion, creating with purpose, and innovating for a brighter
 										future.
