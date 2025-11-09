@@ -540,20 +540,138 @@ if ($query->num_rows > 0) {
 				</li>
 			</ul>
 		</div>
+	</header>
 
-		<!-- Modal Search -->
+	<!-- Modal Search -->
 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
-				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-					<img src="images/icons/icon-close2.png" alt="CLOSE">
-				</button>
-
-				<form class="wrap-search-header flex-w p-l-15">
-					<button class="flex-c-m trans-04">
-						<i class="zmdi zmdi-search"></i>
-					</button>
-					<input class="plh3" type="text" name="search" placeholder="Search...">
-				</form>
+			<section class="bg0 p-t-62 p-b-60">
+				<div class="content">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="search-container">
+								<h1>🐻 What are you looking for?</h1>
+								<form class="search-box" action="#" method="GET">
+									<input type="text" placeholder="Search" name="search">
+									<button type="submit"><i class="fas fa-search"></i></button> <!-- Using Font Awesome search icon -->
+								</form>
+								<div class="popular-searches">
+									<span>Popular searches:</span>
+									<a href="#" class="tag">Featured</a>
+									<a href="#" class="tag">Trendy</a>
+									<a href="#" class="tag">Sale</a>
+									<a href="#" class="tag">New</a>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row justify-content-center mb-4">
+							<div class="col-12 text-left">
+								<h2>Recommended products</h2>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<!-- Recommended products -->
+							<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+								<a href="#">
+									<div class="card zoom-img" style="border-radius: 20px;">
+										<img src="images/jellycat.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+									</div>
+								</a>
+								<div class="text-center">
+									<h5 class="p-b-15">
+										<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+											Flower
+										</a>
+									</h5>
+									<p>$12.99</p>
+								</div>
+							</div>
+							<!-- Repeat the above block for other recommended products -->
+							<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+								<a href="#">
+									<div class="card zoom-img" style="border-radius: 20px;">
+										<img src="images/Jelly Cat Flower.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+									</div>
+								</a>
+								<div class="text-center">
+									<h5 class="p-b-15">
+										<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+											Flower
+										</a>
+									</h5>
+									<p>$10.99</p>
+								</div>
+							</div>
+							<!-- Repeat the above block for other recommended products -->
+							<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+								<a href="#">
+									<div class="card zoom-img" style="border-radius: 20px;">
+										<img src="images/beartowel.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+									</div>
+								</a>
+								<div class="text-center">
+									<h5 class="p-b-15">
+										<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+											Bear Baby Towel
+										</a>
+									</h5>
+									<p>$12.99</p>
+								</div>
+							</div>
+							<!-- Repeat the above block for other recommended products -->
+							<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+								<a href="#">
+									<div class="card zoom-img" style="border-radius: 20px;">
+										<img src="images/Elephant.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+									</div>
+								</a>
+								<div class="text-center">
+									<h5 class="p-b-15">
+										<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+											Elephant Jelly Cat
+										</a>
+									</h5>
+									<p>$10.99</p>
+								</div>
+							</div>
+							<!-- Repeat the above block for other recommended products -->
+							<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+								<a href="#">
+									<div class="card zoom-img" style="border-radius: 20px;">
+										<img src="images/giraffe.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+									</div>
+								</a>
+								<div class="text-center">
+									<h5 class="p-b-15">
+										<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+											Giraffe Jelly Cat
+										</a>
+									</h5>
+									<p>$12.99</p>
+								</div>
+							</div>
+							<!-- Repeat the above block for other recommended products -->
+							<div class="col-lg-2 col-md-4 col-sm-6 col-12 mb-4">
+								<a href="#">
+									<div class="card zoom-img" style="border-radius: 20px;">
+										<img src="images/unicorn.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
+									</div>
+								</a>
+								<div class="text-center">
+									<h5 class="p-b-15">
+										<a href="#" class="ltext-111 cl2 hov-cl1 trans-04">
+											Unicorn
+										</a>
+									</h5>
+									<p>$10.99</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			</div>
 		</div>
 	</header>
@@ -564,11 +682,11 @@ if ($query->num_rows > 0) {
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
 			<div class="header-cart-title flex-w flex-sb-m p-b-8">
-				<span class="mtext-103 cl2 darkModetxt">
+				<span class="mtext-103 cl2 darkModetxt noselect">
 					Your Cart
 				</span>
 
-				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+				<div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart noselect">
 					<i class="zmdi zmdi-close"></i>
 				</div>
 			</div>
@@ -577,9 +695,9 @@ if ($query->num_rows > 0) {
 				<ul class="header-cart-wrapitem w-full">
 					<br>
 					<?php
-					// Iterate over each product in the cart and display information
+					// Duyệt qua mỗi sản phẩm trong giỏ hàng và hiển thị thông tin
 					foreach ($order_array as $item) {
-						// Split the image string into an array and trim extra whitespace
+						// Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
 						$product_images = array_map('trim', explode(',', $item["p_image"]));
 						
 						// mới có u_id $userLogin["userID"], 555
@@ -589,23 +707,23 @@ if ($query->num_rows > 0) {
 								<div class="row">
 									<div class="col-md-3">
 										<div class="header-cart-item-img">
-											<!-- Show image in cart -->
+											<!-- Hiện hình trong giỏ hàng -->
 											<img src="images/<?php echo $product_images[0]; ?>" alt="IMG">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div >
-											<!-- Show product name in cart -->
+											<!-- Hiện tên sản phẩm trong giỏ hàng -->
 											<a href="#" class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
 										</div>
-										<!-- Show product quantity and price -->
+										<!-- Hiện số lượng sản phẩm và giá tiền -->
 										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x $<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
 										<form action="delete-cart2.php" method="post">											
 											<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
 
-											<!-- Delete button here -->
+											<!-- Nút xóa tại đây -->
 											<input type="submit" value="X" name="delete-cart" class="btn-delete">
 											<!-- <//?php print_r($item['p_id']); ?> -->
 										</form>
@@ -621,16 +739,16 @@ if ($query->num_rows > 0) {
 
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
-						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- change user -->
+						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
 						<p>Total: $<?php echo $totalPrice; ?></p>
 					</div>
 
-					<div class="header-cart-buttons flex-w w-full">
-						<a href="shopping-cart.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+					<div class="header-cart-buttons flex-w w-full noselect">
+						<a href="shopping-cart.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10 noselect">
 							View Cart
 						</a>
 
-						<a href="your-order.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						<a href="your-order.php" id="btn-cart" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10 noselect">
 							Your Order
 						</a>
 					</div>
