@@ -396,7 +396,7 @@ if ($query->num_rows > 0) {
 							<li>
 								<a class="darkModetxt" href="contact.php">Contact</a>
 								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
+									<li><a class="darkModetxt" href="Improved_customer_support/main/customer-support.php">Customer Support</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -833,7 +833,7 @@ if ($query->num_rows > 0) {
 
 								<div class="col-md-4 m-tb-15">
 									<a  id="update-cart" href="shopping-cart-coupon.php" class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5 darkModeBtn">
-										Apply coupon
+										Apply Coupon
 									</a>
 								</div>
 

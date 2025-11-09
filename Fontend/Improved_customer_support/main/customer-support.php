@@ -1,13 +1,13 @@
 <?php
-include 'login.php';
+include '../../login.php';
 
-include('../Admin/connection/connectionpro.php');
-require_once '../Admin/connection/connectData.php';
+include('../../../Admin/connection/connectionpro.php');
+require_once '../../../Admin/connection/connectData.php';
 
 
 if (!isset($_SESSION["user"])) {
 	// Redirect user to the login page if not logged in
-	header("Location: login.html");
+	header("Location: ../../login.html");
 	exit(); // Stop further execution of the script
 }
 
@@ -176,36 +176,37 @@ if ($query->num_rows > 0) {
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 
 	<!-- link icon -->
-	<link rel="icon" type="image/png" href="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
+	<link rel="icon" type="image/png" href="../../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/bootstrap/css/bootstrap.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../../fonts/iconic/css/material-design-iconic-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../../fonts/linearicons-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/animate/animate.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/css-hamburgers/hamburgers.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/animsition/css/animsition.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/select2/select2.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/daterangepicker/daterangepicker.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/slick/slick.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/MagnificPopup/magnific-popup.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../../vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" href="css/universal.css">
-	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
+	<link rel="stylesheet" type="text/css" href="../../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/universal.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="../../css/darkcsspart2.css" disabled>
 	<!--===============================================================================================-->
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
@@ -302,50 +303,50 @@ if ($query->num_rows > 0) {
 				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
-					<a href="index.php" class="navbar-brand">
+					<a href="../../index.php" class="navbar-brand">
 						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
-									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
+									src="../../images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a href="index.php">Home</a>
+								<a href="../../index.php">Home</a>
 								<ul class="sub-menu">
-									<li><a href="index.php#shop-by-category">Categories</a></li>
-									<li><a href="index.php#new-arrivals">Arrivals</a></li>
-									<li><a href="index.php#blog">Blog</a></li>
-									<li><a href="index.php#top-brands">Top Brands</a></li>
+									<li><a href="../../index.php#shop-by-category">Categories</a></li>
+									<li><a href="../../index.php#new-arrivals">Arrivals</a></li>
+									<li><a href="../../index.php#blog">Blog</a></li>
+									<li><a href="../../index.php#top-brands">Top Brands</a></li>
 								</ul>
 
 							</li>
 
 							<li class="label1" data-label1="new">
-							<a href="product.php">Shop</a>
+							<a href="../../product.php">Shop</a>
 								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
-									<li><a class="darkModetxt" href="./Products/fantasy-animal-products.php">Fantasy Animals</a></li>
-									<li><a class="darkModetxt" href="./Products/teddy-bear-products.php">Teddy Bears</a></li>
-									<li><a class="darkModetxt" href="./Products/soft-doll-products.php">Soft Dolls</a></li>
-									<li><a class="darkModetxt" href="./Products/plastic-toy-products.php">Plastic Toys</a></li>
+									<li><a class="darkModetxt" href="../../Products/stuffed-animal-products.php">Stuffed Animals</a></li>
+									<li><a class="darkModetxt" href="../../Products/fantasy-animal-products.php">Fantasy Animals</a></li>
+									<li><a class="darkModetxt" href="../../Products/teddy-bear-products.php">Teddy Bears</a></li>
+									<li><a class="darkModetxt" href="../../Products/soft-doll-products.php">Soft Dolls</a></li>
+									<li><a class="darkModetxt" href="../../Products/plastic-toy-products.php">Plastic Toys</a></li>
 								</ul>
 							</li>
 
 							<li class="label1" data-label1="hot">
-								<a href="shopping-cart.php">Cart</a>
+								<a href="../../shopping-cart.php">Cart</a>
 							</li>
 
 							<li>
-								<a href="blog.php">Blog</a>
+								<a href="../../blog.php">Blog</a>
 							</li>
 
 							<li>
-								<a href="about.php">About</a>
+								<a href="../../about.php">About</a>
 							</li>
 
 							<li class="active-menu">
-								<a class="darkModetxt" href="contact.php">Contact</a>
+								<a class="darkModetxt" href="../../contact.php">Contact</a>
 								<ul class="sub-menu darkModebg-black">
 									<li class="active-menu"><a class="darkModetxt" href="#go-up">Customer Support</a></li>
 								</ul>
@@ -365,17 +366,17 @@ if ($query->num_rows > 0) {
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</a>
 
-						<a href="wishlist.php"
+						<a href="../../wishlist.php"
 							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
 							<li class="active-menu">
-								<a href="register.php" class="btn2 btn-primary2 mt-1 "
+								<a href="../../register.php" class="btn2 btn-primary2 mt-1 "
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
 								<ul class="profile-sub-menu">
-									<li><a href="user-profile.php">Profile</a></li>
+									<li><a href="../../user-profile.php">Profile</a></li>
 									
 									<li>
 										<!-- Your toggle button -->
@@ -385,7 +386,7 @@ if ($query->num_rows > 0) {
 									</li>
 										
 
-									<li><a href="register.php">Logout</a></li>
+									<li><a href="../../logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -496,7 +497,7 @@ if ($query->num_rows > 0) {
 		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
 				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
-					<img src="images/icons/icon-close2.png" alt="CLOSE">
+					<img src="../../images/icons/icon-close2.png" alt="CLOSE">
 				</button>
 
 				<form class="wrap-search-header flex-w p-l-15">
@@ -541,7 +542,7 @@ if ($query->num_rows > 0) {
 									<div class="col-md-3">
 										<div class="header-cart-item-img">
 											<!-- Hiện hình trong giỏ hàng -->
-											<img src="images/<?php echo $product_images[0]; ?>" alt="IMG">
+											<img src="../../images/<?php echo $product_images[0]; ?>" alt="IMG">
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -592,7 +593,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../../images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-55">
 			Customer Support
 		</h2>
@@ -600,71 +601,28 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section1>
-		<!-- <h4 class="sectionHeader">Contact Us</h4> -->
-		<h1 class="stext-121 heading darkModetxt">Get In Touch</h1>
-		<div class="contactForm">
-			<form action="notification_api.php" id="notificationForm">
-				<h1 class=" stext-121 sub-heading darkModetxt">Ukinnam ardy</h1>
-				<p class="para para2">
-					Contact us for a quote, help to join the them.
-				</p>
-				<input type="text" id="user" name="user" class="input" value="ADMIN" required>
-				<input type="text" id="title" name="title" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
-				<textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
-				
-				<button type="submit" id="sendmsg" class="input submit">Send Message</button>
-			</form>
-			<div id="result" class="result" style="display: none;"></div>
-
-			<div class="map-container">
-				<div class="mapBg"></div>
-				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.786852619814!2d120.31229760000001!3d16.6374632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33918d5e2a81bcfb%3A0xd9ee01c3a2281d87!2sOmacha%20Shop%20%7C%20E-commerce%20Website!5e0!3m2!1sen!2sph!4v1759728220314!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				
-			</div>
-			
-			<div class="contactMethod">
-
-				<div class="method">
-					<i class="fa-duotone fa-location-check fa-beat-fade contactIcon" style="--fa-primary-color: #ee1153; --fa-secondary-color: #f4679f;"></i>
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Location</h1>
-						<p class="para darkModetxt">Saint Louis College</p>
-					</article>
+	<section1 class="darkMode">
+		<div class="wrap">
+			<div class="chat-card">
+				<div class="chat-header">
+				<div class="avatar">S</div>
+				<div class="status"><span id="lastActive">Last Active (5 mins ago)</span></div>
 				</div>
 
-				<div class="method">
-					<i class="fa-duotone fa-envelope fa-beat-fade contactIcon" style="--fa-primary-color: #dd2776; --fa-secondary-color: #f486c6;"></i>						
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Email</h1>
-						<p class="para darkModetxt">
-							<a
-							class="darkModetxt"
-							href="mailto:omachashopofficial@gmail.com"
-							style="color: #000; text-decoration: none;">omachashopofficial@gmail.com
-							</a>
-						</p>
-						
-					</article>
-				</div>
+				<div id="chatBody" class="chat-body"></div>
 
-				<div class="method">
-					<i class="fa-duotone fa-phone-volume fa-beat-fade contactIcon" style="--fa-primary-color: #d71d55; --fa-secondary-color: #d6669c;"></i>					
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Phone</h1>
-						<p class="para darkModetxt">
-							<a 
-							class="darkModetxt"
-							href="tel:+1922 4800"
-							style="color: #000; text-decoration: none;">+1922 4800
-							</a>
-						</p>
-					</article>
+				<div class="quick-row" id="quickRow"></div>
+
+				<div class="composer">
+				<input id="userInput" type="text" placeholder="Type your question..." autocomplete="off">
+				<button id="sendBtn" aria-label="Send" class="send">
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+					<path d="M22 2L11 13"></path>
+					<path d="M22 2L15 22l-4-9-9-4 20-7z"></path>
+					</svg>
+				</button>
 				</div>
 			</div>
-
 		</div>
 	</section1>
 
@@ -786,23 +744,23 @@ if ($query->num_rows > 0) {
 			<div class="p-t-40">
 				<div class="flex-c-m flex-w p-b-18">
 					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+						<img src="../../images/icons/icon-pay-01.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+						<img src="../../images/icons/icon-pay-02.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+						<img src="../../images/icons/icon-pay-03.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+						<img src="../../images/icons/icon-pay-04.png" alt="ICON-PAY">
 					</a>
 
 					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+						<img src="../../images/icons/icon-pay-05.png" alt="ICON-PAY">
 					</a>
 				</div>
 
@@ -827,14 +785,14 @@ if ($query->num_rows > 0) {
 	</div>
 
 <!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="../../vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../vendor/bootstrap/js/popper.js"></script>
+	<script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+	<script src="../../vendor/select2/select2.min.js"></script>
 	<script>
 		$(".js-select2").each(function(){
 			$(this).select2({
@@ -844,9 +802,9 @@ if ($query->num_rows > 0) {
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script src="../../vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../../vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
 		$('.js-pscroll').each(function(){
 			$(this).css('position','relative');
@@ -864,7 +822,7 @@ if ($query->num_rows > 0) {
 	</script>
 <!--===============================================================================================-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="js/map-custom.js"></script>
+	<script src="../../js/map-custom.js"></script>
 <!--===============================================================================================-->
 	<script>
 		document.getElementById('notificationForm').addEventListener('submit', async function(e) {
@@ -878,7 +836,7 @@ if ($query->num_rows > 0) {
 		};
 
 		try {
-			const response = await fetch('notification_api.php', {
+			const response = await fetch('../../notification_api.php', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -936,9 +894,10 @@ if ($query->num_rows > 0) {
 	</script>
 
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
-	<script src="js/dark-mode.js"></script>
-	<script src="js/scroll.js"></script>
+	<script src="../../js/main.js"></script>
+	<script src="../../js/dark-mode.js"></script>
+	<script src="../../js/scroll.js"></script>
+	<script src="../response/app.js"></script>
 
 </body>
 </html>

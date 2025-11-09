@@ -396,7 +396,7 @@ if ($query->num_rows > 0) {
 							<li>
 								<a class="darkModetxt" href="contact.php">Contact</a>
 								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
+									<li><a class="darkModetxt" href="Improved_customer_support/main/customer-support.php">Customer Support</a></li>
 								</ul>
 							</li>
 						</ul>

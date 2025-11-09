@@ -1,7 +1,4 @@
-:root{--blue:#2563eb;--blue2:#1d4ed8;--black:#0f172a;--white:#ffffff}
 *{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#ffffff 0%,#eaf2ff 100%);color:var(--black)}
 .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:28px}
 .chat-card{width:100%;max-width:500px;background:var(--white);border:1.5px solid rgba(15,23,42,.15);border-radius:22px;padding:16px 16px 18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 12px 28px rgba(0,0,0,.08)}
 .chat-header{display:flex;align-items:center;gap:12px;padding:8px 2px 12px;border-bottom:1px solid rgba(15,23,42,.12)}
