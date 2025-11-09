@@ -828,7 +828,7 @@ if ($result->num_rows > 0) {
 							<img src="images/ThuyKhanh1.jpg" alt="Team Member 1">
 							<a href="https://github.com/AndreiOchangco"
 								target="_blank"
-								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								<i class="fab fa-github"></i>
 							</a>
 						</div>
@@ -849,7 +849,7 @@ if ($result->num_rows > 0) {
 							<img src="images/HuuDat1.jpg" alt="Team Member 2">
 							<a href="https://github.com/Lone-collab"
 								target="_blank"
-								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								<i class="fab fa-github"></i>
 							</a>
 						</div>
@@ -869,7 +869,7 @@ if ($result->num_rows > 0) {
 							<img src="images/BinhQuyen1.jpg" alt="Team Member 3">
 							<a href="https://github.com/hit00ri"
 								target="_blank"
-								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								<i class="fab fa-github"></i>
 							</a>
 						</div>
@@ -889,7 +889,7 @@ if ($result->num_rows > 0) {
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
 							<a href="https://github.com/ardy05aquino-creator"
 								target="_blank"
-								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								<i class="fab fa-github"></i>
 							</a>
 						</div>
@@ -909,7 +909,7 @@ if ($result->num_rows > 0) {
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
 							<a href="#"
 								target="_blank"
-								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								<i class="fab fa-github"></i>
 							</a>
 						</div>
@@ -929,7 +929,7 @@ if ($result->num_rows > 0) {
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
 							<a href="#"
 								target="_blank"
-								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								<i class="fab fa-github"></i>
 							</a>
 						</div>
@@ -949,7 +949,7 @@ if ($result->num_rows > 0) {
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
 							<a href="#"
 								target="_blank"
-								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
+								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								<i class="fab fa-github"></i>
 							</a>
 						</div>
