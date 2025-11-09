@@ -1,48 +1,151 @@
 <?php
-// Start session
-session_start();
+include 'login.php';
 
-// Redirect if user not logged in
+include('../Admin/connection/connectionpro.php');
+require_once '../Admin/connection/connectData.php';
+
+
 if (!isset($_SESSION["user"])) {
-    header("Location: login.html");
-    exit();
+	// Redirect user to the login page if not logged in
+	header("Location: login.html");
+	exit(); // Stop further execution of the script
 }
 
-// Database connection
-$conn = new mysqli('localhost', 'root', '', 'toy-shop');
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$conn->set_charset("utf8mb4");
-
-// Fetch current user info
 $userName = $_SESSION["user"];
-$sqlUser  = "SELECT * FROM `login` WHERE userName = ?";
-$stmt = $conn->prepare($sqlUser);
-$stmt->bind_param("s", $userName);
-$stmt->execute();
-$result = $stmt->get_result();
+// print_r($userName);
+$sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
+$queryLogin = mysqli_query($conn, $sqlLogin);
+// print_r($queryLogin);
+// Check query results
 
-if ($result->num_rows > 0) {
-    $userLogin = $result->fetch_assoc();
+// Iterate through each row of data from the query results
+$row = $queryLogin->fetch_assoc();
+// Add each row's information into the $vuserLogin array
+$userLogin = array(
+	"userID" => $row["userID"],
+	"userName" => $row["userName"],
+	"email" => $row["email"],
+);
+
+$sql = "SELECT * FROM product";
+$query = mysqli_query($conn, $sql);
+
+
+// SQL SELECT query
+$sqlOrder = "SELECT 
+`order`.o_id, 
+`order`.u_id, 
+`order`.p_id, 
+`order`.o_price, 
+`order`.o_status, 
+`order`.o_quantity,
+product.p_type, 
+product.p_image, 
+product.p_name, 
+product.p_price 
+FROM 
+`order`
+INNER JOIN 
+product ON `order`.p_id = product.p_id";
+
+// Execute query
+$resultOrder = $conn->query($sqlOrder);
+
+// Array containing order information
+$order_array = array();
+
+// Check query results
+if ($resultOrder->num_rows > 0) {
+	// Iterate through each row of data from the query results
+	while ($row = $resultOrder->fetch_assoc()) {
+		if ($row['u_id'] == $userLogin['userID'] && $row['o_status'] == 0) {
+			// Add information for each row into the $order_array array
+			$order_array[] = array(
+				"o_id" => $row["o_id"],
+				"u_id" => $row["u_id"],
+				"p_id" => $row["p_id"],
+				"o_price" => $row["o_price"],
+				"o_quantity" => $row["o_quantity"],
+				"o_status" => $row["o_status"],
+				"p_type" => $row["p_type"],
+				"p_image" => $row["p_image"],
+				"p_name" => $row["p_name"],
+				"p_price" => $row["p_price"]
+			);
+		}
+	};
 } else {
-    // Session username not found — invalid session
-    session_destroy();
-    header("Location: login.html");
-    exit();
+	echo "0 results";
 }
-$stmt->close();
 
-// Fetch order count
-$sqlOrderCount = "SELECT COUNT(*) AS total FROM `order` WHERE u_id = ?";
-$stmt = $conn->prepare($sqlOrderCount);
-$stmt->bind_param("i", $userLogin['userID']);
-$stmt->execute();
-$order_count = $stmt->get_result()->fetch_assoc()['total'] ?? 0;
-$stmt->close();
 
-// Wishlist count (placeholder)
-$wishlist_count = 0;
+function sumTotalPrice($order_array, $u_id)
+{
+	$totalPrice = 0; // Initialize the total price variable
+
+	// Browse through each product in the shopping cart and calculate the total price
+	foreach ($order_array as $item) {
+		// Check whether the product's u_id matches the specified u_id
+		if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
+			// Calculate the price of each product (price * quantity)
+			$productPrice = $item["p_price"] * $item["o_quantity"];
+
+			// Add to the total price
+			$totalPrice += $productPrice;
+		}
+	}
+
+	return $totalPrice; // Return the total amount
+}
+
+// Query to count the number of rows in the order table
+$sql = "SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = '{$userLogin['userID']}' AND o_quantity > 0 AND o_status = 0";
+$result = $conn->query($sql);
+
+// Check and display results
+if ($result->num_rows > 0) {
+	$row = $result->fetch_assoc();
+	$order_count = $row["total_rows"];
+} else {
+	echo "There is no data in the order table";
+}
+
+// Query to count the number of rows in the order table
+$sql = "SELECT COUNT(*) AS total_rows FROM wishlist";
+$result = $conn->query($sql);
+
+// Check and display the results
+if ($result->num_rows > 0) {
+	$row = $result->fetch_assoc();
+	$wishlist_count = $row["total_rows"];
+} else {
+	echo "There is no data in the order table";
+}
+
+// Query discount information based on the discount name (d_name)
+$sqlDiscount = "SELECT * FROM discount";
+$query = mysqli_query($conn, $sqlDiscount);
+
+// Array containing discount information
+$discount = array();
+
+// Check query results
+if ($query->num_rows > 0) {
+	// Iterate through each row of data from the query results
+	while ($row = $query->fetch_assoc()) {
+		// Add each row's information to the $discount array
+		$discount = array(
+			"d_id" => $row["d_id"],
+			"d_name" => $row["d_name"],
+			"d_amount" => $row["d_amount"],
+			"d_description" => $row["d_description"],
+			"d_start_date" => $row["d_start_date"],
+			"d_end_date" => $row["d_end_date"]
+		);
+	}
+} else {
+	echo "0 results";
+}
 ?>
 
 <!DOCTYPE html>
