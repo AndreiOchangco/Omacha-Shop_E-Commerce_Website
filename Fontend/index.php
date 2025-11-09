@@ -1126,11 +1126,11 @@ if ($query->num_rows > 0) {
 
 	<!-- introduction test start-->
 	<div class="row1 noselect">
-		<div class="imgWrapper">
-			<img src="images/tshirt-ha.png">
-		</div>
-		<iframe  class="home-frame" width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"></iframe>
+		<img src="images/tshirt-ha.png">
+		<iframe width="600" height="425" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+</iframe>
 	</div>
+<hr style="height: 1.2px; width: 89%; background-color: #a7a7a7; border: none; margin: auto;">
 
 	<section class="bg0 p-t-120 p-b-25 noselect" id="new-arrivals">
 		<div class="content">

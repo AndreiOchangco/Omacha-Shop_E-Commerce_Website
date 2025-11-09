@@ -39,6 +39,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
+
+
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/Poppins/Poppins-Regular.ttf'); 
@@ -4488,21 +4490,7 @@ img.Imagealignment{
   padding: 90px 10px;
 }
 
-.row1 .imgWrapper{
-  overflow: hidden;
-}
 
-.row1 .imgWrapper img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s;
-  
-
-}
-.row1 .imgWrapper:hover img{
-  transform: scale(1.1);
-}
 
 .row1 .contentWrapper{
   width: 100%;
@@ -4998,7 +4986,3 @@ form{
   to { transform: translateX(-100%); }
 }
 
-.home-frame {
-   width: 100px;   /* increase width */
-  height: 50px;   /* increase height */
-}
