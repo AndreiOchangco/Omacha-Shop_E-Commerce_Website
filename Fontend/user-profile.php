@@ -106,9 +106,13 @@ $wishlist_count = 0;
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/universal.css">
+    	<link rel="stylesheet" type="text/css" href="css/userprof.css">
+
     <link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 	
 	<link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+    
+
     <!-- link icon -->
     <link
       rel="stylesheet"
@@ -366,29 +370,43 @@ $wishlist_count = 0;
             </div>
         </header>
 
-        <!-- Content page -->
-        <section class="container p-t-120 p-b-100">
-            <div class="bg0 p-5 rounded-lg shadow-lg max-w-xl mx-auto text-center drkmde">
-                <img src="images/profile.png" alt="User Avatar" class="profile-avatar mb-4" style="width: 200px; height: 200px;">
-                <h2 class="ltext-103 cl2 p-b-10 darkModetxt"><?php echo htmlspecialchars($userLogin['userName']); ?></h2>
-                <p class="stext-107 cl6 mb-4 darkModetxt">User Profile</p>
 
-                <div class="text-left mx-auto w-4/5">
-                    <div class="flex justify-between border-b py-2 darkModetxt">
-                        <strong>User ID:</strong>
-                        <span><?php echo $userLogin['userID']; ?></span>
-                    </div>
-                    <div class="flex justify-between border-b py-2 darkModetxt">
-                        <strong>Email:</strong>
-                        <span><?php echo htmlspecialchars($userLogin['email']); ?></span>
-                    </div>
-                    <div class="flex justify-between border-b py-2 darkModetxt">
-                        <strong>Password:</strong>
-                        <span>********</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Content page (override) -->
+     <section class="profile-section">
+  <div class="profile-card">
+
+
+    <div class="profile-content">
+      
+      <div class="avatar-container">
+        <div class="avatar-wrapper">
+          <img src="images/profile.png" alt="User Avatar" class="profile-avatar">
+        </div>
+      </div>
+
+      <h2 class="username"><?php echo htmlspecialchars($userLogin['userName']); ?></h2>
+      <p class="user-label">User Profile</p>
+
+      <div class="details-container">
+        <div class="detail">
+          <strong>User ID:</strong>
+          <span><?php echo $userLogin['userID']; ?></span>
+        </div>
+        <div class="detail">
+          <strong>Email:</strong>
+          <span><?php echo htmlspecialchars($userLogin['email']); ?></span>
+        </div>
+        <div class="detail">
+          <strong>Password:</strong>
+          <span>********</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
     <!-- Footer -->
 	<footer class="bg3 p-t-100 p-b-25">
