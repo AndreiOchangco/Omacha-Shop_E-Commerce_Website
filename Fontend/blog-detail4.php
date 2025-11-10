@@ -370,10 +370,6 @@ if ($query->num_rows > 0) {
 								</ul>
 							</li>
 
-							<li class="label1" data-label1="hot">
-								<a href="shopping-cart.php">Cart</a>
-							</li>
-
 							<li class="active-menu">
 								<a href="blog.php">Blog</a>
 							</li>
@@ -1038,7 +1034,7 @@ if ($query->num_rows > 0) {
 								</a>
 
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
-									sofy toys
+									soft toys
 								</a>
 
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">

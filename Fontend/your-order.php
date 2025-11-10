@@ -218,6 +218,7 @@ if ($query->num_rows > 0) {
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" href="disproduct.css">
 	<link rel="stylesheet" type="text/css" href="css/universal.css">
+    <link rel="stylesheet" href="css/order-delete.css">
 	<link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
 	<!--===============================================================================================-->
     <style>
@@ -417,10 +418,6 @@ if ($query->num_rows > 0) {
 									<li><a class="darkModetxt" href="./Products/soft-doll-products.php">Soft Dolls</a></li>
 									<li><a class="darkModetxt" href="./Products/plastic-toy-products.php">Plastic Toys</a></li>
 								</ul>
-                                </li>
-
-                                <li class="label1" data-label1="hot">
-                                    <a href="shopping-cart.php">Cart</a>
                                 </li>
 
                                 <li>
@@ -676,19 +673,32 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</div>
-    <!-- Shoping Cart -->
+
+    <!-- Shopping Cart -->
     <form class="bg0 p-t-75 p-b-85">
         <div class="container">
         <h1 id="thank-you">Thank You!</h1>
+
+        <?php if (isset($_GET['deleted']) && $_GET['deleted'] == 1): ?>
+            <div style="background: #d4edda; color: #155724; padding: 10px; border-radius: 8px; text-align:center;">
+                ✅ Item successfully deleted.
+            </div>
+        <?php elseif (isset($_GET['deleted']) && $_GET['deleted'] == 0): ?>
+            <div style="background: #f8d7da; color: #721c24; padding: 10px; border-radius: 8px; text-align:center;">
+                ❌ Failed to delete item. Please try again.
+            </div>
+        <?php endif; ?>
+
         <p id="thank-you">Your order has been successfully placed.</p>
         <p style="padding-bottom: 10px;" id="thank-you">We appreciate your business and look forward to serving you again.</p>
             <table style="width:100%" class="table-shopping-cart">
                 <tr class="table_head">
                     <th class="column-1">Product</th>
-                    <th class="column-2"></th>
+                    <th class="column-2">Name</th>
                     <th class="column-3">Price</th>
                     <th class="column-4">Quantity</th>
                     <th class="column-5">Total</th>
+                    <th class="column-6"></th>
                 </tr>
 
                 <?php foreach ($order_array as $item) : ?>
@@ -710,31 +720,22 @@ if ($query->num_rows > 0) {
                         <td id="quantity_<?php echo $item['p_id']; ?>" class="column-4"><?php echo $item["o_quantity"]; ?></td>
 
                         <td id="total_<?php echo $item['p_id']; ?>" class="column-5">$ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
+                        <td class="column-6">
+							<form action="delete-order-item.php" method="post">											
+								<input type="hidden" name="o_id" value="<?php echo $item['o_id']; ?>">
+								<button type="button" class="btn-delete" data-order-id="<?php echo $row['o_id']; ?>">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+
+
+							</form>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </table>
 
 
         </div>
-
-
-        <!-- <div style="text-align:center; padding-top:40px">
-            Total: $ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?>
-            <div style="padding-top: 30px;" class="row">
-                <div class="col-md-4">
-                    <a style="color: white" id="button-add" href="index.php">Back to Home</a>
-                </div>
-
-                <div class="col-md-4">
-                    <a style="color: white" id="button-add" href="product2.php">Continue Shopping</a>
-                </div>
-
-                <div class="col-md-4">
-                    <a style="color: white" id="button-add" href="contact.php">Continue Contact</a>
-                </div>
-            </div>
-
-        </div> -->
 
         <div class="col-sm-12 col-lg-10 col-xl-8 m-lr-auto p-b-85">
             <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
@@ -1002,6 +1003,49 @@ if ($query->num_rows > 0) {
 	});
 	})();
 	</script>
+    <!--===============================================================================================-->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.btn-delete').forEach(button => {
+            button.addEventListener('click', async function(e) {
+                e.preventDefault();   // stop form submission
+                e.stopPropagation();  // stop duplicate click events
+
+                const orderId = this.dataset.orderId;
+
+                // Confirm once
+                if (!confirm('Are you sure you want to delete this order?')) return;
+
+                try {
+                    const response = await fetch('delete-order-item.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: 'o_id=' + encodeURIComponent(orderId)
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        // Animate and remove the order row
+                        const row = this.closest('tr');
+                        if (row) {
+                            row.style.transition = 'opacity 0.3s ease';
+                            row.style.opacity = '0';
+                            setTimeout(() => row.remove(), 300);
+                        }
+
+                        console.log('✅ ' + data.message);
+                    } else {
+                        alert('❌ ' + data.message);
+                    }
+                } catch (err) {
+                    console.error('⚠️ Error deleting order:', err);
+                    alert('⚠️ Failed to delete. Please try again.');
+                }
+            });
+        });
+    });
+    </script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/dark-mode.js"></script>

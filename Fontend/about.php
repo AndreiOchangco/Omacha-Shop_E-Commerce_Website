@@ -436,10 +436,6 @@ if ($result->num_rows > 0) {
 								</ul>
 							</li>
 
-							<li class="label1" data-label1="hot">
-								<a href="shopping-cart.php">Cart</a>
-							</li>
-
 							<li>
 								<a href="blog.php">Blog</a>
 							</li>

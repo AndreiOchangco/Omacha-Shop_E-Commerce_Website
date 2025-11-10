@@ -381,10 +381,6 @@ if ($query->num_rows > 0) {
 								</ul>
 							</li>
 
-							<li class="label1 active-menu" data-label1="hot">
-								<a href="#go-up">Cart</a>
-							</li>
-
 							<li>
 								<a href="blog.php">Blog</a>
 							</li>

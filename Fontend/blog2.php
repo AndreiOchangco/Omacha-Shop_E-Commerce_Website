@@ -372,10 +372,6 @@ if ($query->num_rows > 0) {
 								</ul>
 							</li>
 
-							<li class="label1" data-label1="hot">
-								<a href="shopping-cart.php">Cart</a>
-							</li>
-
 							<li class="active-menu">
 								<a href="#go-up">Blog</a>
 							</li>
@@ -892,7 +888,7 @@ if ($query->num_rows > 0) {
 								<li class="p-b-7">
 									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
 										<span>
-											Swptember 2023
+											September 2023
 										</span>
 
 										<span>
@@ -940,7 +936,7 @@ if ($query->num_rows > 0) {
 
 								<a href="#"
 									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
-									sofy toys
+									soft toys
 								</a>
 
 								<a href="#"

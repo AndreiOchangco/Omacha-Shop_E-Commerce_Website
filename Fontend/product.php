@@ -325,10 +325,6 @@ if ($result->num_rows > 0) {
 								</ul>
 							</li>
 
-							<li class="label1" data-label1="hot">
-								<a class="darkModetxt" href="shopping-cart.php">Cart</a>
-							</li>
-
 							<li>
 								<a class="darkModetxt" href="blog.php">Blog</a>
 							</li>
@@ -1020,7 +1016,7 @@ if ($result->num_rows > 0) {
 
 							<ul>
 								<li class="p-b-6">
-									<button type="submit" value="Cotton">Cotton </button>
+									<button type="submit" value="Cotton" id="Cotton">Cotton </button>
 								</li>
 
 								<li class="p-b-6">
@@ -1045,17 +1041,17 @@ if ($result->num_rows > 0) {
 							<div class="flex-w p-t-4 m-r--5">
 								<a href="#"
 									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									<button type="submit" value="Cute">Cute </button>
+									<button type="submit" value="kids">kids</button>
 								</a>
 
 								<a href="#"
 									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									<button type="submit" value="fashion">fashion</button>
+									<button type="submit" value="soft-toys">soft toys</button>
 								</a>
 
 								<a href="#"
 									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5">
-									<button type="submit" value="street">Streetstyle </button>
+									<button type="submit" value="toys">toys</button>
 								</a>
 
 

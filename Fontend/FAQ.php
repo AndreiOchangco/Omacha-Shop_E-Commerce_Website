@@ -1272,18 +1272,6 @@ for (var attr in meta) {
       <cart-drawer-items >
         <form action="/cart" id="CartDrawer-Form" class="cart__contents cart-drawer__form" method="post">
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
-              
-
-<div class="cart-progress">
-<p style="text-align:center" id="main-cart-progress" data-id="" class="free-shipping ">  
-  
-  
-  
-       <span>Congratulations! You&#39;ve got <strong>Free Shipping!</strong></span>
-      
-  
-</p>
-
 
 <div class="cart-progress-bar">
 <progress max="10000" value="65400" class="free-shipp-ready">654
