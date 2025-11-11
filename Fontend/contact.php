@@ -599,19 +599,20 @@ if ($query->num_rows > 0) {
 
 	<!-- Content page -->
 	<section1>
-		<h1 style="margin-bottom: -20px;" class="stext-122 heading darkModetxt-omacha m-t-30">Get In Touch</h1>
+		<h1 style="margin-bottom: -20px;" class="stext-122 heading darkModetxt-omacha m-t-25">Get In Touch</h1>
 		<div class="contactForm">
-			<div style="background-color: #ffffffff; border-radius: 25px; align-items: center;" class="m-t-30">
-				<h1 style="margin-top: 20px; margin-bottom: 20px; margin-left: 20px; font-size: 1.5rem; color: #181818;" class=" stext-121 sub-heading">Let's talk</h1>
-				<form action="notification_api.php" id="notificationForm">
-	
-					<input type="text" id="user" name="user" style="margin-bottom: 20px; border: 0.5px dashed #000; border-radius: 10px;" class="input" value="ADMIN" required>
-					<input type="text" id="title" name="title" style="margin-bottom: 20px; border: 0.5px dashed #000; border-radius: 10px;" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
-					<textarea name="message" style="border: 0.5px dashed #000; border-radius: 10px;" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
-					
-					<button type="submit" id="sendmsg" class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 m-lf-minus-10 m-t-10 trans-04">Send Message</button>
+			<div style="background-color: #ffffff; border-radius: 25px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center;" class="m-t-30">
+				<h1 style="margin: 0 0 30px 0; font-size: 1.5rem; color: #181818;" class="stext-121 sub-heading">Let's talk</h1>
+				<form action="notification_api.php" id="notificationForm" style="display: flex; flex-direction: column; align-items: center; width: 98%; max-width: 500px;">
+					<input type="text" id="user" name="user" style="margin-bottom: 20px; border-radius: 10px; width: 98%;" class="input" value="ADMIN" required>
+					<input type="text" id="title" name="title" style="margin-bottom: 20px; border-radius: 10px; width: 98%;" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
+
+					<textarea name="message" style="border-radius: 10px; width: 100%; margin-bottom: 25px;" class="input" id="message" cols="30" rows="5" placeholder="Your message"></textarea>
+
+					<button type="submit" id="sendmsg" class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 trans-04" style="width: 98%; margin-bottom: -5px;">Send Message</button>
 				</form>
 			</div>
+
 			<!-- Notification Modal -->
 			<div id="resultModal" class="modal" style="display: none;">
 				<div class="modal-content">
@@ -620,17 +621,24 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 
-			<div style="margin-top: -20px; " class="map-container">
+			<div style="margin-top: -20px; height: 500px; border-radius: 20px; overflow: hidden;" class="map-container">
 				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.786852619814!2d120.31229760000001!3d16.6374632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33918d5e2a81bcfb%3A0xd9ee01c3a2281d87!2sOmacha%20Shop%20%7C%20E-commerce%20Website!5e0!3m2!1sen!2sph!4v1759728220314!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe 
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.786852619814!2d120.31229760000001!3d16.6374632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33918d5e2a81bcfb%3A0xd9ee01c3a2281d87!2sOmacha%20Shop%20%7C%20E-commerce%20Website!5e0!3m2!1sen!2sph!4v1759728220314!5m2!1sen!2sph" 
+						allowfullscreen="" 
+						loading="lazy" 
+						referrerpolicy="no-referrer-when-downgrade" 
+						style="width: 100%; height: 100%; border: 0; border-radius: 20px;"
+					></iframe>
 				</div>
 			</div>
+
 			
 		</div>
 		<div class="contactMethod">
 
 			<div class="method">
-				<i class="fa-duotone fa-location-check fa-beat-fade contactIcon" style="--fa-primary-color: #ee1153; --fa-secondary-color: #f4679f; margin-top: 20px;"></i>
+				<i class="fa-duotone fa-location-check fa-beat-fade contactIcon" style="--fa-primary-color: #ee1153; --fa-secondary-color: #f4679f; margin-top: 20px; margin-right: -13px;"></i>
 				<article class="text">
 					<h1 class="stext-121 sub-heading text-omacha">Location</h1>
 					<p class="para darkModetxt">Saint Louis College</p>
@@ -638,7 +646,7 @@ if ($query->num_rows > 0) {
 			</div>
 
 			<div class="method">
-				<i class="fa-duotone fa-envelope fa-beat-fade contactIcon" style="--fa-primary-color: #dd2776; --fa-secondary-color: #f486c6; margin-top: 20px;"></i>						
+				<i class="fa-duotone fa-envelope fa-beat-fade contactIcon" style="--fa-primary-color: #dd2776; --fa-secondary-color: #f486c6; margin-top: 23px; margin-right: -10px;"></i>						
 				<article class="text">
 					<h1 class="stext-121 sub-heading text-omacha">Email</h1>
 					<p class="para darkModetxt">
@@ -653,7 +661,7 @@ if ($query->num_rows > 0) {
 			</div>
 
 			<div class="method">
-				<i class="fa-duotone fa-phone-volume fa-beat-fade contactIcon" style="--fa-primary-color: #d71d55; --fa-secondary-color: #d6669c; margin-top: 20px;"></i>					
+				<i class="fa-duotone fa-phone-volume fa-beat-fade contactIcon" style="--fa-primary-color: #d71d55; --fa-secondary-color: #d6669c; margin-top: 20px; margin-right: -10px;"></i>					
 				<article class="text">
 					<h1 class="stext-121 sub-heading text-omacha">Phone</h1>
 					<p class="para darkModetxt">
