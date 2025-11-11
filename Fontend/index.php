@@ -410,6 +410,10 @@ if ($query->num_rows > 0) {
 								</ul>
 							</li>
 
+							<li class="label1" data-label1="hot">
+								<a class="darkModetxt" href="shopping-cart.php">Cart</a>
+							</li>
+
 							<li>
 								<a class="darkModetxt" href="blog.php">Blog</a>
 							</li>
@@ -421,7 +425,7 @@ if ($query->num_rows > 0) {
 							<li>
 								<a class="darkModetxt" href="contact.php">Contact</a>
 								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="Improved_customer_support/main/customer-support.php">Customer Support</a></li>
+									<li><a class="darkModetxt" href="customer-support.php">Customer Support</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -1002,7 +1006,8 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w noselect">
-						<img class="category noselect" src="images/Homepage-images/convenience_icon.png" alt="category-img">
+						<a href="./Products/stuffed-animal-products.php" style="color: white;">
+						<img class="category noselect" src="images/Homepage-images/convenience_icon.png" alt="category-img" >
 						<h5 class="stext-121 noselect">Stuffed Animals</h5>
 					</div>
 				</div>
@@ -1010,32 +1015,40 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block2 -->
 					<div class="block1 wrap-pic-w noselect">
+						<a href="./Products/fantasy-animal-products.php" style="color: white;">
 						<img class="category noselect" src="images/Homepage-images/shopping_icon.png" alt="category-img">
-						<h5 class="stext-121 noselect">Fantasy Animals</h5>
+						<h5 class="stext-121 noselect">
+							 Fantasy Animals
+							</h5>
 					</div>
 				</div>
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block3 -->
 					<div class="block1 wrap-pic-w noselect">
+						 <a href="./Products/teddy-bear-products.php" style="color: white;"> 
 						<img class="category noselect" src="images/Homepage-images/speciality_icon.png" alt="category-img">
-						<h5 class="stext-121 noselect">Teddy Bears</h5>
+						<h5 class="stext-121 noselect">Teddy Bears </h5>
 					</div>
 				</div>
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block4 -->
 					<div class="block1 wrap-pic-w noselect">
+						<a href="./Products/soft-doll-products.php" style="color: white;">
 						<img class="category noselect" src="images/Homepage-images/unsought_icon.png" alt="category-img">
-						<h5 class="stext-121 noselect">Soft Dolls</h5>
+						<h5 class="stext-121 noselect"> Soft Dolls</h5>
 					</div>
 				</div>	
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block5 -->
 					<div class="block1 wrap-pic-w noselect">
+						<a href="./Products/plastic-toy-products.php" style="color: white;">
 						<img class="category noselect" src="images/Homepage-images/digital_icon.png" alt="category-img">
-						<h5 class="stext-121 noselect">Plastic Toys</h5>
+						<h5 class="stext-121 noselect">
+						Plastic Toys
+					</h5>
 					</div>
 				</div>
 			</div>
