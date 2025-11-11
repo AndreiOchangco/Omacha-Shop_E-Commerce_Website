@@ -155,66 +155,95 @@ $i = 0;
 // Tạo HTML cho tiêu đề và thông tin người mua
 $html .= '
 
-<p style="text-align:center; font-size:28px">OMACHA SHOP PHILIPPINES</p>
-<p style="text-align:center; font-size:18px"> Taguig City, Metro Manila, Philippines</p>
-<p style="text-align:center; font-size:18px"> omachashopofficial@gmail.com</p>
+<style>
+    body { font-family: Arial, sans-serif; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #000; padding: 8px; }
+    th { background-color: #f2f2f2; }
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
+    .text-left { text-align: left; }
+</style>
 
-<p style="text-align:center; font-size:28px"> Invoice</p>
-<p style="padding-left:100px"> Date: ' . $date .  '           Time: '. $time .  '</p>
-<p style="padding-left:100px"> Employee: Andrei Ochangco </p>
-<p style="padding-left:100px"> Customer: ' . $userLogin["userName"] . '</p>
+<!-- Header -->
+<p class="text-center" style="font-size:28px;">OMACHA SHOP PHILIPPINES</p>
+<p class="text-center" style="font-size:18px;">Taguig City, Metro Manila, Philippines</p>
+<p class="text-center" style="font-size:18px;">omachashopofficial@gmail.com</p>
 
+<h2 class="text-center">Invoice</h2>
+
+<table style="width:100%; margin-bottom:20px;">
+    <tr>
+        <td><strong>Date:</strong> ' . $date . '</td>
+        <td><strong>Time:</strong> ' . $time . '</td>
+    </tr>
+    <tr>
+        <td><strong>Employee:</strong> Andrei Ochangco</td>
+        <td><strong>Customer:</strong> ' . $userLogin["userName"] . '</td>
+    </tr>
+</table>
 
 <hr>
 
-<!-- Shoping Cart -->
+<!-- Shopping Cart Table -->
+<table>
+    <thead>
+        <tr>
+            <th class="text-center">#</th>
+            <th class="text-left">Product Name</th>
+            <th class="text-right">Unit Price</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-right">Total</th>
+        </tr>
+    </thead>
+    <tbody>';
 
-<table style="text-align:center; width:100%">
-    <tr style="text-align:center;">
-        <th class="column-1">Quantity of Items</th>    
-        <th class="column-2">Product Name</th>                              
-        <th class="column-3">Price</th>
-        <th class="column-4">Quantity</th>
-        <th class="column-5">Total</th>
-    </tr>' ;
-
+$i = 0;
 foreach ($order_array as $item) {
     if ($item['u_id'] == $userLogin['userID'] && $item["o_quantity"] > 0 && $item["o_status"] == 1) {
-        
-        $html .= '<tr>
-            <td style="text-align:center;" class="column-1">' . ++$i . '</td>
-            <td style="text-align:left;" class="column-2">' . $item["p_name"] . '</td>
-            <td style="text-align:right;" class="column-3"> $' . $item["p_price"] . '</td>                                                  
-            <td style="text-align:center;" class="column-4">' . $item["o_quantity"] . '</td>                 
-            <td style="text-align:right;" class="column-5"> $' . $item["p_price"] * $item["o_quantity"] . '</td>
-        </tr> ';
-                    
+        $i++;
+        $itemTotal = $item["p_price"] * $item["o_quantity"];
+        $html .= '
+        <tr>
+            <td class="text-center">' . $i . '</td>
+            <td class="text-left">' . $item["p_name"] . '</td>
+            <td class="text-right">₱' . number_format($item["p_price"], 2) . '</td>
+            <td class="text-center">' . $item["o_quantity"] . '</td>
+            <td class="text-right">₱' . number_format($itemTotal, 2) . '</td>
+        </tr>';
     }
 }
 
-// .= có nghĩa là nối chuỗi 
-$html .= '</table> 
-<hr>';
+$html .= '
+    </tbody>
+</table>
+
+<hr>
+
+<!-- Summary -->
+<table style="width: 100%; margin-top:20px;">
+    <tr>
+        <td style="width:50%; vertical-align: top;">
+            <p><strong>Total Quantity of Items:</strong> ' . $order_count . '</p>
+            <p><strong>Shipping:</strong> Free Shipping Voucher</p>
+        </td>
+        <td style="width:50%; vertical-align: top;">
+            <p><strong>Subtotal:</strong> ₱' . number_format($totalPrice, 2) . '</p>';
+
+$discountAmount = isset($discount["d_amount"]) ? $discount["d_amount"] : 0;
+$saving = $totalPrice * $discountAmount / 100;
+$totalAfterDiscount = $totalPrice - $saving;
 
 $html .= '
-<table style="width: 100%;">
-    <tr>
-        <!-- Cột bên trái -->
-        <td style="width: 50%; vertical-align: top; padding-left: 100px;">
-            <p>Total Quantity of Items: ' . $order_count. '</p>
-            <p>Shipping: Free Shipping Voucher </p>
-        </td>
-        <!-- Cột bên phải -->
-        <td style="width: 50%; vertical-align: top; padding-left: 100px;">
-            <p>Subtotal: $' . $totalPrice . '</p>
-            <p>Discount: ' . $discount["d_amount"] . '%</p>
-            <p>Saving: $' . $totalPrice * $discount["d_amount"] /100 . '</p>
-            <p>Total: $' . $totalPrice * ((100 - $discount["d_amount"]) / 100) . '</p>
+            <p><strong>Discount:</strong> ' . $discountAmount . '%</p>
+            <p><strong>Saving:</strong> ₱' . number_format($saving, 2) . '</p>
+            <p><strong>Total:</strong> ₱' . number_format($totalAfterDiscount, 2) . '</p>
         </td>
     </tr>
-</table>';
+</table>
 
-$html .= '<p style="text-align:center"> <i> Thank you for your order </i> </p>';
+<p class="text-center"><i>Thank you for your order!</i></p>
+';
 // Import thư viện Dompdf
 require_once('./dompdf/autoload.inc.php');
 

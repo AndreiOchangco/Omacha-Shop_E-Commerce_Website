@@ -997,25 +997,21 @@ if ($result->num_rows > 0) {
 
 							<ul>
 								<li class="p-b-6">
-									<button type="submit" value="$10" id="$5">5-8</button>
+									<button type="submit" value="₱589.02" id="$5">294.51-471.22</button>
 								</li>
 
 								<li class="p-b-6">
-									<button type="submit" value="$20" id="$8">8-9</button>
+									<button type="submit" value="₱1178.04" id="$8">471.22-530.12</button>
 								</li>
 
 								<li class="p-b-6">
-									<button type="submit" value="$30" id="$10">10-11</button>
+									<button type="submit" value="₱1767.06" id="$10">589.02-647.92</button>
 								</li>
 
 
 								<li class="p-b-6">
-									<button type="submit" value="$50" id="$11">11-13</button>
+									<button type="submit" value="₱2945.10" id="$11">647.92-765.73</button>
 								</li>
-
-
-
-
 							</ul>
 						</div>
 

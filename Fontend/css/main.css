@@ -4709,20 +4709,19 @@ section1 {
   width: 90%;
   max-width: 550px;
   margin: auto;
-  margin-top: 2em;
 }
 
 .sectionHeader{
   text-transform: capitalize;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #867070;
+  color: #19f574;
   margin-bottom: .5em;
 }
 .heading, .sub-heading{
   margin-bottom: .5em;
   font-weight: bold;
-  color: #50623A;
+  color: #19f574;
 }
 
 .sub-heading{
@@ -4781,36 +4780,21 @@ form{
 }
 
 .map-container{
-  position: relative;
   width: 100%;
   height: 500px;
-  
-}
-
-.mapBg{
-  position: absolute;
-  background-color: #F8E8EE;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 90%;
-  border-radius: 20px;
-
 }
 
 .map{
   position:absolute;
   bottom: 0;
   left: 0;
-  width: 90%;
-  height: 90%;
-
+  width: 100%;
+  height: 100%;
 }
 
 .map iframe{
   width: 100%;
   height: 100%;
-
 }
 
 .contactMethod{
@@ -4830,7 +4814,6 @@ form{
 .contactIcon{
   font-size: 2rem;
   width: 70px;
-  
 }
 
 

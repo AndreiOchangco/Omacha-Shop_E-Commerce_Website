@@ -582,7 +582,7 @@ if ($query->num_rows > 0) {
 											<a href="#" class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
 										</div>
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
-										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x $<?php echo $item["p_price"]; ?></span>
+										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x ₱<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
 										<form action="delete-cart2.php" method="post">											
@@ -605,7 +605,7 @@ if ($query->num_rows > 0) {
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
 						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
-						<p>Total: $<?php echo $totalPrice; ?></p>
+						<p>Total: ₱<?php echo $totalPrice; ?></p>
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
@@ -676,7 +676,7 @@ if ($query->num_rows > 0) {
 								</span>
 
 								<span>
-									Kids, Sofy toys, Toys  
+									Kids, Soft toys, Toys  
 									<span class="cl12 m-l-4 m-r-6">|</span>
 								</span>
 
@@ -709,7 +709,7 @@ if ($query->num_rows > 0) {
 								</a>
 
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
-									sofy toys
+									soft toys
 								</a>
 
 								<a href="#" class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
@@ -834,31 +834,31 @@ if ($query->num_rows > 0) {
 
 							<ul>
 								<li class="bor18">
-									<a href="stuffed-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+									<a href="Products/stuffed-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Stuffed Animals
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="fantasy-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+									<a href="Products/fantasy-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Fantasy Animals
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="teddy-bear-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+									<a href="Products/teddy-bear-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Teddy Bears
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="soft-doll-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+									<a href="Products/soft-doll-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Soft Dolls
 									</a>
 								</li>
 
 								<li class="bor18">
-									<a href="plastic-toy-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
+									<a href="Products/plastic-toy-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
 										Plastic Toys
 									</a>
 								</li>
