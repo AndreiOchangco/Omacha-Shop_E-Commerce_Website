@@ -1007,7 +1007,7 @@ if ($query->num_rows > 0) {
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/stuffed-animal-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/convenience_icon.png" alt="category-img" >
+						<img class="category noselect" src="images/Homepage-images/toy.png" alt="category-img" >
 						<h5 class="stext-121 noselect">Stuffed Animals</h5>
 					</div>
 				</div>
@@ -1016,7 +1016,7 @@ if ($query->num_rows > 0) {
 					<!-- Block2 -->
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/fantasy-animal-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/shopping_icon.png" alt="category-img">
+						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
 						<h5 class="stext-121 noselect">
 							 Fantasy Animals
 							</h5>
