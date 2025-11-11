@@ -1007,7 +1007,7 @@ if ($query->num_rows > 0) {
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/stuffed-animal-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/convenience_icon.png" alt="category-img" >
+						<img class="category noselect" src="images/Homepage-images/toysy.png" alt="category-img" >
 						<h5 class="stext-121 noselect">Stuffed Animals</h5>
 					</div>
 				</div>
@@ -1016,7 +1016,7 @@ if ($query->num_rows > 0) {
 					<!-- Block2 -->
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/fantasy-animal-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/shopping_icon.png" alt="category-img">
+						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
 						<h5 class="stext-121 noselect">
 							 Fantasy Animals
 							</h5>
@@ -1027,7 +1027,7 @@ if ($query->num_rows > 0) {
 					<!-- Block3 -->
 					<div class="block1 wrap-pic-w noselect">
 						 <a href="./Products/teddy-bear-products.php" style="color: white;"> 
-						<img class="category noselect" src="images/Homepage-images/speciality_icon.png" alt="category-img">
+						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
 						<h5 class="stext-121 noselect">Teddy Bears </h5>
 					</div>
 				</div>
@@ -1036,7 +1036,7 @@ if ($query->num_rows > 0) {
 					<!-- Block4 -->
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/soft-doll-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/unsought_icon.png" alt="category-img">
+						<img class="category noselect" src="images/Homepage-images/doll.png" alt="category-img">
 						<h5 class="stext-121 noselect"> Soft Dolls</h5>
 					</div>
 				</div>	
@@ -1045,7 +1045,7 @@ if ($query->num_rows > 0) {
 					<!-- Block5 -->
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/plastic-toy-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/digital_icon.png" alt="category-img">
+						<img class="category noselect" src="images/Homepage-images/bricks.png" alt="category-img">
 						<h5 class="stext-121 noselect">
 						Plastic Toys
 					</h5>
