@@ -200,9 +200,9 @@ foreach ($order_array as $item) {
         <tr>
             <td class="text-center">' . $i . '</td>
             <td class="text-left">' . $item["p_name"] . '</td>
-            <td class="text-right">₱' . number_format($item["p_price"], 2) . '</td>
+            <td class="text-right">' . number_format($item["p_price"], 2) . '</td>
             <td class="text-center">' . $item["o_quantity"] . '</td>
-            <td class="text-right">₱' . number_format($itemTotal, 2) . '</td>
+            <td class="text-right">' . number_format($itemTotal, 2) . '</td>
         </tr>';
     }
 }
@@ -221,10 +221,10 @@ $html .= '
             <p><strong>Shipping:</strong> Free Shipping Voucher</p>
         </td>
         <td style="width:50%; vertical-align: top;">
-            <p><strong>Subtotal:</strong> ₱' . number_format($totalPrice, 2) . '</p>
+            <p><strong>Subtotal:</strong> ' . number_format($totalPrice, 2) . '</p>
             <p><strong>Discount:</strong> 0%</p>
-            <p><strong>Saving:</strong> ₱0.00</p>
-            <p><strong>Total:</strong> ₱' . number_format($totalPrice, 2) . '</p>
+            <p><strong>Saving:</strong> 0.00</p>
+            <p><strong>Total:</strong> ' . number_format($totalPrice, 2) . '</p>
         </td>
     </tr>
 </table>
