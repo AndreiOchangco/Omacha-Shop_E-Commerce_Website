@@ -41,11 +41,11 @@
 
 
 .text-white {
-    color: #fff !important;
+    color: #f1f1f1 !important;
 }
 
 .text-black {
-    color: #000 !important;
+    color: #181818 !important;
 }
 
 .text-omacha {
@@ -71,6 +71,30 @@
 .digital-legend-color {
     --bg-opacity: 1;
     background-color: #5b25a1ff !important;
+}
+
+.add-cart-btn {
+    background-color: #19f574 !important;
+    border-color: #19f574;
+    color: #181818 !important;
+}
+
+.add-cart-btn:hover {
+    background-color: #f1f1f1 !important;
+    border-color: #f1f1f1 !important;
+    color: #181818 !important;
+}
+
+.buy-now-btn {
+    background-color: #f1f1f1 !important;
+    border-color: #f1f1f1 !important;
+    color: #181818 !important;
+}
+
+.buy-now-btn:hover {
+    background-color: #19f574 !important;
+    border-color: #19f574;
+    color: #181818 !important;
 }
 
 

@@ -279,7 +279,7 @@ if ($resultOrder->num_rows > 0) {
                         <!-- Menu desktop -->
                         <div class="menu-desktop">
                             <ul class="main-menu">
-                                <li class="active-menu">
+                                <li>
                                     <a href="index.php">Home</a>
                                     <ul class="sub-menu">
                                         <li><a href="index.php#shop-by-category">Categories</a></li>
@@ -328,7 +328,7 @@ if ($resultOrder->num_rows > 0) {
 							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
 							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
-						</a>
+							</a>
 
                             <a href="#go-up"
                                 class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
@@ -350,7 +350,7 @@ if ($resultOrder->num_rows > 0) {
                                         </li>
                                             
 
-                                        <li><a href="register.php">Logout</a></li>
+                                        <li><a href="logout.php">Logout</a></li>
                                     </ul>
                                 </li>
                             </div>
@@ -572,28 +572,8 @@ if ($resultOrder->num_rows > 0) {
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
+					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1 darkModehyperlink" data-filter="*">
 						All Products
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-						Women
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-						Men
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-						Bag
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
-						Shoes
-					</button>
-
-					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
-						Watches
 					</button>
 				</div>
 
@@ -963,7 +943,7 @@ if ($resultOrder->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
+						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
 						on (+1) 96 716 6879
 					</p>
 
@@ -1042,7 +1022,7 @@ if ($resultOrder->num_rows > 0) {
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
-			<i class="zmdi zmdi-chevron-up"></i>
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>
 	</div>
 

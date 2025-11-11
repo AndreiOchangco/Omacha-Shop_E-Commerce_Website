@@ -1474,7 +1474,7 @@ if ($result->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
+						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
 						on (+1) 96 716 6879
 					</p>
 

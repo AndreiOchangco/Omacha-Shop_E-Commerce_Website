@@ -961,7 +961,7 @@ if ($result->num_rows > 0) {
 								<form action="add-to-cart.php" method="post">
 									<!-- Name input is add-to-order -->
 									<input type="submit" value="Add to cart" id="button-add" name="add-to-cart"
-										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 add-cart-btn">
 									<input type="hidden" name="p_id" value="<?php echo $product["p_id"]; ?>">
 									<input type="hidden" name="p_image" value="<?php echo $product["p_image"]; ?>">
 									<input type="hidden" name="p_name" value="<?php echo $product["p_name"]; ?>">
@@ -975,7 +975,7 @@ if ($result->num_rows > 0) {
 								<form action="buy-it-now.php" method="post">
 									<!-- Name input is buy-it-now -->
 									<input type="submit" value="Buy it now" id="button-buy" name="buy-it-now"
-										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 darkModeBtn">
 									<input type="hidden" name="p_id" value="<?php echo $product["p_id"]; ?>">
 									<input type="hidden" name="p_image" value="<?php echo $product["p_image"]; ?>">
 									<input type="hidden" name="p_name" value="<?php echo $product["p_name"]; ?>">
@@ -1602,7 +1602,7 @@ if ($result->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us
+						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
 						on (+1) 96 716 6879
 					</p>
 
