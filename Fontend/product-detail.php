@@ -710,7 +710,7 @@ if ($result->num_rows > 0) {
 										</div>
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
 										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x
-											$<?php echo $item["p_price"]; ?></span>
+											₱<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
 										<form action="delete-cart2.php" method="post">
@@ -733,7 +733,7 @@ if ($result->num_rows > 0) {
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
 						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
-						<p>Total: $<?php echo $totalPrice; ?></p>
+						<p>Total: ₱<?php echo $totalPrice; ?></p>
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
@@ -828,7 +828,7 @@ if ($result->num_rows > 0) {
 						</h4>
 
 						<span class="mtext-106 cl2">
-							$9.99
+							₱588.43
 						</span>
 
 						<p class="stext-102 cl3 p-t-23">

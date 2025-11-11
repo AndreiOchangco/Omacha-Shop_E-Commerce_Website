@@ -340,143 +340,143 @@ if ($query->num_rows > 0) {
         <header class="header-v4">
             <!-- Header desktop -->
             <div class="container-menu-desktop">
-                <!-- Topbar -->
-                <div class="top-bar">
-                    <div class="content-topbar flex-sb-m h-full container">
-                        <div class="left-top-bar">
-                            <div class="d-inline-flex align-items-center">
-                                <p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
-                                        class="darkModetxt"
-                                        href="mailto:omachashopofficial@gmail.com"
-                                        style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
-                                <p class="text-body px-3">|</p>
-                                <p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-                                        style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
-                            </div>
-                        </div>
+			<!-- Topbar -->
+			<div class="top-bar noselect">
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar">
+						<div class="d-inline-flex align-items-center">
+							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
+									class="darkModetxt"
+									href="mailto:omachashopofficial@gmail.com"
+									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
+							<p class="text-body px-3">|</p>
+							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
+						</div>
+					</div>
 
-                        <div class="col-lg-6 text-center text-lg-right">
-                            <div class="d-inline-flex align-items-center">
-                                <a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-                                    target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
-                                    <i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
-                                </a>
-                                <a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-                                    title="Visit the Reis Omacha Shop Philippines Twitter.">
-                                    <i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
-                                </a>
-                                <a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-                                    target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
-                                    <i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
-                                </a>
-                                <a class="text-primary px-3"
-                                    href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-                                    target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
-                                    <i style="
-                                            background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
-                                            -webkit-background-clip: text;
-                                            -webkit-text-fill-color: transparent;
-                                    " class="fa-brands fa-square-instagram"></i>
-                                </a>
-                                
-                                
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
+					<div class="col-lg-6 text-center text-lg-right">
+						<div class="d-inline-flex align-items-center">
+							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
+								target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
+								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
+							</a>
+							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
+								title="Visit the Reis Omacha Shop Philippines Twitter.">
+								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
+							</a>
+							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
+								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
+							</a>
+							<a class="text-primary px-3"
+								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
+								<i style="
+										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+								" class="fa-brands fa-square-instagram"></i>
+							</a>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <div class="wrap-menu-desktop" style="background-color: #ffffffff;">
-                    <nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
+			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
-                        <!-- Logo desktop -->
-                        <a href="index.php" class="navbar-brand">
-                            <h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
-                                        src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
-                        </a>
+					<!-- Logo desktop -->
+					<a href="index.php" class="navbar-brand noselect">
+						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
+									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
+					</a>
 
-                        <!-- Menu desktop -->
-                        <div class="menu-desktop">
-                            <ul class="main-menu">
-                                <li class="active-menu">
-                                    <a href="index.php">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.php#shop-by-category">Categories</a></li>
-                                        <li><a href="index.php#new-arrivals">Arrivals</a></li>
-                                        <li><a href="index.php#blog">Blog</a></li>
-                                        <li><a href="index.php#top-brands">Top Brands</a></li>
-                                    </ul>
+					<!-- Menu desktop -->
+					<div class="menu-desktop noselect">
+						<ul class="main-menu">
+							<li>
+								<a class="darkModetxt" href="index.php">Home</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="#shop-by-category">Categories</a></li>
+									<li><a class="darkModetxt" href="#new-arrivals">Arrivals</a></li>
+									<li><a class="darkModetxt" href="#blog">Blog</a></li>
+									<li><a class="darkModetxt" href="#top-brands">Top Brands</a></li>
+								</ul>
 
-                                </li>
+							</li>
 
-                                <li class="label1" data-label1="new">
-                                <a href="product.php">Shop</a>
-                                    <ul class="sub-menu darkModebg-black">
+							<li class="label1" data-label1="new">
+							<a class="darkModetxt" href="product.php">Shop</a>
+								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
 									<li><a class="darkModetxt" href="./Products/fantasy-animal-products.php">Fantasy Animals</a></li>
 									<li><a class="darkModetxt" href="./Products/teddy-bear-products.php">Teddy Bears</a></li>
 									<li><a class="darkModetxt" href="./Products/soft-doll-products.php">Soft Dolls</a></li>
 									<li><a class="darkModetxt" href="./Products/plastic-toy-products.php">Plastic Toys</a></li>
 								</ul>
-                                </li>
+							</li>
 
-                                <li>
-                                    <a href="blog.php">Blog</a>
-                                </li>
+							<li>
+								<a class="darkModetxt" href="blog.php">Blog</a>
+							</li>
 
-                                <li>
-                                    <a href="about.php">About</a>
-                                </li>
+							<li>
+								<a class="darkModetxt" href="about.php">About</a>
+							</li>
 
-                                <li>
+							<li>
 								<a class="darkModetxt" href="contact.php">Contact</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="Improved_customer_support/main/customer-support.php">Customer Support</a></li>
 								</ul>
-							    </li>
-                            </ul>
-                        </div>
+							</li>
+						</ul>
+					</div>
 
-                        <!-- Icon header -->
-                        <div class="wrap-icon-header flex-w flex-r-m">
-                            <div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-                                <i class="zmdi zmdi-search"></i>
-                            </div>
+					<!-- Icon header -->
+					<div class="wrap-icon-header flex-w flex-r-m noselect">
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+							<i class="zmdi zmdi-search"></i>
+						</div>
 
-                            <a
+						<a
 							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
 							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
-						    </a>
+						</a>
 
-                            <a href="#go-up"
-                                class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-                                data-notify="<?php echo $wishlist_count?>">
-                                <i class="zmdi zmdi-favorite-outline"></i>
-                            </a>
-                            <div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
-                                <li class="active-menu">
-                                    <a href="register.php" class="btn2 btn-primary2 mt-1 "
-                                    style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
-                                    <ul class="profile-sub-menu">
-                                        <li><a href="user-profile.php">Profile</a></li>
-                                        
-                                        <li>
-                                            <!-- Your toggle button -->
-                                            <a id="darkModeToggle">
-                                                <span class="darkbtn">☀️</span>
-                                            </a>
-                                        </li>
-                                            
+						<a href="wishlist.php"
+							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
+							data-notify="<?php echo $wishlist_count?>">
+							<i class="zmdi zmdi-favorite-outline"></i>
+						</a>
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu noselect">
+							<li class="active-menu noselect">
+								<a href="register.php" class="btn2 btn-primary2 mt-1 "
+								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
+								<ul class="profile-sub-menu noselect">
+									<li><a href="user-profile.php">Profile</a></li>
+									
+									<li>
+										<!-- Your toggle button -->
+										<a id="darkModeToggle">
+											<span class="darkbtn">☀️</span>
+										</a>
+									</li>
+										
 
-                                        <li><a href="register.php">Logout</a></li>
-                                    </ul>
-                                </li>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+									<li><a href="logout.php">Logout</a></li>
+								</ul>
+							</li>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
 
         <!-- Header Mobile -->
         <div class="wrap-header-mobile">
@@ -675,123 +675,96 @@ if ($query->num_rows > 0) {
 	</div>
 
     <!-- Shopping Cart -->
-    <form class="bg0 p-t-75 p-b-85">
+    <form style="width: auto; height: auto;" class="bg0 p-t-75 p-b-85">
         <div class="container">
-        <h1 id="thank-you">Thank You!</h1>
-
-        <?php if (isset($_GET['deleted']) && $_GET['deleted'] == 1): ?>
-            <div style="background: #d4edda; color: #155724; padding: 10px; border-radius: 8px; text-align:center;">
-                ✅ Item successfully deleted.
-            </div>
-        <?php elseif (isset($_GET['deleted']) && $_GET['deleted'] == 0): ?>
-            <div style="background: #f8d7da; color: #721c24; padding: 10px; border-radius: 8px; text-align:center;">
-                ❌ Failed to delete item. Please try again.
-            </div>
-        <?php endif; ?>
-
-        <p id="thank-you">Your order has been successfully placed.</p>
-        <p style="padding-bottom: 10px;" id="thank-you">We appreciate your business and look forward to serving you again.</p>
-            <table style="width:100%" class="table-shopping-cart">
-                <tr class="table_head">
-                    <th class="column-1">Product</th>
-                    <th class="column-2">Name</th>
-                    <th class="column-3">Price</th>
-                    <th class="column-4">Quantity</th>
-                    <th class="column-5">Total</th>
-                    <th class="column-6"></th>
-                </tr>
-
-                <?php foreach ($order_array as $item) : ?>
-                    <?php if ($item['u_id'] == $userLogin['userID'] && $item["o_quantity"] > 0 && $item["o_status"] == 1) 
-                    
-                    // Tách chuỗi hình ảnh thành mảng và loại bỏ khoảng trắng thừa
-                    $p_images = array_map('trim', explode(',', $item["p_image"]));                   
-                    
-                    ?>
-                    <tr class="table_row">
-                        <td class="column-1">
-                            <div class="how-itemcart1">
-                                <img src="images/<?php echo $p_images[0]; ?>" alt="IMG">
+            <div class="row">
+                <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+                    <div class="m-l-25 m-r--38 m-lr-0-xl">
+                        <h1 id="thank-you" style="text-align: center;" class="darkModetxt">Thank You!</h1>
+                        <p id="thank-you" style="text-align: center;" class="darkModetxt">Your order has been successfully placed.</p>
+                        <p id="thank-you" style="text-align: center; padding-bottom: 10px;" class="darkModetxt">We appreciate your business and look forward to serving you again.</p>
+                        <div class="wrap-table-shopping-cart">
+                            <table class="table-shopping-cart">
+                                <tr class="table_head">
+                                    <th style="text-align: center;" class="column-1 darkModetxt">Product</th>
+                                    <th style="text-align: center;" class="column-2 darkModetxt">Name</th>
+                                    <th style="text-align: center;" class="column-3 darkModetxt">Price</th>
+                                    <th style="text-align: center;" class="column-4 darkModetxt">Quantity</th>
+                                    <th style="text-align: center;" class="column-5 darkModetxt">Total</th>
+                                    <th class="column-6"></th>
+                                </tr>
+                
+                                <?php foreach ($order_array as $item) : ?>
+                                    <?php if ($item['u_id'] == $userLogin['userID'] && $item["o_quantity"] > 0 && $item["o_status"] == 1): 
+                                        $p_images = array_map('trim', explode(',', $item["p_image"])); ?>                   
+                                        <tr class="table_row">
+                                            <td class="column-1">
+                                                <div class="how-itemcart1">
+                                                    <img src="images/<?php echo $p_images[0]; ?>" alt="IMG">
+                                                </div>
+                                            </td>
+                                            <td class="column-2"><?php echo $item["p_name"]; ?></td>
+                                            <td id="price_<?php echo $item['p_id']; ?>" class="column-3">$ <?php echo $item["p_price"]; ?></td>
+                                            <td id="quantity_<?php echo $item['p_id']; ?>" class="column-4"><?php echo $item["o_quantity"]; ?></td>
+                                            <td id="total_<?php echo $item['p_id']; ?>" class="column-5">$ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
+                                            <td class="column-6">
+                                                <form action="delete-order-item.php" method="post">                                            
+                                                    <input type="hidden" name="o_id" value="<?php echo $item['o_id']; ?>">
+                                                    <button type="button" class="btn-delete" data-order-id="<?php echo $row['o_id']; ?>">
+                                                        <i class="fa fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+                    <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
+                        <div class="flex-w flex-t bor12 p-t-15 p-b-30">
+                            <div class="size-208 w-full-ssm">
+                                <span class="stext-110 cl2 darkModetxt">Shipping:</span>
                             </div>
-                        </td>
-                        <td class="column-2"><?php echo $item["p_name"]; ?></td>
-                        <td id="price_<?php echo $item['p_id']; ?>" class="column-3">$ <?php echo $item["p_price"]; ?></td>
-
-                        <td id="quantity_<?php echo $item['p_id']; ?>" class="column-4"><?php echo $item["o_quantity"]; ?></td>
-
-                        <td id="total_<?php echo $item['p_id']; ?>" class="column-5">$ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
-                        <td class="column-6">
-							<form action="delete-order-item.php" method="post">											
-								<input type="hidden" name="o_id" value="<?php echo $item['o_id']; ?>">
-								<button type="button" class="btn-delete" data-order-id="<?php echo $row['o_id']; ?>">
-                                    <i class="fa fa-trash"></i>
-                                </button>
-
-
-							</form>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </table>
-
-
-        </div>
-
-        <div class="col-sm-12 col-lg-10 col-xl-8 m-lr-auto p-b-85">
-            <div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
-                <div class="flex-w flex-t bor12 p-t-15 p-b-30">
-                    <div class="size-208 w-full-ssm">
-                        <span class="stext-110 cl2">
-                            Shipping:
-                        </span>
+    
+                            <div class="size-209 p-r-18 p-r-0-sm w-full-ssm">
+                                <p class="stext-111 cl6 p-t-2 darkModetxt">
+                                    There are no shipping methods available. Please double check your address, or contact us if you need any help.
+                                </p>
+                            </div>
+                        </div>
+    
+                        <div class="flex-w flex-t p-t-27 p-b-33">
+                            <div class="size-208">
+                                <span class="mtext-101 cl2 darkModetxt">Total:</span>
+                            </div>
+    
+                            <div class="size-209 p-t-1">
+                                <span class="mtext-110 cl2 darkModetxt">$ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?></span>
+                            </div>
+                        </div>
+    
+                        <div class="row" style="justify-content: center; text-align: center;">
+                            <div class="col-md-4">
+                                <a href="index.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer darkModeBtn">Back to Home</a>
+                            </div>
+    
+                            <div class="col-md-4">
+                                <a href="product2.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer darkModeBtn">Continue Shopping</a>
+                            </div>
+    
+                            <div class="col-md-4">
+                                <a href="exportPDF.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer darkModeBtn">Export to PDF</a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="size-209 p-r-18 p-r-0-sm w-full-ssm">
-                        <p class="stext-111 cl6 p-t-2">
-                            There are no shipping methods available. Please double check your address, or contact us if you need any help.
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="flex-w flex-t p-t-27 p-b-33">
-                    <div class="size-208">
-                        <span class="mtext-101 cl2">
-                            Total:
-                        </span>
-                    </div>
-
-                    <div class="size-209 p-t-1">
-                        <span class="mtext-110 cl2">
-                            $ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="index.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">Back to Home</a>
-                    </div>
-
-                    <div class="col-md-4">
-                        <a href="product2.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">Continue Shopping</a>
-                    </div>
-
-                    <div class="col-md-4">
-                        <a href="exportPDF.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">Export to PDF</a>
-                    </div>
-                </div>
-
-
-
-
+                </div>  
             </div>
         </div>
-
     </form>
-
-
-
 
     <!-- Footer -->
 	<footer class="bg3 p-t-100 p-b-25">
@@ -943,11 +916,11 @@ if ($query->num_rows > 0) {
 
 
     <!-- Back to top -->
-    <div class="btn-back-to-top" id="myBtn">
-        <span class="symbol-btn-back-to-top">
-            <i class="zmdi zmdi-chevron-up"></i>
-        </span>
-    </div>
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
+		</span>
+	</div>
 
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>

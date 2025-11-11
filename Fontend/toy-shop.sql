@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 04, 2025 at 08:09 AM
+-- Generation Time: Nov 10, 2025 at 04:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,7 +45,9 @@ INSERT INTO `comments` (`IDcomment`, `commentText`, `commentName`, `email`, `dat
 (21, 'khách', 'khách', 'k@gmail.com', '2024-05-11 00:00:00', 'cảm ơn ạ'),
 (28, 'chao mot ngay moi', 'linh', 'duongthuylinh@gmail.com', '2024-05-11 00:00:00', NULL),
 (29, '123456', 'thuylinh', 'duongthuylinh@gmail.com', '2024-05-11 00:00:00', 'hello ban'),
-(32, 'Đẹp quá à', 'Tran Huu Dat', 'huudat.lego@gmail.com', '2024-05-15 00:00:00', NULL);
+(32, 'Đẹp quá à', 'Tran Huu Dat', 'huudat.lego@gmail.com', '2024-05-15 00:00:00', NULL),
+(33, 'Testing', 'ReinFhaul', 'andreiluiseochangco123@gmail.com', '2025-11-08 00:00:00', NULL),
+(34, '', 'ReinFhaul', 'andreiluiseochangco123@gmail.com', '0000-00-00 00:00:00', 'Testing reply');
 
 -- --------------------------------------------------------
 
@@ -138,13 +140,15 @@ CREATE TABLE `order` (
 --
 
 INSERT INTO `order` (`o_id`, `u_id`, `p_id`, `o_price`, `o_quantity`, `o_status`) VALUES
-(70, 21, 3, 11, 5, 1),
-(79, 14, 6, 13, 5, 1),
-(84, 14, 4, 11, 1, 1),
-(87, 24, 3, 11, 1, 1),
 (94, 14, 5, 11, 3, 1),
-(95, 14, 1, 13, 3, 1),
-(96, 14, 21, 10, 3, 1);
+(95, 14, 1, 13, 1, 1),
+(96, 14, 21, 10, 3, 1),
+(105, 29, 1, 13, 1, 1),
+(106, 29, 1, 13, 5, 1),
+(107, 29, 3, 11, 1, 1),
+(108, 29, 4, 11, 1, 1),
+(109, 29, 6, 13, 2, 1),
+(111, 29, 8, 11, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -181,27 +185,27 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`p_id`, `p_name`, `p_image`, `p_type`, `p_price`, `p_provider`, `p_age`, `p_description`) VALUES
-(1, 'LEGO 70365 Axl', 'LEGO_70365_1.png, LEGO_70365_2.png, LEGO_70365_3.png', 'Plastic', 12.99, 'Frog Leaf', '3+ years', 'Features a buildable battle suit with highly posable limbs and a minifigure cockpit. Charge into battle with an even bigger Axl and send the Stone monsters flying! Also includes a super-sized buildable axe. Accessory elements include a Combo NEXO Power shield and five scannable NEXO Powers.'),
-(2, 'Rabit', 'rabit.png,About-Icon-1.webp,About-Icon-2.webp', 'Plastic', 12.99, 'dun dun dun', '3+ years', 'it is very pretty'),
-(3, 'Elephant Jelly Cat', 'Elephant.png', 'Cotton', 10.99, 'Cookie', '0-12 months', 'it is very pretty'),
-(4, 'Unicorn', 'unicorn.png', 'Cotton', 10.99, 'Baby Logo', '1-2 years', 'it is very pretty'),
-(5, 'Barbie', 'barbie.png', 'Plastic', 10.99, 'BarBie', '3+ years', 'it is very pretty'),
-(6, 'Beach', 'beach.png', 'Plastic', 12.99, 'Cookie', '5+ years', 'it is very pretty'),
-(7, 'Frog Duck', 'frog.png', 'Cotton', 12.99, 'Frog Leaf', '1-2 years', 'it is very pretty'),
-(8, 'Bear Jelly Cat', 'bearjellycat.png', 'Cotton', 10.99, 'DiNo', '0-12 months', 'it is very pretty'),
-(9, 'Giraffe Jelly Cat', 'giraffe.png', 'Cotton', 12.99, 'Frog Leaf', '0-12 months', 'it is very pretty'),
-(10, 'Bear Baby Tower', 'beartowel.png,,', 'Cotton', 12.99, 'Frog Leaf', '0-12 months', 'it is very pretty'),
-(11, 'Flower Jelly Cat', 'Jelly Cat Flower.png', 'Cotton', 10.99, 'Frog Leaf', '0-12 months', 'it is very pretty'),
-(12, 'Ring', 'ring.png', 'Wood', 8.49, 'dun dun dun', '0-12 months', 'it is very pretty'),
-(13, 'Tiger Ring', 'tiger2.png', 'Cotton', 8.49, 'Baby Logo', '1-2 years', 'it is very pretty'),
-(14, 'Duck', 'duck.png', 'Plastic', 5.25, 'dun dun dun', '1-2 years', 'it is very pretty'),
-(15, 'Frog', 'frog1.png', 'Plastic', 8.49, 'Frog Leaf', '3+ years', 'it is very pretty'),
-(16, 'Barbie Cutie Reveal', 'barbie2.png', 'Rubberized Plastic', 5.25, 'BarBie', '5+ years', 'it is very pretty'),
-(17, 'Logic Matrix', 'logicmatrix.png', 'Metal', 5.25, 'Cookie', '5+ years', 'it is very pretty'),
-(18, 'Music', 'music1.png', 'Wood', 8.49, 'dun dun dun', '5+ years', 'it is very pretty'),
-(21, 'LEGO 70362 Clay', 'LEGO_70362_1.png,70362.jpeg,19458_lego-nexo-chien-giap-clay-tuticare-2.jpg', 'Plastic', 9.99, 'LEGO', '5+ years', 'Features a buildable battle suit with highly posable limbs and a minifigure cockpit. Also includes a super-sized buildable sword. Accessory elements include a Combo NEXO Power shield and 5 scannable NEXO Powers. Download the free LEGO® NEXO KNIGHTS™: MERLOK 2.0 app to your smartphone or tablet.'),
-(22, 'Sticker', 'StickerCookieRun 1.png,StickerCookieRun 2.png,StickerCookieRun 3.png', 'Plastic', 9.99, 'Cookie', '5+ years', 'Sticker Very Good'),
-(23, 'LEGO 70363 Macy', 'Macy 1.jpg,Macy 2.jpg,Macy 3.jpg', 'Plastic', 9.99, 'LEGO', '5+ years', 'Đặc điểm nổi bật của Lego Nexo Knights 70363 - Chiến giáp Macy:\r\nGồm 66 miếng ghép thuộc chủ đề Lego Nexo Knights mới nhất năm 2017.\r\nKết hợp chơi xếp hình và lắp ráp mô hình trong bộ Lego Nexo Knights 70363 - Chiến giáp Macy cùng công nghệ hấp dẫn khi có thể chơi cả trên ứng dụng điện thoại và máy tính bảng.');
+(1, 'LEGO 70365 Axl', 'LEGO_70365_1.png, LEGO_70365_2.png, LEGO_70365_3.png', 'Plastic', 765.14, 'Frog Leaf', '3+ years', 'Features a buildable battle suit with highly posable limbs and a minifigure cockpit. Charge into battle with an even bigger Axl and send the Stone monsters flying! Also includes a super-sized buildable axe. Accessory elements include a Combo NEXO Power shield and five scannable NEXO Powers.'),
+(2, 'Rabit', 'rabit.png,About-Icon-1.webp,About-Icon-2.webp', 'Plastic', 765.14, 'dun dun dun', '3+ years', 'it is very pretty'),
+(3, 'Elephant Jelly Cat', 'Elephant.png', 'Cotton', 647.33, 'Cookie', '0-12 months', 'it is very pretty'),
+(4, 'Unicorn', 'unicorn.png', 'Cotton', 647.33, 'Baby Logo', '1-2 years', 'it is very pretty'),
+(5, 'Barbie', 'barbie.png', 'Plastic', 647.33, 'BarBie', '3+ years', 'it is very pretty'),
+(6, 'Beach', 'beach.png', 'Plastic', 765.14, 'Cookie', '5+ years', 'it is very pretty'),
+(7, 'Frog Duck', 'frog.png', 'Cotton', 765.14, 'Frog Leaf', '1-2 years', 'it is very pretty'),
+(8, 'Bear Jelly Cat', 'bearjellycat.png', 'Cotton', 647.33, 'DiNo', '0-12 months', 'it is very pretty'),
+(9, 'Giraffe Jelly Cat', 'giraffe.png', 'Cotton', 765.14, 'Frog Leaf', '0-12 months', 'it is very pretty'),
+(10, 'Bear Baby Tower', 'beartowel.png,,', 'Cotton', 765.14, 'Frog Leaf', '0-12 months', 'it is very pretty'),
+(11, 'Flower Jelly Cat', 'Jelly Cat Flower.png', 'Cotton', 647.33, 'Frog Leaf', '0-12 months', 'it is very pretty'),
+(12, 'Ring', 'ring.png', 'Wood', 500.08, 'dun dun dun', '0-12 months', 'it is very pretty'),
+(13, 'Tiger Ring', 'tiger2.png', 'Cotton', 500.08, 'Baby Logo', '1-2 years', 'it is very pretty'),
+(14, 'Duck', 'duck.png', 'Plastic', 309.24, 'dun dun dun', '1-2 years', 'it is very pretty'),
+(15, 'Frog', 'frog1.png', 'Plastic', 500.08, 'Frog Leaf', '3+ years', 'it is very pretty'),
+(16, 'Barbie Cutie Reveal', 'barbie2.png', 'Rubberized Plastic', 309.24, 'BarBie', '5+ years', 'it is very pretty'),
+(17, 'Logic Matrix', 'logicmatrix.png', 'Metal', 309.24, 'Cookie', '5+ years', 'it is very pretty'),
+(18, 'Music', 'music1.png', 'Wood', 500.08, 'dun dun dun', '5+ years', 'it is very pretty'),
+(21, 'LEGO 70362 Clay', 'LEGO_70362_1.png,70362.jpeg,19458_lego-nexo-chien-giap-clay-tuticare-2.jpg', 'Plastic', 588.43, 'LEGO', '5+ years', 'Features a buildable battle suit with highly posable limbs and a minifigure cockpit. Also includes a super-sized buildable sword. Accessory elements include a Combo NEXO Power shield and 5 scannable NEXO Powers. Download the free LEGO® NEXO KNIGHTS™: MERLOK 2.0 app to your smartphone or tablet.'),
+(22, 'Sticker', 'StickerCookieRun 1.png,StickerCookieRun 2.png,StickerCookieRun 3.png', 'Plastic', 588.43, 'Cookie', '5+ years', 'Sticker Very Good'),
+(23, 'LEGO 70363 Macy', 'Macy 1.jpg,Macy 2.jpg,Macy 3.jpg', 'Plastic', 588.43, 'LEGO', '5+ years', 'Đặc điểm nổi bật của Lego Nexo Knights 70363 - Chiến giáp Macy:\r\nGồm 66 miếng ghép thuộc chủ đề Lego Nexo Knights mới nhất năm 2017.\r\nKết hợp chơi xếp hình và lắp ráp mô hình trong bộ Lego Nexo Knights 70363 - Chiến giáp Macy cùng công nghệ hấp dẫn khi có thể chơi cả trên ứng dụng điện thoại và máy tính bảng.');
 
 -- --------------------------------------------------------
 
@@ -312,7 +316,7 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `IDcomment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `IDcomment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `contacts`
@@ -336,7 +340,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `o_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `o_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -354,7 +358,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `p_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables

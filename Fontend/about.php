@@ -652,7 +652,7 @@ if ($result->num_rows > 0) {
 										</div>
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
 										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x
-											$<?php echo $item["p_price"]; ?></span>
+											₱<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
 										<form action="delete-cart2.php" method="post">
@@ -675,7 +675,7 @@ if ($result->num_rows > 0) {
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
 						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
-						<p>Total: $<?php echo $totalPrice; ?></p>
+						<p>Total: ₱<?php echo $totalPrice; ?></p>
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
@@ -696,7 +696,7 @@ if ($result->num_rows > 0) {
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92 m-t-10" style="background-image: url('images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
 			About Us
 		</h2>

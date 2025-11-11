@@ -514,7 +514,7 @@ if ($query->num_rows > 0) {
 			<ul class="topbar-mobile">
 					<li>
 						<div class="left-top-bar">
-							Free shipping for standard order over $100
+							Free shipping for standard order over ₱100
 						</div>
 					</li>
 
@@ -625,7 +625,7 @@ if ($query->num_rows > 0) {
 											Flower
 										</a>
 									</h5>
-									<p>$12.99</p>
+									<p>₱765.14</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -641,7 +641,7 @@ if ($query->num_rows > 0) {
 											Flower
 										</a>
 									</h5>
-									<p>$10.99</p>
+									<p>₱647.33</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -657,7 +657,7 @@ if ($query->num_rows > 0) {
 											Bear Baby Towel
 										</a>
 									</h5>
-									<p>$12.99</p>
+									<p>₱765.14</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -673,7 +673,7 @@ if ($query->num_rows > 0) {
 											Elephant Jelly Cat
 										</a>
 									</h5>
-									<p>$10.99</p>
+									<p>₱647.33</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -689,7 +689,7 @@ if ($query->num_rows > 0) {
 											Giraffe Jelly Cat
 										</a>
 									</h5>
-									<p>$12.99</p>
+									<p>₱765.14</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -705,7 +705,7 @@ if ($query->num_rows > 0) {
 											Unicorn
 										</a>
 									</h5>
-									<p>$10.99</p>
+									<p>₱647.33</p>
 								</div>
 							</div>
 						</div>
@@ -757,7 +757,7 @@ if ($query->num_rows > 0) {
 											<a href="#" class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
 										</div>
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
-										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x $<?php echo $item["p_price"]; ?></span>
+										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x ₱<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
 										<form action="delete-cart2.php" method="post">											
@@ -780,7 +780,7 @@ if ($query->num_rows > 0) {
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
 						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
-						<p>Total: $<?php echo $totalPrice; ?></p>
+						<p>Total: ₱<?php echo $totalPrice; ?></p>
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full noselect">
@@ -1071,7 +1071,7 @@ if ($query->num_rows > 0) {
 									Bear Baby Tower
 								</a>
 							</h5>
-							<p>$12.99</p>
+							<p>₱765.14</p>
 						</div>
 						<a href="product2.php">
 							<div class="card1 zoom-img" >
@@ -1092,7 +1092,7 @@ if ($query->num_rows > 0) {
 									Giraffe Jelly Cat
 								</a>
 							</h5>
-							<p>$12.99</p>
+							<p>₱765.14</p>
 						</div>
 						<a href="product2.php">
 							<div class="card1 zoom-img" style="border-radius: 20px;">
@@ -1113,7 +1113,7 @@ if ($query->num_rows > 0) {
 									Flower Jelly Cat
 								</a>
 							</h5>
-							<p>$10.99</p>
+							<p>₱647.33</p>
 						</div>
 						<a href="product2.php">
 							<div class="card1 zoom-img" style="border-radius: 20px;">
@@ -1136,8 +1136,7 @@ if ($query->num_rows > 0) {
 	<!-- introduction test start-->
 	<div class="row1 noselect">
 		<img src="images/tshirt-ha.png">
-		<iframe width="600" height="425" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
-</iframe>
+		<iframe width="600" height="425" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
 	</div>
 <hr style="height: 1.2px; width: 89%; background-color: #a7a7a7; border: none; margin: auto;">
 
@@ -1167,7 +1166,7 @@ if ($query->num_rows > 0) {
 								</a>
 
 								<p class="stext-105 cl3 darkModetxt">
-									$8.49
+									₱500.08
 								</p>
 							</div>
 						</div>
@@ -1187,7 +1186,7 @@ if ($query->num_rows > 0) {
 								</a>
 
 								<p class="stext-105 cl3 darkModetxt">
-									$10.99
+									₱647.33
 								</p>
 							</div>
 						</div>
@@ -1207,7 +1206,7 @@ if ($query->num_rows > 0) {
 								</a>
 
 								<p class="stext-105 cl3 darkModetxt">
-									$12.99
+									₱765.14
 								</p>
 							</div>
 						</div>
@@ -1227,7 +1226,7 @@ if ($query->num_rows > 0) {
 								</a>
 
 								<p class="stext-105 cl3 darkModetxt">
-									$12.99
+									₱765.14
 								</p>
 							</div>
 						</div>
@@ -1247,7 +1246,7 @@ if ($query->num_rows > 0) {
 								</a>
 
 								<p class="stext-105 cl3 darkModetxt">
-									$10.99
+									₱647.33
 								</p>
 							</div>
 						</div>
@@ -1267,7 +1266,7 @@ if ($query->num_rows > 0) {
 								</a>
 
 								<p class="stext-105 cl3 darkModetxt">
-									$5.25
+									₱309.24
 								</p>
 							</div>
 						</div>

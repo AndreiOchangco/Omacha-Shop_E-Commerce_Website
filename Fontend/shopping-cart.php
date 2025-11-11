@@ -302,7 +302,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar">
+			<div class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -351,27 +351,27 @@ if ($query->num_rows > 0) {
 				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
 
 					<!-- Logo desktop -->
-					<a href="index.php" class="navbar-brand">
+					<a href="index.php" class="navbar-brand noselect">
 						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
 									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
 					</a>
 
 					<!-- Menu desktop -->
-					<div class="menu-desktop">
+					<div class="menu-desktop noselect">
 						<ul class="main-menu">
 							<li>
-								<a href="index.php">Home</a>
-								<ul class="sub-menu">
-									<li><a href="index.php#shop-by-category">Categories</a></li>
-									<li><a href="index.php#new-arrivals">Arrivals</a></li>
-									<li><a href="index.php#blog">Blog</a></li>
-									<li><a href="index.php#top-brands">Top Brands</a></li>
+								<a class="darkModetxt" href="index.php">Home</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="#shop-by-category">Categories</a></li>
+									<li><a class="darkModetxt" href="#new-arrivals">Arrivals</a></li>
+									<li><a class="darkModetxt" href="#blog">Blog</a></li>
+									<li><a class="darkModetxt" href="#top-brands">Top Brands</a></li>
 								</ul>
 
 							</li>
 
 							<li class="label1" data-label1="new">
-							<a href="product.php">Shop</a>
+							<a class="darkModetxt" href="product.php">Shop</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
 									<li><a class="darkModetxt" href="./Products/fantasy-animal-products.php">Fantasy Animals</a></li>
@@ -382,11 +382,11 @@ if ($query->num_rows > 0) {
 							</li>
 
 							<li>
-								<a href="blog.php">Blog</a>
+								<a class="darkModetxt" href="blog.php">Blog</a>
 							</li>
 
 							<li>
-								<a href="about.php">About</a>
+								<a class="darkModetxt" href="about.php">About</a>
 							</li>
 
 							<li>
@@ -399,7 +399,7 @@ if ($query->num_rows > 0) {
 					</div>
 
 					<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m">
+					<div class="wrap-icon-header flex-w flex-r-m noselect">
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
@@ -415,11 +415,11 @@ if ($query->num_rows > 0) {
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
-							<li class="active-menu">
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu noselect">
+							<li class="active-menu noselect">
 								<a href="register.php" class="btn2 btn-primary2 mt-1 "
 								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
-								<ul class="profile-sub-menu">
+								<ul class="profile-sub-menu noselect">
 									<li><a href="user-profile.php">Profile</a></li>
 									
 									<li>
@@ -769,7 +769,7 @@ if ($query->num_rows > 0) {
 	</div>
 
 
-	<!-- Shoping Cart -->
+	<!-- Shopping Cart -->
 	<form class="p-t-75 p-b-85">
 		<div class="container">
 			<div class="row">
@@ -797,7 +797,7 @@ if ($query->num_rows > 0) {
 											</div>
 										</td>
 										<td style="text-align: center;" class="column-2 darkModetxt"><?php echo $item["p_name"]; ?></td>
-										<td style="text-align: center;" class="column-3 darkModetxt" id="price_<?php echo $item['p_id']; ?>" class="column-3">$ <?php echo $item["p_price"]; ?></td>
+										<td style="text-align: center;" class="column-3 darkModetxt" id="price_<?php echo $item['p_id']; ?>" class="column-3">₱ <?php echo $item["p_price"]; ?></td>
 										<td class="column-4">
 											<div class="wrap-num-product flex-w m-l-auto m-r-0">
 												<div class="btn-down cl8 hov-btn3 trans-04 flex-c-m darkModeBtn-outline" onclick="decreaseQuantity(<?php echo $item['p_id']; ?>)">
@@ -811,7 +811,7 @@ if ($query->num_rows > 0) {
 												</div>
 											</div>
 										</td>
-										<td style="text-align: center;" id="total_<?php echo $item['p_id']; ?>" class="column-5 darkModetxt">$ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
+										<td style="text-align: center;" id="total_<?php echo $item['p_id']; ?>" class="column-5 darkModetxt">₱ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
 									</tr>
 								<?php endforeach; ?>
 							</table>
@@ -872,7 +872,7 @@ if ($query->num_rows > 0) {
 
 							<div class="size-209">
 								<span class="mtext-110 cl2 darkModetxt">
-									$ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?>
+									₱ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?>
 								</span>
 							</div>
 						</div>
@@ -932,7 +932,7 @@ if ($query->num_rows > 0) {
 
 							<div class="size-209 p-t-1">
 								<span class="mtext-110 cl2 darkModetxt">
-									$ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?>
+									₱ <?php echo sumTotalPrice($order_array, $userLogin["userID"]); ?>
 								</span>
 							</div>
 						</div>
@@ -1100,7 +1100,7 @@ if ($query->num_rows > 0) {
 	<!-- Back to top -->
 	<div class="btn-back-to-top" id="myBtn">
 		<span class="symbol-btn-back-to-top">
-			<i class="zmdi zmdi-chevron-up"></i>
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
 		</span>
 	</div>
 

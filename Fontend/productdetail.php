@@ -754,7 +754,7 @@ if ($result->num_rows > 0) {
 										</div>
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
 										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x
-											$<?php echo $item["p_price"]; ?></span>
+											₱<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
 										<form action="delete-cart2.php" method="post">
@@ -777,7 +777,7 @@ if ($result->num_rows > 0) {
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
 						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
-						<p>Total: $<?php echo $totalPrice; ?></p>
+						<p>Total: ₱<?php echo $totalPrice; ?></p>
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
@@ -874,7 +874,7 @@ if ($result->num_rows > 0) {
 						</h4>
 
 						<span class="mtext-106 cl2 darkModetxt">
-							$ <?php echo $product["p_price"]; ?>
+							₱ <?php echo $product["p_price"]; ?>
 						</span>
 
 						<p class="stext-102 cl3 p-t-23 darkModetxt">
@@ -961,7 +961,7 @@ if ($result->num_rows > 0) {
 								<form action="add-to-cart.php" method="post">
 									<!-- Name input is add-to-order -->
 									<input type="submit" value="Add to cart" id="button-add" name="add-to-cart"
-										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									<input type="hidden" name="p_id" value="<?php echo $product["p_id"]; ?>">
 									<input type="hidden" name="p_image" value="<?php echo $product["p_image"]; ?>">
 									<input type="hidden" name="p_name" value="<?php echo $product["p_name"]; ?>">
@@ -969,13 +969,13 @@ if ($result->num_rows > 0) {
 									<input type="hidden" name="p_type" value="<?php echo $product["p_type"]; ?>">
 									<input type="hidden" name="o_quantity" id="hidden-quantity"
 										value="<?php echo $quantity; ?>">
-									<input type="hidden" name="o_status" value="0"> <!-- Nằm trong giỏ hàng -->
+									<input type="hidden" name="o_status" value="0"> 
 								</form>
 
 								<form action="buy-it-now.php" method="post">
 									<!-- Name input is buy-it-now -->
 									<input type="submit" value="Buy it now" id="button-buy" name="buy-it-now"
-										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									<input type="hidden" name="p_id" value="<?php echo $product["p_id"]; ?>">
 									<input type="hidden" name="p_image" value="<?php echo $product["p_image"]; ?>">
 									<input type="hidden" name="p_name" value="<?php echo $product["p_name"]; ?>">
@@ -983,7 +983,7 @@ if ($result->num_rows > 0) {
 									<input type="hidden" name="p_type" value="<?php echo $product["p_type"]; ?>">
 									<input type="hidden" name="o_quantity" id="hidden-quantity-buy"
 										value="<?php echo $quantity; ?>">
-									<input type="hidden" name="o_status" value="0"> <!-- Nằm trong giỏ hàng -->
+									<input type="hidden" name="o_status" value="0"> 
 								</form>
 							</div>
 						</div>
@@ -1258,7 +1258,7 @@ if ($result->num_rows > 0) {
 									</a>
 
 									<span class="stext-105 cl3 darkModetxt">
-										$8.49
+										₱500.08
 									</span>
 								</div>
 
@@ -1294,7 +1294,7 @@ if ($result->num_rows > 0) {
 									</a>
 
 									<span class="stext-105 cl3 darkModetxt">
-										$10.99
+										₱647.33
 									</span>
 								</div>
 
@@ -1329,7 +1329,7 @@ if ($result->num_rows > 0) {
 									</a>
 
 									<span class="stext-105 cl3 darkModetxt">
-										$12.99
+										₱765.14
 									</span>
 								</div>
 
@@ -1365,7 +1365,7 @@ if ($result->num_rows > 0) {
 									</a>
 
 									<span class="stext-105 cl3 darkModetxt">
-										$12.99
+										₱765.14
 									</span>
 								</div>
 
@@ -1401,7 +1401,7 @@ if ($result->num_rows > 0) {
 									</a>
 
 									<span class="stext-105 cl3 darkModetxt">
-										$10.99
+										₱647.33
 									</span>
 								</div>
 
@@ -1437,7 +1437,7 @@ if ($result->num_rows > 0) {
 									</a>
 
 									<span class="stext-105 cl3 darkModetxt">
-										$5.25
+										₱309.24
 									</span>
 								</div>
 
@@ -1473,7 +1473,7 @@ if ($result->num_rows > 0) {
 									</a>
 
 									<span class="stext-105 cl3 darkModetxt">
-										$10.99
+										₱647.33
 									</span>
 								</div>
 
@@ -1509,7 +1509,7 @@ if ($result->num_rows > 0) {
 									</a>
 
 									<span class="stext-105 cl3 darkModetxt">
-										$10.99
+										₱647.33
 									</span>
 								</div>
 

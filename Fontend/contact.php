@@ -325,12 +325,12 @@ if ($query->num_rows > 0) {
 
 							<li class="label1" data-label1="new">
 							<a href="product.php">Shop</a>
-								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
-									<li><a class="darkModetxt" href="./Products/fantasy-animal-products.php">Fantasy Animals</a></li>
-									<li><a class="darkModetxt" href="./Products/teddy-bear-products.php">Teddy Bears</a></li>
-									<li><a class="darkModetxt" href="./Products/soft-doll-products.php">Soft Dolls</a></li>
-									<li><a class="darkModetxt" href="./Products/plastic-toy-products.php">Plastic Toys</a></li>
+								<ul class="sub-menu">
+									<li><a href="./Products/convenience-products.php">Convenience</a></li>
+									<li><a href="./Products/shopping-products.php">Shopping</a></li>
+									<li><a href="./Products/specialty-products.php">Specialty</a></li>
+									<li><a href="./Products/unsought-products.php">Unsought</a></li>
+									<li><a href="./Products/digital-products.php">Digital</a></li>
 								</ul>
 							</li>
 
@@ -342,7 +342,7 @@ if ($query->num_rows > 0) {
 								<a href="about.php">About</a>
 							</li>
 
-							<li class="active-menu">
+							<li>
 								<a class="darkModetxt" href="contact.php">Contact</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="Improved_customer_support/main/customer-support.php">Customer Support</a></li>
@@ -590,7 +590,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92 m-t-10" style="background-image: url('images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-55">
 			Contact
 		</h2>
@@ -599,18 +599,19 @@ if ($query->num_rows > 0) {
 
 	<!-- Content page -->
 	<section1>
-		<!-- <h4 class="sectionHeader">Contact Us</h4> -->
-		<h1 class="stext-122 heading darkModetxt">Get In Touch</h1>
+		<h1 style="margin-bottom: -20px;" class="stext-122 heading darkModetxt-omacha m-t-30">Get In Touch</h1>
 		<div class="contactForm">
-			<form action="notification_api.php" id="notificationForm">
-				<h1 class=" stext-121 sub-heading darkModetxt">Let's talk</h1>
-
-				<input type="text" id="user" name="user" class="input" value="ADMIN" required>
-				<input type="text" id="title" name="title" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
-				<textarea name="message" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
-				
-				<button type="submit" id="sendmsg" class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 m-lf-minus-10 m-t-10 trans-04">Send Message</button>
-			</form>
+			<div style="background-color: #ffffffff; border-radius: 25px; align-items: center;" class="m-t-30">
+				<h1 style="margin-top: 20px; margin-bottom: 20px; margin-left: 20px; font-size: 1.5rem; color: #181818;" class=" stext-121 sub-heading">Let's talk</h1>
+				<form action="notification_api.php" id="notificationForm">
+	
+					<input type="text" id="user" name="user" style="margin-bottom: 20px; border: 0.5px dashed #000; border-radius: 10px;" class="input" value="ADMIN" required>
+					<input type="text" id="title" name="title" style="margin-bottom: 20px; border: 0.5px dashed #000; border-radius: 10px;" class="input" value="From <?php echo htmlspecialchars($userLogin['userName']); ?>" required>
+					<textarea name="message" style="border: 0.5px dashed #000; border-radius: 10px;" class="input" id="message" cols="30" rows="5"  placeholder="Your message"></textarea>
+					
+					<button type="submit" id="sendmsg" class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 m-lf-minus-10 m-t-10 trans-04">Send Message</button>
+				</form>
+			</div>
 			<!-- Notification Modal -->
 			<div id="resultModal" class="modal" style="display: none;">
 				<div class="modal-content">
@@ -619,54 +620,51 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 
-			<div class="map-container">
-				
+			<div style="margin-top: -20px; " class="map-container">
 				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.786852619814!2d120.31229760000001!3d16.6374632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33918d5e2a81bcfb%3A0xd9ee01c3a2281d87!2sOmacha%20Shop%20%7C%20E-commerce%20Website!5e0!3m2!1sen!2sph!4v1759728220314!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.786852619814!2d120.31229760000001!3d16.6374632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33918d5e2a81bcfb%3A0xd9ee01c3a2281d87!2sOmacha%20Shop%20%7C%20E-commerce%20Website!5e0!3m2!1sen!2sph!4v1759728220314!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
-				
 			</div>
 			
-			<div class="contactMethod">
+		</div>
+		<div class="contactMethod">
 
-				<div class="method">
-					<i class="fa-duotone fa-location-check fa-beat-fade contactIcon" style="--fa-primary-color: #ee1153; --fa-secondary-color: #f4679f;"></i>
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Location</h1>
-						<p class="para darkModetxt">Saint Louis College</p>
-					</article>
-				</div>
-
-				<div class="method">
-					<i class="fa-duotone fa-envelope fa-beat-fade contactIcon" style="--fa-primary-color: #dd2776; --fa-secondary-color: #f486c6;"></i>						
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Email</h1>
-						<p class="para darkModetxt">
-							<a
-							class="darkModetxt"
-							href="mailto:omachashopofficial@gmail.com"
-							style="color: #000; text-decoration: none;">omachashopofficial@gmail.com
-							</a>
-						</p>
-						
-					</article>
-				</div>
-
-				<div class="method">
-					<i class="fa-duotone fa-phone-volume fa-beat-fade contactIcon" style="--fa-primary-color: #d71d55; --fa-secondary-color: #d6669c;"></i>					
-					<article class="text">
-						<h1 class="stext-121 sub-heading text-omacha">Phone</h1>
-						<p class="para darkModetxt">
-							<a 
-							class="darkModetxt"
-							href="tel:+1922 4800"
-							style="color: #000; text-decoration: none;">+1922 4800
-							</a>
-						</p>
-					</article>
-				</div>
+			<div class="method">
+				<i class="fa-duotone fa-location-check fa-beat-fade contactIcon" style="--fa-primary-color: #ee1153; --fa-secondary-color: #f4679f; margin-top: 20px;"></i>
+				<article class="text">
+					<h1 class="stext-121 sub-heading text-omacha">Location</h1>
+					<p class="para darkModetxt">Saint Louis College</p>
+				</article>
 			</div>
 
+			<div class="method">
+				<i class="fa-duotone fa-envelope fa-beat-fade contactIcon" style="--fa-primary-color: #dd2776; --fa-secondary-color: #f486c6; margin-top: 20px;"></i>						
+				<article class="text">
+					<h1 class="stext-121 sub-heading text-omacha">Email</h1>
+					<p class="para darkModetxt">
+						<a
+						class="darkModetxt"
+						href="mailto:omachashopofficial@gmail.com"
+						style="color: #000; text-decoration: none;">omachashopofficial@gmail.com
+						</a>
+					</p>
+					
+				</article>
+			</div>
+
+			<div class="method">
+				<i class="fa-duotone fa-phone-volume fa-beat-fade contactIcon" style="--fa-primary-color: #d71d55; --fa-secondary-color: #d6669c; margin-top: 20px;"></i>					
+				<article class="text">
+					<h1 class="stext-121 sub-heading text-omacha">Phone</h1>
+					<p class="para darkModetxt">
+						<a 
+						class="darkModetxt"
+						href="tel:+1922 4800"
+						style="color: #000; text-decoration: none;">+1922 4800
+						</a>
+					</p>
+				</article>
+			</div>
 		</div>
 	</section1>
 
@@ -751,15 +749,15 @@ if ($query->num_rows > 0) {
 
 					<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-facebook fa-lg" style="color: #19f574;"></i>
+							<i class="fa-brands fa-facebook fa-lg" style="color: #ea539c;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-instagram fa-lg" style="color: #19f574;"></i>
+							<i class="fa-brands fa-instagram fa-lg" style="color: #e151a5;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-pinterest fa-lg" style="color: #19f574;"></i>
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #e74b7a;"></i>
 						</a>
 					</div>
 				</div>
@@ -777,7 +775,7 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
 								Subscribe
 							</button>
 						</div>
