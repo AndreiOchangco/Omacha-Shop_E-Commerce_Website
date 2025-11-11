@@ -975,7 +975,7 @@ if ($result->num_rows > 0) {
 								<form action="buy-it-now.php" method="post">
 									<!-- Name input is buy-it-now -->
 									<input type="submit" value="Buy it now" id="button-buy" name="buy-it-now"
-										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 darkModeBtn">
+										class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 buy-now-btn">
 									<input type="hidden" name="p_id" value="<?php echo $product["p_id"]; ?>">
 									<input type="hidden" name="p_image" value="<?php echo $product["p_image"]; ?>">
 									<input type="hidden" name="p_name" value="<?php echo $product["p_name"]; ?>">
