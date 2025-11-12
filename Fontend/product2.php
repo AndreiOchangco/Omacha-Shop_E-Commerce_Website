@@ -262,8 +262,8 @@ if ($result->num_rows > 0) {
 
 					<div class="col-lg-6 text-center text-lg-right">
 						<div class="d-inline-flex align-items-center">
-							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-								target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
+							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61581825749869"
+								target="_blank" title="Visit the Omacha Shop Philippines page.">
 								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
 							</a>
 							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
