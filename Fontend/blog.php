@@ -674,7 +674,7 @@ if ($query->num_rows > 0) {
 
 								<!-- Second Column -->
 								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail2.html">
+									<a href="blog-detail2.php">
 										<div class="card" style="border: none;">
 											<img src="images/blog-05.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
 												class="zoomable-img">

@@ -331,7 +331,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar noselect">
+			<div style="background-color: #ffffffff;" class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -376,8 +376,8 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
-				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
+			<div class="wrap-menu-desktop" style="background-color: #fff8f8ff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #fff8f8ff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand noselect">
@@ -800,7 +800,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Slider -->
-	<section class="section-slide m-t-10">
+	<section class="section-slide m-t-20">
 		<div class="wrap-slick1 noselect">
 			<div class="slick1 noselect">
 				<div class="item-slick1" style="background-image: url(images/slide-22.png);">
@@ -814,15 +814,16 @@ if ($query->num_rows > 0) {
 
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
 								<h2 class="stext-119 cl2 p-t-19 p-b-43 respon1">
-									Blankie Buddies
+									Teddy Buddies
 								</h2>
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product2.php"
+								<a href="product.php"
 									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
+
 							</div>
 						</div>
 					</div>
@@ -840,12 +841,12 @@ if ($query->num_rows > 0) {
 							<div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn"
 								data-delay="800">
 								<h2 class="stext-119 cl2 p-t-19 p-b-43 respon1">
-									Babies Soft Toys
+									Soft Toys
 								</h2>
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product2.php"
+								<a href="product.php"
 									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
@@ -872,7 +873,7 @@ if ($query->num_rows > 0) {
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product2.php"
+								<a href="product.php"
 									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
@@ -899,7 +900,7 @@ if ($query->num_rows > 0) {
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product2.php"
+								<a href="product.php"
 									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
@@ -911,6 +912,63 @@ if ($query->num_rows > 0) {
 		</div>
 	</section>
 
+	<!-- Category Start -->
+	<div class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
+		<div class="container text-center">
+			<h1 class="text-primary1 m-t-50 noselect">Shop by Category</h1>
+			<div class="row">
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
+					<!-- Block1 -->
+					<div class="block1 wrap-pic-w noselect">
+						<a href="./Products/stuffed-animal-products.php" style="color: white;">
+						<img class="category noselect" src="images/Homepage-images/toysy.png" alt="category-img" >
+						<h5 class="stext-121 noselect">Stuffed Animals</h5>
+					</div>
+				</div>
+
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
+					<!-- Block2 -->
+					<div class="block1 wrap-pic-w noselect">
+						<a href="./Products/fantasy-animal-products.php" style="color: white;">
+						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
+						<h5 class="stext-121 noselect">
+							Fantasy Animals
+							</h5>
+					</div>
+				</div>
+
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
+					<!-- Block3 -->
+					<div class="block1 wrap-pic-w noselect">
+						<a href="./Products/teddy-bear-products.php" style="color: white;"> 
+						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
+						<h5 class="stext-121 noselect">Teddy Bears </h5>
+					</div>
+				</div>
+
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
+					<!-- Block4 -->
+					<div class="block1 wrap-pic-w noselect">
+						<a href="./Products/soft-doll-products.php" style="color: white;">
+						<img class="category noselect" src="images/Homepage-images/doll.png" alt="category-img">
+						<h5 class="stext-121 noselect"> Soft Dolls</h5>
+					</div>
+				</div>	
+
+				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
+					<!-- Block5 -->
+					<div class="block1 wrap-pic-w noselect">
+						<a href="./Products/plastic-toy-products.php" style="color: white;">
+						<img class="category noselect" src="images/Homepage-images/bricks.png" alt="category-img">
+						<h5 class="stext-121 noselect">
+						Plastic Toys
+					</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Category End -->
 
 	<!-- retangle start -->
 	<div class="sec-banner bg0 p-t-100 p-b-40">
@@ -998,69 +1056,11 @@ if ($query->num_rows > 0) {
 
 	<!-- retangle end -->
 
-	<!-- Category Start -->
-	<div class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
-		<div class="container text-center">
-			<h1 class="text-primary1 m-t-50 noselect">Shop by Category</h1>
-			<div class="row">
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
-					<!-- Block1 -->
-					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/stuffed-animal-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/toysy.png" alt="category-img" >
-						<h5 class="stext-121 noselect">Stuffed Animals</h5>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
-					<!-- Block2 -->
-					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/fantasy-animal-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
-						<h5 class="stext-121 noselect">
-							 Fantasy Animals
-							</h5>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
-					<!-- Block3 -->
-					<div class="block1 wrap-pic-w noselect">
-						 <a href="./Products/teddy-bear-products.php" style="color: white;"> 
-						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
-						<h5 class="stext-121 noselect">Teddy Bears </h5>
-					</div>
-				</div>
-
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
-					<!-- Block4 -->
-					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/soft-doll-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/doll.png" alt="category-img">
-						<h5 class="stext-121 noselect"> Soft Dolls</h5>
-					</div>
-				</div>	
-
-				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
-					<!-- Block5 -->
-					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/plastic-toy-products.php" style="color: white;">
-						<img class="category noselect" src="images/Homepage-images/bricks.png" alt="category-img">
-						<h5 class="stext-121 noselect">
-						Plastic Toys
-					</h5>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Category End -->
 
 	<!-- hostpot start -->
 	<section>
 		<div class="container1 noselect">
 			<img src="images/hostspot.jpg" alt="img">
-			<div class="all-tooltips1"></div>
 			<div class="tooltip1 tooltip-1 noselect">
 				<div class="pin1"></div>
 				<div class="tooltip-content1">
@@ -1138,7 +1138,6 @@ if ($query->num_rows > 0) {
 		<img src="images/tshirt-ha.png">
 		<iframe width="600" height="425" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
 	</div>
-<hr style="height: 1.2px; width: 89%; background-color: #a7a7a7; border: none; margin: auto;">
 
 	<section class="bg0 p-t-120 p-b-25 noselect" id="new-arrivals">
 		<div class="content">

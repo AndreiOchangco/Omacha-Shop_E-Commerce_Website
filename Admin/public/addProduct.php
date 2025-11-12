@@ -3,7 +3,6 @@ require_once '../connection/connectData.php';
 
 if (isset($_POST['sbm'])) {
     $p_name = $_POST['p_name'];
-
     $p_images = $_FILES['p_image']['name'];
     $p_images_tmp = $_FILES['p_image']['tmp_name'];
     $p_image_paths = []; // Mảng để chứa các đường dẫn ảnh

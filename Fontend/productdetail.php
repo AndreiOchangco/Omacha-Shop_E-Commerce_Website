@@ -514,7 +514,7 @@ if ($result->num_rows > 0) {
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu noselect">
-							<li class="active-menu">
+							<li>
 								<a class="darkModetxt" href="index.php">Home</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="index.php#shop-by-category">Categories</a></li>
@@ -525,7 +525,7 @@ if ($result->num_rows > 0) {
 
 							</li>
 
-							<li class="label1" data-label1="new">
+							<li class="label1 active-menu" data-label1="new">
 							<a class="darkModetxt" href="product.php">Shop</a>
 								<ul class="sub-menu darkModebg-black">
 									<li><a class="darkModetxt" href="./Products/stuffed-animal-products.php">Stuffed Animals</a></li>
@@ -991,14 +991,6 @@ if ($result->num_rows > 0) {
 
 					<!--  -->
 					<div class="flex-w flex-m p-l-100 p-t-40 respon7 noselect">
-						<div class="flex-m bor9 p-r-10 m-r-11">
-							<a href="#"
-								class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100"
-								data-tooltip="Add to Wishlist">
-								<i class="zmdi zmdi-favorite"></i>
-							</a>
-						</div>
-
 						<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
 							data-tooltip="Facebook">
 							<i class="fab fa-facebook"></i> <!-- Use "fab" for brand icons -->
@@ -1010,15 +1002,15 @@ if ($result->num_rows > 0) {
 						</a>
 
 						<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 m-r-8 tooltip100"
-							data-tooltip="Google Plus">
-							<i class="fab fa-google-plus"></i>
+							data-tooltip="Github">
+							<i class="fab fa-github"></i>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="bor10 m-t-50 p-t-43 p-b-40">
+		<div class="bor10 m-t-50 m-lr-30 p-t-43 p-b-40">
 			<!-- Tab01 -->
 			<div class="tab01 noselect">
 				<!-- Nav tabs -->
@@ -1119,12 +1111,12 @@ if ($result->num_rows > 0) {
 							<div class="col-sm-10 col-md-8 col-lg-6 m-lr-auto">
 								<div class="p-b-30 m-lr-15-sm">
 									<!-- Review -->
-									<div>
+									<div id="reviews-container">
 										<?php
 										$sql = "SELECT * from review";
 										$query = mysqli_query($conn, $sql);
 										while ($review = mysqli_fetch_assoc($query)) {
-											?>
+										?>
 											<div class="flex-w flex-t p-b-68">
 												<div>
 													<div class="flex-w flex-sb-m p-b-17">
@@ -1133,7 +1125,6 @@ if ($result->num_rows > 0) {
 														</span>
 														<span class="fs-18 cl11 drkmde">
 															<?php
-															// Tính toán và hiển thị số lượng sao
 															$stars = $review['r_star'];
 															for ($i = 1; $i <= 5; $i++) {
 																if ($i <= $stars) {
@@ -1155,8 +1146,7 @@ if ($result->num_rows > 0) {
 
 
 									<!-- Add review -->
-									<form class="w-full" method="POST" enctype="multipart/form-data"
-										action="productdetail.php">
+									<form class="w-full" method="POST" action="../Admin/public/addReview.php">
 										<h5 class="mtext-108 cl2 p-b-7 darkModetxt-omacha">
 											Add a review
 										</h5>
@@ -1176,28 +1166,29 @@ if ($result->num_rows > 0) {
 												<i class="item-rating pointer zmdi zmdi-star-outline"></i>
 												<i class="item-rating pointer zmdi zmdi-star-outline"></i>
 												<i class="item-rating pointer zmdi zmdi-star-outline"></i>
-												<input class="dis-none" type="number" name="r_star">
+												<input class="dis-none" type="number" name="r_star" value="0">
 											</span>
 										</div>
 
 										<div class="row p-b-25">
-											
 											<div class="col-sm-6 p-tb-5">
 												<label class="stext-102 cl3 darkModetxt-omacha" for="name">Name</label>
 												<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="name" type="text"
-												name="r_name" placeholder="Name" value="<?php echo htmlspecialchars($userLogin['userName']); ?>" required>
+													name="r_name" placeholder="Name"
+													value="<?php echo htmlspecialchars($userLogin['userName']); ?>" required>
 											</div>
-											
+
 											<div class="col-sm-6 p-tb-5">
 												<label class="stext-102 cl3 darkModetxt-omacha" for="email">Email</label>
 												<input class="size-111 bor8 stext-102 cl2 p-lr-20" id="email"
-												type="text" name="r_email" placeholder="Email" value="<?php echo htmlspecialchars($userLogin['email']); ?>" required>
-												<input type="hidden"
-												class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-												style="background-color: white;" name="p_name"
-												value="<?php echo $product["p_name"]; ?>">
+													type="text" name="r_email" placeholder="Email"
+													value="<?php echo htmlspecialchars($userLogin['email']); ?>" required>
+
+												<input type="hidden" name="p_name"
+													value="<?php echo htmlspecialchars($product['p_name']); ?>">
+
 												<input type="hidden" name="user"
-												value="<?php $userLogin["userName"]; ?>">
+													value="<?php echo htmlspecialchars($userLogin['userName']); ?>">
 											</div>
 
 											<div class="col-12 p-b-5">
@@ -1213,6 +1204,7 @@ if ($result->num_rows > 0) {
 											Submit
 										</button>
 									</form>
+
 								</div>
 							</div>
 						</div>
@@ -1220,9 +1212,6 @@ if ($result->num_rows > 0) {
 				</div>
 			</div>
 		</div>
-
-
-
 	</section>
 
 
@@ -2038,11 +2027,77 @@ if ($result->num_rows > 0) {
 		})
 
 	</script>
+	<script>
+	// Handle review submission dynamically
+	document.querySelector('form[action="../Admin/public/addReview.php"]').addEventListener('submit', function (e) {
+		e.preventDefault();
+		const form = e.target;
+		const formData = new FormData(form);
+
+		fetch(form.action, {
+			method: 'POST',
+			body: formData
+		})
+		.then(res => res.json())
+		.then(data => {
+			if (data.success) {
+				const reviewList = document.querySelector('#reviews-container');
+				if (!reviewList) return;
+
+				// Build stars
+				let starsHTML = '';
+				const rating = parseInt(form.r_star.value) || 0;
+				for (let i = 1; i <= 5; i++) {
+					starsHTML += i <= rating
+						? '<i class="zmdi zmdi-star drkmde"></i>'
+						: '<i class="zmdi zmdi-star-outline drkmde"></i>';
+				}
+
+				// Build review HTML
+				const newReview = document.createElement('div');
+				newReview.classList.add('flex-w', 'flex-t', 'p-b-68', 'fade-up');
+				newReview.innerHTML = `
+					<div>
+						<div class="flex-w flex-sb-m p-b-17">
+							<span class="mtext-107 cl2 p-r-20 darkModetxt-omacha">${form.r_name.value}</span>
+							<span class="fs-18 cl11 drkmde">${starsHTML}</span>
+						</div>
+						<p class="stext-102 cl6 darkModetxt">${form.r_description.value}</p>
+					</div>
+				`;
+
+				// Add new review to top
+				reviewList.prepend(newReview);
+
+				// Trigger fade-up
+				requestAnimationFrame(() => {
+					newReview.classList.add('fade-up-visible');
+				});
+
+				// Reset form
+				form.reset();
+			}
+		})
+		.catch(err => console.error("Error:", err));
+	});
+	</script>
+
+	<style>
+	/* Fade-up animation for new reviews */
+	.fade-up {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: all 0.4s ease-in-out;
+	}
+	.fade-up-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	</style>
+
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>
 	<script src="js/dark-mode.js"></script>
-
-
 </body>
 
 </html>
