@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2025 at 04:53 PM
+-- Generation Time: Nov 12, 2025 at 09:32 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -144,11 +144,12 @@ INSERT INTO `order` (`o_id`, `u_id`, `p_id`, `o_price`, `o_quantity`, `o_status`
 (95, 14, 1, 13, 1, 1),
 (96, 14, 21, 10, 3, 1),
 (105, 29, 1, 13, 1, 1),
-(106, 29, 1, 13, 5, 1),
+(106, 29, 1, 13, 1, 1),
 (107, 29, 3, 11, 1, 1),
 (108, 29, 4, 11, 1, 1),
 (109, 29, 6, 13, 2, 1),
-(111, 29, 8, 11, 1, 1);
+(111, 29, 8, 11, 1, 1),
+(112, 29, 1, 765, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -340,7 +341,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `o_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
+  MODIFY `o_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 
 --
 -- AUTO_INCREMENT for table `product`
