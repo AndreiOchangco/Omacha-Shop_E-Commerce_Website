@@ -1416,7 +1416,7 @@ if ($query->num_rows > 0) {
 
 	
 	<!-- Footer -->
-	<footer class="bg3 p-t-100 p-b-25 noselect">
+	<footer style="background-color: #fff8f8ff;" class="bg3 p-t-100 p-b-25 noselect">
 		<div class="container noselect">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
