@@ -1097,7 +1097,7 @@ if ($result->num_rows > 0) {
 									</div>
 									<div class="block2-txt-child2 flex-r p-t-3">
 										<a href="../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>"
-											class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+											class="btn-addwish-b2 dis-block pos-relative">
 											<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
 												alt="ICON">
 											<img class="icon-heart2 dis-block trans-04 ab-t-l"

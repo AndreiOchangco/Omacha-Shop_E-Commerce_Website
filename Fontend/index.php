@@ -759,15 +759,15 @@ if ($query->num_rows > 0) {
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
 										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x ₱<?php echo $item["p_price"]; ?></span>
 									</div>
-									<div class="col-md-3">
-										<form action="delete-cart2.php" method="post">											
-											<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
+								</div>
+								<div class="col-md-3">
+									<form action="delete-cart2.php" method="post">											
+										<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
 
-											<!-- Nút xóa tại đây -->
-											<input type="submit" value="X" name="delete-cart" class="btn-delete">
-											<!-- <//?php print_r($item['p_id']); ?> -->
-										</form>
-									</div>
+										<!-- Nút xóa tại đây -->
+										<input type="submit" value="X" name="delete-cart" class="btn-delete">
+										<!-- <//?php print_r($item['p_id']); ?> -->
+									</form>
 								</div>
 							</li>
 					<?php

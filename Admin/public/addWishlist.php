@@ -15,7 +15,7 @@ if(isset($_GET['p_id'])) {
     $stmt->bind_param("i", $p_id);
     
     if ($stmt->execute()) {
-        header('Location: ../../Fontend/wishlist.php');
+        header("Location: ../../Fontend/productdetail.php?p_id=" . $p_id);
         exit();
     } else {
         echo "Lỗi: " . $stmt->error;

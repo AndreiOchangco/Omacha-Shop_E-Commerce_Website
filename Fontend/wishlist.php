@@ -787,24 +787,21 @@ if ($resultOrder->num_rows > 0) {
 							<div class="block2">
 								<form method="POST" action="productdetail.php">
 									<div id="<?php echo $wishlist['p_id']; ?>" class="block2-pic hov-img0"
-										style="border: 0.1px dashed #000; border-radius: 50px;">
+										style="border: 0.5px dashed #000; border-radius: 50px; background-color: #ffffffff;">
 										<img src="images/<?php echo $product_images[0]; ?>" alt="IMG-PRODUCT">
 									</div>
 									<div class="block2-txt flex-w flex-t p-t-14">
 										<div class="block2-txt-child1 flex-col-l">
-										<input class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-												style="background-color: white;" type="submit" name="p_name"
-												value="<?php echo $wishlist["p_name"]; ?>">
+										<a class="stext-104 cl4 hov-cl1 trans-04 p-b-6 darkModehyperlink" type="button" name="p_name" href="productdetail.php?p_id=<?php echo $wishlist["p_id"]; ?>"><?php echo $wishlist["p_name"]; ?></a>
 										<input type="hidden" name="user" value="<?php $userLogin["userName"]; ?>">
-											<p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1">
+											<p class="stext-104 cl4 hov-cl1 trans-04 p-b-6 text1 darkModetxt">
 												<?php echo $wishlist['p_type']; ?></p>
-											<span class="stext-105 cl3 price">$<?php echo $wishlist['p_price']; ?></span>
+											<span class="stext-105 cl3 price darkModetxt">$<?php echo $wishlist['p_price']; ?></span>
 										</div>
 										<div class="block2-txt-child2 flex-r p-t-3">
 											<a
 												href="../Admin/public/deleteWishlist.php?p_id=<?php echo $wishlist['p_id']; ?>">
-												<i class="fa-solid fa-trash fa-lg" style="color: #3962a7;"></i>
-												<i class="fa-solid fa-heart fa-lg" style="color: #4f83de;"></i>
+												<i class="fa-solid fa-trash fa-lg m-r-10" style="color: #19f574;"></i>
 											</a>
 
 										</div>
@@ -828,13 +825,13 @@ if ($resultOrder->num_rows > 0) {
 							<div class="block2">
 								<form method="POST" action="productdetail.php">
 									<div id="<?php echo $product['p_id']; ?>" class="block2-pic hov-img0"
-										style="border: 0.1px dashed #000; border-radius: 50px;">
+										style="border: 0.5px dashed #000; border-radius: 50px; background-color: #ffffffff;">
 										<img src="images/<?php echo $product_images[0]; ?>" alt="IMG-PRODUCT">
 									</div>
 									<div class="block2-txt flex-w flex-t p-t-14">
 										<div class="block2-txt-child1 flex-col-l">
 											<input class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"
-												style="background-color: white;" type="submit" name="p_name"
+												type="submit" name="p_name"
 												value="<?php echo $product["p_name"]; ?>">
 											<input type="hidden" name="user" value="<?php $userLogin["userName"]; ?>">
 											<p class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6 text1">
@@ -844,7 +841,7 @@ if ($resultOrder->num_rows > 0) {
 										</div>
 										<div class="block2-txt-child2 flex-r p-t-3">
 											<a href="../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>"
-												class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+												class="btn-addwish-b2 dis-block pos-relative">
 												<img class="icon-heart1 dis-block trans-04"
 													src="images/icons/icon-heart-01.png" alt="ICON"
 													href="../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>">
@@ -858,9 +855,9 @@ if ($resultOrder->num_rows > 0) {
 								</form>
 							</div>
 						</div>
-						<!-- <?php
+					 <?php
 					 }
-					?> -->
+					?> 
 				</section>
 
 
