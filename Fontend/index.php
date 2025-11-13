@@ -1392,21 +1392,21 @@ if ($query->num_rows > 0) {
 
 		<div class="carousel noselect">
 			<div class="group">
-			<div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
-			<div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
-			<div class="card1"><img src="images/Homepage-images/nike-logo.png" alt="Nike logo"></div>
-			<div class="card1"><img src="images/Homepage-images/uniqlo2-logo.png" alt="Uniqlo logo"></div>
-			<div class="card1"><img src="images/Homepage-images/pg-logo.png" alt="P&G logo"></div>
-			<div class="card1"><img src="images/Homepage-images/unilever-logo.png" alt="Unilever logo"></div>
+			<div class="card1"><img src="images/Homepage-images/logo1.jpg" alt="logo1"></div>
+			<div class="card1"><img src="images/Homepage-images/logo2.jpg" alt="logo2"></div>
+			<div class="card1"><img src="images/Homepage-images/logo3.jpg" alt="logo3"></div>
+			<div class="card1"><img src="images/Homepage-images/logo4.jpg" alt="logo4"></div>
+			<div class="card1"><img src="images/Homepage-images/logo5.jpg" alt="logo5"></div>
+			<div class="card1"><img src="images/Homepage-images/logo6.jpg" alt="logo6"></div>
 			</div>
 
 			<div aria-hidden class="group">
-			<div class="card1"><img src="images/Homepage-images/Samsung-logo.png" alt="Samsung logo"></div>
-			<div class="card1"><img src="images/Homepage-images/apple-black-logo.png" alt="Apple logo"></div>
-			<div class="card1"><img src="images/Homepage-images/nike-logo.png" alt="Nike logo"></div>
-			<div class="card1"><img src="images/Homepage-images/uniqlo2-logo.png" alt="Uniqlo logo"></div>
-			<div class="card1"><img src="images/Homepage-images/pg-logo.png" alt="P&G logo"></div>
-			<div class="card1"><img src="images/Homepage-images/unilever-logo.png" alt="Unilever logo"></div>
+			<div class="card1"><img src="images/Homepage-images/logo1.jpg" alt="logo1"></div>
+			<div class="card1"><img src="images/Homepage-images/logo2.jpg" alt="logo2"></div>
+			<div class="card1"><img src="images/Homepage-images/logo3.jpg" alt="logo3"></div>
+			<div class="card1"><img src="images/Homepage-images/logo4.jpg" alt="logo4"></div>
+			<div class="card1"><img src="images/Homepage-images/logo5.jpg" alt="logo5"></div>
+			<div class="card1"><img src="images/Homepage-images/logo6.jpg" alt="logo6"></div>
 			</div>
 		</div>
 	</div>
