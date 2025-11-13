@@ -1380,8 +1380,8 @@ html, body {
   align-items: center;
   width: auto;
   height: auto;
-  font-size: 80px;
-  color: rgba(0,0,0,0.3);
+  font-size: 100px;
+  color: #181818;
   position: absolute;
   opacity: 0;
   
@@ -1404,7 +1404,7 @@ html, body {
 }
 
 .arrow-slick1:hover {
-  color: #7280e0;
+  color: #19f574;
 }
 
 .next-slick1 {
@@ -2245,7 +2245,7 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 .btn-addwish-b2 .icon-heart2 {
-  opacity: 0;
+  opacity: 0; 
 }
 
 .btn-addwish-b2:hover .icon-heart2 {

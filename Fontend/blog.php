@@ -293,7 +293,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar">
+			<div style="background-color: #ffffffff;" class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -338,8 +338,8 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
-				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
+			<div class="wrap-menu-desktop" style="background-color: #fff8f8ff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #fff8f8ff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
@@ -674,7 +674,7 @@ if ($query->num_rows > 0) {
 
 								<!-- Second Column -->
 								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail2.html">
+									<a href="blog-detail2.php">
 										<div class="card" style="border: none;">
 											<img src="images/blog-05.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
 												class="zoomable-img">
@@ -1154,7 +1154,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-100 p-b-25">
+	<footer style="background-color: #fff8f8ff;" class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">

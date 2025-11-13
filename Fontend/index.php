@@ -331,7 +331,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar noselect">
+			<div style="background-color: #ffffffff;" class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -376,8 +376,8 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
-				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
+			<div class="wrap-menu-desktop" style="background-color: #fff8f8ff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #fff8f8ff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand noselect">
@@ -759,15 +759,15 @@ if ($query->num_rows > 0) {
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
 										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x ₱<?php echo $item["p_price"]; ?></span>
 									</div>
-									<div class="col-md-3">
-										<form action="delete-cart2.php" method="post">											
-											<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
+								</div>
+								<div class="col-md-3">
+									<form action="delete-cart2.php" method="post">											
+										<input type="hidden" name="p_id" value="<?php echo $item['p_id']; ?>">
 
-											<!-- Nút xóa tại đây -->
-											<input type="submit" value="X" name="delete-cart" class="btn-delete">
-											<!-- <//?php print_r($item['p_id']); ?> -->
-										</form>
-									</div>
+										<!-- Nút xóa tại đây -->
+										<input type="submit" value="X" name="delete-cart" class="btn-delete">
+										<!-- <//?php print_r($item['p_id']); ?> -->
+									</form>
 								</div>
 							</li>
 					<?php
@@ -800,8 +800,8 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Slider -->
-	<section class="section-slide m-t-10">
-		<div class="wrap-slick1 noselect">
+	<section class="section-slide m-t-20">
+		<div style="background-color: transparent;" class="wrap-slick1 noselect">
 			<div class="slick1 noselect">
 				<div class="item-slick1" style="background-image: url(images/slide-22.png);">
 					<div class="container h-full">
@@ -814,15 +814,16 @@ if ($query->num_rows > 0) {
 
 							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
 								<h2 class="stext-119 cl2 p-t-19 p-b-43 respon1">
-									Blankie Buddies
+									Teddy Buddies
 								</h2>
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product2.php"
+								<a href="product.php"
 									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
+
 							</div>
 						</div>
 					</div>
@@ -840,12 +841,12 @@ if ($query->num_rows > 0) {
 							<div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn"
 								data-delay="800">
 								<h2 class="stext-119 cl2 p-t-19 p-b-43 respon1">
-									Babies Soft Toys
+									Soft Toys
 								</h2>
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product2.php"
+								<a href="product.php"
 									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
@@ -872,7 +873,7 @@ if ($query->num_rows > 0) {
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product2.php"
+								<a href="product.php"
 									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
@@ -899,7 +900,7 @@ if ($query->num_rows > 0) {
 							</div>
 
 							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product2.php"
+								<a href="product.php"
 									class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
 									Shop Now
 								</a>
@@ -910,93 +911,6 @@ if ($query->num_rows > 0) {
 			</div>
 		</div>
 	</section>
-
-
-	<!-- retangle start -->
-	<div class="sec-banner bg0 p-t-100 p-b-40">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
-					<!-- Block1 -->
-					<?php 
-						$query = mysqli_query($conn, $sqlDiscount);
-						while ($discount = mysqli_fetch_assoc($query)) {
-					?>
-						<div class="blocky wrap-pic-w noselect">
-							<img class="clothes" src="images/Homepage-images/clothes_img.png" alt="IMG-BANNER">
-							<div class="blocky-content">
-								<div class="block2-txt-child1 flex-col-l">
-									<span class="blocky-name stext-122 trans-04 p-b-8" >
-										<?php echo $discount['d_name'];?>
-									</span>
-									<span class="blocky-info stext-102 trans-04">
-										Get <?php echo $discount['d_amount'];?>% off your first purchase
-									</span>
-								</div>
-								<div class="blocky-txt-child2 p-b-4 trans-05">
-									<a href="product2.php" class="blocky-btn stext-101 cl0 trans-09">
-										Shop Now
-									</a>
-								</div>
-							</div>
-						</div>
-					<?php } ?>
-				</div>
-
-				
-
-
-				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
-					<!-- Block1 -->
-					<div class="blocky wrap-pic-w noselect">
-						<img class="clothes" src="images/Homepage-images/digital_accessories.png" alt="IMG-BANNER">
-						<div class="blocky-content">
-							<div class="block2-txt-child1 flex-col-l">
-								<span class="blocky-name stext-122  trans-04 p-b-8">
-									Early black friday specials
-								</span>
-								<span class="blocky-info stext-102 trans-04">
-									Big discount 50% off on all order
-								</span>
-							</div>
-							<div class="blocky-txt-child2 p-b-4 trans-05">
-								<a href="product2.php" class="blocky-btn stext-101 cl0 trans-09">
-									Shop Now
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-	
-
-				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
-					<!-- Block1 -->
-					<div class="blocky wrap-pic-w noselect">
-						<img class="clothes" src="images/Homepage-images/shoes_img.png" alt="IMG-BANNER">
-						<div class="blocky-content">
-							<div class="block2-txt-child1 flex-col-l">
-								<span class="blocky-name stext-122  trans-04 p-b-8">
-									The best thing for kids
-								</span>
-								<span class="blocky-info stext-102 trans-04">
-									Special offer gift voucher
-								</span>
-							</div>
-							<div class="blocky-txt-child2 p-b-4 trans-05">
-								<a href="product2.php" class="blocky-btn stext-101 cl0 trans-09">
-									Shop Now
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- retangle end -->
 
 	<!-- Category Start -->
 	<div class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
@@ -1018,7 +932,7 @@ if ($query->num_rows > 0) {
 						<a href="./Products/fantasy-animal-products.php" style="color: white;">
 						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
 						<h5 class="stext-121 noselect">
-							 Fantasy Animals
+							Fantasy Animals
 							</h5>
 					</div>
 				</div>
@@ -1026,7 +940,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block3 -->
 					<div class="block1 wrap-pic-w noselect">
-						 <a href="./Products/teddy-bear-products.php" style="color: white;"> 
+						<a href="./Products/teddy-bear-products.php" style="color: white;"> 
 						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
 						<h5 class="stext-121 noselect">Teddy Bears </h5>
 					</div>
@@ -1056,11 +970,97 @@ if ($query->num_rows > 0) {
 	</div>
 	<!-- Category End -->
 
+	<!-- retangle start -->
+	<div class="sec-banner bg0 p-t-100 p-b-40">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
+					<!-- Block1 -->
+					<?php 
+						$query = mysqli_query($conn, $sqlDiscount);
+						while ($discount = mysqli_fetch_assoc($query)) {
+					?>
+						<div class="blocky wrap-pic-w noselect">
+							<img class="clothes" src="images/rectangle1.jpg" alt="IMG-BANNER">
+							<div class="blocky-content">
+								<div class="block2-txt-child1 flex-col-l">
+									<span class="blocky-name stext-122 trans-04 p-b-8" >
+										<?php echo $discount['d_name'];?>
+									</span>
+									<span class="blocky-info stext-102 trans-04">
+										Get <?php echo $discount['d_amount'];?>% off your first purchase
+									</span>
+								</div>
+								<div class="blocky-txt-child2 p-b-4 trans-05">
+									<a href="product1.php" class="blocky-btn stext-101 cl0 trans-09">
+										Shop Now
+									</a>
+								</div>
+							</div>
+						</div>
+					<?php } ?>
+				</div>
+
+				
+
+
+				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
+					<!-- Block1 -->
+					<div class="blocky wrap-pic-w noselect">
+						<img class="clothes" src="images/rectangle2.jpg" alt="IMG-BANNER">
+						<div class="blocky-content">
+							<div class="block2-txt-child1 flex-col-l">
+								<span class="blocky-name stext-122  trans-04 p-b-8">
+									Early black friday specials
+								</span>
+								<span class="blocky-info stext-102 trans-04">
+									Big discount 50% off on all order
+								</span>
+							</div>
+							<div class="blocky-txt-child2 p-b-4 trans-05">
+								<a href="product1.php" class="blocky-btn stext-101 cl0 trans-09">
+									Shop Now
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+	
+
+				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
+					<!-- Block1 -->
+					<div class="blocky wrap-pic-w noselect">
+						<img class="clothes" src="images/rectangle3.jpg" alt="IMG-BANNER">
+						<div class="blocky-content">
+							<div class="block2-txt-child1 flex-col-l">
+								<span class="blocky-name stext-122  trans-04 p-b-8">
+									The best thing for kids
+								</span>
+								<span class="blocky-info stext-102 trans-04">
+									Special offer gift voucher
+								</span>
+							</div>
+							<div class="blocky-txt-child2 p-b-4 trans-05">
+								<a href="product1.php" class="blocky-btn stext-101 cl0 trans-09">
+									Shop Now
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- retangle end -->
+
+
 	<!-- hostpot start -->
 	<section>
 		<div class="container1 noselect">
 			<img src="images/hostspot.jpg" alt="img">
-			<div class="all-tooltips1"></div>
 			<div class="tooltip1 tooltip-1 noselect">
 				<div class="pin1"></div>
 				<div class="tooltip-content1">
@@ -1138,7 +1138,6 @@ if ($query->num_rows > 0) {
 		<img src="images/tshirt-ha.png">
 		<iframe width="600" height="425" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
 	</div>
-<hr style="height: 1.2px; width: 89%; background-color: #a7a7a7; border: none; margin: auto;">
 
 	<section class="bg0 p-t-120 p-b-25 noselect" id="new-arrivals">
 		<div class="content">
@@ -1417,7 +1416,7 @@ if ($query->num_rows > 0) {
 
 	
 	<!-- Footer -->
-	<footer class="bg3 p-t-100 p-b-25 noselect">
+	<footer style="background-color: #fff8f8ff;" class="bg3 p-t-100 p-b-25 noselect">
 		<div class="container noselect">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
@@ -1908,5 +1907,6 @@ if ($query->num_rows > 0) {
 	});
 	})();
 	</script>
+	<div id="interaction-blocker"></div>
 	</body>
 </html>

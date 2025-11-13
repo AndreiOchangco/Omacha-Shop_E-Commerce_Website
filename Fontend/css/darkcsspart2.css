@@ -70,8 +70,8 @@ ul.sub-menu {
 }
 
 .darkModeBtn:hover {
-    background-color: #2ebb6c !important;
-    border-color: #2ebb6c !important;
+    background-color: #18E800 !important;
+    border-color: #18E800 !important;
     color: #181818 !important;
 }
 
@@ -193,4 +193,17 @@ div.block1.wrap-pic-w {
 
 .username {
     color: #f1f1f1 !important;
+}
+
+
+
+
+
+.darkMode-nav-arrow {
+  color: #181818;
+  background-color: transparent;
+}
+
+.darkMode-nav-arrow:hover {
+  color: #19f574;
 }

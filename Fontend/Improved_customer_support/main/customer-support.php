@@ -599,19 +599,19 @@ if ($query->num_rows > 0) {
 	<!-- Content page -->
 	<section1 class="darkMode">
 		<div class="wrap">
-			<div class="chat-card">
+			<div style="background-color: #ffffffff;" class="chat-card">
 				<div class="chat-header">
-				<div class="avatar">S</div>
-				<div class="status"><span id="lastActive">Last Active (5 mins ago)</span></div>
+				<div style="background-color: #19f574;" class="avatar">S</div>
+				<div style="color: #181818;" class="status"><span id="lastActive">Last Active (5 mins ago)</span></div>
 				</div>
 
-				<div id="chatBody" class="chat-body"></div>
+				<div style="color: #181818; text-align: left;" id="chatBody" class="chat-body"></div>
 
-				<div class="quick-row" id="quickRow"></div>
+				<div style="color: #181818;" class="quick-row" id="quickRow"></div>
 
 				<div class="composer">
 				<input id="userInput" type="text" placeholder="Type your question..." autocomplete="off">
-				<button id="sendBtn" aria-label="Send" class="send">
+				<button style="color: #181818;" id="sendBtn" aria-label="Send" class="send">
 					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
 					<path d="M22 2L11 13"></path>
 					<path d="M22 2L15 22l-4-9-9-4 20-7z"></path>

@@ -1955,3 +1955,15 @@
   -webkit-animation-name: overlay-slide-out-right;
           animation-name: overlay-slide-out-right;
 }
+
+
+
+
+#interaction-blocker {
+  position: fixed;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background: rgba(255, 255, 255, 0); /* fully transparent */
+  z-index: 999999; /* above everything */
+  display: none;
+  cursor: wait; /* show “wait” cursor */
+}

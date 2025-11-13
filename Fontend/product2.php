@@ -246,7 +246,7 @@ if ($result->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar noselect">
+			<div style="background-color: #ffffffff;" class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -291,8 +291,8 @@ if ($result->num_rows > 0) {
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
-				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
+			<div class="wrap-menu-desktop" style="background-color: #fff8f8ff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #fff8f8ff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand noselect">
@@ -1097,7 +1097,7 @@ if ($result->num_rows > 0) {
 									</div>
 									<div class="block2-txt-child2 flex-r p-t-3">
 										<a href="../Admin/public/addWishlist.php?p_id=<?php echo $product['p_id']; ?>"
-											class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+											class="btn-addwish-b2 dis-block pos-relative">
 											<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png"
 												alt="ICON">
 											<img class="icon-heart2 dis-block trans-04 ab-t-l"
@@ -1118,7 +1118,7 @@ if ($result->num_rows > 0) {
 
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-100 p-b-25 noselect">
+	<footer style="background-color: #fff8f8ff;" class="bg3 p-t-100 p-b-25 noselect">
 		<div class="container noselect">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">
