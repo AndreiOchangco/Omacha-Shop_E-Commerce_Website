@@ -241,14 +241,14 @@ if ($query->num_rows > 0) {
 		#button-add {
 			border-radius: 10px;
 			padding: 10px;
-			background-color: #F4538A;
+			background-color: #19f574;
 			color: white;
 			margin-right: 10px;
 			/* Add margin to create space between buttons */
 		}
 
 		#button-add:hover {
-			background-color: black;
+			background-color: #16b659ff ;
 		}
 
 		/* Định dạng hình ảnh sản phẩm */
