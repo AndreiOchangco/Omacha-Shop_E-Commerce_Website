@@ -942,7 +942,7 @@ if ($query->num_rows > 0) {
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/teddy-bear-products.php"> 
 						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
-						<h5 class="stext-121 darkModehyperlink-omacha noselect">Teddy Bears </h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Teddy Bears </h5>
 					</div>
 				</div>
 
