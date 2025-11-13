@@ -52,8 +52,6 @@
                 autoplaySpeed: 6000,
                 arrows: true,
                 appendArrows: $(wrapSlick1),
-                prevArrow:'<button style="background-color: transparent;" class="arrow-slick1 darkMode-nav-arrow prev-slick1" type="button"><i class="zmdi zmdi-caret-left"></i></button>',
-                nextArrow:'<button style="background-color: transparent;" class="arrow-slick1 darkMode-nav-arrow next-slick1" type="button"><i class="zmdi zmdi-caret-right"></i></button>',
                 dots: showDot,
                 appendDots: $(wrapSlick1).find('.wrap-slick1-dots'),
                 dotsClass:'slick1-dots',
