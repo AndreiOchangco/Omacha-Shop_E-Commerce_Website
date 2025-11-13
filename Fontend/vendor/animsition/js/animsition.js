@@ -358,4 +358,28 @@
     }
   };
 
+  $(document).ready(function() {
+  // Initialize Animsition
+  $(".animsition").animsition();
+
+  // Disable interaction during transitions
+  $(document)
+    .on('animsition.inStart animsition.outStart', function() {
+      $('#interaction-blocker').fadeIn(100);
+      $('body').css({
+        'pointer-events': 'none',
+        'overflow': 'hidden',
+        'cursor': 'wait'
+      });
+    })
+    .on('animsition.inEnd animsition.outEnd', function() {
+      $('#interaction-blocker').fadeOut(100);
+      $('body').css({
+        'pointer-events': '',
+        'overflow': '',
+        'cursor': ''
+      });
+    });
+});
+
 }));

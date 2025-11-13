@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     // init
     setLastActive();
-    addMsg('bot','Hi! I’m Omacha-Shop Customer Care. Ask me anything or tap a quick chat.');
+    addMsg('bot','Hello! I’m OmachaShop Customer Care. Ask me anything or tap for a quick chat.');
     renderQuick(defaultQuick);
   });
   

@@ -801,7 +801,7 @@ if ($query->num_rows > 0) {
 
 	<!-- Slider -->
 	<section class="section-slide m-t-20">
-		<div class="wrap-slick1 noselect">
+		<div style="background-color: transparent;" class="wrap-slick1 noselect">
 			<div class="slick1 noselect">
 				<div class="item-slick1" style="background-image: url(images/slide-22.png);">
 					<div class="container h-full">
@@ -981,7 +981,7 @@ if ($query->num_rows > 0) {
 						while ($discount = mysqli_fetch_assoc($query)) {
 					?>
 						<div class="blocky wrap-pic-w noselect">
-							<img class="clothes" src="images/Homepage-images/clothes_img.png" alt="IMG-BANNER">
+							<img class="clothes" src="images/rectangle1.jpg" alt="IMG-BANNER">
 							<div class="blocky-content">
 								<div class="block2-txt-child1 flex-col-l">
 									<span class="blocky-name stext-122 trans-04 p-b-8" >
@@ -992,7 +992,7 @@ if ($query->num_rows > 0) {
 									</span>
 								</div>
 								<div class="blocky-txt-child2 p-b-4 trans-05">
-									<a href="product2.php" class="blocky-btn stext-101 cl0 trans-09">
+									<a href="product1.php" class="blocky-btn stext-101 cl0 trans-09">
 										Shop Now
 									</a>
 								</div>
@@ -1007,7 +1007,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
 					<div class="blocky wrap-pic-w noselect">
-						<img class="clothes" src="images/Homepage-images/digital_accessories.png" alt="IMG-BANNER">
+						<img class="clothes" src="images/rectangle2.jpg" alt="IMG-BANNER">
 						<div class="blocky-content">
 							<div class="block2-txt-child1 flex-col-l">
 								<span class="blocky-name stext-122  trans-04 p-b-8">
@@ -1018,7 +1018,7 @@ if ($query->num_rows > 0) {
 								</span>
 							</div>
 							<div class="blocky-txt-child2 p-b-4 trans-05">
-								<a href="product2.php" class="blocky-btn stext-101 cl0 trans-09">
+								<a href="product1.php" class="blocky-btn stext-101 cl0 trans-09">
 									Shop Now
 								</a>
 							</div>
@@ -1032,7 +1032,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
 					<div class="blocky wrap-pic-w noselect">
-						<img class="clothes" src="images/Homepage-images/shoes_img.png" alt="IMG-BANNER">
+						<img class="clothes" src="images/rectangle3.jpg" alt="IMG-BANNER">
 						<div class="blocky-content">
 							<div class="block2-txt-child1 flex-col-l">
 								<span class="blocky-name stext-122  trans-04 p-b-8">
@@ -1043,7 +1043,7 @@ if ($query->num_rows > 0) {
 								</span>
 							</div>
 							<div class="blocky-txt-child2 p-b-4 trans-05">
-								<a href="product2.php" class="blocky-btn stext-101 cl0 trans-09">
+								<a href="product1.php" class="blocky-btn stext-101 cl0 trans-09">
 									Shop Now
 								</a>
 							</div>
@@ -1907,5 +1907,6 @@ if ($query->num_rows > 0) {
 	});
 	})();
 	</script>
+	<div id="interaction-blocker"></div>
 	</body>
 </html>
