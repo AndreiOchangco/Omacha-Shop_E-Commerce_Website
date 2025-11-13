@@ -920,7 +920,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
 					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/stuffed-animal-products.php" style="color: white;">
+						<a href="./Products/stuffed-animal-products.php">
 						<img class="category noselect" src="images/Homepage-images/toysy.png" alt="category-img" >
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Stuffed Animals</h5>
 					</div>
@@ -929,7 +929,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block2 -->
 					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/fantasy-animal-products.php" style="color: white;">
+						<a href="./Products/fantasy-animal-products.php" >
 						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">
 							Fantasy Animals
@@ -940,7 +940,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block3 -->
 					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/teddy-bear-products.php" style="color: white;"> 
+						<a href="./Products/teddy-bear-products.php"> 
 						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Teddy Bears </h5>
 					</div>
@@ -949,7 +949,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block4 -->
 					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/soft-doll-products.php" style="color: white;">
+						<a href="./Products/soft-doll-products.php" >
 						<img class="category noselect" src="images/Homepage-images/doll.png" alt="category-img">
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect"> Soft Dolls</h5>
 					</div>
@@ -958,7 +958,7 @@ if ($query->num_rows > 0) {
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block5 -->
 					<div class="block1 wrap-pic-w noselect">
-						<a href="./Products/plastic-toy-products.php" style="color: white;">
+						<a href="./Products/plastic-toy-products.php" >
 						<img class="category noselect" src="images/Homepage-images/bricks.png" alt="category-img">
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">
 						Plastic Toys
