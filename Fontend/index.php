@@ -922,7 +922,7 @@ if ($query->num_rows > 0) {
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/stuffed-animal-products.php" style="color: white;">
 						<img class="category noselect" src="images/Homepage-images/toysy.png" alt="category-img" >
-						<h5 class="stext-121 noselect">Stuffed Animals</h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Stuffed Animals</h5>
 					</div>
 				</div>
 
@@ -931,7 +931,7 @@ if ($query->num_rows > 0) {
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/fantasy-animal-products.php" style="color: white;">
 						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
-						<h5 class="stext-121 noselect">
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">
 							Fantasy Animals
 							</h5>
 					</div>
@@ -942,7 +942,7 @@ if ($query->num_rows > 0) {
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/teddy-bear-products.php" style="color: white;"> 
 						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
-						<h5 class="stext-121 noselect">Teddy Bears </h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Teddy Bears </h5>
 					</div>
 				</div>
 
@@ -951,7 +951,7 @@ if ($query->num_rows > 0) {
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/soft-doll-products.php" style="color: white;">
 						<img class="category noselect" src="images/Homepage-images/doll.png" alt="category-img">
-						<h5 class="stext-121 noselect"> Soft Dolls</h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect"> Soft Dolls</h5>
 					</div>
 				</div>	
 
@@ -960,7 +960,7 @@ if ($query->num_rows > 0) {
 					<div class="block1 wrap-pic-w noselect">
 						<a href="./Products/plastic-toy-products.php" style="color: white;">
 						<img class="category noselect" src="images/Homepage-images/bricks.png" alt="category-img">
-						<h5 class="stext-121 noselect">
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">
 						Plastic Toys
 					</h5>
 					</div>
