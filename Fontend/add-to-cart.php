@@ -43,9 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add-to-cart'])) {
     $row = $result->fetch_assoc();
     $o_id = $row['o_id'];
 
-    $update_query = "UPDATE `order` 
-                     SET o_quantity = o_quantity + ? 
-                     WHERE o_id = ? AND u_id = ?";
+    $update_query = "UPDATE `order` SET o_quantity = o_quantity + ? WHERE o_id = ? AND u_id = ?";
     $stmt = $conn->prepare($update_query);
     $stmt->bind_param("iii", $o_quantity, $o_id, $u_id);
     if ($stmt->execute()) {
@@ -58,8 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add-to-cart'])) {
 
     } else {
         // New product → insert into cart
-        $insert_query = "INSERT INTO `order` (u_id, p_id, o_price, o_quantity, o_status)
-                        VALUES (?, ?, ?, ?, ?)";
+        $insert_query = "INSERT INTO `order` (u_id, p_id, o_price, o_quantity, o_status) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($insert_query);
         $stmt->bind_param("iidii", $u_id, $p_id, $p_price, $o_quantity, $o_status);
         if ($stmt->execute()) {
