@@ -37,11 +37,16 @@
     color: #181818 !important;
 }
 
+<<<<<<< Updated upstream
 .lightModetxt-omacha {
   color: #181818;
+=======
+.lightModetxt {
+  color: #181818 !important;
+>>>>>>> Stashed changes
 }
 
-.lightModetxt-omacha:hover {
+.lightModetxt:hover {
   color: #19f574;
 }
 
