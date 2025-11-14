@@ -720,63 +720,69 @@ if ($query->num_rows > 0) {
 						<br><br><br><br>
 						<!-- comment -->
 						<?php
+						// ======= CONNECT =======
 						require_once 'connect.php';
 
 						$error = '';
 
-						// Add Comment
-						if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['addComment'])) {
-							$name = $_POST['commentName'];
-							$date = $_POST['dateComment'];
-							$cmt = $_POST['commentText'];
-							$email = $_POST['email'];
+						// ======= PROCESS POST REQUESTS FIRST =======
+						if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-							// Validate input fields if needed
+							// ----- Add Comment -----
+							if (isset($_POST['addComment'])) {
+								$name = $_POST['commentName'];
+								$date = $_POST['dateComment'];
+								$cmt = $_POST['commentText'];
+								$email = $_POST['email'];
 
-							// Check if the combination of name, date, comment text, and email is unique
-							$sql_check_unique = "SELECT * FROM comments WHERE commentName='$name' AND dateComment='$date' AND commentText='$cmt' AND email='$email'";
-							$result_check_unique = mysqli_query($conn, $sql_check_unique);
-							if (mysqli_num_rows($result_check_unique) > 0) {
-								$error = "Email hoặc ngày đã tồn tại.";
-							} else {
-								// Insert new comment into the database
-								$sql = "INSERT INTO comments (commentName, dateComment, commentText, email) 
-										VALUES ('$name', '$date', '$cmt', '$email')";
-								if (mysqli_query($conn, $sql)) {
-									header('location: blog-detail1]].php');
-									exit; // Make sure to exit after redirecting
+								// Check for duplicates (optional)
+								$sql_check_unique = "SELECT * FROM comments WHERE commentName='$name' AND dateComment='$date' AND commentText='$cmt' AND email='$email'";
+								$result_check_unique = mysqli_query($conn, $sql_check_unique);
+
+								if (mysqli_num_rows($result_check_unique) > 0) {
+									$error = "This comment already exists.";
 								} else {
-									$error = 'Có lỗi, vui lòng thử lại';
+									$sql = "INSERT INTO comments (commentName, dateComment, commentText, email) VALUES ('$name', '$date', '$cmt', '$email')";
+									if (mysqli_query($conn, $sql)) {
+										//header('Location: blog-detail1.php');
+										//exit;
+									} else {
+										$error = 'An error occurred while posting your comment.';
+									}
+								}
+							}
+
+							// ----- Add Reply -----
+							if (isset($_POST['addReply'])) {
+								$commentID = $_POST['commentID'];
+								$replyText = $_POST['replyText'];
+
+								$sql_update_reply = "UPDATE comments SET replyText='$replyText' WHERE IDcomment='$commentID'";
+								if (mysqli_query($conn, $sql_update_reply)) {
+									//header('Location: blog-detail1.php');
+									//exit;
+								} else {
+									$error = 'An error occurred while posting your reply.';
 								}
 							}
 						}
 
-						// Add Reply
-						if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['addReply'])) {
-							$commentID = $_POST['commentID'];
-							$replyText = $_POST['replyText'];
-
-							// Validate input fields if needed
-
-							// Update the comments table with the reply
-							$sql_update_reply = "UPDATE comments SET replyText='$replyText' WHERE IDcomment='$commentID'";
-							if (mysqli_query($conn, $sql_update_reply)) {
-								header('location: blog-detail1.php');
-								exit; // Make sure to exit after redirecting
-							} else {
-								$error = 'Có lỗi, vui lòng thử lại';
-							}
-						}
-
-						// Retrieve comments from the database
-						$sql_select_comments = "SELECT * FROM comments";
+						// ======= RETRIEVE COMMENTS =======
+						$sql_select_comments = "SELECT * FROM comments ORDER BY dateComment DESC";
 						$result = mysqli_query($conn, $sql_select_comments);
+						?>
+						<?php
+						// Set the correct timezone (Philippines in your case)
+						date_default_timezone_set('Asia/Manila'); 
+
+						// Get current date and time in format for datetime-local
+						$currentDateTime = date('Y-m-d\TH:i');
 						?>
 
 						<!-- HTML content starts after PHP code -->
 						<div class="panel panel-primary">
 							<div class="panel-heading">
-								<h3 class="panel-title mtext-113 p-b-5 darkModetxt-omacha">Leave a Comment</h3>
+								<h3 class="panel-title mtext-113 p-b-5 darkModetxt-omacha" style="color: #181818;">Leave a Comment</h3>
                                 <p class="stext-107 cl6">
 								Your email address will not be published.
 							    </p>
@@ -789,31 +795,74 @@ if ($query->num_rows > 0) {
 
 									<div class="form-group">
 										<label for="">Your Name</label>
-										<input type="text" class="form-control stext-111" name="commentName" placeholder="Name" value="<?php echo htmlspecialchars($userLogin['userName']); ?>">
+										<input type="text" class="form-control stext-111" name="commentName" placeholder="Name">
 									</div>
 
 									<div class="form-group">
 										<label for="">Comment</label>
-										<input type="text" class="form-control stext-111 size-124" name="commentText" placeholder="Comment" required>
+										<textarea type="text" class="form-control stext-111 size-124" name="commentText" placeholder="Comment" required></textarea>
 									</div>
 									<div class="form-group">
 										<label for="">Email</label>
-										<input type="email" class="form-control stext-111" name="email" placeholder="Email" value="<?php echo htmlspecialchars($userLogin['email']); ?>">
+										<input type="email" class="form-control stext-111" name="email" placeholder="Email">
 									</div>
 									<div class="form-group">
 										<label for="">Date/Time</label>
-										<input type="date" class="form-control stext-111" name="dateComment" required>
+										<input 
+											type="datetime-local" 
+											class="form-control stext-111" 
+											name="dateComment" 
+											value="<?php echo $currentDateTime; ?>" 
+											readonly
+											required
+										>
 									</div>
-									<button type="submit" class="flex-c-m stext-101 cl0 size-125 btn btn-primary darkModeBtn m-t-10" name="addComment"><strong>Post Comment</strong></button>
+									<button type="submit" style="color: #FFEFEF;" class="flex-c-m stext-101 cl0 size-125 btn btn-primary darkModeBtn m-t-10" name="addComment"><strong>Post Comment</strong></button>
 								</form>
-								<?php
-								// Handle errors if any
-								if ($error) {
-									echo "<p>Error: $error</p>";
-								}
-								?>
 							</div>
 						</div>
+						<br><br><br><br>
+
+						<h3 class="panel-title mtext-113 p-b-5 m-b-25 darkModetxt-omacha" style="color: #181818;">Comments</h3>
+
+						<?php
+						if ($result && mysqli_num_rows($result) > 0) {
+							while ($row = mysqli_fetch_assoc($result)) {
+								echo '<div class="single_comment_area" style="margin-bottom:20px; padding:15px; border:1px solid; border-radius:8px;">';
+								echo '<div class="comment-content">';
+
+								// Format the date/time nicely (optional)
+								$datetime = date("Y-m-d H:i:s", strtotime($row["dateComment"]));
+
+								echo '<h6>Date & Time: ' . $datetime . '</h6>';
+								echo '<h6>Name: ' . htmlspecialchars($row["commentName"]) . '</h6>';
+								echo '<br>';
+								echo '<p>' . nl2br(htmlspecialchars($row["commentText"])) . '</p>';
+
+								// Toggleable Reply Form
+								echo '<button type="button" class="btn btn-secondary btn-sm toggle-reply" style="margin-top:20px;" data-target="reply-form-' . $row["IDcomment"] . '">Reply</button>';
+
+								echo '<div class="reply-form-container" id="reply-form-' . $row["IDcomment"] . '" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease; margin-top:10px;">';
+								echo '<form action="" method="POST">';
+								echo '<input type="hidden" name="commentID" value="' . $row["IDcomment"] . '">';
+								echo '<div class="form-group">';
+								echo '<label for="replyText">Reply</label>';
+								echo '<input type="text" class="form-control" name="replyText" placeholder="Type your reply..." required>';
+								echo '</div>';
+								echo '<button type="submit" class="btn btn-primary" name="addReply">Post Reply</button>';
+								echo '</form>';
+								echo '</div>';
+
+								echo '</div>'; // comment-content
+								echo '</div>'; // single_comment_area
+
+							}
+						} else {
+							echo "<p>No comments yet. Be the first to comment!</p>";
+						}
+
+						$conn->close();
+						?>
 					</div>
 				</div>
 				
@@ -1262,6 +1311,23 @@ if ($query->num_rows > 0) {
 		}, 600); // adjust delay if you want the glow to last longer
 	});
 	})();
+	</script>
+	<!--===============================================================================================-->
+	<script>
+	document.querySelectorAll('.toggle-reply').forEach(button => {
+		button.addEventListener('click', () => {
+			const targetID = button.getAttribute('data-target');
+			const form = document.getElementById(targetID);
+
+			if (form.style.maxHeight && form.style.maxHeight !== '0px') {
+				// Collapse
+				form.style.maxHeight = '0';
+			} else {
+				// Expand smoothly
+				form.style.maxHeight = form.scrollHeight + 'px';
+			}
+		});
+	});
 	</script>
 	<!--===============================================================================================-->
 	<script src="js/main.js"></script>

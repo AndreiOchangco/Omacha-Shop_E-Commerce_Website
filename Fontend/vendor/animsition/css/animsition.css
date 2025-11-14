@@ -1953,8 +1953,9 @@
   right: 0;
   width: 100%;
   -webkit-animation-name: overlay-slide-out-right;
-          animation-name: overlay-slide-out-right;
+  animation-name: overlay-slide-out-right;
 }
+
 
 
 

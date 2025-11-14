@@ -1347,6 +1347,7 @@ html, body {
 [ Slick1 ]*/
 .wrap-slick1 {
   position: relative;
+  z-index: 0;
 }
 
 .item-slick1 {
@@ -1382,6 +1383,7 @@ html, body {
   height: auto;
   font-size: 100px;
   color: #181818;
+  background-color: transparent;
   position: absolute;
   opacity: 0;
   
@@ -1392,13 +1394,11 @@ html, body {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 
-  z-index: 200;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 .wrap-slick1:hover .arrow-slick1 {
   opacity: 1;
 }
