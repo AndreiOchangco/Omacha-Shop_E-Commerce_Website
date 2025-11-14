@@ -1413,6 +1413,21 @@ if ($query->num_rows > 0) {
 
 	<!-- brand end -->
 
+	<!-- brand start (Original) -->
+	<div class="container2">
+		<h1 class="text-primary1" style="padding-bottom: 10px; text-align: center;">Top Brands</h1>
+		<div class="logo-slider">
+			<div class="item1"><a href="frogleaf.php"><img src="images/logo1.jpg" alt=""></a></div>
+			<div class="item1"><a href="dun_dun_dun.php"><img src="images/logo2.jpg" alt=""></a></div>
+			<div class="item1"><a href="cloudfrog.php"><img src="images/logo3.jpg" alt=""></a></div>
+			<div class="item1"><a href="dino.php"><img src="images/logo4.jpg" alt=""></a></div>
+			<div class="item1"><a href="babylogo.php"><img src="images/logo5.jpg" alt=""></a></div>
+			<div class="item1"><a href="cookie.php"><img src="images/logo6.jpg" alt=""></a></div>
+			<div class="item1"><a href="barbie.php"><img src="images/logo7.jpg" alt=""></a></div>
+			<div class="item1"><a href="LEGO.php"><img src="images/LEGO.png" alt=""></a></div>
+		</div>
+	</div>
+
 
 	
 	<!-- Footer -->

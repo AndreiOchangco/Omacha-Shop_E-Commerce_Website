@@ -336,8 +336,8 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
-				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
+			<div class="wrap-menu-desktop" style="background-color: #fff8f8ff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #fff8f8ff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
@@ -1100,7 +1100,7 @@ if ($query->num_rows > 0) {
 		
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-100 p-b-25">
+	<footer style="background-color: #fff8f8ff;" class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">

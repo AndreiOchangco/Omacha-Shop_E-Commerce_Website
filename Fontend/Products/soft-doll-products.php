@@ -724,7 +724,7 @@ if ($result->num_rows > 0) {
 	</div>
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-10" style="background-image: url('../images/background-image.png');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-50" style="background-image: url('../images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
 			Soft Doll Products
 		</h2>
