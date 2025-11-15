@@ -50,8 +50,6 @@
                 infinite: true,
                 autoplay: true,
                 autoplaySpeed: 6000,
-                arrows: true,
-                appendArrows: $(wrapSlick1),
                 dots: showDot,
                 appendDots: $(wrapSlick1).find('.wrap-slick1-dots'),
                 dotsClass:'slick1-dots',
