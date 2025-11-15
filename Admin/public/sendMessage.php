@@ -822,7 +822,7 @@
                 </div>
 
                 <div class="form-group text-gray-700 dark:text-gray-200">
-                <button name="sbm" type="submit" class="btn">Send Notification</button>
+                <button name="sbm" type="submit" class="btn btn-success">Send Notification</button>
                 </div>
             </div>
             </form>
