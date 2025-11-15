@@ -1524,7 +1524,7 @@ if ($query->num_rows > 0) {
 						</li>
 
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="privacy-policy.php" class="stext-107 cl7 hov-cl1 trans-04">
 								Privacy Policy
 							</a>
 						</li>
