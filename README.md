@@ -117,9 +117,9 @@ You are free to Share and Adapt the material, under the terms of Attribution and
 ## 👤 Contributors
 
 *   **Team Engineering**
-    *   **Andrei Luise Ochangco** - Repository Maintainer, Software Engineer, Project Manager, Organization Administrator, Sub-UI Designer, Sub-Programmer, Dependencies Checker, Database Administrator - [@AndreiOchangco](https://github.com/AndreiOchangco)
+    *   **Andrei Luise Ochangco** - Team Leader, Repository Maintainer, Software Engineer, Project Manager, Sub-UI Designer, Sub-Programmer, Dependencies Checker, Database Administrator - [@AndreiOchangco](https://github.com/AndreiOchangco)
     *   **Louis Ricardo Servito** - Main UI Designer - [@Lone-collab](https://github.com/Lone-collab)
-    *   **Mark Lester Rivera** - Team Leader
+    *   **Mark Lester Rivera** - Member
     *   **Ardy Aquino** - Member
     *   **Brent Alabag** - Member
     *   **Vince Alvendia** - Member
@@ -231,9 +231,9 @@ Malaya kang Ibahagi at Iangkop ang materyal, sa ilalim ng mga tuntunin ng Attrib
 ## 👤 Contributors
 
 *   **Team Engineering**
-    *   **Andrei Luise Ochangco** - Repository Maintainer, Software Engineer, Project Manager, Organization Administrator, Sub-UI Designer, Sub-Programmer, Dependencies Checker, Database Administrator - [@AndreiOchangco](https://github.com/AndreiOchangco)
+    *   **Andrei Luise Ochangco** - Team Leader, Repository Maintainer, Software Engineer, Project Manager, Sub-UI Designer, Sub-Programmer, Dependencies Checker, Database Administrator - [@AndreiOchangco](https://github.com/AndreiOchangco)
     *   **Louis Ricardo Servito** - Main UI Designer - [@Lone-collab](https://github.com/Lone-collab)
-    *   **Mark Lester Rivera** - Team Leader
+    *   **Mark Lester Rivera** - Member
     *   **Ardy Aquino** - Member
     *   **Brent Alabag** - Member
     *   **Vince Alvendia** - Member
