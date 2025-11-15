@@ -623,7 +623,7 @@ if ($query->num_rows > 0) {
 
 			<div style="margin-top: -20px; border-radius: 20px; overflow: hidden;" class="map-container">
 				<iframe 
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.115096130524!2d120.31875049007566!3d16.613869657943717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1762931796912!5m2!1sen!2sph"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.150313223057!2d121.05175892065974!3d14.53339329922556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8c15145d3b3%3A0x8e08f0fb05c8e635!2sVenice%20Grand%20Canal%20Mall%20taguig!5e0!3m2!1sen!2sph!4v1763216160766!5m2!1sen!2sph"
 					allowfullscreen=""
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"

@@ -326,6 +326,7 @@ html, body {
   background-color: transparent;
   top: 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .header-v4 .wrap-menu-desktop {
@@ -416,7 +417,7 @@ html, body {
   border-radius: 9px;
   min-width: 178px;
   max-width: 225px;
-  background-color: #fff;
+  background-color: #fff8f8ff;
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -453,7 +454,7 @@ html, body {
   font-family: Poppins-Regular;
   font-size: 14px;
   line-height: 1.5;
-  color: #555;
+  color: #000000;
 
   display: block;
   padding: 8px 20px; 
@@ -1398,30 +1399,6 @@ html, body {
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
-}
-
-.arrow-slick1:hover {
-  color: #19f574;
-}
-
-.next-slick1 {
-  right: 50px;
-  left: auto;
-}
-
-.prev-slick1 {
-  left: 50px;
-  right: auto;
-}
-
-@media (max-width: 991px) {
-  .next-slick1 {
-    right: 15px;
-  }
-
-  .prev-slick1 {
-    left: 15px;
-  }
 }
 
 /*---------------------------------------------*/
@@ -3077,7 +3054,7 @@ input.num-product::-webkit-inner-spin-button {
 .how-pagination1 {
   font-family: Poppins-Regular;
   font-size: 14px;
-  color: #808080;
+  color: #181818;
 
   width: 36px;
   height: 36px;
@@ -3086,15 +3063,15 @@ input.num-product::-webkit-inner-spin-button {
 }
 
 .how-pagination1:hover {
-  background-color: #999;
-  border-color: #999;
+  background-color: #000;
+  border-color: #9999;
   color: #fff;
 }
 
 .active-pagination1 {
-  background-color: #999;
-  border-color: #999;
-  color: #fff;
+  background-color: #19f574;
+  border-color: #9999;
+  color: #181818;
 }
 
 /*---------------------------------------------*/
@@ -3304,8 +3281,8 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .hov-btn3:hover {
-  border-color: #717fe0;
-  background-color: #717fe0;
+  border-color: #19f574;
+  background-color: #19f574;
   color: #fff;
 }
 
@@ -3315,8 +3292,8 @@ input.num-product::-webkit-inner-spin-button {
 
 /*---------------------------------------------*/
 .hov-tag1:hover {
-  color: #717fe0;
-  border-color: #717fe0;
+  color: #19f574;
+  border-color: #19f574;
 }
 
 
@@ -3596,7 +3573,7 @@ img.Imagealignment{
 }
 
 .sec-banner h1 {
-  color: #007bff; /* adjust as needed */
+  color: #2cc56f; /* adjust as needed */
   margin-bottom: 50px;
 }
 
@@ -3642,7 +3619,7 @@ img.Imagealignment{
 
 
 .wrap-pic-w:hover .stext-121 {
-  color: #19f574;
+  color: #2cc56f;
 }
 
 /* rectangle */
@@ -4573,7 +4550,7 @@ img.Imagealignment{
 .blog-heading h3{
   font-size: 37.5px;
   font-family: 'Baloo 2', sans-serif;
-  color: rgb(126, 99, 99);
+  color: #2cc56f;
 }
 
 .blog-container{
@@ -4622,11 +4599,11 @@ img.Imagealignment{
 .blog-text .blog-title{
   font-size: 1.3rem;
   font-weight: 500;
-  color: #183D3D;
+  color: #181818;
 }
 
 .blog-text .blog-title:hover{
-  color: #93B1A6;
+  color: #2cc56f;
   transition: all ease 0.3s;
 
 }
@@ -4652,14 +4629,14 @@ img.Imagealignment{
 }
 
 .readmore {
-  background-color: #93B1A6;
+  background-color: #19f574;
   border-radius: 20px;
   width: fit-content;
   height: fit-content;
 }
 
 .readmore:hover{
-  background-color: #5C8374;
+  background-color: #2cc56f;
   color: #fff;
 }
 
@@ -4919,6 +4896,7 @@ form{
 .containcarousel {
   width: 100%;
   overflow: hidden;
+  background-color: #ffffffff;
 }
 
 .carousel {
@@ -4938,13 +4916,13 @@ form{
   align-items: center;
   justify-content: center;
   gap: 4em;
-  animation: spin 29s infinite linear;
+  animation: spin 30s infinite linear;
   padding-right: 3.2em;
 }
 
 
 .card1 {
-  flex: 0 0 12em;
+  flex: 0 0 5em;
   height: 5em;
   border-radius: 0.4em;
   background: #ffffff;
@@ -4959,8 +4937,8 @@ form{
 }
 
 .card1 img {
-  height: 100%;
-  width: auto;
+  height: 90%;
+  width: 90%;
   object-fit: contain; 
   display: block;
 }
