@@ -331,7 +331,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar noselect">
+			<div class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -970,6 +970,8 @@ if ($query->num_rows > 0) {
 	</div>
 	<!-- Category End -->
 
+
+
 	<!-- retangle start -->
 	<div class="sec-banner bg0 p-t-100 p-b-40">
 		<div class="container">
@@ -1057,6 +1059,7 @@ if ($query->num_rows > 0) {
 	<!-- retangle end -->
 
 
+
 	<!-- hostpot start -->
 	<section>
 		<div class="container1 noselect">
@@ -1067,13 +1070,13 @@ if ($query->num_rows > 0) {
 					<div class="col-title ">
 						<div class="text-center noselect">
 							<h5 class="p-b-15">
-								<a href="product2.php" class="ltext-111 cl2 hov-cl1 trans-04 noselect">
+								<a href="productdetail.php?p_id=10" class="ltext-111 cl2 hov-cl1 trans-04 noselect">
 									Bear Baby Tower
 								</a>
 							</h5>
 							<p>₱765.14</p>
 						</div>
-						<a href="product2.php">
+						<a href="productdetail.php?p_id=10">
 							<div class="card1 zoom-img" >
 								<img src="images/beartowel.png">
 							</div>
@@ -1088,13 +1091,13 @@ if ($query->num_rows > 0) {
 						
 						<div class="text-center">
 							<h5 class="p-b-15">
-								<a href="product2.php" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="productdetail.php?p_id=9" class="ltext-111 cl2 hov-cl1 trans-04">
 									Giraffe Jelly Cat
 								</a>
 							</h5>
 							<p>₱765.14</p>
 						</div>
-						<a href="product2.php">
+						<a href="productdetail.php?p_id=9">
 							<div class="card1 zoom-img" style="border-radius: 20px;">
 								<img src="images/giraffe.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
 							</div>
@@ -1109,13 +1112,13 @@ if ($query->num_rows > 0) {
 						
 						<div class="text-center">
 							<h5 class="p-b-15">
-								<a href="product2.php" class="ltext-111 cl2 hov-cl1 trans-04">
+								<a href="productdetail.php?p_id=11" class="ltext-111 cl2 hov-cl1 trans-04">
 									Flower Jelly Cat
 								</a>
 							</h5>
 							<p>₱647.33</p>
 						</div>
-						<a href="product2.php">
+						<a href="productdetail.php?p_id=11">
 							<div class="card1 zoom-img" style="border-radius: 20px;">
 								<img src="images/Jelly Cat Flower.png" alt="Product Image" class="img-fluid" style="border-radius: 20px;">
 							</div>
@@ -1128,8 +1131,6 @@ if ($query->num_rows > 0) {
 	</section>
 
 	<!-- hospot end -->
-
-
 
 
 
@@ -1275,13 +1276,13 @@ if ($query->num_rows > 0) {
 		</div>
 	</section>
 
-	
+
 
 	<!-- banner start -->
-	<div class="banner-start container noselect">
+	<div style="background-color: #ffffffff;" class="banner-start container noselect">
 		<div class="intro-banner row">
-			<h1>Greatest prices and deals save 20%off</h1>
-			<div class="shop-now">
+			<h1 style="margin-top: -8px;">Greatest prices and deals save 20%off</h1>
+			<div style="margin-top: -10px;" class="shop-now">
 				<a href="product.php">Shop now</a>
 			</div>
 		</div>
@@ -1291,9 +1292,9 @@ if ($query->num_rows > 0) {
 
 
 	<!-- blog start -->
-	<section id="blog">
+	<section style="background-color: #ffffffff;" id="blog">
 		<div class="blog-heading p-t-100 p-b-25 noselect">
-			<h3 class="darkModetxt-omacha">My Blog</h3>
+			<h3 class="text-omacha darkModetxt-omacha">My Blog</h3>
 			<div class="blog-container">
 				<div class="blog-box darkModebg-darkgray">
 					<div class="blog-img">
@@ -1388,33 +1389,119 @@ if ($query->num_rows > 0) {
 
 	<!-- brand start -->
 	<div class="containcarousel p-t-100 p-b-40 noselect" id="top-brands">
-  	<h1 class="text-primary1 m-t-30 noselect" style="text-align: center;">Top Brands</h1>
+		<h1 class="text-primary1 m-t-30 noselect" style="text-align: center; margin-bottom: -50px;">Top Brands</h1>
 
 		<div class="carousel noselect">
+
+			<!-- GROUP 1 -->
 			<div class="group">
-			<div class="card1"><img src="images/Homepage-images/logo1.jpg" alt="logo1"></div>
-			<div class="card1"><img src="images/Homepage-images/logo2.jpg" alt="logo2"></div>
-			<div class="card1"><img src="images/Homepage-images/logo3.jpg" alt="logo3"></div>
-			<div class="card1"><img src="images/Homepage-images/logo4.jpg" alt="logo4"></div>
-			<div class="card1"><img src="images/Homepage-images/logo5.jpg" alt="logo5"></div>
-			<div class="card1"><img src="images/Homepage-images/logo6.jpg" alt="logo6"></div>
+
+				<div class="card1">
+					<a href="frogleaf.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo1.jpg" alt="logo1">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="dun_dun_dun.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo2.jpg" alt="logo2">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="cloudfrog.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo3.jpg" alt="logo3">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="dino.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo4.jpg" alt="logo4">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="babylogo.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo5.jpg" alt="logo5">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="cookie.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo6.jpg" alt="logo6">
+					</a>
+				</div>
+
 			</div>
 
-			<div aria-hidden class="group">
-			<div class="card1"><img src="images/Homepage-images/logo1.jpg" alt="logo1"></div>
-			<div class="card1"><img src="images/Homepage-images/logo2.jpg" alt="logo2"></div>
-			<div class="card1"><img src="images/Homepage-images/logo3.jpg" alt="logo3"></div>
-			<div class="card1"><img src="images/Homepage-images/logo4.jpg" alt="logo4"></div>
-			<div class="card1"><img src="images/Homepage-images/logo5.jpg" alt="logo5"></div>
-			<div class="card1"><img src="images/Homepage-images/logo6.jpg" alt="logo6"></div>
+			<!-- GROUP 2 (duplicate for infinite scroll) -->
+			<div class="group" aria-hidden="true">
+
+				<div class="card1">
+					<a href="frogleaf.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo1.jpg" alt="logo1"
+							style="transform:none !important; transition:none !important;">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="dun_dun_dun.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo2.jpg" alt="logo2"
+							style="transform:none !important; transition:none !important;">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="cloudfrog.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo3.jpg" alt="logo3"
+							style="transform:none !important; transition:none !important;">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="dino.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo4.jpg" alt="logo4"
+							style="transform:none !important; transition:none !important;">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="babylogo.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo5.jpg" alt="logo5"
+							style="transform:none !important; transition:none !important;">
+					</a>
+				</div>
+
+				<div class="card1">
+					<a href="cookie.php" 
+					style="display:inline-block; transform:none !important; transition:none !important;">
+						<img src="images/Homepage-images/logo6.jpg" alt="logo6"
+							style="transform:none !important; transition:none !important;">
+					</a>
+				</div>
+
 			</div>
+
 		</div>
 	</div>
 
+
+
 	<!-- brand end -->
 
-
 	
+
 	<!-- Footer -->
 	<footer style="background-color: #fff8f8ff;" class="bg3 p-t-100 p-b-25 noselect">
 		<div class="container noselect">

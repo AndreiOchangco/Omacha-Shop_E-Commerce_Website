@@ -292,6 +292,18 @@ if ($query->num_rows > 0) {
 		.btn-delete:hover {
 			color: #F4538A;
 		}
+
+		.lightModeBtn {
+			background-color: #19f574 !important;
+			border-color: #19f574;
+			color: #181818 !important;
+		}
+
+		.lightModeBtn:hover {
+			background-color: #16c261 !important;
+			border-color: #16c261;
+			color: #181818 !important;
+		}
 	</style>
 </head>
 
@@ -1053,7 +1065,7 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 lightModeBtn darkModeBtn">
 								Subscribe
 							</button>
 						</div>

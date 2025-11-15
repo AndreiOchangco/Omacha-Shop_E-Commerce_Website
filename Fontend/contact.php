@@ -255,7 +255,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="top-bar">
+			<div style="background-color: #ffffffff;" class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -300,8 +300,8 @@ if ($query->num_rows > 0) {
 				</div>
 			</div>
 
-			<div class="wrap-menu-desktop" style="background-color: #ffffffff;">
-				<nav class="limiter-menu-desktop container" style="background-color: #ffffffff;">
+			<div class="wrap-menu-desktop" style="background-color: #fff8f8ff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #fff8f8ff;">
 
 					<!-- Logo desktop -->
 					<a href="index.php" class="navbar-brand">
@@ -590,8 +590,8 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92 m-t-10" style="background-image: url('images/background-image.png');">
-		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-55">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-50" style="background-image: url('images/background-image.png');">
+		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
 			Contact
 		</h2>
 	</section>	
@@ -601,7 +601,7 @@ if ($query->num_rows > 0) {
 	<section1>
 		<h1 style="margin-bottom: -20px;" class="stext-122 heading darkModetxt-omacha m-t-25">Get In Touch</h1>
 		<div class="contactForm">
-			<div style="background-color: #ffffff; border-radius: 25px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center;" class="m-t-30">
+			<div style="background-color: #fff8f8ff; border-radius: 25px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center;" class="m-t-30">
 				<h1 style="margin: 0 0 30px 0; font-size: 1.5rem; color: #181818;" class="stext-121 sub-heading">Let's talk</h1>
 				<form action="notification_api.php" id="notificationForm" style="display: flex; flex-direction: column; align-items: center; width: 98%; max-width: 500px;">
 					<input type="text" id="user" name="user" style="margin-bottom: 20px; border-radius: 10px; width: 98%;" class="input" value="ADMIN" required>
@@ -623,7 +623,7 @@ if ($query->num_rows > 0) {
 
 			<div style="margin-top: -20px; border-radius: 20px; overflow: hidden;" class="map-container">
 				<iframe 
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.115096130524!2d120.31875049007566!3d16.613869657943717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1762931796912!5m2!1sen!2sph"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.150313223057!2d121.05175892065974!3d14.53339329922556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8c15145d3b3%3A0x8e08f0fb05c8e635!2sVenice%20Grand%20Canal%20Mall%20taguig!5e0!3m2!1sen!2sph!4v1763216160766!5m2!1sen!2sph"
 					allowfullscreen=""
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
@@ -677,7 +677,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Footer -->
-	<footer class="bg3 p-t-100 p-b-25">
+	<footer style="background-color: #fff8f8ff;" class="bg3 p-t-100 p-b-25">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-lg-3 p-b-50">

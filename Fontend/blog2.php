@@ -628,8 +628,8 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/background-image.png');">
-		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-50" style="background-image: url('images/background-image.png');">
+		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-50">
 			Blog
 		</h2>
 	</section>
