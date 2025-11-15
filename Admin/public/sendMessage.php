@@ -12,6 +12,7 @@
   <!-- link icon -->
   <link rel="icon" type="image/png" href="../../Fontend/images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png" />
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="./assets/js/init-alpine.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
@@ -795,9 +796,9 @@
         </header>
         <main class="h-full pb-16 overflow-y-auto">
             <form id="notificationForm"action="sendMessage.php" method="POST" autocomplete="off">
-            <div class="content">
+            <div class="content" style="margin-top: 30px; ">
                 <div class="container px-6 mx-auto grid">
-                <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">Send Message to Customer</h2>
+                <h2 style="font-weight: bolder; margin-bottom: 30px; padding-left: 110px">Send Message to Customer</h2>
                 </div>
                 <div class="form-group text-gray-700 dark:text-gray-200">
 
@@ -822,7 +823,8 @@
                 </div>
 
                 <div class="form-group text-gray-700 dark:text-gray-200">
-                <button name="sbm" type="submit" class="btn btn-success">Send Notification</button>
+                <button name="sbm" type="submit" id="sendmsg" class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 trans-04" style="width: 62%; border-radius: 9px">Send Notification</button>
+                
                 </div>
             </div>
             </form>

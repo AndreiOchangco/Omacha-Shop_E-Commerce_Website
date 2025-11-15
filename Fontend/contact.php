@@ -609,7 +609,7 @@ if ($query->num_rows > 0) {
 
 					<textarea name="message" style="border-radius: 10px; width: 100%; margin-bottom: 25px;" class="input" id="message" cols="30" rows="5" placeholder="Your message"></textarea>
 
-					<button type="submit" id="sendmsg" class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 trans-04" style="width: 98%; margin-bottom: -5px;">Send Message</button>
+					<button type="submit" id="sendmsg" class="stext-101 cl0 size-103 bg1 bor1 p-lr-15 trans-04" style="width: 100%; margin-bottom: -5px; border-radius: 10px">Send Message</button>
 				</form>
 			</div>
 
