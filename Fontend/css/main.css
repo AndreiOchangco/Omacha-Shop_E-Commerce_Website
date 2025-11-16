@@ -3236,8 +3236,8 @@ input.num-product::-webkit-inner-spin-button {
 
 .hov-cl0:hover {color: #fff;}
 .hov-bg0:hover {background-color: #fff;}
-.hov-cl1:hover {color: #717fe0;}
-.hov-bg1:hover {background-color: #717fe0;}
+.hov-cl1:hover {color: #19f574;}
+.hov-bg1:hover {background-color: #19f574;}
 
 /*---------------------------------------------*/
 .hov-img0 {
@@ -3275,7 +3275,7 @@ input.num-product::-webkit-inner-spin-button {
 /*---------------------------------------------*/
 .hov-btn2:hover {
   border-color: #fff;
-  background-color: #f10d5b;
+  background-color: #2cc56f;
   color: #fff;
 }
 
@@ -4453,6 +4453,8 @@ img.Imagealignment{
     margin-left: 130px;
   }
 }
+
+
 /* introduction test   */
 .row1 {
   width: 80%;

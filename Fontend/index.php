@@ -973,7 +973,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- retangle start -->
-	<div class="sec-banner bg0 p-t-100 p-b-40">
+	<div class="sec-banner bg0 p-t-100 p-b-40 m-b-50">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
@@ -1061,7 +1061,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- hostpot start -->
-	<section>
+	<section style="background-color: #F9F5F6;">
 		<div class="container1 noselect">
 			<img src="images/hostspot.jpg" alt="img">
 			<div class="tooltip1 tooltip-1 noselect">
@@ -1140,7 +1140,7 @@ if ($query->num_rows > 0) {
 		<iframe width="600" height="425" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
 	</div>
 
-	<section class="bg0 p-t-120 p-b-25 noselect" id="new-arrivals">
+	<section style="background-color: #F9F5F6;" class="bg0 p-t-120 p-b-25 noselect" id="new-arrivals">
 		<div class="content">
 			<div class="container">
 				<div class="row justify-content-center mb-4">
@@ -1279,7 +1279,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- banner start -->
-	<div style="background-color: #ffffffff;" class="banner-start container noselect">
+	<div style="background-color: #F9F5F6;" class="banner-start container noselect">
 		<div class="intro-banner row">
 			<h1 style="margin-top: -8px;">Greatest prices and deals save 20%off</h1>
 			<div style="margin-top: -10px;" class="shop-now">
@@ -1292,7 +1292,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- blog start -->
-	<section style="background-color: #ffffffff;" id="blog">
+	<section style="background-color: #F9F5F6;" id="blog">
 		<div class="blog-heading p-t-100 p-b-25 noselect">
 			<h3 class="text-omacha darkModetxt-omacha">My Blog</h3>
 			<div class="blog-container">
