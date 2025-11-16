@@ -254,7 +254,7 @@ html, body {
 [ Top bar ]*/
 .top-bar {
   height: 45px;
-  background-color: #F9F5F6;
+  background-color: #f1f1f1;
   z-index: 0;
 }
 
@@ -492,7 +492,7 @@ html, body {
   border-radius: 9px;
   min-width: 178px;
   max-width: 225px;
-  background-color: #fff;
+  background-color: #fff8f8ff;
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;

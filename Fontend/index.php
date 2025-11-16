@@ -913,13 +913,13 @@ if ($query->num_rows > 0) {
 	</section>
 
 	<!-- Category Start -->
-	<div class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
+	<div style="background-color: #fff;" class="sec-banner bg0 p-t-100 p-b-25" id="shop-by-category">
 		<div class="container text-center">
 			<h1 class="text-primary1 m-t-50 noselect">Shop by Category</h1>
 			<div class="row">
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block1 -->
-					<div class="block1 wrap-pic-w noselect">
+					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/stuffed-animal-products.php">
 						<img class="category noselect" src="images/Homepage-images/toysy.png" alt="category-img" >
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Stuffed Animals</h5>
@@ -928,7 +928,7 @@ if ($query->num_rows > 0) {
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block2 -->
-					<div class="block1 wrap-pic-w noselect">
+					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/fantasy-animal-products.php" >
 						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">
@@ -939,7 +939,7 @@ if ($query->num_rows > 0) {
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block3 -->
-					<div class="block1 wrap-pic-w noselect">
+					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/teddy-bear-products.php"> 
 						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Teddy Bears </h5>
@@ -948,7 +948,7 @@ if ($query->num_rows > 0) {
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block4 -->
-					<div class="block1 wrap-pic-w noselect">
+					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/soft-doll-products.php" >
 						<img class="category noselect" src="images/Homepage-images/doll.png" alt="category-img">
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect"> Soft Dolls</h5>
@@ -957,7 +957,7 @@ if ($query->num_rows > 0) {
 
 				<div class="col-md-2 col-sm-4 p-b-30 m-lr-auto noselect">
 					<!-- Block5 -->
-					<div class="block1 wrap-pic-w noselect">
+					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/plastic-toy-products.php" >
 						<img class="category noselect" src="images/Homepage-images/bricks.png" alt="category-img">
 						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">
@@ -973,7 +973,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- retangle start -->
-	<div class="sec-banner bg0 p-t-100 p-b-40 m-b-50">
+	<div style="background-color: #fff;" class="sec-banner bg0 p-t-100 p-b-40 m-b-50">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-xl-4 p-b-30 m-lr-auto noselect">
@@ -1061,7 +1061,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- hostpot start -->
-	<section style="background-color: #F9F5F6;">
+	<section style="background-color: #fff; margin-top: -50px; padding-top: 30px;">
 		<div class="container1 noselect">
 			<img src="images/hostspot.jpg" alt="img">
 			<div class="tooltip1 tooltip-1 noselect">
@@ -1135,12 +1135,12 @@ if ($query->num_rows > 0) {
 
 
 	<!-- introduction test start-->
-	<div class="row1 noselect">
-		<img src="images/tshirt-ha.png">
-		<iframe width="600" height="425" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
-	</div>
-
-	<section style="background-color: #F9F5F6;" class="bg0 p-t-120 p-b-25 noselect" id="new-arrivals">
+	
+	<section style="background-color: #fff;" class="bg0 p-t-120 p-b-25 noselect" id="new-arrivals">
+		<div class="row1 noselect">
+			<img src="images/tshirt-ha.png">
+			<iframe width="600" height="425" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe>
+		</div>
 		<div class="content">
 			<div class="container">
 				<div class="row justify-content-center mb-4">
@@ -1279,7 +1279,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- banner start -->
-	<div style="background-color: #F9F5F6;" class="banner-start container noselect">
+	<div style="background-color: #fff;" class="banner-start container noselect">
 		<div class="intro-banner row">
 			<h1 style="margin-top: -8px;">Greatest prices and deals save 20%off</h1>
 			<div style="margin-top: -10px;" class="shop-now">
@@ -1292,7 +1292,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- blog start -->
-	<section style="background-color: #F9F5F6;" id="blog">
+	<section style="background-color: #fff;" id="blog">
 		<div class="blog-heading p-t-100 p-b-25 noselect">
 			<h3 class="text-omacha darkModetxt-omacha">My Blog</h3>
 			<div class="blog-container">
@@ -1562,7 +1562,7 @@ if ($query->num_rows > 0) {
 						</li>
 
 						<li class="p-b-10">
-							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+							<a href="FAQ.php" class="stext-107 cl7 hov-cl1 trans-04">
 								FAQs
 							</a>
 						</li>

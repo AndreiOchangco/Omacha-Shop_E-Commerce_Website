@@ -246,7 +246,7 @@ if ($result->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar noselect">
+			<div class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -721,7 +721,7 @@ if ($result->num_rows > 0) {
 	</section>
 
 	<!-- Product -->
-	<div >
+	<div style="background-color: #fff;">
 		<div class="container noselect">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
