@@ -1372,35 +1372,6 @@ html, body {
   }
 }
 
-.arrow-slick1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-  font-size: 100px;
-  color: #181818;
-  background-color: transparent;
-  position: absolute;
-  opacity: 0;
-  
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
 /*---------------------------------------------*/
 .rs2-slick1 .arrow-slick1 {
   color: rgba(255,255,255,0.3);
