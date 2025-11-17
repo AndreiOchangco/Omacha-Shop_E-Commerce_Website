@@ -720,8 +720,7 @@ if ($result->num_rows > 0) {
 		</h2>
 	</section>
 
-	<!-- Product -->
-	<div style="background-color: #fff;">
+	<div>
 		<div class="container noselect">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
