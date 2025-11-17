@@ -597,9 +597,9 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section1 class="darkMode">
+	<section1 style="background-color: #fff;" class="darkMode">
 		<div class="wrap">
-			<div style="background-color: #ffffffff;" class="chat-card">
+			<div class="chat-card">
 				<div class="chat-header">
 				<div style="background-color: #19f574;" class="avatar">S</div>
 				<div style="color: #181818;" class="status"><span id="lastActive">Last Active (5 mins ago)</span></div>

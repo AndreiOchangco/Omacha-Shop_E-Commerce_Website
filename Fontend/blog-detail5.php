@@ -291,7 +291,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar">
+			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -623,7 +623,7 @@ if ($query->num_rows > 0) {
 	</div>
 
 	<!-- breadcrumb -->
-	<div class="container m-t-50">
+	<div style="background-color: #fff;" class="container m-t-50">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
 			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
 				Home
@@ -643,7 +643,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section class="bg0 p-t-52 p-b-20">
+	<section style="background-color: #fff;" class="bg0 p-t-52 p-b-20">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-lg-9 p-b-80">

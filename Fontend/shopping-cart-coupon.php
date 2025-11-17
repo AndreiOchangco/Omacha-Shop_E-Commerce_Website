@@ -302,7 +302,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar noselect">
+			<div class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -312,7 +312,8 @@ if ($query->num_rows > 0) {
 									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
 							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
+									class="darkModetxt"
+									style="color: #000; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
@@ -581,7 +582,7 @@ if ($query->num_rows > 0) {
 											Flower
 										</a>
 									</h5>
-									<p>$12.99</p>
+									<p>₱768.78</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -597,7 +598,7 @@ if ($query->num_rows > 0) {
 											Flower
 										</a>
 									</h5>
-									<p>$10.99</p>
+									<p>₱650.42</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -613,7 +614,7 @@ if ($query->num_rows > 0) {
 											Bear Baby Towel
 										</a>
 									</h5>
-									<p>$12.99</p>
+									<p>₱768.78</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -629,7 +630,7 @@ if ($query->num_rows > 0) {
 											Elephant Jelly Cat
 										</a>
 									</h5>
-									<p>$10.99</p>
+									<p>₱650.42</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -645,7 +646,7 @@ if ($query->num_rows > 0) {
 											Giraffe Jelly Cat
 										</a>
 									</h5>
-									<p>$12.99</p>
+									<p>₱768.78</p>
 								</div>
 							</div>
 							<!-- Repeat the above block for other recommended products -->
@@ -661,7 +662,7 @@ if ($query->num_rows > 0) {
 											Unicorn
 										</a>
 									</h5>
-									<p>$10.99</p>
+									<p>₱650.42</p>
 								</div>
 							</div>
 						</div>
@@ -713,7 +714,7 @@ if ($query->num_rows > 0) {
 											<a href="#" class="header-cart-item-name hov-cl1 trans-04"><?php echo $item["p_name"]; ?></a>
 										</div>
 										<!-- Hiện số lượng sản phẩm và giá tiền -->
-										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x $<?php echo $item["p_price"]; ?></span>
+										<span class="header-cart-item-info"><?php echo $item["o_quantity"]; ?> x ₱<?php echo $item["p_price"]; ?></span>
 									</div>
 									<div class="col-md-3">
 										<form action="delete-cart2.php" method="post">											
@@ -736,7 +737,7 @@ if ($query->num_rows > 0) {
 				<div class="w-full">
 					<div class="header-cart-total w-full p-tb-40">
 						<?php $totalPrice = sumTotalPrice($order_array, $userLogin["userID"]); ?> <!-- thay doi user -->
-						<p>Total: $<?php echo $totalPrice; ?></p>
+						<p>Total: ₱<?php echo $totalPrice; ?></p>
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full noselect">
@@ -755,7 +756,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- breadcrumb -->
-	<div class="container">
+	<div style="background-color: #fff;" class="container">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-80 p-lr-0-lg">
 			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink">
 				Home
@@ -770,7 +771,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Shopping Cart -->
-	<form class="p-t-75 p-b-85">
+	<form style="background-color: #fff;" class="p-t-75 p-b-85">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -1053,7 +1054,7 @@ if ($query->num_rows > 0) {
 						</div>
 
 						<div class="p-t-18">
-							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 darkModeBtn">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04 lightModeBtn darkModeBtn">
 								Subscribe
 							</button>
 						</div>

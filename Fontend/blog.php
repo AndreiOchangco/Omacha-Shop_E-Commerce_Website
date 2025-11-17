@@ -293,7 +293,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar">
+			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -636,7 +636,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section class="bg0 p-t-62 p-b-60">
+	<section style="background-color: #fff;" class="bg0 p-t-62 p-b-60">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-lg-9 p-b-80">

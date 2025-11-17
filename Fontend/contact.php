@@ -255,7 +255,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar">
+			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -598,7 +598,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section1>
+	<section1 style="background-color: #fff;">
 		<h1 style="margin-bottom: -20px;" class="stext-122 heading darkModetxt-omacha m-t-25">Get In Touch</h1>
 		<div class="contactForm">
 			<div style="background-color: #fff8f8ff; border-radius: 25px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center;" class="m-t-30">

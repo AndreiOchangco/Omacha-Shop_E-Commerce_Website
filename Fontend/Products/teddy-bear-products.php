@@ -246,7 +246,7 @@ if ($result->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar">
+			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -256,7 +256,8 @@ if ($result->num_rows > 0) {
 									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
 							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
+									class="darkModetxt"
+									style="color: #000; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
@@ -731,7 +732,7 @@ if ($result->num_rows > 0) {
 	</section>
 
 	<!-- Product -->
-	<div >
+	<div style="background-color: #fff;">
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">

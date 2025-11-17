@@ -357,7 +357,7 @@ if ($result->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar">
+			<div class="top-bar">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -706,7 +706,7 @@ if ($result->num_rows > 0) {
 	<!-- Content page -->
 
 	<!-- layer 01 -->
-	<section class="bg0 p-t-75 p-b-120">
+	<section style="background-color: #fff;" class="bg0 p-t-75 p-b-120">
 		<div class="container">
 		
 
@@ -810,7 +810,7 @@ if ($result->num_rows > 0) {
 	</section>
 
 	<!-- Team Members -->
-	<section class="bg0 p-t-75 p-b-30">
+	<section style="background-color: #fff;" class="bg0 p-t-75 p-b-30">
 		<div class="container">
 			<h3 style="text-align: center; font-size: 25px; " class="mtext-111 cl2 p-b-16 m-b-50 text-omacha">
 				Our Developer Team

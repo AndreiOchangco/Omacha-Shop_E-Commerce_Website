@@ -341,6 +341,7 @@ if ($query->num_rows > 0) {
 									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
 							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+									class="darkModetxt"
 									style="color: #000; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>

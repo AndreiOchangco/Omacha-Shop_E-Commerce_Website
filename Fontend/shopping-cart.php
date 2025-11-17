@@ -314,7 +314,7 @@ if ($query->num_rows > 0) {
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div style="background-color: #ffffffff;" class="top-bar noselect">
+			<div class="top-bar noselect">
 				<div class="content-topbar flex-sb-m h-full container">
 					<div class="left-top-bar">
 						<div class="d-inline-flex align-items-center">
@@ -324,7 +324,8 @@ if ($query->num_rows > 0) {
 									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
 							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
+									class="darkModetxt"
+									style="color: #000; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
@@ -767,7 +768,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- breadcrumb -->
-	<div class="container">
+	<div style="background-color: #fff;" class="container drkmde">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-80 p-lr-0-lg">
 			<a href="index.php" class="stext-109 cl8 hov-cl1 trans-04 darkModehyperlink">
 				Home
@@ -782,7 +783,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Shopping Cart -->
-	<form class="p-t-75 p-b-85">
+	<form style="background-color: #fff; width: 100%;" class="p-t-75 p-b-85 drkmde">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -918,11 +919,11 @@ if ($query->num_rows > 0) {
 									</div>
 
 									<div class="bor8 bg0 m-b-12">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State /  country">
+										<input style="border-radius: 15px;" class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="state" placeholder="State / country">
 									</div>
 
 									<div class="bor8 bg0 m-b-22">
-										<input class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="postcode" placeholder="Postcode / Zip">
+										<input style="border-radius: 15px;" class="stext-111 cl8 plh3 size-111 p-lr-15" type="text" name="postcode" placeholder="Postcode / Zip">
 									</div>
 
 									<div class="flex-w">
