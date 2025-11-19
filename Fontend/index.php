@@ -74,8 +74,6 @@ if ($resultOrder->num_rows > 0) {
 			);
 		}
 	};
-} else {
-	echo "0 results";
 }
 
 
@@ -491,7 +489,7 @@ if ($query->num_rows > 0) {
 				</div>
 
 				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
-					data-notify="2">
+					data-notify="0">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
 

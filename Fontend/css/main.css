@@ -1366,6 +1366,14 @@ html, body {
   height: 100vh;
 }
 
+.slick-prev,
+.slick-next {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 @media (max-width: 991px) {
   .item-slick1 {
     height: calc(100vh - 70px) !important;
@@ -1373,11 +1381,11 @@ html, body {
 }
 
 /*---------------------------------------------*/
-.rs2-slick1 .arrow-slick1 {
+.rs2-slick1 {
   color: rgba(255,255,255,0.3);
 }
 
-.rs2-slick1 .arrow-slick1:hover {
+.rs2-slick1:hover {
   color: #7280e0;
 }
 

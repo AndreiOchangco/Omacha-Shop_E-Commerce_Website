@@ -710,7 +710,7 @@ if ($query->num_rows > 0) {
                                             <td class="column-6">
                                                 <form action="delete-order-item.php" method="post">                                            
                                                     <input type="hidden" name="o_id" value="<?php echo $item['o_id']; ?>">
-                                                    <button type="button" class="btn-delete" data-order-id="<?php echo $row['o_id']; ?>">
+                                                    <button type="submit" class="btn-delete" data-order-id="<?php echo $item['o_id']; ?>">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                 </form>
