@@ -37,12 +37,12 @@
     color: #181818 !important;
 }
 
-.lightModetxt {
+.lightModetxt-omacha {
   color: #181818 !important;
 }
 
-.lightModetxt:hover {
-  color: #19f574;
+.lightModetxt-omacha:hover {
+  color: #19f574 !important;
 }
 
 

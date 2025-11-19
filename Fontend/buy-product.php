@@ -87,7 +87,7 @@ function updateOrderStatus($userID)
     $result = $conn->query($sqlUpdate);
 
     if ($result) {
-        header('location: your-order.php');
+        header('location: payment-option.php');
         // return true;
     } else {
         // Trả về false nếu cập nhật thất bại

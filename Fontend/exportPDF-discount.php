@@ -262,5 +262,5 @@ $domPDF->setPaper('A4', 'portrait');
 $domPDF->render();
 
 // Xuất PDF ra trình duyệt hoặc lưu vào file
-$domPDF->stream('omachashop-invoice.pdf');
+$domPDF->stream('OmachaShop-Invoice_' . $userLogin["userName"] . '.pdf');
 ?>

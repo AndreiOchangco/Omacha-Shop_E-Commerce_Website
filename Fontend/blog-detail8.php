@@ -301,7 +301,8 @@ if ($query->num_rows > 0) {
 									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
 							<p class="text-body px-3">|</p>
 							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-									style="color: #19f574; text-decoration: none;">+1922 4800</a></p>
+									class="darkModetxt"
+									style="color: #000; text-decoration: none;">+1922 4800</a></p>
 						</div>
 					</div>
 
@@ -388,38 +389,38 @@ if ($query->num_rows > 0) {
 					</div>
 
 					<!-- Icon header -->
-					<div class="wrap-icon-header flex-w flex-r-m">
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-							<i class="zmdi zmdi-search"></i>
+					<div class="wrap-icon-header flex-w flex-r-m noselect">
+						<div class="js-show-modal-search">
+							<a 
+							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11"
+							style="color: #181818;">
+								<i class="zmdi zmdi-search"></i>
+							</a>
 						</div>
 
 						<a
 							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+							style="color: #181818;"
 							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</a>
 
 						<a href="wishlist.php"
 							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
+							style="color: #181818;"
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu">
-							<li class="active-menu">
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu noselect">
+							<li class="active-menu noselect">
 								<a href="register.php" class="btn2 btn-primary2 mt-1 "
-								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
-								<ul class="profile-sub-menu">
-									<li><a href="user-profile.php">Profile</a></li>
+								style="color: #181818;"><b><i class="fa-regular fa-user fa-sm"></i></b></a>
+								<ul class="profile-sub-menu noselect">
+									<li><a class="darkModehyperlink" href="user-profile.php">Profile</a></li>
 									
-									<li>
-										<!-- Your toggle button -->
-										<a id="darkModeToggle">
-											<span class="darkbtn">☀️</span>
-										</a>
-									</li>
-										
+									<li><a id="darkModeToggle"><span class="darkbtn">☀️</span></a></li>
 
-									<li><a href="logout.php">Logout</a></li>
+									<li><a class="darkModehyperlink" href="logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>

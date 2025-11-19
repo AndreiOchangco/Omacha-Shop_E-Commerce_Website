@@ -1,24 +1,37 @@
 <?php
 include 'login.php';
+
 include('../Admin/connection/connectionpro.php');
 require_once '../Admin/connection/connectData.php';
 
+
 if (!isset($_SESSION["user"])) {
-    header("Location: login.html");
-    exit();
+	// Redirect user to the login page if not logged in
+	header("Location: login.html");
+	exit(); // Stop further execution of the script
 }
 
 $userName = $_SESSION["user"];
+// print_r($userName);
 $sqlLogin = "SELECT * FROM `login` WHERE userName = '$userName' ";
 $queryLogin = mysqli_query($conn, $sqlLogin);
+// print_r($queryLogin);
+// Kiểm tra kết quả truy vấn
+
+// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
 $row = $queryLogin->fetch_assoc();
+// Thêm thông tin từng hàng vào mảng $vuserLogin
 $userLogin = array(
-    "userID" => $row["userID"],
-    "userName" => $row["userName"],
-    "email" => $row["email"],
+	"userID" => $row["userID"],
+	"userName" => $row["userName"],
+	"email" => $row["email"],
 );
 
-// Get cart items for the current user
+$sql = "SELECT * FROM product";
+$query = mysqli_query($conn, $sql);
+
+
+// Câu truy vấn SQL SELECT
 $sqlOrder = "SELECT 
 `order`.o_id, 
 `order`.u_id, 
@@ -33,60 +46,108 @@ product.p_price
 FROM 
 `order`
 INNER JOIN 
-product ON `order`.p_id = product.p_id
-WHERE `order`.u_id = '{$userLogin['userID']}' AND `order`.o_status = 0";
+product ON `order`.p_id = product.p_id";
 
+// Thực hiện truy vấn
 $resultOrder = $conn->query($sqlOrder);
+
+// Mảng chứa thông tin các đơn hàng
 $order_array = array();
 
+// Kiểm tra kết quả truy vấn
 if ($resultOrder->num_rows > 0) {
-    while ($row = $resultOrder->fetch_assoc()) {
-        $order_array[] = array(
-            "o_id" => $row["o_id"],
-            "u_id" => $row["u_id"],
-            "p_id" => $row["p_id"],
-            "o_price" => $row["o_price"],
-            "o_quantity" => $row["o_quantity"],
-            "o_status" => $row["o_status"],
-            "p_type" => $row["p_type"],
-            "p_image" => $row["p_image"],
-            "p_name" => $row["p_name"],
-            "p_price" => $row["p_price"]
-        );
-    };
+	// Duyệt qua từng hàng dữ liệu từ kết quả truy vấn
+	while ($row = $resultOrder->fetch_assoc()) {
+		if ($row['u_id'] == $userLogin['userID'] && $row['o_status'] == 0) {
+			// Thêm thông tin từng hàng vào mảng $order_array
+			$order_array[] = array(
+				"o_id" => $row["o_id"],
+				"u_id" => $row["u_id"],
+				"p_id" => $row["p_id"],
+				"o_price" => $row["o_price"],
+				"o_quantity" => $row["o_quantity"],
+				"o_status" => $row["o_status"],
+				"p_type" => $row["p_type"],
+				"p_image" => $row["p_image"],
+				"p_name" => $row["p_name"],
+				"p_price" => $row["p_price"]
+			);
+		}
+	};
+} else {
+	// echo "0 results";
 }
+
 
 function sumTotalPrice($order_array, $u_id)
 {
-    $totalPrice = 0;
-    foreach ($order_array as $item) {
-        if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
-            $productPrice = $item["p_price"] * $item["o_quantity"];
-            $totalPrice += $productPrice;
-        }
-    }
-    return $totalPrice;
+	$totalPrice = 0; // Khởi tạo biến tổng giá tiền
+
+	// Duyệt qua từng sản phẩm trong giỏ hàng và tính tổng giá tiền
+	foreach ($order_array as $item) {
+		// Kiểm tra xem u_id của sản phẩm có khớp với u_id được chỉ định hay không
+		if ($item["u_id"] == $u_id && $item["o_status"] == 0) {
+			// Tính giá tiền của mỗi sản phẩm (giá tiền * số lượng)
+			$productPrice = $item["p_price"] * $item["o_quantity"];
+
+			// Cộng vào tổng giá tiền
+			$totalPrice += $productPrice;
+		}
+	}
+
+	return $totalPrice; // Trả về tổng giá tiền
 }
 
-$totalPrice = sumTotalPrice($order_array, $userLogin["userID"]);
+// Truy vấn để đếm số dòng trong bảng order
+$sql = "SELECT COUNT(*) AS total_rows FROM `order` WHERE u_id = '{$userLogin['userID']}' AND o_quantity > 0 AND o_status = 0";
+$result = $conn->query($sql);
 
-// Process payment if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $payment_method = $_POST["payment_method"];
-    
-    // Update order status from 0 (cart) to 1 (paid/confirmed)
-    $update_sql = "UPDATE `order` SET o_status = 1, payment_method = '$payment_method' WHERE u_id = '{$userLogin['userID']}' AND o_status = 0";
-    
-    if (mysqli_query($conn, $update_sql)) {
-        // Payment successful - redirect to your-order.php
-        header("Location: your-order.php?payment=success&method=" . $payment_method);
-        exit();
-    } else {
-        // Payment failed
-        header("Location: shopping-cart.php?payment=failed");
-        exit();
-    }
+// Kiểm tra và hiển thị kết quả
+if ($result->num_rows > 0) {
+	$row = $result->fetch_assoc();
+	$order_count = $row["total_rows"];
+} else {
+	// echo "Không có dữ liệu trong bảng order";
 }
+
+// Truy vấn để đếm số dòng trong bảng order
+$sql = "SELECT COUNT(*) AS total_rows FROM wishlist";
+$result = $conn->query($sql);
+
+// Kiểm tra và hiển thị kết quả
+if ($result->num_rows > 0) {
+	$row = $result->fetch_assoc();
+	$wishlist_count = $row["total_rows"];
+} else {
+	// echo "Không có dữ liệu trong bảng order";
+}
+
+// Truy vấn thông tin chiết khấu dựa trên tên discount (d_name)
+$sqlDiscount = "SELECT * FROM discount";
+$query = mysqli_query($conn, $sqlDiscount);
+
+// Mảng chứa thông tin chiết khấu
+$discount = array();
+
+// Kiểm tra kết quả truy vấn
+if ($query->num_rows > 0) {
+	// Lặp qua từng hàng dữ liệu từ kết quả truy vấn
+	while ($row = $query->fetch_assoc()) {
+		// Thêm thông tin từng hàng vào mảng $discount
+		$discount = array(
+			"d_id" => $row["d_id"],
+			"d_name" => $row["d_name"],
+			"d_amount" => $row["d_amount"],
+			"d_description" => $row["d_description"],
+			"d_start_date" => $row["d_start_date"],
+			"d_end_date" => $row["d_end_date"]
+		);
+	}
+} else {
+	// Nếu không tìm thấy kết quả
+	// echo "0 results";
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -136,7 +197,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/universal.css">
+    <link id="dark-mode-css" rel="stylesheet" type="text/css" href="css/darkcsspart2.css" disabled>
     <!--===============================================================================================-->
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
     <!-- link icon -->
@@ -304,118 +366,145 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- Header -->
     <header>
         <!-- Header desktop -->
-        <div class="container-menu-desktop">
-            <!-- Topbar -->
-            <div class="top-bar">
-                <div class="content-topbar flex-sb-m h-full container">
-                    <div class="left-top-bar">
-                        <div class="d-inline-flex align-items-center">
-                            <p style="color: #F4538A"><i class="fa fa-envelope mr-2"></i><a
-                                    href="mailto:omachacontact@gmail.com"
-                                    style="color: #000; text-decoration: none;">omachacontact@gmail.com</a></p>
-                            <p class="text-body px-3">|</p>
-                            <p style="color: #F4538A"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
-                                    style="color: #000; text-decoration: none;">+1922 4800</a></p>
-                        </div>
-                    </div>
+		<div class="container-menu-desktop">
+			<!-- Topbar -->
+			<div class="top-bar">
+				<div class="content-topbar flex-sb-m h-full container">
+					<div class="left-top-bar">
+						<div class="d-inline-flex align-items-center">
+							<p style="color: #19f574"><i class="fa fa-envelope mr-2"></i><a
+									class="darkModetxt"
+									href="mailto:omachashopofficial@gmail.com"
+									style="color: #000; text-decoration: none;">omachashopofficial@gmail.com</a></p>
+							<p class="text-body px-3">|</p>
+							<p style="color: #19f574"><i class="fa fa-phone-alt mr-2"></i><a href="tel:+19223600"
+									class="darkModetxt"
+									style="color: #000; text-decoration: none;">+1922 4800</a></p>
+						</div>
+					</div>
 
-                    <div class="col-lg-6 text-center text-lg-right">
-                        <div class="d-inline-flex align-items-center">
-                            <a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
-                                target="_blank" title="Visit the Reis Adventures fanpage.">
-                                <i style="color: #49243E;" class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
-                                title="Visit the Reis Adventures Twitter.">
-                                <i style="color: #49243E;" class="fab fa-twitter"></i>
-                            </a>
-                            <a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
-                                target="_blank" title="Visit the Reis Adventures Linkedin.">
-                                <i style="color: #49243E;" class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a class="text-primary px-3"
-                                href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
-                                target="_blank" title="Visit the Reis Adventures Instagram.">
-                                <i style="color: #49243E;" class="fab fa-instagram"></i>
-                            </a>
-                            <div class="data1">
-                                <i style="color: #49243E;" class=""></i>
-                                <a href="register.php" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b><?php echo $userLogin["userID"]; ?>
-                                        /</b></a>
-                            </div>
-                            <div class="data2">
-                                <i style="color: #49243E;" class=""></i>
-                                <a href="register.php" class="btn2 btn-primary2 mt-1" style="color: #49243E;"><b><?php echo $userLogin["userName"]; ?></b></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+					<div class="col-lg-6 text-center text-lg-right">
+						<div class="d-inline-flex align-items-center">
+							<a class="text-primary px-3" href="https://www.facebook.com/profile.php?id=61557250007525"
+								target="_blank" title="Visit the Reis Omacha Shop Philippines page.">
+								<i style="color: #4267B2 ;" class="fa-brands fa-square-facebook"></i>
+							</a>
+							<a class="text-primary px-3" href="https://twitter.com/reis_adventures" target="_blank"
+								title="Visit the Reis Omacha Shop Philippines Twitter.">
+								<i style="color: #1DA1F2;" class="fa-brands fa-twitter"></i>
+							</a>
+							<a class="text-primary px-3" href="https://www.linkedin.com/in/reis-adventures-458144300/"
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Linkedin.">
+								<i style="color: #0077B5;" class="fa-brands fa-linkedin"></i>
+							</a>
+							<a class="text-primary px-3"
+								href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr"
+								target="_blank" title="Visit the Reis Omacha Shop Philippines Instagram.">
+								<i style="
+										background: -webkit-gradient(linear, right top, left bottom, from( #a005acff), to( #ffe15cff));
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+								" class="fa-brands fa-square-instagram"></i>
+							</a>
+							
+							
+							
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <div class="wrap-menu-desktop" style="background-color: #FFEFEF;">
-                <nav class="limiter-menu-desktop container" style="background-color: #FFEFEF;">
+			<div class="wrap-menu-desktop" style="background-color: #fff8f8ff;">
+				<nav class="limiter-menu-desktop container" style="background-color: #fff8f8ff;">
 
-                    <!-- Logo desktop -->
-                    <a href="index.php" class="navbar-brand">
-                        <h1 class="m-0 text-primary1 mt-3 "><span class="text-dark1"><img class="Imagealignment"
-                                    src="images/icon.png">Omacha</h1>
-                    </a>
+					<!-- Logo desktop -->
+					<a href="index.php" class="navbar-brand">
+						<h1 class="m-0 text-primary1"><span class="text-dark1"><img class="Imagealignment"
+									src="images/Omacha-Shop_3000x3000/OmachaShop-Logo2.png">Omacha Shop</h1>
+					</a>
 
-                    <!-- Menu desktop -->
-                    <div class="menu-desktop">
-                        <ul class="main-menu">
-                            <li class="active-menu">
-                                <a href="index.php">Home</a>
-                            </li>
+					<!-- Menu desktop -->
+					<div class="menu-desktop">
+						<ul class="main-menu">
+							<li>
+								<a href="index.php">Home</a>
+								<ul class="sub-menu">
+									<li><a href="index.php#shop-by-category">Categories</a></li>
+									<li><a href="index.php#new-arrivals">Arrivals</a></li>
+									<li><a href="index.php#blog">Blog</a></li>
+									<li><a href="index.php#top-brands">Top Brands</a></li>
+								</ul>
 
-                            <li class="label1" data-label1="hot">
-                                <a href="product2.php">Shop</a>
-                                <ul class="sub-menu">
-                                    <li><a href="0_12months.php">0-12 Months</a></li>
-                                    <li><a href="1_2years.php">1-2 Years</a></li>
-                                    <li><a href="3+years.php">3+ Years</a></li>
-                                    <li><a href="5+years.php">5+ Years</a></li>
-                                </ul>
-                            </li>
+							</li>
 
-                            <li>
-                                <a href="blog.php">Blog</a>
-                            </li>
+							<li class="label1" data-label1="new">
+							<a href="product.php">Shop</a>
+								<ul class="sub-menu">
+									<li><a href="./Products/convenience-products.php">Convenience</a></li>
+									<li><a href="./Products/shopping-products.php">Shopping</a></li>
+									<li><a href="./Products/specialty-products.php">Specialty</a></li>
+									<li><a href="./Products/unsought-products.php">Unsought</a></li>
+									<li><a href="./Products/digital-products.php">Digital</a></li>
+								</ul>
+							</li>
 
-                            <li>
-                                <a href="contact.php">Contact</a>
-                            </li>
+							<li>
+								<a href="blog.php">Blog</a>
+							</li>
 
-                            <li>
-                                <a href="about.php">Pages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="about.php">About</a></li>
-                                    <li><a href="FAQ.php">Faq</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+							<li>
+								<a href="about.php">About</a>
+							</li>
 
-                    <!-- Icon header -->
-                    <div class="wrap-icon-header flex-w flex-r-m">
-                        <div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-                            <i class="zmdi zmdi-search"></i>
-                        </div>
+							<li>
+								<a class="darkModetxt" href="contact.php">Contact</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="Improved_customer_support/main/customer-support.php">Customer Support</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 
-                        <div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
-                            data-notify="<?php echo count($order_array); ?>">
-                            <i class="zmdi zmdi-shopping-cart"></i>
-                        </div>
+					<!-- Icon header -->
+					<div class="wrap-icon-header flex-w flex-r-m noselect">
+						<div class="js-show-modal-search">
+							<a 
+							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11"
+							style="color: #181818;">
+								<i class="zmdi zmdi-search"></i>
+							</a>
+						</div>
 
-                        <a href="wishlist.php"
-                            class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
-                            data-notify="0">
-                            <i class="zmdi zmdi-favorite-outline"></i>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
+						<a
+							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+							style="color: #181818;"
+							data-notify="<?php echo $order_count?>">
+							<i class="zmdi zmdi-shopping-cart"></i>
+						</a>
+
+						<a href="wishlist.php"
+							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
+							style="color: #181818;"
+							data-notify="<?php echo $wishlist_count?>">
+							<i class="zmdi zmdi-favorite-outline"></i>
+						</a>
+						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu noselect">
+							<li class="active-menu noselect">
+								<a href="register.php" class="btn2 btn-primary2 mt-1 "
+								style="color: #181818;"><b><i class="fa-regular fa-user fa-sm"></i></b></a>
+								<ul class="profile-sub-menu noselect">
+									<li><a class="darkModehyperlink" href="user-profile.php">Profile</a></li>
+									
+									<li><a id="darkModeToggle"><span class="darkbtn">☀️</span></a></li>
+
+									<li><a class="darkModehyperlink" href="logout.php">Logout</a></li>
+								</ul>
+							</li>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
 
         <!-- Header Mobile -->
         <div class="wrap-header-mobile">
@@ -516,14 +605,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <form action="" method="POST" id="paymentForm">
                 <div class="payment-methods">
-    <label class="payment-option" id="codOption">
-        <input type="radio" name="payment_method" value="cod" required onchange="window.location.href='your-order.php'">
-        <span class="payment-icon"><i class="fas fa-money-bill-wave"></i></span>
-        <div>
-            <h4>Cash on Delivery (COD)</h4>
-            <p>Pay with cash when your order is delivered</p>
-        </div>
-    </label>
+                    <label class="payment-option" id="codOption">
+                        <input type="radio" name="payment_method" value="cod" required onchange="window.location.href='your-order.php'">
+                        <span class="payment-icon"><i class="fas fa-money-bill-wave"></i></span>
+                        <div>
+                            <h4>Cash on Delivery (COD)</h4>
+                            <p>Pay with cash when your order is delivered</p>
+                        </div>
+                    </label>
 
                     <label class="payment-option" id="bankOption">
                         <input type="radio" name="payment_method" value="bank">
@@ -600,164 +689,164 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                <input type="button" value="Complete Payment" class="submit-btn" onclick="window.location.href='your-order.php'">
+            </form>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg3 p-t-75 p-b-32">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0 p-b-30">
-                        Categories
-                    </h4>
+	<footer style="background-color: #fff8f8ff;" class="bg3 p-t-100 p-b-25">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl10 p-b-30">
+						Legal
+					</h4>
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Faq
+							</a>
+						</li>
 
-                    <ul>
-                        <li class="p-b-10">
-                            <a href="0_12months.php" class="stext-107 cl7 hov-cl1 trans-04">
-                                0-12 Months
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Retailers
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="1_2years.php" class="stext-107 cl7 hov-cl1 trans-04">
-                                1-2 Years
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Privacy Policy
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="3+years.php" class="stext-107 cl7 hov-cl1 trans-04">
-                                3+ Years
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Cookies
+							</a>
+						</li>
+					</ul>
+				</div>
 
-                        <li class="p-b-10">
-                            <a href="5+years.php" class="stext-107 cl7 hov-cl1 trans-04">
-                                5+ Years
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl10 p-b-30">
+						Services
+					</h4>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0 p-b-30">
-                        Help
-                    </h4>
+					<ul>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Track Order
+							</a>
+						</li>
 
-                    <ul>
-                        <li class="p-b-10">
-                            <a href="your-order.php" class="stext-107 cl7 hov-cl1 trans-04">
-                                Track Order
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Returns
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="FAQ.php" class="stext-107 cl7 hov-cl1 trans-04">
-                                Returns
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								Shipping
+							</a>
+						</li>
 
-                        <li class="p-b-10">
-                            <a href="FAQ.php" class="stext-107 cl7 hov-cl1 trans-04">
-                                Shipping
-                            </a>
-                        </li>
+						<li class="p-b-10">
+							<a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+								FAQs
+							</a>
+						</li>
+					</ul>
+				</div>
 
-                        <li class="p-b-10">
-                            <a href="FAQ.php" class="stext-107 cl7 hov-cl1 trans-04">
-                                FAQs
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl10 p-b-30">
+						GET IN TOUCH
+					</h4>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0 p-b-30">
-                        GET IN TOUCH
-                    </h4>
+					<p class="stext-107 size-201">
+						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
+						on (+1) 96 716 6879
+					</p>
 
-                    <p class="stext-107 cl7 size-201">
-                        Any questions? Let us know in store or call us on (+1) 922 4800
-                    </p>
+					<div class="p-t-27">
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa-brands fa-facebook fa-lg" style="color: #ea539c;"></i>
+						</a>
 
-                    <div class="p-t-27">
-                        <a href="https://www.facebook.com/profile.php?id=61557250007525" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa fa-facebook"></i>
-                        </a>
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa-brands fa-instagram fa-lg" style="color: #e151a5;"></i>
+						</a>
 
-                        <a href="https://www.instagram.com/reis_adventures2024?igsh=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa fa-instagram"></i>
-                        </a>
+						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #e74b7a;"></i>
+						</a>
+					</div>
+				</div>
 
-                        <a href="https://twitter.com/reis_adventures" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
+				<div class="col-sm-6 col-lg-3 p-b-50">
+					<h4 class="stext-301 cl10 p-b-30">
+						Newsletter
+					</h4>
 
-                <div class="col-sm-6 col-lg-3 p-b-50">
-                    <h4 class="stext-301 cl0 p-b-30">
-                        Newsletter
-                    </h4>
+					<form>
+						<div class="wrap-input1 w-full p-b-4">
+							<input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
+								placeholder="email@example.com">
+							<div class="focus-input1 trans-04"></div>
+						</div>
 
-                    <form>
-                        <div class="wrap-input1 w-full p-b-4">
-                            <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
-                                placeholder="email@example.com">
-                            <div class="focus-input1 trans-04"></div>
-                        </div>
+						<div class="p-t-18">
+							<button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+								Subscribe
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
 
-                        <div class="p-t-18">
-                            <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-                                Subscribe
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+			<div class="p-t-40">
+				<div class="flex-c-m flex-w p-b-18">
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
+					</a>
 
-            <div class="p-t-40">
-                <div class="flex-c-m flex-w p-b-18">
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-                    </a>
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
+					</a>
 
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-                    </a>
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
+					</a>
 
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-                    </a>
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
+					</a>
 
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-                    </a>
+					<a href="#" class="m-all-1">
+						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
+					</a>
+				</div>
 
-                    <a href="#" class="m-all-1">
-                        <img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-                    </a>
-                </div>
+				<p class="stext-107 cl6 txt-center">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;
+					<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
+						class="fa fa-heart-o" aria-hidden="true"></i> Group 5
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-                <p class="stext-107 cl6 txt-center">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;
-                    <script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i
-                        class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                        target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com"
-                        target="_blank">ThemeWagon</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </p>
-            </div>
-        </div>
-    </footer>
+				</p>
+			</div>
+		</div>
+	</footer>
 
     <!-- Back to top -->
-    <div class="btn-back-to-top" id="myBtn">
-        <span class="symbol-btn-back-to-top">
-            <i class="zmdi zmdi-chevron-up"></i>
-        </span>
-    </div>
+	<div class="btn-back-to-top" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa-duotone fa-arrow-up fa-xl" style="--fa-primary-color: #19f574; --fa-secondary-color: #0eca5c;"></i>
+		</span>
+	</div>
 
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -797,6 +886,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </script>
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+	<script src="js/scroll.js"></script>
 
     <script>
         // Payment method selection functionality

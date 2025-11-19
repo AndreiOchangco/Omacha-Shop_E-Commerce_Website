@@ -413,37 +413,37 @@ if ($query->num_rows > 0) {
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m noselect">
-						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
-							<i class="zmdi zmdi-search"></i>
+						<div class="js-show-modal-search">
+							<a 
+							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11"
+							style="color: #181818;">
+								<i class="zmdi zmdi-search"></i>
+							</a>
 						</div>
 
 						<a
 							class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart"
+							style="color: #181818;"
 							data-notify="<?php echo $order_count?>">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</a>
 
 						<a href="wishlist.php"
 							class="dis-block icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti"
+							style="color: #181818;"
 							data-notify="<?php echo $wishlist_count?>">
 							<i class="zmdi zmdi-favorite-outline"></i>
 						</a>
 						<div class="icon-header-item cl13 hov-cl1 trans-04 p-l-22 p-r-11 profile-menu noselect">
 							<li class="active-menu noselect">
 								<a href="register.php" class="btn2 btn-primary2 mt-1 "
-								style="color: #49243E;"><b><i style="color: #49243E;" class="fa-regular fa-user fa-sm"></i></b></a>
+								style="color: #181818;"><b><i class="fa-regular fa-user fa-sm"></i></b></a>
 								<ul class="profile-sub-menu noselect">
-									<li><a href="user-profile.php">Profile</a></li>
+									<li><a class="darkModehyperlink" href="user-profile.php">Profile</a></li>
 									
-									<li>
-										<!-- Your toggle button -->
-										<a id="darkModeToggle">
-											<span class="darkbtn">☀️</span>
-										</a>
-									</li>
-										
+									<li><a id="darkModeToggle"><span class="darkbtn">☀️</span></a></li>
 
-									<li><a href="logout.php">Logout</a></li>
+									<li><a class="darkModehyperlink" href="logout.php">Logout</a></li>
 								</ul>
 							</li>
 						</div>
@@ -1034,7 +1034,7 @@ if ($query->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
+						Any questions? Let us know in store at Taguig City, Metro Manila, Philippines or call us
 						on (+1) 96 716 6879
 					</p>
 

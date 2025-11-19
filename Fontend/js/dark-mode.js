@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       darkCss.setAttribute("disabled", "");
       localStorage.setItem("darkMode", "disabled");
       if (knob) knob.textContent = "☀️";
-      document.documentElement.style.backgroundColor = "#f1f1f1";
+      document.documentElement.style.backgroundColor = "#fff";
     } else {
       // Turn on dark mode
       darkCss.removeAttribute("disabled");
