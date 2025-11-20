@@ -721,7 +721,7 @@ if ($result->num_rows > 0) {
 		</h2>
 	</section>
 
-	<div>
+	<div style="background-color: #fff;" class="darkModebg-darkgray">
 		<div class="container noselect">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">

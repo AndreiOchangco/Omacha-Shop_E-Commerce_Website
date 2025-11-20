@@ -783,7 +783,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Shopping Cart -->
-	<form style="background-color: #fff; width: 100%;" class="p-t-75 p-b-85 drkmde">
+	<form style="background-color: #fff; width: 100%;" class="p-t-75 p-b-85 darkModebg-darkgray">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">

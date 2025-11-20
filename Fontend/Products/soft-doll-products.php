@@ -732,7 +732,7 @@ if ($result->num_rows > 0) {
 	</section>
 
 	<!-- Product -->
-	<div style="background-color: #fff;">
+	<div style="background-color: #fff;" class="darkModebg-darkgray">
 		<div class="container">
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">

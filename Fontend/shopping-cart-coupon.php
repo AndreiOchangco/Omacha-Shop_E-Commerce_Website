@@ -771,7 +771,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Shopping Cart -->
-	<form style="background-color: #fff;" class="p-t-75 p-b-85">
+	<form style="background-color: #fff;" class="p-t-75 p-b-85 darkModebg-darkgray">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -938,7 +938,7 @@ if ($query->num_rows > 0) {
 							</div>
 						</div>
 
-						<a href="buy-product.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer darkModeBtn">Proceed to Checkout</a>
+						<a href="buy-product-coupon.php" id="button-add" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer darkModeBtn">Proceed to Checkout</a>
 											
 					</div>
 				</div>

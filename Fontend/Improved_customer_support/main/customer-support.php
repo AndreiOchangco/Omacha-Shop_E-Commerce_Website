@@ -598,30 +598,39 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section1 style="background-color: #fff;" class="darkMode">
-		<div class="wrap">
-			<div class="chat-card">
-				<div class="chat-header">
-				<div style="background-color: #19f574;" class="avatar">S</div>
-				<div style="color: #181818;" class="status"><span id="lastActive">Last Active (5 mins ago)</span></div>
-				</div>
+	 <div style="background-color: #fff;" class="darkModebg-darkgray">
+		 <section1>
+			 <div class="wrap landscape">
+	 
+				 <div style="background-color: #fff;" class="chat-card">
+	 
+					 <div class="chat-header">
+						 <div style="background-color: #19f574;" class="avatar">S</div>
+						 <div style="color: #181818;" class="status">
+							 <span id="lastActive">Last Active (5 mins ago)</span>
+						 </div>
+					 </div>
+	 
+					 <div style="color: #181818; text-align: left;" id="chatBody" class="chat-body"></div>
+	 
+					 <div style="color: #181818;" class="quick-row" id="quickRow"></div>
+	 
+					 <div class="composer">
+						 <input id="userInput" type="text" placeholder="Type your question..." autocomplete="off">
+						 <button style="color: #181818;" id="sendBtn" aria-label="Send" class="send">
+							 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+								 <path d="M22 2L11 13"></path>
+								 <path d="M22 2L15 22l-4-9-9-4 20-7z"></path>
+							 </svg>
+						 </button>
+					 </div>
+	 
+				 </div>
+	 
+			 </div>
+		 </section1>
+	 </div>
 
-				<div style="color: #181818; text-align: left;" id="chatBody" class="chat-body"></div>
-
-				<div style="color: #181818;" class="quick-row" id="quickRow"></div>
-
-				<div class="composer">
-				<input id="userInput" type="text" placeholder="Type your question..." autocomplete="off">
-				<button style="color: #181818;" id="sendBtn" aria-label="Send" class="send">
-					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-					<path d="M22 2L11 13"></path>
-					<path d="M22 2L15 22l-4-9-9-4 20-7z"></path>
-					</svg>
-				</button>
-				</div>
-			</div>
-		</div>
-	</section1>
 
 
 
@@ -698,7 +707,7 @@ if ($query->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
+						Any questions? Let us know in store at Taguig City, Metro Manila, Philippines or call us
 						on (+1) 96 716 6879
 					</p>
 

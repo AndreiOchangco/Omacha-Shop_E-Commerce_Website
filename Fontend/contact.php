@@ -599,7 +599,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section1 style="background-color: #fff;">
+	<section1 style="background-color: #fff;" class="darkModebg-darkgray">
 		<h1 style="margin-bottom: -20px;" class="stext-122 heading darkModetxt-omacha m-t-25">Get In Touch</h1>
 		<div class="contactForm">
 			<div style="background-color: #fff8f8ff; border-radius: 25px; padding: 30px 20px; display: flex; flex-direction: column; align-items: center;" class="m-t-30">
@@ -750,21 +750,21 @@ if ($query->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
+						Any questions? Let us know in store at Taguig City, Metro Manila, Philippines or call us
 						on (+1) 96 716 6879
 					</p>
 
 					<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-facebook fa-lg" style="color: #ea539c;"></i>
+							<i class="fa-brands fa-facebook fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-instagram fa-lg" style="color: #e151a5;"></i>
+							<i class="fa-brands fa-instagram fa-lg" style="color: #19f574;"></i>
 						</a>
 
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-							<i class="fa-brands fa-pinterest fa-lg" style="color: #e74b7a;"></i>
+							<i class="fa-brands fa-pinterest fa-lg" style="color: #19f574;"></i>
 						</a>
 					</div>
 				</div>

@@ -644,7 +644,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section style="background-color: #fff;" class="bg0 p-t-52 p-b-20">
+	<section style="background-color: #fff;" class="bg0 p-t-52 p-b-20 darkModebg-darkgray">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-lg-9 p-b-80">

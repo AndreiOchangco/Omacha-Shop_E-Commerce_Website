@@ -593,7 +593,7 @@ if ($query->num_rows > 0) {
         </div>
     </header>
 
-    <div style="background-color: #fff;" class="darkModebg-darkgray">
+    <div class="background-image">
         <h1  style="text-align: center; padding-top: 90px; text-transform: uppercase;"><b>Choose Payment Method</b></h1>
         <!-- Content page -->
         <div class="payment-container">

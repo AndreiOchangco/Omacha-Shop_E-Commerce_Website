@@ -917,7 +917,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/stuffed-animal-products.php">
 						<img class="category noselect" src="images/Homepage-images/toysy.png" alt="category-img" >
-						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Stuffed Animals</h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink noselect">Stuffed Animals</h5>
 						</a>
 					</div>
 				</div>
@@ -927,7 +927,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/fantasy-animal-products.php" >
 						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
-						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Fantasy Animals</h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink noselect">Fantasy Animals</h5>
 						</a>
 					</div>
 				</div>
@@ -937,7 +937,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/teddy-bear-products.php"> 
 						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
-						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Teddy Bears </h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink noselect">Teddy Bears </h5>
 						</a>
 					</div>
 				</div>
@@ -947,7 +947,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/soft-doll-products.php" >
 						<img class="category noselect" src="images/Homepage-images/doll.png" alt="category-img">
-						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect"> Soft Dolls</h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink noselect"> Soft Dolls</h5>
 						</a>
 					</div>
 				</div>	
@@ -957,7 +957,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/plastic-toy-products.php" >
 						<img class="category noselect" src="images/Homepage-images/bricks.png" alt="category-img">
-						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink-omacha noselect">Plastic Toys</h5>
+						<h5 class="stext-121 lightModetxt-omacha darkModehyperlink noselect">Plastic Toys</h5>
 						</a>
 					</div>
 				</div>
@@ -1275,14 +1275,16 @@ if ($query->num_rows > 0) {
 
 
 	<!-- banner start -->
-	<div style="background-color: #fff;" class="banner-start container noselect">
-		<div class="intro-banner row">
-			<h1 style="margin-top: -8px;">Greatest prices and deals save 20%off</h1>
-			<div style="margin-top: -10px;" class="shop-now">
-				<a href="product.php">Shop now</a>
-			</div>
-		</div>
-	</div>
+	 <div style="background-color: #fff;" class="p-t-20 p-b-20 darkModebg-darkgray">
+		 <div class="banner-start container noselect">
+			 <div class="intro-banner row">
+				 <h1 style="margin-top: -8px;">Greatest prices and deals save 20%off</h1>
+				 <div style="margin-top: -10px;" class="shop-now">
+					 <a href="product.php">Shop now</a>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
 	<!-- banner end -->
 
 

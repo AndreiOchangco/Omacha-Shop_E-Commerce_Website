@@ -676,7 +676,7 @@ if ($query->num_rows > 0) {
 	</div>
 
     <!-- Shopping Cart -->
-    <form style="width: auto; height: auto;" class="bg0 p-t-75 p-b-85">
+    <form style="width: auto; height: auto;" class="bg0 p-t-75 p-b-85 darkModebg-darkgray">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -840,7 +840,7 @@ if ($query->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
+						Any questions? Let us know in store at Taguig City, Metro Manila, Philippines or call us
 						on (+1) 96 716 6879
 					</p>
 

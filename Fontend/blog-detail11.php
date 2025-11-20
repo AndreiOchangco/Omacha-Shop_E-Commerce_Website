@@ -644,7 +644,7 @@ if ($query->num_rows > 0) {
 
 
 	<!-- Content page -->
-	<section style="background-color: #fff;" class="bg0 p-t-52 p-b-20">
+	<section style="background-color: #fff;" class="bg0 p-t-52 p-b-20 darkModebg-darkgray">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-lg-9 p-b-80">
@@ -1173,7 +1173,7 @@ if ($query->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
+						Any questions? Let us know in store at Taguig City, Metro Manila, Philippines or call us
 						on (+1) 96 716 6879
 					</p>
 

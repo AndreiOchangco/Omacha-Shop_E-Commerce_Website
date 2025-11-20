@@ -707,12 +707,8 @@ if ($result->num_rows > 0) {
 	<!-- Content page -->
 
 	<!-- layer 01 -->
-	<section style="background-color: #fff;" class="bg0 p-t-75 p-b-120">
+	<section style="background-color: #fff;" class="bg0 p-t-75 p-b-120 darkModebg-darkgray">
 		<div class="container">
-		
-
-		
-
 			<div class="row p-b-148">
 				<div class="col-md-7 col-lg-8">
 					<div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
@@ -1036,7 +1032,7 @@ if ($result->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
+						Any questions? Let us know in store at Taguig City, Metro Manila, Philippines or call us
 						on (+1) 96 716 6879
 					</p>
 
