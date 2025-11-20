@@ -1175,7 +1175,7 @@ if ($query->num_rows > 0) {
 					</h4>
 
 					<p class="stext-107 size-201">
-						Any questions? Let us know in store at Quezon Avenue, Barangay II, San Fernando City, La Union or call us
+						Any questions? Let us know in store at Taguig City, Metro Manila, Philippines or call us
 						on (+1) 96 716 6879
 					</p>
 
