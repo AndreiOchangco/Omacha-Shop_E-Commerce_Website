@@ -917,7 +917,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/stuffed-animal-products.php">
 						<img class="category noselect" src="images/Homepage-images/toysy.png" alt="category-img" >
-						<h2 class="stext-121 lighttext darkModetxt noselect" style="color:#19f574;">Stuffed Animals</h2>
+						<h2 class="stext-121 lighttext  noselect" style="color:#19f574;">Stuffed Animals</h2>
 						</a>
 					</div>
 				</div>
@@ -927,7 +927,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/fantasy-animal-products.php" >
 						<img class="category noselect" src="images/Homepage-images/unicorn.png" alt="category-img">
-						<h5 class="stext-121 lighttext darkModetxt noselect" style="color:#19f574;">Fantasy Animals</h5>
+						<h5 class="stext-121 lighttext  noselect" style="color:#19f574;">Fantasy Animals</h5>
 						</a>
 					</div>
 				</div>
@@ -937,7 +937,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/teddy-bear-products.php"> 
 						<img class="category noselect" src="images/Homepage-images/teddy-bear.png" alt="category-img">
-						<h5 class="stext-121 lighttext darkModetxt noselect" style="color:#19f574;">Teddy Bears </h5>
+						<h5 class="stext-121 lighttext  noselect" style="color:#19f574;">Teddy Bears </h5>
 						</a>
 					</div>
 				</div>
@@ -947,7 +947,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/soft-doll-products.php" >
 						<img class="category noselect" src="images/Homepage-images/doll.png" alt="category-img">
-						<h5 class="stext-121 lighttext darkModetxt noselect" style="color:#19f574;"> Soft Dolls</h5>
+						<h5 class="stext-121 lighttext  noselect" style="color:#19f574;"> Soft Dolls</h5>
 						</a>
 					</div>
 				</div>	
@@ -957,7 +957,7 @@ if ($query->num_rows > 0) {
 					<div style="background-color: #fff;" class="block1 wrap-pic-w noselect">
 						<a href="./Products/plastic-toy-products.php" >
 						<img class="category noselect" src="images/Homepage-images/bricks.png" alt="category-img">
-						<h5 class="stext-121 lighttext darkModetxt noselect" style="color:#19f574;">Plastic Toys</h5>
+						<h5 class="stext-121 lighttext  noselect" style="color:#19f574;">Plastic Toys</h5>
 						</a>
 					</div>
 				</div>
