@@ -143,7 +143,7 @@ if ($query->num_rows > 0) {
 }
 
 // Thiết lập múi giờ cho Việt Nam
-date_default_timezone_set('Asia/Ho_Chi_Minh');
+date_default_timezone_set('Asia/Manila');
 
 // Lấy ngày hiện tại
 $currentDateTime = date("Y-m-d H:i:s");

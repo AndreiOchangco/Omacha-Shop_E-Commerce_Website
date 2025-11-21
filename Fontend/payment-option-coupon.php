@@ -606,7 +606,7 @@ if ($query->num_rows > 0) {
             <form action="" method="POST" id="paymentForm">
                 <div class="payment-methods">
                     <label class="payment-option" id="codOption">
-                        <input type="radio" name="payment_method" value="cod" required onchange="window.location.href='your-order.php'">
+                        <input type="radio" name="payment_method" value="cod">
                         <span class="payment-icon"><i class="fas fa-money-bill-wave"></i></span>
                         <div>
                             <h4>Cash on Delivery (COD)</h4>

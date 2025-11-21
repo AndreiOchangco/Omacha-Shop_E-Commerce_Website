@@ -598,19 +598,19 @@ if ($query->num_rows > 0) {
         <!-- Content page -->
         <div class="payment-container">
             <div class="order-summary">
-                <h4>Order Summary</h4>
-                <p><strong>Total Items:</strong> <?php echo count($order_array); ?></p>
-                <p><strong>Total Amount:</strong> $<?php echo number_format($totalPrice, 2); ?></p>
+                <h4 style="color: #000;">Order Summary</h4>
+                <p style="color: #000;"><strong>Total Items:</strong> <?php echo count($order_array); ?></p>
+                <p style="color: #000;"><strong>Total Amount:</strong> $<?php echo number_format($totalPrice, 2); ?></p>
             </div>
 
             <form action="" method="POST" id="paymentForm">
                 <div class="payment-methods">
                     <label class="payment-option" id="codOption">
-                        <input type="radio" name="payment_method" value="cod" required onchange="window.location.href='your-order.php'">
+                        <input type="radio" name="payment_method" value="cod">
                         <span class="payment-icon"><i class="fas fa-money-bill-wave"></i></span>
                         <div>
-                            <h4>Cash on Delivery (COD)</h4>
-                            <p>Pay with cash when your order is delivered</p>
+                            <h4 style="color: #000;">Cash on Delivery (COD)</h4>
+                            <p style="color: #000;">Pay with cash when your order is delivered</p>
                         </div>
                     </label>
 
@@ -618,8 +618,8 @@ if ($query->num_rows > 0) {
                         <input type="radio" name="payment_method" value="bank">
                         <span class="payment-icon"><i class="fas fa-university"></i></span>
                         <div>
-                            <h4>Bank Transfer</h4>
-                            <p>Transfer money directly from your bank account</p>
+                            <h4 style="color: #000;">Bank Transfer</h4>
+                            <p style="color: #000;">Transfer money directly from your bank account</p>
                         </div>
                     </label>
 
@@ -627,63 +627,63 @@ if ($query->num_rows > 0) {
                         <input type="radio" name="payment_method" value="credit">
                         <span class="payment-icon"><i class="fas fa-credit-card"></i></span>
                         <div>
-                            <h4>Credit/Debit Card</h4>
-                            <p>Pay securely with your credit or debit card</p>
+                            <h4 style="color: #000;">Credit/Debit Card</h4>
+                            <p style="color: #000;">Pay securely with your credit or debit card</p>
                         </div>
                     </label>
                 </div>
 
                 <!-- Bank Transfer Details (Hidden by default) -->
                 <div class="payment-details" id="bankDetails">
-                    <h3 class="title stext-121">Bank Transfer Information</h3>
-                    <p>Please transfer the total amount to the following bank account:</p>
+                    <h3 class="title stext-121" style="color: #000;">Bank Transfer Information</h3>
+                    <p style="color: #000;">Please transfer the total amount to the following bank account:</p>
                     <div class="inputBox">
-                        <span>Bank Name:</span>
-                        <input type="text" value="Omacha Bank" readonly>
+                        <span style="color: #000;">Bank Name:</span>
+                        <input style="color: #000;" type="text" value="Omacha Bank" readonly>
                     </div>
                     <div class="inputBox">
-                        <span>Account Number:</span>
-                        <input type="text" value="1234 5678 9012 3456" readonly>
+                        <span style="color: #000;">Account Number:</span>
+                        <input style="color: #000;" type="text" value="1234 5678 9012 3456" readonly>
                     </div>
                     <div class="inputBox">
-                        <span>Account Holder:</span>
-                        <input type="text" value="Omacha Store" readonly>
+                        <span style="color: #000;">Account Holder:</span>
+                        <input style="color: #000;" type="text" value="Omacha Store" readonly>
                     </div>
                     <div class="inputBox">
-                        <span>Reference:</span>
-                        <input type="text" value="ORDER-<?php echo $userLogin['userID'] . '-' . time(); ?>" readonly>
+                        <span style="color: #000;">Reference:</span>
+                        <input style="color: #000;" type="text" value="ORDER-<?php echo $userLogin['userID'] . '-' . time(); ?>" readonly>
                     </div>
                 </div>
 
                 <!-- Credit Card Details (Hidden by default) -->
                 <div class="payment-details" id="creditDetails">
-                    <h3 class="title stext-121">Credit Card Information</h3>
+                    <h3 style="color: #000;" class="title stext-121">Credit Card Information</h3>
                     
                     <div class="inputBox">
-                        <span>Cards accepted :</span>
+                        <span style="color: #000;">Cards accepted :</span>
                         <img src="images/card_img.png" alt="Accepted Cards">
                     </div>
                     <div class="inputBox">
-                        <span>Name on card :</span>
-                        <input type="text" placeholder="Cardholder Name">
+                        <span style="color: #000;">Name on card :</span>
+                        <input style="color: #000;" type="text" placeholder="Cardholder Name">
                     </div>
                     <div class="inputBox">
-                        <span>Credit card number :</span>
-                        <input type="text" placeholder="1111-2222-3333-4444" pattern="[0-9-]{16,19}">
+                        <span style="color: #000;">Credit card number :</span>
+                        <input style="color: #000;" type="text" placeholder="1111-2222-3333-4444" pattern="[0-9-]{16,19}">
                     </div>
                     <div class="inputBox">
-                        <span>Exp month :</span>
-                        <input type="text" placeholder="MM" pattern="(0[1-9]|1[0-2])">
+                        <span style="color: #000;">Exp month :</span>
+                        <input style="color: #000;" type="text" placeholder="MM" pattern="(0[1-9]|1[0-2])">
                     </div>
 
                     <div class="flex">
                         <div class="inputBox">
-                            <span>Exp year :</span>
-                            <input type="text" placeholder="YYYY" pattern="[0-9]{4}">
+                            <span style="color: #000;">Exp year :</span>
+                            <input style="color: #000;" type="text" placeholder="YYYY" pattern="[0-9]{4}">
                         </div>
                         <div class="inputBox">
-                            <span>CVV :</span>
-                            <input type="text" placeholder="123" pattern="[0-9]{3,4}">
+                            <span style="color: #000;">CVV :</span>
+                            <input style="color: #000;" type="text" placeholder="123" pattern="[0-9]{3,4}">
                         </div>
                     </div>
                 </div>

@@ -207,3 +207,13 @@ div.block1.wrap-pic-w {
 .darkMode-nav-arrow:hover {
   color: #19f574;
 }
+
+
+
+.darkModebtn-delete {
+    color: #fff;
+}
+
+.darkModebtn-delete:hover {
+    color: #19f574;
+}
