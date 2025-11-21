@@ -312,11 +312,11 @@ if ($query->num_rows > 0) {
 
         /* Định dạng nút delete */
         .btn-delete {
-            color: black;
+            color: #000;
         }
 
         .btn-delete:hover {
-            color: #F4538A;
+            color: #19f574;
         }
 
         #thank-you{
@@ -683,7 +683,7 @@ if ($query->num_rows > 0) {
                     <div class="m-l-25 m-r--38 m-lr-0-xl">
                         <h1 id="thank-you" style="text-align: center;" class="darkModetxt">Thank You!</h1>
                         <p id="thank-you" style="text-align: center;" class="darkModetxt">Your order has been successfully placed.</p>
-                        <p id="thank-you" style="text-align: center; padding-bottom: 10px;" class="darkModetxt">We appreciate your business and look forward to serving you again.</p>
+                        <p id="thank-you" style="text-align: center; padding-bottom: 50px;" class="darkModetxt">We appreciate your business and look forward to serving you again.</p>
                         <div class="wrap-table-shopping-cart">
                             <table class="table-shopping-cart">
                                 <tr class="table_head">
@@ -699,19 +699,19 @@ if ($query->num_rows > 0) {
                                     <?php if ($item['u_id'] == $userLogin['userID'] && $item["o_quantity"] > 0 && $item["o_status"] == 1): 
                                         $p_images = array_map('trim', explode(',', $item["p_image"])); ?>                   
                                         <tr class="table_row">
-                                            <td class="column-1">
+                                            <td class="column-1 darkModetxt">
                                                 <div class="how-itemcart1">
                                                     <img src="images/<?php echo $p_images[0]; ?>" alt="IMG">
                                                 </div>
                                             </td>
-                                            <td class="column-2"><?php echo $item["p_name"]; ?></td>
-                                            <td id="price_<?php echo $item['p_id']; ?>" class="column-3">$ <?php echo $item["p_price"]; ?></td>
-                                            <td id="quantity_<?php echo $item['p_id']; ?>" class="column-4"><?php echo $item["o_quantity"]; ?></td>
-                                            <td id="total_<?php echo $item['p_id']; ?>" class="column-5">$ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
+                                            <td style="text-align: center;" class="column-2 darkModetxt"><?php echo $item["p_name"]; ?></td>
+                                            <td style="text-align: center;" id="price_<?php echo $item['p_id']; ?>" class="column-3 darkModetxt">$ <?php echo $item["p_price"]; ?></td>
+                                            <td style="text-align: center;" id="quantity_<?php echo $item['p_id']; ?>" class="column-4 darkModetxt"><?php echo $item["o_quantity"]; ?></td>
+                                            <td style="text-align: center;" id="total_<?php echo $item['p_id']; ?>" class="column-5 darkModetxt">$ <?php echo $item["p_price"] * $item["o_quantity"]; ?></td>
                                             <td class="column-6">
                                                 <form action="delete-order-item.php" method="post">                                            
                                                     <input type="hidden" name="o_id" value="<?php echo $item['o_id']; ?>">
-                                                    <button type="submit" class="btn-delete" data-order-id="<?php echo $item['o_id']; ?>">
+                                                    <button type="submit" class="btn-delete darkModebtn-delete" data-order-id="<?php echo $item['o_id']; ?>">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                 </form>

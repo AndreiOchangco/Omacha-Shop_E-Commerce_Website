@@ -900,7 +900,7 @@ if ($result->num_rows > 0) {
 					<div class="team-member">
 						<div style="border-radius: 100%;" class="team-member-img block2-pic hov-img0">
 							<img src="images/ThuyLinh1.jpg" alt="Team Member 4">
-							<a href="#"
+							<a href="https://github.com/brentalabag-ai"
 								target="_blank"
 								class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04">
 								<i class="fab fa-github"></i>
