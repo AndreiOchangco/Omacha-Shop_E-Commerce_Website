@@ -303,8 +303,11 @@ if ($resultOrder->num_rows > 0) {
                                 </li>
 
                                 <li>
-                                    <a href="blog.php">Blog</a>
-                                </li>
+								<a class="darkModetxt" href="blog.php">Blog</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="./social-media-forum.php">Social Media Forum</a></li>
+								</ul>
+								</li>
 
                                 <li>
                                     <a href="about.php">About</a>

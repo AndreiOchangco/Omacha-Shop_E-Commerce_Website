@@ -373,8 +373,11 @@ if ($query->num_rows > 0) {
 								</ul>
 							</li>
 
-							<li class="active-menu">
-								<a href="#go-up">Blog</a>
+							<li>
+								<a class="darkModetxt" href="#go-up">Blog</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="./social-media-forum.php">Social Media Forum</a></li>
+								</ul>
 							</li>
 
 							<li>

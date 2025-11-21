@@ -328,6 +328,9 @@ if ($result->num_rows > 0) {
 
 							<li>
 								<a class="darkModetxt" href="blog.php">Blog</a>
+								<ul class="sub-menu darkModebg-black">
+									<li><a class="darkModetxt" href="./social-media-forum.php">Social Media Forum</a></li>
+								</ul>
 							</li>
 
 							<li>

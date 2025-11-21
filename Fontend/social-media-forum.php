@@ -373,11 +373,8 @@ if ($query->num_rows > 0) {
 								</ul>
 							</li>
 
-							<li>
-								<a class="darkModetxt" href="#go-up">Blog</a>
-								<ul class="sub-menu darkModebg-black">
-									<li><a class="darkModetxt" href="./social-media-forum.php">Social Media Forum</a></li>
-								</ul>
+							<li class="active-menu">
+								<a href="#go-up">Blog</a>
 							</li>
 
 							<li>
@@ -634,7 +631,7 @@ if ($query->num_rows > 0) {
 	<!-- Title page -->
 	<section class="bg-img1 txt-center p-lr-15 p-tb-82 m-t-50" style="background-image: url('images/background-image.png');">
 		<h2 style="color: #000;" class="ltext-105 cl0 txt-center m-t-60">
-			Blog
+			Social Media Forum
 		</h2>
 	</section>
 
@@ -642,517 +639,58 @@ if ($query->num_rows > 0) {
 	<!-- Content page -->
 	<section style="background-color: #fff;" class="bg0 p-t-62 p-b-60 darkModebg-darkgray">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-lg-9 p-b-80">
-					<div class="p-r-45 p-r-0-lg">
-						<!-- item blog -->
-						<div class="container">
-							<div class="row">
-								<!-- First Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail1.php">
-										<div class="card" style="border: none;">
-											<img src="images/blog-04.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail1.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												Making Your Kids' Special Day Memorable
-											</a>
-										</h5>
-										<p>Planning memorable celebration for your child's special day involves...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail1.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
+            <div class="header">
+                <h1>Social Media Stream</h1>
+                <p>Stay connected with our latest updates and posts from all platforms</p>
+                
+                <div class="status">
+                    <div class="status-dot"></div>
+                    Live feeds updating in real-time
+                </div>
+            </div>
 
-								<!-- Second Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail2.php">
-										<div class="card" style="border: none;">
-											<img src="images/blog-05.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail2.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												What Are the Best Toys for Child Development
-											</a>
-										</h5>
-										<p>Selecting toys that promote child development involves considering...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail2.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
+            <!-- Two Column Layout for TikTok Feeds -->
+            <div class="two-column-layout">
+                <div class="column">
+                    <div class="feed-wrapper">
+                        <div class="feed-title">
+                            <i class="fab fa-tiktok"></i>
+                            Trending TikTok Hashtags
+                        </div>
+                        <div class="powr-container">
+                            <div class='sk-ww-tiktok-hashtag-feed' data-embed-id='25619777'></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="feed-wrapper">
+                        <div class="feed-title">
+                            <i class="fab fa-tiktok"></i>
+                            Popular TikTok Content
+                        </div>
+                        <div class="powr-container">
+                            <div class='sk-ww-tiktok-hashtag-feed' data-embed-id='25619773'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-								<!-- Third Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail3.php">
-										<div class="card" style="border: none;">
-											<img src="images/blog-06.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail3.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												How Do Toys Impact a Child's Learning
-											</a>
-										</h5>
-										<p>Toys wield significant influence on a child's learning journey, serving as...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail3.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
+            <div class="instructions">
+                <h3>About This Dashboard</h3>
+                <ul>
+                    <li>Real-time TikTok feeds from SociableKit</li>
+                    <li>Automatically updates with latest content</li>
+                    <li>Dark theme optimized for extended viewing</li>
+                </ul>
+            </div>
 
+            <div class="footer">
+                <p>Powered by SociableKit | TikTok feeds update automatically</p>
+            </div>
+        </div>
 
-								<!-- Fourth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail4.php">
-										<div class="card" style="border: none;">
-											<img src="images/02.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail4.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												Build Worlds, Collect Pieces With Your Young Ones
-											</a>
-										</h5>
-										<p>Building worlds and collecting pieces with your young ones is not just...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail4.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<!-- Fifth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail5.php">
-										<div class="card" style="border: none;">
-											<img src="images/3.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail5.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												The Joys of Being a Parent: A Guide to Parenting
-											</a>
-										</h5>
-										<p>Parenting is a journey filled with ups and downs, but ultimately, it's one...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail5.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<!-- Sixth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail6.php">
-										<div class="card" style="border: none;">
-											<img src="images/4.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail6.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												Essential Tips for Buying and Caring for Children' Toys
-											</a>
-										</h5>
-										<p>When it comes to buying toys for children, safety should always be...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail6.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-
-								<!-- Seventh Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail7.php">
-										<div class="card" style="border: none;">
-											<img src="images/5.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail7.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												When a Little Toy Brings Everyone Together
-											</a>
-										</h5>
-										<p>Sometimes, the smallest things can have the biggest impact, and...
-										<div class="block1-txt-child2 p-b-4 m-t-10 trans-05">
-											<a id="button-add" href="blog-detail7.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-								<!-- Eighth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail8.php">
-										<div class="card" style="border: none;">
-											<img src="images/6.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail8.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												Fun Ways to Help Your Child Learn and Grow
-											</a>
-										</h5>
-										<p>Turn cooking into a learning experience by inviting your child...
-										<div class="block1-txt-child2 p-b-4 trans-05 m-t-10">
-											<a id="button-add" href="blog-detail8.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-
-								<!-- Ninth Column -->
-								<div class="col-lg-4 col-md-6 mb-4">
-									<a href="blog-detail9.php">
-										<div class="card" style="border: none;">
-											<img src="images/7.jpg" alt="IMG-BLOG" style="border-radius: 10px;"
-												class="zoomable-img">
-										</div>
-									</a>
-									<h5 class="card__heading h2"></h5>
-									<h9>John Mathew | 14 Feb 2024</h9>
-									<p></p>
-									<div class="text-left">
-										<h5 class="card__heading h2"></h5>
-										<h5 class="p-b-15">
-											<a href="blog-detail9.php" class="ltext-111 cl2 hov-cl1 trans-04 darkModehyperlink-omacha">
-												Exploring the Evolution Toys Through the Years
-											</a>
-										</h5>
-										<p>oys have experienced a remarkable evolution throughout history,...
-										<div class="block1-txt-child2 p-b-4 trans-05 m-t-10">
-											<a id="button-add" href="blog-detail9.php"
-												class="block1-btn stext-101 cl0 trans-09 darkModeBtn">
-												Read More
-											</a>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-
-						<!-- Pagination -->
-						<div class="flex-l-m flex-w w-full p-t-10 m-lr--7">
-							<a href="#" class="flex-c-m how-pagination1 trans-04 m-all-7 active-pagination1 darkModeBtn-ActiveOutline">
-								1
-							</a>
-
-							<a href="blog2.php" class="flex-c-m how-pagination1 trans-04 m-all-7 darkModeBtn-outline">
-								2
-							</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 col-lg-3 p-b-80">
-					<div class="side-menu">
-						<div class="bor17 of-hidden pos-relative">
-							<input class="stext-103 cl2 plh4 size-116 p-l-28 p-r-55" type="text" name="search"
-								placeholder="Search">
-
-							<button class="flex-c-m size-122 ab-t-r fs-18 cl4 hov-cl1 trans-04">
-								<i class="zmdi zmdi-search"></i>
-							</button>
-						</div>
-
-						<div class="p-t-55">
-							<h4 class="mtext-112 cl2 p-b-33 text-omacha">
-								Categories
-							</h4>
-
-							<ul>
-								<li class="bor18">
-									<a href="../Fontend/Products/stuffed-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
-										Stuffed Animals
-									</a>
-								</li>
-
-								<li class="bor18">
-									<a href="../Fontend/Products/fantasy-animal-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
-										Fantasy Animals
-									</a>
-								</li>
-
-								<li class="bor18">
-									<a href="../Fontend/Products/teddy-bear-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
-										Teddy Bears
-									</a>
-								</li>
-
-								<li class="bor18">
-									<a href="../Fontend/Products/soft-doll-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
-										Soft Dolls
-									</a>
-								</li>
-
-								<li class="bor18">
-									<a href="../Fontend/Products/plastic-toy-products.php" class="dis-block stext-115 cl6 hov-cl1 trans-04 p-tb-8 p-lr-4 darkModehyperlink-omacha">
-										Plastic Toys
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="p-t-65">
-							<h4 class="mtext-112 cl2 p-b-33 darkModetxt-omacha">
-								Recent Post
-							</h4>
-
-							<ul>
-								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail1.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
-										<img src="images/blog-04.jpg" href="blog-detail1.php" alt="PRODUCT" class="product-img zoomable-img">
-									</a>
-								
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail1.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
-											Making Your Kids' Special Day Memorable
-										</a>
-										<span class="stext-116 cl6 p-t-20 darkModetxt">
-											John Mathew | 14 Feb 2024
-										</span>
-									</div>
-								</li>
-								
-								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail2.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
-										<img src="images/blog-05.jpg" href="blog-detail2.php" alt="PRODUCT" class="product-img zoomable-img">
-									</a>
-								
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail2.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
-											What Are the Best Toys for Child Development
-										</a>
-										<span class="stext-116 cl6 p-t-20 darkModetxt">
-											John Mathew | 14 Feb 2024
-										</span>
-									</div>
-								</li>
-
-								<li class="flex-w flex-t p-b-30">
-									<a href="blog-detail3.php" style="border-radius: 10px;" class="wrap-pic-w m-r-20">
-										<img src="images/blog-06.jpg" href="blog-detail3.php" alt="PRODUCT" class="product-img zoomable-img">
-									</a>
-								
-									<div class="size-215 flex-col-t p-t-8">
-										<a href="blog-detail3.php" class="stext-116 cl8 hov-cl1 trans-04 darkModehyperlink-omacha">
-											How Do Toys Impact a Child's Learning
-										</a>
-										<span class="stext-116 cl6 p-t-20 darkModetxt">
-											John Mathew | 14 Feb 2024
-										</span>
-									</div>
-								</li>
-
-							</ul>
-						</div>
-
-						<div class="p-t-55">
-							<h4 class="mtext-112 cl2 p-b-20 text-omacha">
-								Archive
-							</h4>
-
-							<ul>
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
-										<span>
-											February 2024
-										</span>
-
-										<span>
-											(9)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
-										<span>
-											January 2024
-										</span>
-
-										<span>
-											(39)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
-										<span>
-											December 2023
-										</span>
-
-										<span>
-											(29)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
-										<span>
-											November 2023
-										</span>
-
-										<span>
-											(35)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
-										<span>
-											October 2023
-										</span>
-
-										<span>
-											(22)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
-										<span>
-											September 2023
-										</span>
-
-										<span>
-											(32)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
-										<span>
-											August 2023
-										</span>
-
-										<span>
-											(21)
-										</span>
-									</a>
-								</li>
-
-								<li class="p-b-7">
-									<a href="#" class="flex-w flex-sb-m stext-115 cl6 hov-cl1 trans-04 p-tb-2 darkModehyperlink-omacha">
-										<span>
-											July 2023
-										</span>
-
-										<span>
-											(26)
-										</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-
-						<div class="p-t-50">
-							<h4 class="mtext-112 cl2 p-b-27 text-omacha">
-								Tags
-							</h4>
-
-							<div class="flex-w m-r--5">
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
-									kids
-								</a>
-
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
-									soft toys
-								</a>
-
-								<a href="#"
-									class="flex-c-m stext-107 cl6 size-301 bor7 p-lr-15 hov-tag1 trans-04 m-r-5 m-b-5 darkModeBtn-outline">
-									toys
-								</a>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <script src='https://widgets.sociablekit.com/tiktok-hashtag-feed/widget.js' defer></script>
 	</section>
 
 
