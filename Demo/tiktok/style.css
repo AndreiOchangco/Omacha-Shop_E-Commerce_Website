@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #69C9D0, #EE1D52, #69C9D0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 15px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #4ecdc4;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4ecdc4;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Two Column Layout */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-wrapper {
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: fit-content;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.feed-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #69C9D0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.feed-title i {
+    font-size: 1.5rem;
+    color: #EE1D52;
+}
+
+.powr-container {
+    position: relative;
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #111;
+    min-height: 500px;
+    display: flex;
+}
+
+/* TikTok Widget Styling */
+.sk-ww-tiktok-hashtag-feed {
+    width: 100%;
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    min-height: 500px;
+}
+
+/* Ensure iframes fill containers properly */
+.sk-ww-tiktok-hashtag-feed iframe {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 500px !important;
+    border: none !important;
+    border-radius: 10px !important;
+}
+
+/* Hide any potential branding */
+[class*="sk-"][class*="branding"],
+a[href*="sociablekit"],
+[class*="powered-by"],
+[class*="powered"][class*="sk-"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+}
+
+.instructions {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #aaa;
+    border: 1px solid #333;
+}
+
+.instructions h3 {
+    color: #69C9D0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.instructions ul {
+    list-style-position: inside;
+    margin-left: 10px;
+}
+
+.instructions li {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    
+    .two-column-layout {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .two-column-layout {
+        gap: 20px;
+    }
+    
+    .feed-wrapper {
+        padding: 20px;
+        min-height: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    .two-column-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .feed-wrapper {
+        padding: 20px;
+        min-height: 500px;
+    }
+    
+    .header {
+        padding: 20px 15px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .feed-title {
+        font-size: 1.1rem;
+    }
+    
+    .feed-wrapper {
+        padding: 15px;
+        min-height: 450px;
+    }
+    
+    .two-column-layout {
+        gap: 20px;
+    }
+}
